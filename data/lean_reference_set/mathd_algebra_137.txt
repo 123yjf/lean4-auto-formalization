@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given that this year’s enrollment is 598 students, representing a 4% increase from last year, find last year’s enrollment.
+-- 2. [Key Idea] This year’s 598 students correspond to 104% of last year’s total; equivalently, the ratio new/old = 104%/100% = 26/25.
+-- 3. [Proof] Algebraic method: Let x be last year’s enrollment. Then 598 = 1.04·x, so x = 598 / 1.04 = 575. Proportional method: Since new/old = 26/25, we get old = (25/26)·598 = 575.
+-- 4. [Conclusion] Last year Liberty Middle School enrolled 575 students.

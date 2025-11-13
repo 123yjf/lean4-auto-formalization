@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every real number a, the inequality a * (2 - a) ≤ 1 holds.
+-- 2. [Key Idea] Rewrite the inequality by completing the square: observe that 1 - a(2 - a) = (a - 1)^2. Since any square is nonnegative, this implies 1 - a(2 - a) ≥ 0, which is equivalent to a(2 - a) ≤ 1.
+-- 3. [Proof] 
+--    - First, establish the algebraic identity 1 - a * (2 - a) = (a - 1)^2 by expanding and simplifying both sides; this is done by a straightforward ring calculation.
+--    - Next, note that (a - 1)^2 ≥ 0 for all real a because squares are nonnegative.
+--    - Combining these, we get 1 - a * (2 - a) ≥ 0, hence a * (2 - a) ≤ 1.
+--    - The auxiliary lemmas reflect these steps explicitly: one lemma performs the algebraic manipulation to get the identity, another states the nonnegativity of the square, and a small check shows the function’s value at a = 1 is indeed 1. The final theorem then directly invokes the main lemma proving the inequality.
+-- 4. [Conclusion] Therefore, for all real a, a * (2 - a) ≤ 1. Equality occurs precisely when a = 1, where the square (a - 1)^2 vanishes.

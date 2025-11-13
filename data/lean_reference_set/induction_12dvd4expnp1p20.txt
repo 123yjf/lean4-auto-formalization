@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every natural number n, the integer 4^(n+1) + 20 is divisible by 12.
+-- 2. [Key Idea] Prove the number is divisible by 4 and by 3 separately; since 4 and 3 are coprime, divisibility by both implies divisibility by 12.
+-- 3. [Proof] 
+--    (i) Modulo 4: The term 4^(n+1) is a power of 4, hence a multiple of 4. Also, 20 is a multiple of 4. Therefore, 4^(n+1) + 20 ≡ 0 (mod 4).
+--    (ii) Modulo 3: Since 4 ≡ 1 (mod 3), we have 4^(n+1) ≡ 1^(n+1) ≡ 1 (mod 3). Moreover, 20 ≡ 2 (mod 3), so 4^(n+1) + 20 ≡ 1 + 2 ≡ 3 ≡ 0 (mod 3).
+--    (iii) Combining: Because gcd(4, 3) = 1, any integer divisible by both 4 and 3 is divisible by 12. Hence 4^(n+1) + 20 is a multiple of 12.
+-- 4. [Conclusion] For every natural number n, 12 divides 4^(n+1) + 20.

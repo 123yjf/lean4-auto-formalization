@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] For a prime natural number p and any natural number a, prove that p divides a^p − a.
+-- 2. [Key Idea] Split into two cases: (i) p divides a, in which case p divides both a^p and a, so it divides their difference; (ii) p does not divide a, in which case work in ZMod p (the field with p elements), use that x^p = x for all x, translate this to the congruence a^p ≡ a (mod p), and then turn that congruence into the desired divisibility.
+-- 3. [Proof]
+- Case 1: Suppose p ∣ a. Then divisibility is preserved under taking powers, so p ∣ a^p. Therefore, since p divides both a^p and a, it follows that p ∣ (a^p − a).
+- Case 2: Suppose p ∤ a. View a in ZMod p. Because p is prime, ZMod p has exactly p elements, and the Frobenius map is the identity there: for every x, x^p = x. Applying this to x = a mod p gives (a mod p)^p = a mod p. Interpreted back in ℕ, this says a^p ≡ a (mod p). To convert this congruence into a divisibility statement about the natural-number difference a^p − a, we use that a ≤ a^p (since p > 0), which ensures the subtraction is well-behaved in ℕ. Rewriting the congruence as a ≡ a^p (mod p) and applying the standard equivalence between congruence and divisibility of the (ordered) difference yields p ∣ (a^p − a).
+-- 4. [Conclusion] In both cases, p divides a^p − a. Hence, for every natural a and prime p, we have p ∣ (a^p − a), which is Fermat’s Little Theorem.

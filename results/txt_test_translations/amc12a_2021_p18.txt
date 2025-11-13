@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given five integer expressions:
+--    A = 17 − 5·2, B = 11 − 4·2, C = 7 − 2·3, D = 7 − 2 − 3, and E = 2·5 − 11.
+--    Prove that E < 0, while A > 0, B > 0, C > 0, and D > 0.
+--    (Note: An axiom about a multiplicative-additive function f on rationals is stated but not used in this proof.)
+-- 2. [Key Idea] Evaluate each expression exactly, then check its sign directly.
+-- 3. [Proof] 
+--    - Compute each value:
+--      • A = 17 − 10 = 7.
+--      • B = 11 − 8 = 3.
+--      • C = 7 − 6 = 1.
+--      • D = 7 − 2 − 3 = 5 − 3 = 2.
+--      • E = 10 − 11 = −1.
+--    - From these exact values, conclude the signs:
+--      • E = −1 < 0.
+--      • A = 7 > 0, B = 3 > 0, C = 1 > 0, D = 2 > 0.
+--    - In the Lean code, each equality (for A–E) is proved by straightforward simplification,
+--      and each inequality then follows immediately from these computed constants.
+-- 4. [Conclusion] E is negative, and A, B, C, D are all positive:
+--    E < 0, and A > 0, B > 0, C > 0, D > 0.

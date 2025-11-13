@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] No Lean4 code was provided, so there is no theorem or statement to restate.
+-- 2. [Key Idea] Translation requires the specific Lean4 proof to identify the statement, strategy, and steps.
+-- 3. [Proof] Cannot translate or reconstruct a proof because the necessary Lean4 code is missing.
+-- 4. [Conclusion] Please provide the Lean4 code so I can translate it into a clear English explanation following the requested format.

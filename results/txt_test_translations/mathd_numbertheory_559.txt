@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find a positive natural number X such that X ≡ 2 (mod 3), and there exists a natural number Y with Y ≡ 4 (mod 5) and X and Y have the same last digit (i.e., X % 10 = Y % 10).
+-- 2. [Key Idea] Exhibit a concrete example. Take X = 14, which satisfies 14 ≡ 2 (mod 3) and has last digit 4. Then choose Y = 4, which satisfies Y ≡ 4 (mod 5) and has the same last digit as X.
+-- 3. [Proof] We compute simple modular remainders. First, 14 > 0. Next, 14 % 3 = 2. Also, 14 % 10 = 4, so the last digit of 14 is 4. Take Y = 4; then Y % 5 = 4 and Y % 10 = 4. Therefore, X % 10 = Y % 10 holds with X = 14 and Y = 4. The intermediate computations like 4 % 3 = 1 and 9 % 3 = 0 are routine and not essential to the final construction.
+-- 4. [Conclusion] Such an X exists; for example, X = 14 works, with Y = 4 witnessing the last-digit and mod-5 conditions.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 14 % 3 = 2, and there exists a natural number Y such that Y % 5 = 4 and 14 % 10 = Y % 10.
+-- 2. [Key Idea] Verify the congruence for 14 directly and choose Y = 4 to match the last digit and the mod-5 condition.
+-- 3. [Proof] Direct calculation gives 14 % 3 = 2. Let Y = 4; then Y % 5 = 4 and 14 % 10 = 4 = Y % 10. This provides the required witness.
+-- 4. [Conclusion] Both statements hold: 14 ≡ 2 (mod 3), and with Y = 4, the last-digit and mod-5 conditions are satisfied.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that the sum S = 2010 + 2011 + … + 4018 is divisible by 2009.
+-- 2. [Key Idea] View the sum as an arithmetic progression with 2009 terms, or reduce each term modulo 2009 to see the terms cover a complete set of residues, forcing a factor of 2009.
+-- 3. [Proof] Method 1 (arithmetic progression): The number of terms is n = 4018 − 2010 + 1 = 2009. The average of the first and last terms is (2010 + 4018)/2 = 3014. Hence S = n × average = 2009 × 3014, so S is a multiple of 2009. Method 2 (modular residues): Reducing each term modulo 2009 gives 2010 ≡ 1, 2011 ≡ 2, …, 4017 ≡ 2008, and 4018 ≡ 0 (mod 2009). Thus S ≡ 1 + 2 + … + 2008 + 0 (mod 2009). The sum 1 + … + 2008 equals 2008·2009/2, which is divisible by 2009; therefore S ≡ 0 (mod 2009).
+-- 4. [Conclusion] The sum S is divisible by 2009; equivalently, S ≡ 0 (mod 2009).

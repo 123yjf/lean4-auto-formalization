@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given three shifted quadratic sums of real numbers x₁,…,x₇:
+--    S₀ = Σ xᵢ·(i)² = 1, S₁ = Σ xᵢ·(i+1)² = 12, S₂ = Σ xᵢ·(i+2)² = 123. Compute S₃ = Σ xᵢ·(i+3)².
+-- 2. [Key Idea] Express (i+3)² as a linear combination of i², (i+1)², and (i+2)². The same coefficients then linearly combine S₀, S₁, S₂ to give S₃.
+-- 3. [Proof] Define Sₖ = Σ_{i=1}^{7} xᵢ·(i+k)². We seek constants a, b, c with (i+3)² = a·i² + b·(i+1)² + c·(i+2)² for all integers i.
+--    Expand both sides:
+--    Left: (i+3)² = i² + 6i + 9.
+--    Right: a·i² + b(i² + 2i + 1) + c(i² + 4i + 4) = (a + b + c)i² + (2b + 4c)i + (b + 4c).
+--    Match coefficients:
+--      a + b + c = 1
+--      2b + 4c = 6
+--      b + 4c = 9
+--    Solve: from 2b + 4c = 6, we get b + 2c = 3. Subtracting from b + 4c = 9 gives 2c = 6, so c = 3. Then b = 3 − 2c = −3, and a = 1 − b − c = 1.
+--    Hence (i+3)² = 1·i² − 3·(i+1)² + 3·(i+2)². Summing with weights xᵢ yields S₃ = 1·S₀ − 3·S₁ + 3·S₂ = 1 − 36 + 369 = 334.
+-- 4. [Conclusion] The desired sum is Σ xᵢ·(i+3)² = 334.

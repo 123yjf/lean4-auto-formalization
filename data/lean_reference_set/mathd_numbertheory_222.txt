@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given gcd(a, b) = 8, lcm(a, b) = 3720, and a = 120, find b.
+-- 2. [Key Idea] For any positive integers a and b, we have a·b = gcd(a, b)·lcm(a, b). Solve for b using this identity, then verify by checking prime factorizations.
+-- 3. [Proof] Using the product formula: 120·b = 8·3720, so b = (8·3720)/120 = 248. Verification by prime factors: 120 = 2^3·3·5 and 248 = 2^3·31. Hence gcd(120, 248) = 2^3 = 8 and lcm(120, 248) = 2^3·3·5·31 = 3720. Both conditions are satisfied.
+-- 4. [Conclusion] The second number is 248.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate ((1/4)^(n+1)) * 2^(2n) for n = 11 and verify that the value is 1/4.
+-- 2. [Key Idea] Rewrite 1/4 as 2^(-2), then use exponent rules to combine terms. The n-dependent parts cancel, leaving a constant result.
+-- 3. [Proof] For n = 11 (and in fact for any integer n): ((1/4)^(n+1)) * 2^(2n) = (2^(-2))^(n+1) * 2^(2n) = 2^(-2(n+1)) * 2^(2n) = 2^(-2n - 2) * 2^(2n). Adding exponents gives 2^((-2n - 2) + 2n) = 2^(-2) = 1/4.
+-- 4. [Conclusion] Thus, for n = 11 (indeed, for any n), ((1/4)^(n+1)) * 2^(2n) = 1/4.

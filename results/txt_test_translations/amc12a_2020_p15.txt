@@ -1,0 +1,77 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the complex number 8 equals 8: (8 : ℂ) = 8.
+-- 2. [Key Idea] This is a simple numeric identity; Lean’s norm_num tactic verifies numeral equalities and coercions automatically.
+-- 3. [Proof] The tactic computes the value and confirms both sides are the same numeral in ℂ.
+-- 4. [Conclusion] Therefore, (8 : ℂ) = 8.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (2 : ℂ)^3 = 8.
+-- 2. [Key Idea] Direct numeric computation in the complex numbers; norm_num evaluates powers of numerals.
+-- 3. [Proof] Compute 2^3 = 8; the tactic closes the goal.
+-- 4. [Conclusion] Therefore, (2 : ℂ)^3 = 8.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (84 : ℝ) = 4 * 21.
+-- 2. [Key Idea] Straightforward arithmetic with real numerals; norm_num checks integer multiplication.
+-- 3. [Proof] Compute 4 * 21 = 84; the tactic verifies the equality in ℝ.
+-- 4. [Conclusion] Therefore, (84 : ℝ) = 4 * 21.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (81 : ℝ) + 3 = 84.
+-- 2. [Key Idea] Simple addition of real numerals; norm_num confirms the sum.
+-- 3. [Proof] Compute 81 + 3 = 84; the tactic finishes the proof.
+-- 4. [Conclusion] Therefore, (81 : ℝ) + 3 = 84.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (-1 : ℝ) - 8 = -9.
+-- 2. [Key Idea] Basic subtraction with real numerals; norm_num handles signed arithmetic.
+-- 3. [Proof] Compute -1 - 8 = -9; the tactic confirms the result.
+-- 4. [Conclusion] Therefore, (-1 : ℝ) - 8 = -9.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (-9 : ℝ)^2 = 81.
+-- 2. [Key Idea] Squaring a negative real gives the square of its absolute value; norm_num computes the square.
+-- 3. [Proof] Compute (-9)^2 = 81; the tactic closes the goal.
+-- 4. [Conclusion] Therefore, (-9 : ℝ)^2 = 81.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (√3 : ℝ)^2 = 3.
+-- 2. [Key Idea] For nonnegative real a, (√a)^2 = a; use the lemma sq_sqrt with a proof that 0 ≤ 3.
+-- 3. [Proof] Provide 0 ≤ 3 (checked numerically), then rewrite using sq_sqrt to obtain (√3)^2 = 3.
+-- 4. [Conclusion] Therefore, (√3 : ℝ)^2 = 3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (84 : ℝ) > 36.
+-- 2. [Key Idea] Direct numeric comparison; norm_num decides inequalities between numerals.
+-- 3. [Proof] The tactic verifies 84 > 36.
+-- 4. [Conclusion] Therefore, (84 : ℝ) > 36.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (84 : ℝ) > 64.
+-- 2. [Key Idea] Direct numeric comparison; norm_num evaluates the inequality.
+-- 3. [Proof] The tactic checks that 84 > 64 holds.
+-- 4. [Conclusion] Therefore, (84 : ℝ) > 64.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (84 : ℝ) > 32.
+-- 2. [Key Idea] Direct numeric comparison; norm_num decides the inequality.
+-- 3. [Proof] The tactic confirms 84 > 32.
+-- 4. [Conclusion] Therefore, (84 : ℝ) > 32.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (2 : ℝ)^2 = 4.
+-- 2. [Key Idea] Simple power computation; norm_num computes squares of numerals.
+-- 3. [Proof] Compute 2^2 = 4; the tactic finishes the proof.
+-- 4. [Conclusion] Therefore, (2 : ℝ)^2 = 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (8 : ℝ)^2 = 64.
+-- 2. [Key Idea] Simple power computation; norm_num evaluates the square.
+-- 3. [Proof] Compute 8^2 = 64; the tactic closes the goal.
+-- 4. [Conclusion] Therefore, (8 : ℝ)^2 = 64.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (3 : ℝ) > 0.
+-- 2. [Key Idea] Direct numeric positivity; norm_num decides sign of numerals.
+-- 3. [Proof] The tactic verifies that 3 is positive.
+-- 4. [Conclusion] Therefore, (3 : ℝ) > 0.

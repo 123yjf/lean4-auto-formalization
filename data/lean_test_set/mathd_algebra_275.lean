@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given (11^(1/4))^(3x – 3) = 1/5, find (11^(1/4))^(6x + 2). 2. [Key Idea] Rewrite the desired exponent 6x + 2 as a simple linear combination of the known exponent 3x – 3 so the unknown x never needs to be solved. 3. [Proof] Let a = 11^(1/4). We are told a^(3x – 3) = 1/5. Notice 6x + 2 = 2(3x – 3) + 8. (*) Therefore a^(6x + 2) = a^{2(3x – 3)+8} = (a^{3x – 3})^2 · a^8 = (1/5)^2 · (11^(1/4))^8 = 1/25 · 11^2 = 121/25. 4. [Conclusion] The required value is 121/25.

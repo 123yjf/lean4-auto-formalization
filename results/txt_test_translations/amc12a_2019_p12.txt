@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let x and y be positive real numbers with x ≠ 1 and y ≠ 1. Assume ln x / ln 2 = ln 16 / ln y and x·y = 64. Prove that (ln(x/y) / ln 2)^2 = 20.
+-- 2. [Key Idea] Define p = ln x / ln 2 and q = ln y / ln 2 (i.e., base-2 logarithms of x and y). From the given relations, derive p·q = 4 and p + q = 6. Then use the identity (p − q)^2 = (p + q)^2 − 4pq and the fact that ln(x/y)/ln 2 = p − q to compute the desired square.
+-- 3. [Proof] 
+- Define p = ln x / ln 2 and q = ln y / ln 2.
+- First show p·q = 4:
+  From ln x / ln 2 = ln 16 / ln y, cross-multiplying (using ln 2 ≠ 0 and ln y ≠ 0, which hold because 2 > 0, 2 ≠ 1, y > 0, y ≠ 1) gives (ln x)(ln y) = (ln 16)(ln 2).
+  Rewrite this in terms of p and q: p·q·(ln 2)^2 = (ln 16)(ln 2). Since ln 16 = 4 ln 2, we get p·q·(ln 2)^2 = 4(ln 2)^2, and cancelling (ln 2)^2 ≠ 0 yields p·q = 4.
+- Next show p + q = 6:
+  From x·y = 64 and x, y > 0, we have ln(xy) = ln x + ln y. But ln 64 = 6 ln 2, so ln x + ln y = 6 ln 2. On the other hand, ln x + ln y = (p + q) ln 2. Cancelling ln 2 ≠ 0 gives p + q = 6.
+- Express ln(x/y)/ln 2 in terms of p and q:
+  Using ln(x/y) = ln x − ln y, we get ln(x/y)/ln 2 = p − q.
+- Compute the square:
+  Use the identity (p − q)^2 = (p + q)^2 − 4(pq). Substituting p + q = 6 and pq = 4 gives (p − q)^2 = 6^2 − 4·4 = 36 − 16 = 20.
+-- 4. [Conclusion] Since ln(x/y)/ln 2 = p − q, we conclude (ln(x/y)/ln 2)^2 = (p − q)^2 = 20, as required.

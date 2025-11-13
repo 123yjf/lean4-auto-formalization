@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] No Lean4 code was provided, so the problem cannot be identified or restated.
+-- 2. [Key Idea] Not applicable because the code snippet is missing.
+-- 3. [Proof] Not available; there is no code to translate into an English proof.
+-- 4. [Conclusion] Please provide the Lean4 code so I can translate it into a clear, structured English explanation.

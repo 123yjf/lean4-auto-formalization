@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the Diophantine equation 4x^3 − 7y^3 = 2003 has no integer solutions.
+-- 2. [Key Idea] Work modulo 7: the term 7y^3 disappears, forcing 4x^3 ≡ 1 (mod 7). Since the inverse of 4 modulo 7 is 2, this gives x^3 ≡ 2 (mod 7). But 2 is not a cubic residue modulo 7.
+-- 3. [Proof] Assume, for contradiction, that integers x, y satisfy 4x^3 − 7y^3 = 2003. Reducing modulo 7, the term 7y^3 is 0, so 4x^3 ≡ 2003 (mod 7). As 2003 ≡ 1 (mod 7), we get 4x^3 ≡ 1 (mod 7). Multiplying by the inverse of 4 modulo 7 (which is 2), we obtain x^3 ≡ 2 (mod 7). Listing cubes modulo 7: 0^3 ≡ 0, 1^3 ≡ 1, 2^3 ≡ 1, 3^3 ≡ 6, 4^3 ≡ 1, 5^3 ≡ 6, 6^3 ≡ 6, so the only cubic residues are 0, 1, and 6. Hence x^3 ≡ 2 (mod 7) is impossible, a contradiction.
+-- 4. [Conclusion] Therefore, no integers x, y can satisfy 4x^3 − 7y^3 = 2003; the equation has no integer solutions.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the value of (100^2 − 7^2)/(70^2 − 11^2) multiplied by (70 − 11)(70 + 11)/((100 − 7)(100 + 7)).
+-- 2. [Key Idea] Use the difference-of-squares factorization a^2 − b^2 = (a − b)(a + b), then observe that all factors cancel pairwise.
+-- 3. [Proof] We factor each difference of squares: 100^2 − 7^2 = (100 − 7)(100 + 7) and 70^2 − 11^2 = (70 − 11)(70 + 11). Substituting these into the expression gives [(100 − 7)(100 + 7)] / [(70 − 11)(70 + 11)] multiplied by (70 − 11)(70 + 11) / [(100 − 7)(100 + 7)]. The identical factors in numerator and denominator cancel completely, leaving 1.
+-- 4. [Conclusion] The entire expression simplifies to 1 (choice A).

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the remainder when 194 is divided by 11.
+-- 2. [Key Idea] Subtract or add multiples of 11 until a number in the range 0–10 is reached.
+-- 3. [Proof] Let q = ⌊194/11⌋ be the quotient and r the remainder, so 194 = 11q + r with 0 ≤ r ≤ 10. Compute: 11 × 17 = 187. Hence 194 − 187 = 7, giving 194 = 11·17 + 7 with 0 ≤ 7 ≤ 10. Therefore r = 7.
+-- 4. [Conclusion] The remainder of 194 (mod 11) is 7.

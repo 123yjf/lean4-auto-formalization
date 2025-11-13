@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers a and b, both irrational, such that a^b is rational.
+-- 2. [Key Idea] Use the classical “sqrt(2) to the sqrt(2)” trick: either (√2)^(√2) is rational (then take a = b = √2), or it is irrational (then take a = (√2)^(√2) and b = √2, and compute a^b = 2).
+-- 3. [Proof] First, note that √2 is irrational. Consider whether (√2)^(√2) is rational.
+--    - If (√2)^(√2) equals some rational q, then choosing a = √2 and b = √2 works: both a and b are irrational, and a^b = q is rational.
+--    - Otherwise, (√2)^(√2) is irrational. Let a = (√2)^(√2) and b = √2. Then a and b are irrational. To see that a^b is rational, compute:
+--      • Since √2 > 0, we can use the power law for real exponents to get ((√2)^(√2))^(√2) = (√2)^(√2 · √2).
+--      • But √2 · √2 = 2, so (√2)^(√2 · √2) = (√2)^2.
+--      • And (√2)^2 = 2, which is rational. Thus a^b = 2.
+-- 4. [Conclusion] In either case we obtain irrational a and b with a^b rational: either (a, b) = (√2, √2) if (√2)^(√2) is rational, or (a, b) = ((√2)^(√2), √2) otherwise; in the second case a^b = 2.

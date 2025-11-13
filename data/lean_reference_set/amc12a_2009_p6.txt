@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given P = 2^m and Q = 3^n, determine which listed expression is always equal to 12^(mn).
+-- 2. [Key Idea] Express each candidate in the form 2^(...) * 3^(...) and compare its exponents with those of 12^(mn) = (2^2 * 3)^(mn) = 2^(2mn) * 3^(mn).
+-- 3. [Proof] For option (E), P^(2n) * Q^m = (2^m)^(2n) * (3^n)^m = 2^(2mn) * 3^(mn) = 12^(mn), so it matches exactly. The other options give mismatched exponents: (A) P^2 * Q = 2^(2m) * 3^n; (B) P^n * Q^m = 2^(mn) * 3^(mn); (C) P^n * Q^(2m) = 2^(mn) * 3^(2mn); (D) P^(2m) * Q^n = 2^(2m^2) * 3^(n^2). None of these equals 2^(2mn) * 3^(mn) for all m, n.
+-- 4. [Conclusion] Only P^(2n) * Q^m (choice E) is identically equal to 12^(mn).

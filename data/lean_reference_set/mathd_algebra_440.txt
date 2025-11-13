@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given that Jasmine drinks 1.5 pints of water every 3 miles, find how much water she will drink over the next 10 miles.
+-- 2. [Key Idea] Water consumption is directly proportional to distance traveled.
+-- 3. [Proof] Method A (Rate per mile): Compute the rate as 1.5 pints ÷ 3 miles = 0.5 pint per mile. Over 10 miles, she drinks 0.5 × 10 = 5 pints. Method B (Scaling): The 10-mile distance is (10 ÷ 3) times the 3-mile segment. So the water is 1.5 × (10 ÷ 3) = 15 ÷ 3 = 5 pints.
+-- 4. [Conclusion] Jasmine will drink 5 pints of water over the next 10 miles.

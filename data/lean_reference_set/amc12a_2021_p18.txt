@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a function f on positive rational numbers satisfying f(ab) = f(a) + f(b) for all positive rationals a, b, and f(p) = p for every prime number p. Among five specific positive rational numbers, we must determine which one is mapped to a negative value by f.
+-- 2. [Key Idea] Because f turns products into sums and is specified on primes, writing any positive rational as a product of prime powers in the numerator divided by a product of prime powers in the denominator shows that f equals the sum of prime bases in the numerator weighted by their exponents, minus the corresponding sum for the denominator.
+-- 3. [Proof] Write a positive rational x uniquely as x = p₁^{α₁} ··· p_k^{α_k} / q₁^{β₁} ··· q_m^{β_m} with α_i, β_j ∈ ℕ. Using f(ab) = f(a) + f(b) repeatedly and f(p) = p, we get f(p^n) = n f(p) = n p, hence
+f(x) = α₁ p₁ + ··· + α_k p_k − (β₁ q₁ + ··· + β_m q_m).
+Evaluate this for each candidate:
+A. x = 17 / 2⁵: f(x) = 17 − 5·2 = 7 > 0.
+B. x = 11 / 2⁴: f(x) = 11 − 4·2 = 3 > 0.
+C. x = 7 / 3²: f(x) = 7 − 2·3 = 1 > 0.
+D. x = 7 / (2·3): f(x) = 7 − 2 − 3 = 2 > 0.
+E. x = 5² / 11: f(x) = 2·5 − 11 = 10 − 11 = −1 < 0.
+Only option E yields a negative value.
+-- 4. [Conclusion] f(x) is negative precisely for x = 25/11, i.e., choice (E).

@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist two real numbers x₁ and x₂ such that (x₁ + 3)^2 = 121 and (x₂ + 3)^2 = 121, with x₁ ≠ x₂, and whose sum is x₁ + x₂ = -6.
+
+-- 2. [Key Idea] Provide explicit witnesses x₁ = 8 and x₂ = -14, then verify directly:
+- (8 + 3)^2 = 121 and (-14 + 3)^2 = 121,
+- 8 ≠ -14,
+- 8 + (-14) = -6.
+All checks are simple arithmetic.
+
+-- 3. [Proof] Take x₁ = 8 and x₂ = -14.
+- Compute (x₁ + 3)^2 = (8 + 3)^2 = 11^2 = 121.
+- Compute (x₂ + 3)^2 = (-14 + 3)^2 = (-11)^2 = 121.
+- They are distinct since 8 ≠ -14.
+- Their sum is 8 + (-14) = -6.
+Additionally, the auxiliary lemmas record the same verifications: one lemma states (8 + 3)^2 = 121 and (-14 + 3)^2 = 121, and another states 8 + (-14) = -6.
+
+-- 4. [Conclusion] Therefore, the choices x₁ = 8 and x₂ = -14 satisfy all the required conditions, so the desired real numbers exist.

@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the maximum value of f(t) = t(2^t − 3t) / 4^t for all real t.
+-- 2. [Key Idea] Factor the expression so that it depends only on the single quantity x = t / 2^t; this reduces the problem to maximizing a simple quadratic in x.
+-- 3. [Proof] Define x = t / 2^t, which is well defined and continuous for all real t. Rewrite f(t) using 2^(-t) and 2^(-2t):
+   f(t) = t·2^(−t) − 3t^2·2^(−2t) = (t/2^t) − 3(t/2^t)^2 = x − 3x^2.
+   Step 1 (Maximize the quadratic): The function g(x) = x − 3x^2 is a concave (downward-opening) parabola. Its vertex occurs where g′(x) = 1 − 6x = 0, i.e., at x = 1/6. The maximal value there is g(1/6) = 1/12. Thus, wherever x can take the value 1/6, the corresponding value of f(t) is 1/12, and no larger value is possible.
+   Step 2 (Show x = 1/6 is attainable): Consider φ(t) = t / 2^t. This function is continuous on ℝ, and φ(0) = 0 while φ(1) = 1/2 > 1/6. By the Intermediate Value Theorem, there exists some t₀ in (0, 1) such that φ(t₀) = 1/6. Therefore, the value x = 1/6 occurs for a real t, and the bound 1/12 is achieved at that t₀ (numerically, t ≈ 0.187).
+-- 4. [Conclusion] The maximum value of t(2^t − 3t)/4^t is 1/12 (answer C).

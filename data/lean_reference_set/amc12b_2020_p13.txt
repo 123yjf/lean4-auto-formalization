@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate √(log₂6 + log₃6) and identify it among the given choices.
+-- 2. [Key Idea] Set a = log₂3. By the change-of-base formula, log₃2 = 1/a. Rewrite the sum inside the square root so that it becomes (√a + √(1/a))², whose square root is √a + √(1/a).
+-- 3. [Proof] Let a = log₂3. Then log₃2 = 1 / log₂3 = 1/a. Now,
+   log₂6 + log₃6 = log₂(2·3) + log₃(2·3) = (1 + log₂3) + (log₃2 + 1) = 1 + a + 1/a + 1 = 2 + a + 1/a.
+   Consider (√log₂3 + √log₃2)² = (√a + √(1/a))² = a + 1/a + 2 = 2 + a + 1/a.
+   Thus the expression under the square root equals (√log₂3 + √log₃2)², so √(log₂6 + log₃6) = √log₂3 + √log₃2.
+-- 4. [Conclusion] Therefore, the value is √(log₂3) + √(log₃2), which corresponds to option (D).

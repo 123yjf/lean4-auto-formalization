@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given four times A, B, C, D (in minutes) satisfying:
+--    (i) B + C + D = 3A
+--    (ii) A + C + D = 4B
+--    (iii) A + B + D = 2C
+--    (iv) 8A + 10B + 6C = 24
+--    We need to find D as a reduced fraction and show that the sum of its numerator and denominator is 28.
+-- 2. [Key Idea] Use the first three equations to express B, C, and D in terms of A. Then substitute these expressions into the fourth equation to solve for A. Finally, compute D and add its numerator and denominator.
+-- 3. [Proof] 
+--    From (i), solve for D: D = 3A − B − C.
+--    Substitute this into (ii): A + C + (3A − B − C) = 4B, which simplifies to 4A − 5B = 0, so B = (4/5)A.
+--    Substitute the expression for D into (iii): A + B + (3A − B − C) = 2C, which simplifies to 4A − 3C = 0, so C = (4/3)A.
+--    Now compute D using these: D = 3A − (4/5)A − (4/3)A = A(3 − 4/5 − 4/3) = A(45/15 − 12/15 − 20/15) = (13/15)A.
+--    Use (iv) to determine A: 8A + 10B + 6C = 24. Substituting B and C in terms of A gives 8A + 10·(4/5)A + 6·(4/3)A = 8A + 8A + 8A = 24A = 24, hence A = 1.
+--    Therefore, D = (13/15)·1 = 13/15.
+-- 4. [Conclusion] D equals 13/15 minutes, which is in lowest terms, and the sum of its numerator and denominator is 13 + 15 = 28.

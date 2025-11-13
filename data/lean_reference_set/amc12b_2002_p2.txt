@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate (3x − 2)(4x + 1) − (3x − 2)·4x + 1 at x = 4.
+-- 2. [Key Idea] Factor out the common factor (3x − 2) from the first two terms to reduce the expression to something linear in x.
+-- 3. [Proof] We have:
+   (3x − 2)(4x + 1) − (3x − 2)·4x + 1
+   = (3x − 2)[(4x + 1) − 4x] + 1   (factor out 3x − 2)
+   = (3x − 2)(1) + 1
+   = 3x − 2 + 1
+   = 3x − 1.
+   Substituting x = 4 gives 3(4) − 1 = 12 − 1 = 11.
+-- 4. [Conclusion] The expression equals 11.

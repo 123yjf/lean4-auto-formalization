@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given that (11^(1/4))^(3x − 3) = 1/5 and asked to find the value of (11^(1/4))^(6x + 2).
+-- 2. [Key Idea] Use exponent rules to avoid solving for x directly: express the exponent 6x + 2 in terms of the known exponent 3x − 3 so we can substitute the given value.
+-- 3. [Proof] Let a = 11^(1/4). The hypothesis says a^(3x − 3) = 1/5. Notice that 6x + 2 = 2(3x − 3) + 8. Therefore,
+   a^(6x + 2) = a^{2(3x − 3) + 8} = (a^(3x − 3))^2 · a^8.
+   Using the given value, this is (1/5)^2 · (11^(1/4))^8. Compute a^8: (11^(1/4))^8 = 11^(8/4) = 11^2 = 121. Thus the product is (1/25) · 121 = 121/25.
+-- 4. [Conclusion] The value of (11^(1/4))^(6x + 2) is 121/25.

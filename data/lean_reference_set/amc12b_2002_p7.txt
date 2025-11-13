@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are to find three consecutive positive integers whose product equals eight times their sum, and then compute the sum of the squares of those three integers.
+-- 2. [Key Idea] Let the middle integer be n. Then the three integers are n − 1, n, n + 1. Their product simplifies to n(n² − 1), and their sum to 3n. Setting product = 8 × sum yields a simple quadratic in n.
+-- 3. [Proof] Assume the integers are n − 1, n, n + 1 with n > 0. Their product is (n − 1)n(n + 1) = n(n² − 1). Their sum is (n − 1) + n + (n + 1) = 3n. The condition “product equals eight times the sum” gives n(n² − 1) = 8·3n = 24n. Since n ≠ 0, divide both sides by n to get n² − 1 = 24, so n² = 25 and hence n = 5. Therefore, the three integers are 4, 5, 6. Their squares sum to 4² + 5² + 6² = 16 + 25 + 36 = 77.
+-- 4. [Conclusion] The sum of the squares is 77.

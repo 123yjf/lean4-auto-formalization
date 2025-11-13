@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given (1 + sin t)(1 + cos t)=5/4, write (1 − sin t)(1 − cos t) in the form m/n − √k with gcd(m,n)=1 and find k+m+n.
+-- 2. [Key Idea] Introduce x = sin t + cos t to turn the condition into a quadratic in x; this also gives sin t cos t from x via sin²t + cos²t = 1, after which (1 − sin t)(1 − cos t) = 1 − x + sin t cos t follows directly.
+-- 3. [Proof] Let s = sin t and c = cos t. From (1 + s)(1 + c) = 5/4 we have s + c + sc = 1/4. Set x = s + c. Using s² + c² = 1, we get x² = s² + c² + 2sc = 1 + 2sc, so sc = (x² − 1)/2. Substituting into s + c + sc = 1/4 gives x + (x² − 1)/2 = 1/4, i.e. 2x² + 4x − 3 = 0. Solving yields x = (−2 ± √10)/2. Since x = s + c lies in [−√2, √2], we choose x = (−2 + √10)/2. Then sc = (x² − 1)/2 = (5 − 2√10)/4. Therefore (1 − s)(1 − c) = 1 − x + sc = 1 − (−2 + √10)/2 + (5 − 2√10)/4 = 13/4 − √10. This is of the form m/n − √k with (m, n, k) = (13, 4, 10) and gcd(m, n) = 1.
+-- 4. [Conclusion] k + m + n = 10 + 13 + 4 = 27, so the required sum is 027.

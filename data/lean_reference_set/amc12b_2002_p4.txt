@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the unique positive integer n such that 1/2 + 1/3 + 1/7 + 1/n is an integer, and determine which listed claim about n is false.
+-- 2. [Key Idea] Combine the fixed fractions over the common denominator 42: 1/2 + 1/3 + 1/7 = 41/42. For the total to be an integer, 1/n must contribute exactly 1/42, forcing n = 42.
+-- 3. [Proof] Let S = 1/2 + 1/3 + 1/7 + 1/n, and suppose S is an integer. Compute the fixed part:
+   - 1/2 = 21/42, 1/3 = 14/42, 1/7 = 6/42, so their sum is 41/42.
+   - Thus S = 41/42 + 1/n = k for some integer k.
+   - Rearranging gives 1/n = k − 41/42 = (42k − 41)/42. Since 1/n > 0, we must have k ≥ 1.
+   - If k = 1, then 1/n = (42 − 41)/42 = 1/42, so n = 42.
+   - If k ≥ 2, then 1/n ≥ (84 − 41)/42 = 43/42 > 1, which is impossible for positive integer n.
+   - Therefore, the only solution is n = 42.
+   Now check the listed statements: 2 | 42, 3 | 42, 6 | 42, and 7 | 42 are all true, while the claim n > 84 is false.
+-- 4. [Conclusion] The sum is an integer only when n = 42. All listed divisibility statements hold, and the sole false statement is n > 84.

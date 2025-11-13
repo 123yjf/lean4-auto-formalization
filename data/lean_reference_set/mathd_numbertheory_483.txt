@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that the 100th Fibonacci number leaves a remainder of 3 when divided by 4.
+-- 2. [Key Idea] The Fibonacci sequence modulo 4 is periodic (Pisano period 6). Therefore, F₁₀₀ mod 4 equals F₄ mod 4.
+-- 3. [Proof] Define F₁ = F₂ = 1 and F_{n+2} = F_{n+1} + F_n. Working modulo 4, the sequence begins: 1, 1, 2, 3, 1, 0, 1, 1, … After six steps, the pair (F₇, F₈) returns to (1, 1), so the period modulo 4 is 6. Thus F_{n+6} ≡ F_n (mod 4). Since 100 ≡ 4 (mod 6), we have F₁₀₀ ≡ F₄ (mod 4). From the list, F₄ ≡ 3 (mod 4). Hence F₁₀₀ ≡ 3 (mod 4).
+-- 4. [Conclusion] The 100th Fibonacci number leaves remainder 3 upon division by 4.

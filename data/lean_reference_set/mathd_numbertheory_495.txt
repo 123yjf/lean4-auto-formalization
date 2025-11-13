@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest possible value of lcm(a, b) where a and b are positive integers ending in 2 and 4 respectively, and gcd(a, b) = 6.
+-- 2. [Key Idea] Factor out the common divisor 6 by writing a = 6x and b = 6y with gcd(x, y) = 1. Then determine the constraints on x and y from the last digits of a and b, and minimize the product xy under these constraints. Since lcm(a, b) = ab / gcd(a, b) = 6xy, minimizing xy minimizes the lcm.
+-- 3. [Proof] 
+   Step 1. Because gcd(a, b) = 6, write a = 6x and b = 6y with gcd(x, y) = 1.
+   Step 2. Impose the last-digit conditions:
+   - a ends in 2 means 6x ≡ 2 (mod 10). Dividing by 2 gives 3x ≡ 1 (mod 5), so x ≡ 2 (mod 5).
+   - b ends in 4 means 6y ≡ 4 (mod 10). Dividing by 2 gives 3y ≡ 2 (mod 5), so y ≡ 4 (mod 5).
+   Thus x takes values 2, 7, 12, … and y takes values 4, 9, 14, …, with gcd(x, y) = 1.
+   Step 3. Minimize xy:
+   - The pair (x, y) = (2, 4) is invalid since gcd(2, 4) = 2.
+   - The next candidate (2, 9) satisfies gcd(2, 9) = 1 and gives xy = 18.
+   - Any other admissible pair has at least one component ≥ 7, so xy ≥ 7·4 = 28 > 18.
+   Therefore the minimal xy is 18.
+   Step 4. Compute the least common multiple:
+   lcm(a, b) = ab / gcd(a, b) = (6x)(6y) / 6 = 6xy. With xy = 18, this is 6·18 = 108.
+-- 4. [Conclusion] The smallest possible value of lcm(a, b) is 108.

@@ -1,0 +1,44 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers x and y such that line1 x y and line2 x y both hold and, moreover, x + y = 4. Here line1 x y means 3*y = x, and line2 x y means 2*x + 5*y = 11.
+-- 2. [Key Idea] Exhibit a concrete solution (x, y) = (3, 1) and verify all three conditions directly by computation.
+-- 3. [Proof] Take x = 3 and y = 1. Then:
+--    - For line1: 3*y = 3*1 = 3, which equals x, so line1 holds.
+--    - For line2: 2*x + 5*y = 2*3 + 5*1 = 6 + 5 = 11, so line2 holds.
+--    - For the sum: x + y = 3 + 1 = 4.
+-- 4. [Conclusion] Therefore, there exist real numbers x and y (namely x = 3, y = 1) satisfying line1, line2, and x + y = 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] If line1 x y holds (i.e., 3*y = x), prove that x = 3*y.
+-- 2. [Key Idea] Unfold the definition and reorient the equality.
+-- 3. [Proof] By definition, line1 x y means 3*y = x. Rewriting this equality gives x = 3*y.
+-- 4. [Conclusion] From line1 x y, it follows that x = 3*y.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show there exists a real number y such that 2*(3*y) + 5*y = 11 and y = 1.
+-- 2. [Key Idea] Provide y = 1 as a witness and check the equation directly.
+-- 3. [Proof] Let y = 1. Then 2*(3*y) + 5*y = 2*(3*1) + 5*1 = 6 + 5 = 11, and clearly y = 1 holds.
+-- 4. [Conclusion] Such a y exists; specifically, y = 1 satisfies the given equation.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show there exists a real number x such that x = 3*1 and x = 3.
+-- 2. [Key Idea] Provide x = 3 as a witness and note that 3*1 = 3.
+-- 3. [Proof] Let x = 3. Then x = 3*1 by computation (since 3*1 = 3), and also x = 3 holds by definition.
+-- 4. [Conclusion] Such an x exists; specifically, x = 3 satisfies both equalities.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 3 + 1 = 4 in the real numbers.
+-- 2. [Key Idea] Direct arithmetic.
+-- 3. [Proof] Compute 3 + 1 = 4.
+-- 4. [Conclusion] The identity 3 + 1 = 4 holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that both line1 3 1 and line2 3 1 hold.
+-- 2. [Key Idea] Check each equation with direct computation.
+-- 3. [Proof] For line1: 3*1 = 3, which matches x = 3. For line2: 2*3 + 5*1 = 6 + 5 = 11. Both statements are true.
+-- 4. [Conclusion] The pair (3, 1) satisfies both line1 and line2.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show there exist real numbers x and y such that x − 3*y = 0, 2*x + 5*y = 11, and additionally x = 3 and y = 1.
+-- 2. [Key Idea] Provide the specific pair (x, y) = (3, 1) and verify all conditions by calculation.
+-- 3. [Proof] Take x = 3 and y = 1. Then x − 3*y = 3 − 3*1 = 0, 2*x + 5*y = 2*3 + 5*1 = 6 + 5 = 11, and clearly x = 3 and y = 1.
+-- 4. [Conclusion] The pair (3, 1) meets all the stated conditions, so such x and y exist.

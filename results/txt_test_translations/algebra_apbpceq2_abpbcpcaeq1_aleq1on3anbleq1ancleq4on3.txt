@@ -1,0 +1,49 @@
+-- Proof content:
+-- 1. [Problem Restatement] From the constraint a + b + c = 2, show that b + c = 2 − a.
+-- 2. [Key Idea] Rearrange the given linear equation.
+-- 3. [Proof] Starting from a + b + c = 2, subtract a from both sides to get b + c = 2 − a. The proof uses simplification to read the constraint and linear arithmetic to rearrange.
+-- 4. [Conclusion] Therefore, b + c = 2 − a.
+
+-- Proof content:
+-- 1. [Problem Restatement] From the constraint ab + bc + ca = 1, show that a(b + c) + bc = 1. (The sum constraint a + b + c = 2 is not used here.)
+-- 2. [Key Idea] Rewrite a(b + c) + bc as ab + ac + bc, which is exactly the given product constraint.
+-- 3. [Proof] Expand a(b + c) + bc to ab + ac + bc and use the hypothesis ab + bc + ca = 1. A ring-normalization step confirms the expressions match.
+-- 4. [Conclusion] Therefore, a(b + c) + bc = 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] Given a + b + c = 2 and ab + bc + ca = 1, show that bc = 1 − 2a + a^2.
+-- 2. [Key Idea] Substitute b + c = 2 − a into the identity a(b + c) + bc = 1 and solve for bc.
+-- 3. [Proof] From the first result, b + c = 2 − a. From the second result, a(b + c) + bc = 1. Substituting gives a(2 − a) + bc = 1, i.e., 2a − a^2 + bc = 1, hence bc = 1 − 2a + a^2. Ring normalization and linear arithmetic justify the rearrangement.
+-- 4. [Conclusion] Therefore, bc = 1 − 2a + a^2.
+
+-- Proof content:
+-- 1. [Problem Restatement] Under the same constraints, show that bc = (1 − a)^2.
+-- 2. [Key Idea] Recognize 1 − 2a + a^2 as (1 − a)^2.
+-- 3. [Proof] From the previous theorem, bc = 1 − 2a + a^2. This is the binomial square (1 − a)^2. A ring-normalization step verifies the identity.
+-- 4. [Conclusion] Therefore, bc = (1 − a)^2.
+
+-- Proof content:
+-- 1. [Problem Restatement] Assume a + b + c = 2 and a ≤ b ≤ c. Show that a ≤ 2/3 and c ≥ 2/3. (The product constraint is not used.)
+-- 2. [Key Idea] Prove each bound by contradiction using the ordering a ≤ b ≤ c and the identity b + c = 2 − a (or a + b = 2 − c).
+-- 3. [Proof] 
+--    - For a ≤ 2/3: Suppose a > 2/3. Then from b + c = 2 − a we get b + c < 4/3. But since b ≥ a and c ≥ b ≥ a, we have b + c ≥ 2a, so 2a < 4/3, i.e., a < 2/3, a contradiction.
+--    - For c ≥ 2/3: Suppose c < 2/3. Then from a + b = 2 − c we get a + b > 4/3. But a ≤ b ≤ c implies a + b ≤ 2c, so 2c > 4/3, i.e., c > 2/3, a contradiction.
+-- 4. [Conclusion] Therefore, a ≤ 2/3 and c ≥ 2/3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show 1/3 < 2/3.
+-- 2. [Key Idea] Direct numeric comparison of rational numbers.
+-- 3. [Proof] Evaluate and compare the fractions; a numeric normalization step confirms the inequality.
+-- 4. [Conclusion] Therefore, 1/3 < 2/3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show 2/3 < 4/3.
+-- 2. [Key Idea] Direct numeric comparison of rational numbers.
+-- 3. [Proof] Evaluate and compare the fractions; a numeric normalization step confirms the inequality.
+-- 4. [Conclusion] Therefore, 2/3 < 4/3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show 0 < 1/3.
+-- 2. [Key Idea] Direct numeric positivity of a positive fraction.
+-- 3. [Proof] Evaluate the fraction; a numeric normalization step confirms the inequality.
+-- 4. [Conclusion] Therefore, 0 < 1/3.

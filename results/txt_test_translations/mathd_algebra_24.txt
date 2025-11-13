@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a real number D such that 40 = 0.02 · D and D = 2000.
+-- 2. [Key Idea] Explicitly choose D = 2000 and verify both required equalities.
+-- 3. [Proof] Let D = 2000. Then 0.02 · D = 0.02 · 2000 = 40 by straightforward arithmetic. The second condition D = 2000 holds by definition of D. Thus both conditions are satisfied for this choice of D.
+-- 4. [Conclusion] Therefore, there exists a real number D (namely D = 2000) such that 40 = 0.02 · D and D = 2000.

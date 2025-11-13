@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find (and add) the two real solutions of (x + 3)² = 121. 2. [Key Idea] Solve the quadratic by square-rooting both sides: x + 3 equals either 11 or –11. 3. [Proof] Given (x+3)² = 121, take square roots: x + 3 = 11 or x + 3 = –11. Thus x₁ = 11 – 3 = 8, x₂ = –11 – 3 = –14. Their sum is x₁ + x₂ = 8 + (–14) = –6. 4. [Conclusion] The sum of the two solutions is –6.

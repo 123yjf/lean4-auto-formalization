@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the number x such that 5 plus 500% of 10 equals 110% of x.
+-- 2. [Key Idea] Convert the percentages to decimals and solve the resulting linear equation.
+-- 3. [Proof] Since 500% equals 5, 500% of 10 is 5 × 10 = 50. Therefore, 5 + 500% of 10 = 5 + 50 = 55. Also, 110% of x is 1.10 x. Setting these equal gives 1.10 x = 55, so x = 55 / 1.10 = 50.
+-- 4. [Conclusion] The required number is x = 50.

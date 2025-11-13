@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists exactly one rational number x such that
+--    2 + 1 / (1 + 1 / (2 + 2 / (3 + x))) = 144/53.
+
+-- 2. [Key Idea] Prove existence by directly substituting a candidate value x = 3/4 and calculating the nested rational expression. Prove uniqueness by showing that any rational y satisfying the same equation must equal 3/4. Conceptually, uniqueness comes from inverting the nested expression step by step (each denominator is nonzero), which forces a single value for x.
+
+-- 3. [Proof]
+--    Existence: Take x = 3/4. A direct computation of the nested expression at this x (carried out in the lemma named direct_calculation) gives
+--    2 + 1 / (1 + 1 / (2 + 2 / (3 + 3/4))) = 144/53.
+--    Hence a solution exists.
+
+--    Uniqueness: Let y be any rational number satisfying
+--    2 + 1 / (1 + 1 / (2 + 2 / (3 + y))) = 144/53.
+--    The lemma uniqueness_result states that any such y must equal 3/4. Therefore, no other rational value can satisfy the equation.
+
+-- 4. [Conclusion] There exists exactly one rational number solving the equation, namely x = 3/4.

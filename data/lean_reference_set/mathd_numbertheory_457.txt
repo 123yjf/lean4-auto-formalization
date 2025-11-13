@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the smallest positive integer n such that 80325 divides n!.
+-- 2. [Key Idea] Factor 80325 into primes and ensure n! contains at least those prime powers. Use Legendre’s formula to count the exponent of each prime in n!. Since 17 is a prime factor of 80325, we must have n ≥ 17.
+-- 3. [Proof] First factor 80325: 80325 = 3^3 * 5^2 * 7 * 17. For a prime p, the exponent of p in n! is given by floor(n/p) + floor(n/p^2) + floor(n/p^3) + ... .
+   - Take n = 17. Then:
+     - For p = 3: floor(17/3) + floor(17/9) = 5 + 1 = 6 ≥ 3.
+     - For p = 5: floor(17/5) = 3 ≥ 2.
+     - For p = 7: floor(17/7) = 2 ≥ 1.
+     - For p = 17: floor(17/17) = 1 ≥ 1.
+     Therefore 17! contains at least 3 factors of 3, 2 factors of 5, one factor of 7, and one factor of 17; hence 80325 divides 17!.
+   - For minimality, if n < 17 then n! contains no factor 17, so 80325 cannot divide n!.
+-- 4. [Conclusion] The least positive integer n with 80325 dividing n! is n = 17.

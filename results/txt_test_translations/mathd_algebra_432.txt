@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for any real number x, (x + 3) * (2x − 6) simplifies to 2x^2 − 18.
+-- 2. [Key Idea] Expand the product using the distributive property (over addition and subtraction), then combine like terms; the linear x-terms cancel.
+-- 3. [Proof] First distribute over the sum: (x + 3)(2x − 6) = x(2x − 6) + 3(2x − 6). Next expand each product over the subtraction:
+--    - x(2x − 6) = 2x^2 − 6x,
+--    - 3(2x − 6) = 6x − 18.
+--    Adding these gives (2x^2 − 6x) + (6x − 18) = 2x^2 − 18, since −6x and +6x cancel.
+-- 4. [Conclusion] Therefore, (x + 3)(2x − 6) = 2x^2 − 18 for all real x.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a rectangle with area 180 square feet and perimeter 54 feet, determine the square of the length of its diagonal.
+-- 2. [Key Idea] Let the side lengths be a and b. From the area and perimeter we get ab = 180 and a + b = 27. The diagonal d satisfies d² = a² + b², which can be found using (a + b)² = a² + b² + 2ab.
+-- 3. [Proof] Let a, b > 0 be the side lengths. The area gives ab = 180. The perimeter 2(a + b) = 54 gives a + b = 27. The diagonal squared is d² = a² + b². Using (a + b)² = a² + b² + 2ab, we have a² + b² = (a + b)² − 2ab = 27² − 2·180 = 729 − 360 = 369. Therefore, d² = 369.
+-- 4. [Conclusion] The square of the rectangle’s diagonal is 369.

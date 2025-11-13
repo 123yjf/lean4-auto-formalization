@@ -1,0 +1,32 @@
+-- Proof content:
+-- 1. [Problem Restatement]
+- Define the finite set of primes primes_set = {5, 7, 11, 13, 17}.
+- Define prime_diff(p, q) = p*q − (p + q).
+- Prove the following statements:
+  a) prime_diff(11, 13) = 119.
+  b) The following congruences modulo 4 hold: 22 ≡ 2, 60 ≡ 0, 119 ≡ 3, 180 ≡ 0, 231 ≡ 3 (all mod 4).
+  c) There exist p, q in primes_set with p ≠ q such that prime_diff(p, q) = 119 (specifically p = 11, q = 13).
+  d) An identity: prime_diff(11, 13) = (11 − 1)(13 − 1) − 1.
+  e) A congruence: prime_diff(11, 13) ≡ 3 (mod 4).
+  f) prime_diff(13, 17) = 191.
+
+-- 2. [Key Idea]
+- Unfold the definition of prime_diff and perform straightforward arithmetic.
+- For modular congruences, reduce each number modulo 4 directly.
+- For the existence claim, explicitly choose p = 11 and q = 13 from the set and compute.
+
+-- 3. [Proof]
+- For (a): Compute prime_diff(11, 13) = 11*13 − (11 + 13) = 143 − 24 = 119.
+- For (b): Reduce each number modulo 4:
+  • 22 ≡ 2 (since 22 = 4·5 + 2).
+  • 60 ≡ 0 (since 60 = 4·15).
+  • 119 ≡ 3 (since 119 = 4·29 + 3).
+  • 180 ≡ 0 (since 180 = 4·45).
+  • 231 ≡ 3 (since 231 = 4·57 + 3).
+- For (c): Choose p = 11 and q = 13. Both 11 and 13 are elements of primes_set. They are distinct (11 ≠ 13). From (a), prime_diff(11, 13) = 119. Hence the required pair exists.
+- For (d): Compute the right-hand side: (11 − 1)(13 − 1) − 1 = 10*12 − 1 = 120 − 1 = 119, which equals prime_diff(11, 13) by (a).
+- For (e): From (a), prime_diff(11, 13) = 119, and from (b), 119 ≡ 3 (mod 4). Hence prime_diff(11, 13) ≡ 3 (mod 4).
+- For (f): Compute prime_diff(13, 17) = 13*17 − (13 + 17) = 221 − 30 = 191.
+
+-- 4. [Conclusion]
+- All stated computations and congruences follow from direct evaluation and simple modular reduction. In particular, 11 and 13 from the given set are distinct primes satisfying prime_diff(11, 13) = 119, and this value is congruent to 3 modulo 4; related identities and another specific value, prime_diff(13, 17) = 191, are also verified.

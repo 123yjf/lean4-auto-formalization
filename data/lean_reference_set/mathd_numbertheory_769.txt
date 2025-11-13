@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the remainder when 129^34 + 96^38 is divided by 11.
+-- 2. [Key Idea] Work modulo 11 from the start: reduce both bases modulo 11, note that ϕ(11) = 10 so Euler’s theorem gives a period of 10 for powers coprime to 11, and use a short table of small powers of 8 modulo 11 to simplify.
+-- 3. [Proof] First, reduce the bases: 129 ≡ 8 (mod 11) and 96 ≡ 8 (mod 11). Thus 129^34 + 96^38 ≡ 8^34 + 8^38 ≡ 8^34(1 + 8^4) (mod 11). Next, compute small powers of 8 modulo 11: 8 ≡ 8, 8^2 ≡ 64 ≡ 9, 8^3 ≡ 8·9 ≡ 72 ≡ 6, and 8^4 ≡ 8·6 ≡ 48 ≡ 4 (mod 11). By Euler’s theorem, since gcd(8,11)=1 and ϕ(11)=10, we have 8^10 ≡ 1 (mod 11). Hence 8^34 = 8^30·8^4 ≡ 1·4 = 4 (mod 11). Putting this together, 8^34(1 + 8^4) ≡ 4(1 + 4) = 4·5 = 20 ≡ 9 (mod 11).
+-- 4. [Conclusion] The remainder is 9.

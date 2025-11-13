@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the integer x with 0 ≤ x ≤ 99 such that 9x ≡ 1 (mod 100).
+-- 2. [Key Idea] Recognize that 9 is almost a divisor of 100: 9·11 = 99 ≡ −1 (mod 100). This gives an inverse by negating 11. Equivalently, use the extended Euclidean algorithm to write 1 as a linear combination of 9 and 100.
+-- 3. [Proof] By inspection:
+--    • Compute 9·11 = 99 ≡ −1 (mod 100).
+--    • Multiply both sides by −1 to get 9·(−11) ≡ 1 (mod 100).
+--    • Reduce −11 modulo 100: −11 ≡ 89 (mod 100).
+--    • Therefore, 9·89 ≡ 1 (mod 100), so x = 89 works.
+--    By the extended Euclidean algorithm:
+--    • From 100 = 11·9 + 1, rearrange to 1 = 100 − 11·9.
+--    • This shows s = −11 satisfies 9s + 100t = 1, so −11 is an inverse of 9 modulo 100.
+--    • Reducing −11 modulo 100 gives 89, the same inverse.
+-- 4. [Conclusion] The multiplicative inverse of 9 modulo 100 is 89; equivalently, x = 89.

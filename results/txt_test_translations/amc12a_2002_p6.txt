@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the set of natural numbers m > 0 for which there exists a natural number n > 0 with m·n ≤ m + n is infinite.
+
+-- 2. [Key Idea] First observe that for every positive m, choosing n = 1 satisfies the inequality, so the set in question is exactly the set of positive natural numbers. Then show the set of positive natural numbers is infinite by exhibiting an injective map from ℕ into it (namely n ↦ n + 1).
+
+-- 3. [Proof]
+- For any m > 0, take n = 1. Then n > 0, and m·1 = m ≤ m + 1, so the inequality holds. Thus, every positive m admits a positive n making m·n ≤ m + n true.
+- Therefore, the set {m ∈ ℕ | m > 0 and ∃ n > 0, m·n ≤ m + n} coincides with {m ∈ ℕ | m > 0}: one inclusion is obvious by projection, and the other follows by supplying n = 1 for any given m > 0.
+- To prove this set is infinite, consider the function f: ℕ → ℕ given by f(n) = n + 1. This function is injective (successor is injective), and its range is contained in {m ∈ ℕ | m > 0} since n + 1 > 0 for all n. The range of an injective function from ℕ is infinite, and any superset of an infinite set is infinite; hence {m ∈ ℕ | m > 0} is infinite.
+
+-- 4. [Conclusion] The original set is equal to the set of positive natural numbers, which is infinite; therefore, the set {m ∈ ℕ | m > 0 and ∃ n > 0, m·n ≤ m + n} is infinite.

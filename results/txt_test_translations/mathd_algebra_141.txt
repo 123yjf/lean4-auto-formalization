@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist positive real numbers a and b such that a · b = 180, 2 · (a + b) = 54, and a^2 + b^2 = 369.
+-- 2. [Key Idea] Exhibit specific numbers a and b (namely a = 15 and b = 12) and verify directly that they satisfy all three conditions.
+-- 3. [Proof] Choose a = 15 and b = 12. Then:
+--    - Positivity: 15 > 0 and 12 > 0.
+--    - Product: 15 · 12 = 180.
+--    - Perimeter-type condition: 2 · (15 + 12) = 2 · 27 = 54.
+--    - Sum of squares: 15^2 + 12^2 = 225 + 144 = 369.
+--    Each of these is a straightforward numerical check.
+-- 4. [Conclusion] Therefore, the chosen a = 15 and b = 12 satisfy all the required conditions, so such positive real numbers exist.

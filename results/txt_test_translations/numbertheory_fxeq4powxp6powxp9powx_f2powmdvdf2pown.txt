@@ -1,0 +1,31 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define f(x) = 4^x + 6^x + 9^x for natural numbers x. The goal is to show: for natural numbers m ≤ n, the integer f(2^m) divides f(2^n).
+-- 2. [Key Idea] The core step is to prove the “doubling” divisibility f(x) ∣ f(2x). This is achieved over the integers by an algebraic factorization:
+   if r = 2^x and s = 3^x, then
+     f(x) = r^2 + r s + s^2
+     f(2x) = (r^2)^2 + (r s)^2 + (s^2)^2
+   and we have the identity
+     (r^2 + r s + s^2)(r^2 − r s + s^2) = (r^2)^2 + (r s)^2 + (s^2)^2.
+   Hence f(2x) = f(x) · (r^2 − r s + s^2), so f(x) divides f(2x) in ℤ. A standard coercion argument plus nonnegativity of the multiplier yields the divisibility in ℕ. Finally, iterate the doubling step along the chain 2^m → 2^(m+1) → … → 2^n.
+-- 3. [Proof]
+   - Move to integers: define fZ(x) = 4^x + 6^x + 9^x as an integer expression. One checks directly that the natural f coerced to ℤ equals fZ, i.e., (f x : ℤ) = fZ x.
+   - Algebraic preparation: Fix x ∈ ℕ and set r = (2 : ℤ)^x and s = (3 : ℤ)^x. Then:
+     • 4^x = (2^2)^x = 2^(2x) = (2^x)^2 = r^2.
+     • 9^x = (3^2)^x = 3^(2x) = (3^x)^2 = s^2.
+     • 6^x = (2·3)^x = 2^x · 3^x = r s.
+     Similarly for the doubled exponent:
+     • 4^(2x) = (r^2)^2, 6^(2x) = (r s)^2, 9^(2x) = (s^2)^2.
+     Therefore,
+       fZ(x) = r^2 + r s + s^2
+       fZ(2x) = (r^2)^2 + (r s)^2 + (s^2)^2.
+   - Factorization step: Use the identity
+       (r^2 + r s + s^2)(r^2 − r s + s^2) = (r^2)^2 + (r s)^2 + (s^2)^2.
+     Substituting the expressions above gives
+       fZ(2x) = fZ(x) · (r^2 − r s + s^2),
+     so fZ(x) divides fZ(2x) in ℤ.
+   - Return to ℕ: Since (f(2x) : ℤ) = (f x : ℤ) · (r^2 − r s + s^2) and the multiplier r^2 − r s + s^2 is an integer ≥ 0 (indeed r^2 − r s + s^2 = (r − s/2)^2 + 3(s/2)^2 ≥ 0), a standard lemma converts this integer divisibility with a nonnegative multiplier into natural-number divisibility, yielding f(x) ∣ f(2x).
+   - Iteration to reach 2^n: For m ≤ n, write n = m + k. Proceed by induction on k.
+     • Base case k = 0: f(2^m) ∣ f(2^m) is trivial.
+     • Inductive step: If f(2^(m+k)) ∣ f(2^(m+k+1)) holds by the doubling step (applied to x = 2^(m+k)), then transitivity of divisibility gives f(2^m) ∣ f(2^(m+k+1)). Using 2^(m+k+1) = 2 · 2^(m+k) identifies the next term correctly.
+     This completes the induction.
+-- 4. [Conclusion] The algebraic identity (u+v+w)(u−v+w) = u^2 + v^2 + w^2, applied with u = r^2, v = r s, w = s^2 and r = 2^x, s = 3^x, shows f(x) ∣ f(2x). Iterating this along the powers 2^m, 2^(m+1), …, 2^n yields f(2^m) ∣ f(2^n) for all m ≤ n.

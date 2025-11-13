@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine $b^a$ when $2^a=32$ and $a^b=125$. 2. [Key Idea] Identify $a$ and $b$ by matching prime-power factorizations, then raise $b$ to the power $a$. 3. [Proof] Step 1. Solve for $a$. Given $2^{a}=32$ and $32=2^{5}$, we have $a=5$. Step 2. Solve for $b$. With $a=5$, the equation $a^{b}=125$ becomes $5^{b}=125$. Since $125=5^{3}$, it follows that $b=3$. Step 3. Compute $b^{a}$. $b^{a}=3^{5}=243$. 4. [Conclusion] Hence $b^{a}=243$, as required.

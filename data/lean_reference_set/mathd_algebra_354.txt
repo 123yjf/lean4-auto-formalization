@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given an arithmetic sequence with a₇ = 30 and a₁₁ = 60, and we need to find a₂₁.
+-- 2. [Key Idea] In an arithmetic sequence, each term is linear in its index: a_n = a₁ + (n−1)d. Subtracting two known terms eliminates the first term and yields the common difference d; then any term can be computed.
+-- 3. [Proof] Let a₁ = a and let d be the common difference. Then:
+   a₇ = a + 6d = 30
+   a₁₁ = a + 10d = 60.
+   Subtracting the first from the second gives (a + 10d) − (a + 6d) = 60 − 30, so 4d = 30 and d = 7.5.
+   Substitute back into a₇ = 30: a + 6(7.5) = 30, hence a = −15.
+   Now compute a₂₁: a₂₁ = a + 20d = (−15) + 20(7.5) = −15 + 150 = 135.
+   Alternatively, from a₁₁ = 60, move forward 10 steps: 60 + 10·7.5 = 135.
+-- 4. [Conclusion] The 21st term is 135.

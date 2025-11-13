@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the logarithm of 27 in base 3 equals 3; that is, Real.logb 3 27 = 3.
+-- 2. [Key Idea] Recognize that 27 = 3^3. For a base b > 0 with b ≠ 1, we have log_b(b^n) = n. This immediately gives log_3(3^3) = 3. Alternatively, using the definition log_b x = log x / log b together with log(3^3) = 3 log 3 and the fact that log 3 ≠ 0, we can cancel to get 3.
+-- 3. [Proof] 
+   - First observe that 27 = 3^3.
+   - The base conditions hold: 3 > 0 and 3 ≠ 1, so the standard logarithm laws apply.
+   - By the general identity for logarithms, log_b(b^n) = n when b > 0 and b ≠ 1; hence log_3(3^3) = 3.
+   - Rewriting 27 as 3^3, we get log_3 27 = 3.
+   - (The proof also notes an equivalent route: using the definition log_b x = log x / log b and the power rule log(3^3) = 3 log 3, one gets (3 log 3) / log 3 = 3 after observing log 3 ≠ 0, which is ensured by 3 > 0 and 3 ≠ 1.)
+-- 4. [Conclusion] Therefore, Real.logb 3 27 = 3.

@@ -1,0 +1,27 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers x, y, z, w with x > 1, y > 1, z > 1, w > 0, and
+   log base x of w = 24, log base y of w = 40, log base (x·y·z) of w = 12,
+   prove that log base z of w = 60.
+
+-- 2. [Key Idea] Rewrite each base-log equation in terms of natural logs (logb a b = log b / log a).
+   This gives linear relations among log x, log y, log z, and log w. Use the product rule
+   log(xyz) = log x + log y + log z and solve the resulting linear system to express log z
+   in terms of log x, then compute log w / log z.
+
+-- 3. [Proof] 
+   - Since x, y, z > 1, they are positive, nonzero, and not equal to 1; w > 0, hence w ≠ 0.
+   - From logb x w = 24, we get log w = 24·log x (because log x ≠ 0).
+   - From logb y w = 40, we get log w = 40·log y (because log y ≠ 0).
+   - From logb (x·y·z) w = 12, and since x·y·z > 1 (as each factor > 1), we get
+     log w = 12·log(x·y·z) with log(x·y·z) ≠ 0.
+   - Using log(x·y·z) = log x + log y + log z, the last equation becomes
+     log w = 12·(log x + log y + log z).
+   - Equating the two expressions for log w:
+     • 24·log x = 40·log y, hence log y = (3/5)·log x.
+     • Also, 12·(log x + log y + log z) = 24·log x, so
+       log x + log y + log z = 2·log x, hence log z = log x − log y.
+     Substituting log y = (3/5)·log x gives log z = (2/5)·log x (so log z ≠ 0).
+   - Finally,
+     logb z w = log w / log z = (24·log x)/((2/5)·log x) = 24/(2/5) = 24·(5/2) = 60.
+
+-- 4. [Conclusion] Therefore, log base z of w equals 60.

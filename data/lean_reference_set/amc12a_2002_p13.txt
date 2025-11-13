@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the sum a + b of the two distinct positive numbers a and b such that each satisfies |x − 1/x| = 1.
+-- 2. [Key Idea] The absolute value equation splits into two cases, x − 1/x = 1 and x − 1/x = −1, each yielding a quadratic with one positive solution; adding those two positive solutions gives the desired sum.
+-- 3. [Proof] For x > 0, the condition |x − 1/x| = 1 is equivalent to either x − 1/x = 1 or x − 1/x = −1.
+--    (i) If x − 1/x = 1, multiplying by x gives x² − 1 = x, so x² − x − 1 = 0. Its positive root is x₁ = (1 + √5)/2.
+--    (ii) If x − 1/x = −1, multiplying by x gives x² − 1 = −x, so x² + x − 1 = 0. Its positive root is x₂ = (−1 + √5)/2.
+--    Both x₁ and x₂ are positive and distinct, so {a, b} = {x₁, x₂}. Their sum is a + b = x₁ + x₂ = (1 + √5)/2 + (−1 + √5)/2 = √5.
+-- 4. [Conclusion] The required sum is √5.

@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are asked to show that there exist digits A, M, C (with A between 1 and 9, and M, C at most 9) such that the two five-digit numbers AMC10 and AMC12, defined by amc10 A M C = 10000*A + 1000*M + 100*C + 10 (i.e., the number with digits A M C 1 0) and amc12 A M C = 10000*A + 1000*M + 100*C + 12 (digits A M C 1 2), add up to 123422, and additionally A + M + C = 14.
+-- 2. [Key Idea] Exhibit a concrete choice of digits that satisfies all constraints and verify by direct computation. The choice A = 6, M = 1, C = 7 works.
+-- 3. [Proof] Take A = 6, M = 1, C = 7. Then A ≥ 1 and A ≤ 9 are true (6 ≥ 1 and 6 ≤ 9), and M ≤ 9 and C ≤ 9 are true (1 ≤ 9 and 7 ≤ 9). Compute:
+   amc10 6 1 7 = 10000*6 + 1000*1 + 100*7 + 10 = 60000 + 1000 + 700 + 10 = 61710,
+   amc12 6 1 7 = 10000*6 + 1000*1 + 100*7 + 12 = 60000 + 1000 + 700 + 12 = 61712.
+   Hence amc10 6 1 7 + amc12 6 1 7 = 61710 + 61712 = 123422. Also, A + M + C = 6 + 1 + 7 = 14.
+-- 4. [Conclusion] Such digits exist; namely A = 6, M = 1, C = 7 satisfy all the required conditions.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify directly that amc10 6 1 7 + amc12 6 1 7 = 123422.
+-- 2. [Key Idea] Expand the definitions of amc10 and amc12 and perform the arithmetic.
+-- 3. [Proof] Using the definitions,
+   amc10 6 1 7 = 60000 + 1000 + 700 + 10 = 61710,
+   amc12 6 1 7 = 60000 + 1000 + 700 + 12 = 61712.
+   Therefore 61710 + 61712 = 123422.
+-- 4. [Conclusion] The equality amc10 6 1 7 + amc12 6 1 7 = 123422 holds.

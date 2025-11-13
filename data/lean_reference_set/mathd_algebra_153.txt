@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute ⌊10·(1/3)⌋ + ⌊100·(1/3)⌋ + ⌊1000·(1/3)⌋ + ⌊10000·(1/3)⌋.
+-- 2. [Key Idea] Write each multiple of 1/3 as an integer plus 1/3; taking the floor then simply discards the fractional 1/3. Equivalently, for k ≥ 1, 10^k/3 = (10^k − 1)/3 + 1/3, so ⌊10^k/3⌋ = (10^k − 1)/3.
+-- 3. [Proof] Let N = 1/3. Then:
+--    a) 10N = 10/3 = 3 + 1/3, so ⌊10N⌋ = 3.
+--    b) 100N = 100/3 = 33 + 1/3, so ⌊100N⌋ = 33.
+--    c) 1000N = 1000/3 = 333 + 1/3, so ⌊1000N⌋ = 333.
+--    d) 10000N = 10000/3 = 3333 + 1/3, so ⌊10000N⌋ = 3333.
+--    Summing gives 3 + 33 + 333 + 3333 = 3702.
+--    Alternatively, using ⌊10^k/3⌋ = (10^k − 1)/3 for k = 1, 2, 3, 4 yields the same four integers and the same sum.
+-- 4. [Conclusion] Therefore, ⌊10·(1/3)⌋ + ⌊100·(1/3)⌋ + ⌊1000·(1/3)⌋ + ⌊10000·(1/3)⌋ = 3702.

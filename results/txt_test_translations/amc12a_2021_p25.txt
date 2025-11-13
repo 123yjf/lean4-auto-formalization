@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to exhibit a specific positive integer N such that:
+--    - N equals 2520,
+--    - for every positive integer n, the value f n = (number of divisors of n) divided by n^(1/3) is at most f N,
+--    - and the sum of the base-10 digits of N equals 9.
+--
+-- 2. [Key Idea] The strategy is simply to choose N = 2520 and then verify the two required properties:
+--    - the optimality property f n ≤ f 2520 for all n > 0, which is supplied by a global axiom,
+--    - and the digit-sum property, which follows from the explicitly given base-10 digit list of 2520.
+--    The detailed number-theoretic reasoning that 2520 is optimal (involving prime-by-prime comparisons and the structure 2520 = 2^3 · 3^2 · 5 · 7) is packaged into provided axioms and is not rederived in this proof.
+--
+-- 3. [Proof] Define f(n) = (n.divisors.card) / n^(1/3) as a real number.
+--    - We choose N = 2520.
+--    - The identity N = 2520 holds by definition.
+--    - The optimality statement ∀ n > 0, f n ≤ f N is given directly by the axiom optimal_exponents.
+--    - For the digit sum, we use the provided facts that the base-10 digits of 2520 are [0, 2, 5, 2] and that the sum of this list is 9, hence (N.digits 10).sum = 9.
+--
+-- 4. [Conclusion] Taking N = 2520 satisfies all requirements: N equals 2520, f n ≤ f N for every n > 0, and the sum of the base-10 digits of N is 9.

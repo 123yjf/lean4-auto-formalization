@@ -1,0 +1,24 @@
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a, b, c, if a = b and b = c, then a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a) = 0.
+-- 2. [Key Idea] Substitute the equalities a = b and b = c into the expression. Then each difference (a − b), (b − c), and (c − a) becomes 0, so every term vanishes and the sum is 0. The proof uses rewriting followed by routine algebraic simplification.
+-- 3. [Proof] Assume a = b and b = c. Rewrite the expression using these equalities; all three factors (a − b), (b − c), and (c − a) become 0, so the entire sum is 0. The ring tactic confirms the simplification.
+-- 4. [Conclusion] Under a = b and b = c, the given sum equals 0.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a, b, c, there exists a real number x such that x equals a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a).
+-- 2. [Key Idea] Explicitly choose x to be the given expression.
+-- 3. [Proof] Take x := a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a). Then, by definition, x equals the required expression.
+-- 4. [Conclusion] Such an x exists.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a, b, c, t, the expression obtained by replacing a, b, c with t a, t b, t c equals t^4 times the original expression:
+--    (t a)^2 (t b) ((t a) − (t b)) + (t b)^2 (t c) ((t b) − (t c)) + (t c)^2 (t a) ((t c) − (t a)) = t^4 (a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a)).
+-- 2. [Key Idea] Each term has total degree 4 in a, b, c (for example, a^2·b·(a − b) is degree 2 + 1 + 1). Scaling a, b, c by t multiplies each term by t^4, so the whole sum scales by t^4. The proof is a straightforward algebraic expansion.
+-- 3. [Proof] Expand the left-hand side after substituting t a, t b, t c; factor out t^4 from each term; the result is t^4 times the original sum. The ring tactic carries out the algebraic rearrangement.
+-- 4. [Conclusion] The expression is homogeneous of degree 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a, b, c, if a = b and b = c, then a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a) = 0.
+-- 2. [Key Idea] Reuse the previously proved result establishing this implication.
+-- 3. [Proof] Directly apply the theorem imo_1983_p6_reverse_direction to conclude the equality.
+-- 4. [Conclusion] The stated implication holds.

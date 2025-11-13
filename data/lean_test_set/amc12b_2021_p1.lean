@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Count the integers x satisfying |x| < 3π. 2. [Key Idea] Replace 3π by its integer part: an integer x lies in (−3π, 3π) exactly when −⌊3π⌋ ≤ x ≤ ⌊3π⌋. 3. [Proof] Since 3π ≈ 9.424…, we have ⌊3π⌋ = 9. Hence −3π < x < 3π ⇒ −9.424… < x < 9.424… For integers this becomes −9 ≤ x ≤ 9. The count of integers from −9 to 9 inclusive is 9 − (−9) + 1 = 19 (or, equivalently, 2⌊3π⌋ + 1 = 2·9 + 1 = 19). 4. [Conclusion] Exactly 19 integers satisfy |x| < 3π, so the answer is (D).

@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that for positive integers a, b, k with 2^k = (a + b^2)(b + a^2), it must be that a = 1.
+-- 2. [Key Idea] Argue by contradiction: if a ≥ 2, then because (a + b^2)(b + a^2) is a power of 2, each factor must itself be a power of 2. This forces a to be a power of 2 as well. Substituting a = 2^d into the expressions and simplifying shows that one of these powers of 2 would factor as 2^d times an odd integer greater than 1, which is impossible for a power of 2.
+-- 3. [Proof] Suppose, aiming for a contradiction, that a ≥ 2. Set m := a + b^2 and n := b + a^2. Then m n = 2^k with m, n > 1, so m and n must each be powers of 2: say m = 2^r and n = 2^s for some integers r, s ≥ 1 with r + s = k.
+--    From m = a + b^2 and m = 2^r, we infer that a divides a + b^2 and hence divides 2^r; since a ≥ 2 and divides a power of 2, we conclude a is itself a power of 2, say a = 2^d with d ≥ 1.
+--    Then n = b + a^2 gives b = 2^s − a^2 = 2^s − 2^{2d}. Because b > 0, we must have s > 2d. Substitute this expression for b into m = a + b^2:
+--    2^r = 2^d + (2^s − 2^{2d})^2 = 2^{2s} − 2^{s + 2d} + 2^{4d} + 2^d.
+--    Comparing exponents shows 2s > s + 2d > 4d > d, so we can factor out 2^d:
+--    2^r = 2^d(2^{2s − d} − 2^{s + d} + 2^{3d} + 1).
+--    The parenthetical factor is odd (it is a sum of even terms and 1) and is greater than 1 (since 2^{2s − d} − 2^{s + d} = 2^{s + d}(2^{s − 2d} − 1) ≥ 2^{s + d} ≥ 2 with s > 2d, and then adding 2^{3d} + 1 keeps it > 1). Hence 2^r is written as 2^d times an odd integer greater than 1, which is impossible for a pure power of 2. This contradiction shows the assumption a ≥ 2 is false.
+--    (Alternative parity-based remark: once a ≥ 2 is forced to be a power of 2, small cases like a = 2, 4 already fail, and the general case leads to the same impossibility via 2-adic valuation.)
+-- 4. [Conclusion] Therefore, the only possibility is a = 1.

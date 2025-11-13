@@ -1,0 +1,19 @@
+-- Proof content:
+-- 1. [Problem Restatement] We must show there exist real numbers m and n such that:
+--    - m > n, m > 0, and n > 0,
+--    - for every real t with t ≥ 0, t^2 − 5t + 6 = 0 if and only if t = m or t = n,
+--    - and m − n = 1.
+-- 2. [Key Idea] Factor the quadratic t^2 − 5t + 6 as (t − 2)(t − 3). Its real roots are 2 and 3. Choosing m = 3 and n = 2 gives m > n, both positive, and m − n = 1. The equivalence t^2 − 5t + 6 = 0 ↔ (t = m ∨ t = n) then follows from the zero-product property; the condition t ≥ 0 is not needed for the equivalence but is allowed.
+-- 3. [Proof] 
+--    - The code first records two general algebraic rewrites (not used later): 
+--      (i) x^4 = 5x^2 − 6 ↔ x^4 − 5x^2 + 6 = 0 (move all terms to one side).
+--      (ii) x^4 − 5x^2 + 6 = 0 ↔ (x^2)^2 − 5(x^2) + 6 = 0 (viewing it as a quadratic in x^2).
+--    - It then proves the needed factorization for any real t:
+--      t^2 − 5t + 6 = 0 ↔ (t − 2)(t − 3) = 0, by expanding and collecting terms.
+--    - By the zero-product property, (t − 2)(t − 3) = 0 ↔ (t = 2 ∨ t = 3).
+--    - Now choose m = 3 and n = 2. One checks directly:
+--      m > n (3 > 2), m > 0 (3 > 0), n > 0 (2 > 0), and m − n = 1 (3 − 2 = 1).
+--    - For any t with t ≥ 0 (the hypothesis is unused), combine the two equivalences:
+--      t^2 − 5t + 6 = 0 ↔ (t = 2 ∨ t = 3).
+--      Since we took m = 3 and n = 2, this is the same as (t = m ∨ t = n), possibly swapping the order of the disjunction. The proof explicitly swaps the order by a simple case split.
+-- 4. [Conclusion] Taking m = 3 and n = 2 satisfies all requirements: m > n, m > 0, n > 0, for all t ≥ 0 we have t^2 − 5t + 6 = 0 iff t = m or t = n, and m − n = 1.

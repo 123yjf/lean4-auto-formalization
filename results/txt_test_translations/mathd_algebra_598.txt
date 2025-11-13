@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] We must find real numbers a, b, c, d such that 4^a = 5, 5^b = 6, 6^c = 7, 7^d = 8, and a · b · c · d = 3/2.
+-- 2. [Key Idea] Use the logarithmic change-of-base identity: for x > 0, x ≠ 1, and y > 0, we have x^(log y / log x) = y. Then set a = log 5 / log 4, b = log 6 / log 5, c = log 7 / log 6, d = log 8 / log 7. The product then telescopes to log 8 / log 4, which equals (3 log 2)/(2 log 2) = 3/2.
+-- 3. [Proof] Define
+- a := log 5 / log 4, b := log 6 / log 5, c := log 7 / log 6, d := log 8 / log 7.
+  Each base (4, 5, 6, 7) is positive and not equal to 1, and each target (5, 6, 7, 8) is positive, so we can apply the change-of-base rule for real powers. Concretely:
+  - 4^a = 4^(log 5 / log 4) = 5,
+  - 5^b = 5^(log 6 / log 5) = 6,
+  - 6^c = 6^(log 7 / log 6) = 7,
+  - 7^d = 7^(log 8 / log 7) = 8.
+  For the product, compute
+  a · b · c · d = (log 5 / log 4) · (log 6 / log 5) · (log 7 / log 6) · (log 8 / log 7).
+  The factors telescope by cancellation of consecutive logarithms to give log 8 / log 4. Now write 8 = 2^3 and 4 = 2^2, so
+  log 8 / log 4 = log(2^3) / log(2^2) = (3 log 2) / (2 log 2) = 3/2,
+  using log(2) ≠ 0.
+-- 4. [Conclusion] With a = log 5 / log 4, b = log 6 / log 5, c = log 7 / log 6, d = log 8 / log 7, all four power equations hold, and a · b · c · d = 3/2, as required.

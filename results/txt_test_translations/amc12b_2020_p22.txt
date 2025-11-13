@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Define g(x) = x − 3x^2 on the real numbers. Show that g attains its global maximum at x = 1/6, compute g(1/6) = 1/12, and conclude that the maximum value M of g is 1/12, which is an upper bound achieved at x0 = 1/6.
+-- 2. [Key Idea] Complete the square for the quadratic: x − 3x^2 = −3(x − 1/6)^2 + 1/12. Since any square is nonnegative, −3 times a square is nonpositive; adding 1/12 then shows g(x) ≤ 1/12 for all x, with equality exactly when x = 1/6.
+-- 3. [Proof] 
+- First compute the value at the candidate maximizer: g(1/6) = (1/6) − 3(1/6)^2 = 1/6 − 3/36 = 1/6 − 1/12 = 1/12.
+- For arbitrary x, rewrite g by completing the square:
+  x − 3x^2 = −3(x − 1/6)^2 + 1/12.
+- Because (x − 1/6)^2 ≥ 0 and −3 ≤ 0, we have −3(x − 1/6)^2 ≤ 0. Adding 1/12 to both sides yields
+  −3(x − 1/6)^2 + 1/12 ≤ 0 + 1/12 = 1/12.
+  Hence g(x) ≤ 1/12 for all x, i.e., g(x) ≤ g(1/6).
+- Therefore, taking M = 1/12, we have (i) for all x, g(x) ≤ M, and (ii) at x0 = 1/6 we achieve equality g(x0) = M.
+-- 4. [Conclusion] The quadratic g(x) = x − 3x^2 attains its global maximum 1/12 at x = 1/6, and 1/12 is an upper bound for g on ℝ that is achieved (so M = 1/12 and x0 = 1/6 witness the maximum).

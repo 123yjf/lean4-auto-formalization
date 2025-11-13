@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute g(f(5) − 1) for f(x) = 2x − 3 and g(x) = x + 1. 2. [Key Idea] Evaluate the inner function f at 5, subtract 1, then apply g to the result. 3. [Proof] Step-by-step computation: i) f(5) = 2·5 − 3 = 10 − 3 = 7. ii) f(5) − 1 = 7 − 1 = 6. iii) g(f(5) − 1) = g(6) = 6 + 1 = 7. 4. [Conclusion] Therefore, g(f(5) − 1) equals 7.

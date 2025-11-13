@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a unique natural number d with d < 10 such that 11 divides 2000 + 10d + 7.
+-- 2. [Key Idea] Exhibit d = 5 as a witness (since 2000 + 10·5 + 7 = 2057 is divisible by 11), and prove uniqueness by checking all possible digits d' = 0, 1, ..., 9: for every value except 5 the number 2007 + 10d' is not divisible by 11. Equivalently, modulo 11 we have 2007 + 10d ≡ 5 − d, so divisibility forces d = 5.
+-- 3. [Proof] 
+   - Existence: Choose d = 5. Clearly 5 < 10. Compute 2000 + 10·5 + 7 = 2057, and 2057 = 11 · 187, so 11 divides 2057.
+   - Uniqueness: Let d' be any natural number with d' < 10 and 11 ∣ (2000 + 10d' + 7). Since d' < 10, d' must be one of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Check each case:
+     • d' = 0: 2000 + 10·0 + 7 = 2007 is not divisible by 11.
+     • d' = 1: 2017 is not divisible by 11.
+     • d' = 2: 2027 is not divisible by 11.
+     • d' = 3: 2037 is not divisible by 11.
+     • d' = 4: 2047 is not divisible by 11.
+     • d' = 5: Then d' = 5, as required.
+     • d' = 6: 2067 is not divisible by 11.
+     • d' = 7: 2077 is not divisible by 11.
+     • d' = 8: 2087 is not divisible by 11.
+     • d' = 9: 2097 is not divisible by 11.
+   In each non-5 case, the assumed divisibility leads to a contradiction, so the only possibility is d' = 5.
+-- 4. [Conclusion] There exists exactly one digit d with d < 10 such that 11 divides 2000 + 10d + 7, namely d = 5.

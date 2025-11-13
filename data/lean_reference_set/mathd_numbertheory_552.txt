@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] For positive integers x, define f(x) = 12x + 7 and g(x) = 5x + 2. Determine all possible values of h(x) = gcd(f(x), g(x)) as x varies, and compute the sum of these distinct values.
+-- 2. [Key Idea] Use the Euclidean algorithm symbolically to reduce gcd(12x + 7, 5x + 2) to a constant gcd involving only a fixed integer. This shows the gcd must divide 11, so the only possibilities are 1 or 11; then verify both occur.
+-- 3. [Proof] Apply the Euclidean algorithm:
+   gcd(12x + 7, 5x + 2)
+   = gcd(12x + 7 − 2(5x + 2), 5x + 2) = gcd(2x + 3, 5x + 2)
+   = gcd(5x + 2 − 2(2x + 3), 2x + 3) = gcd(x − 4, 2x + 3)
+   = gcd(2x + 3 − 2(x − 4), x − 4) = gcd(11, x − 4).
+   Hence h(x) divides 11, so h(x) ∈ {1, 11}. Both values occur:
+   - For x = 1: f(1) = 19, g(1) = 7, so gcd = 1.
+   - For x = 4: f(4) = 55, g(4) = 22, so gcd = 11.
+   Therefore the distinct possible gcds are 1 and 11, whose sum is 12. (Equivalently, modulo 11 we have 12x + 7 ≡ x − 4 and 5x + 2 ≡ x − 4, so both are divisible by 11 exactly when x ≡ 4 (mod 11), confirming the same two gcd values.)
+-- 4. [Conclusion] The only possible values of gcd(f(x), g(x)) are 1 and 11, and their sum is 12.

@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Seven cubes with side lengths 1 through 7 are stacked from largest to smallest. Find the total exposed surface area of the resulting tower.
+-- 2. [Key Idea] Sum the surface areas of the individual cubes, then subtract the areas of the faces that become hidden at each of the six interfaces between adjacent cubes (two faces per interface).
+-- 3. [Proof] Label the cubes from bottom to top with side lengths s₁ = 7, s₂ = 6, …, s₇ = 1.
+   a) If separate, the total surface area is Σ 6sᵢ² = 6(1² + 2² + 3² + 4² + 5² + 6² + 7²) = 6 · 140 = 840.
+   b) At each interface where the upper cube has side length t, the bottom face of the upper cube (area t²) and the covered part of the lower cube’s top face (area t²) are hidden, for a total loss 2t². The t-values are 6, 5, 4, 3, 2, 1, so the hidden area is 2(6² + 5² + 4² + 3² + 2² + 1²) = 2 · 91 = 182.
+   c) Therefore, the exposed surface area is 840 − 182 = 658.
+-- 4. [Conclusion] The tower’s total exposed surface area is 658 square units (choice B).

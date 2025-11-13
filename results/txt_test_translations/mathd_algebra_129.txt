@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a unique real number a such that a ≠ 0 and (8)^{-1} / (4)^{-1} − a^{-1} = 1.
+
+-- 2. [Key Idea] Simplify the constant term (8)^{-1} / (4)^{-1} to 1/2. Then the equation becomes (1/2) − a^{-1} = 1, which rearranges to a^{-1} = −1/2, and since a ≠ 0, this is equivalent to a = −2. This gives both existence and, via the same equivalences, uniqueness.
+
+-- 3. [Proof] 
+- First, rewrite inverses as reciprocals: (8)^{-1} / (4)^{-1} = (1/8) / (1/4).
+- Compute the quotient of fractions: (1/8) / (1/4) = 1/2.
+- For any real a with a ≠ 0, the equation (1/2) − a^{-1} = 1 is equivalent to a^{-1} = −1/2 by simple rearrangement.
+- For any real a with a ≠ 0, the equation a^{-1} = −1/2 is equivalent to a = −2 by taking inverses.
+- Existence: Take a = −2. Then a ≠ 0, and using the simplification above we get (8)^{-1} / (4)^{-1} − a^{-1} = (1/2) − (−1/2) = 1, so the condition holds.
+- Uniqueness: If b is any real number with b ≠ 0 and (8)^{-1} / (4)^{-1} − b^{-1} = 1, then by the same steps we obtain (1/2) − b^{-1} = 1, hence b^{-1} = −1/2, hence b = −2. Thus any solution must equal −2.
+
+-- 4. [Conclusion] There exists exactly one real number satisfying the condition, namely a = −2.

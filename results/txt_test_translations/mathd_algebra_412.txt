@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers x and y such that x + y = 25, x − y = 11, x ≥ y, and x = 18. Additionally, establish supporting facts: from the system one can deduce x ≥ y; eliminating y gives 2x = 36; hence x = 18; then y = 7 and x > y; compute (25 + 11)/2 = 18; verify the solution numerically; and prove uniqueness of the solution pair.
+-- 2. [Key Idea] Solve the linear system by adding the equations x + y = 25 and x − y = 11 to eliminate y, yielding 2x = 36 and thus x = 18. Then use x + y = 25 to get y = 7. Since x − y = 11 > 0, we also have x ≥ y (indeed x > y here). Uniqueness follows because sums and differences determine x and y uniquely.
+-- 3. [Proof] 
+--    - Existence with explicit witnesses (mathd_algebra_412): Choose x = 18 and y = 7. Then:
+--      • x + y = 18 + 7 = 25,
+--      • x − y = 18 − 7 = 11,
+--      • x ≥ y since 18 ≥ 7,
+--      • and x = 18 by construction.
+--      These are verified by straightforward arithmetic (Lean uses norm_num and rfl).
+--    - From the system, x ≥ y (system_setup): If x + y = 25 and x − y = 11, then 11 = x − y ≥ 0, so x ≥ y. (Lean’s linarith establishes this linear inequality.)
+--    - Eliminate y to get 2x = 36 (eliminate_y): Adding the equations gives (x + y) + (x − y) = 25 + 11, hence 2x = 36. (Again via linear arithmetic.)
+--    - Solve for x (solve_for_x): From 2x = 36, conclude x = 18.
+--    - Determine y and compare (verify_larger): With x + y = 25 and x = 18, we get y = 7; then x > y since 18 > 7.
+--    - Direct formula check (direct_formula): Compute (25 + 11)/2 = 18, matching x.
+--    - Numerical verification (solution_verification): Confirm 18 + 7 = 25 and 18 − 7 = 11.
+--    - Uniqueness (uniqueness): If (x₁, y₁) and (x₂, y₂) both satisfy x + y = 25 and x − y = 11 (the ≥ assumptions are unused), then adding the equalities gives 2x₁ = 36 and 2x₂ = 36, so x₁ = x₂; substituting back yields y₁ = y₂. (Lean dispatches this with linear arithmetic.)
+-- 4. [Conclusion] The system x + y = 25 and x − y = 11 has the unique real solution x = 18 and y = 7; in particular, x ≥ y (indeed x > y). All auxiliary lemmas corroborate the standard elimination method, the computed values, and the uniqueness of the solution.

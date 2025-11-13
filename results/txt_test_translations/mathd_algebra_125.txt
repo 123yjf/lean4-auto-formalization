@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers s and f such that f = 5·s, (f − 3) + (s − 3) = 30, and s = 6.
+-- 2. [Key Idea] Exhibit explicit witnesses for s and f and verify the required equalities. Choose s = 6 and f = 30.
+-- 3. [Proof] Take s = 6 and f = 30. Then f = 5·s holds because 30 = 5·6. Next, (f − 3) + (s − 3) = (30 − 3) + (6 − 3) = 27 + 3 = 30, as required. Finally, s = 6 is immediate from the choice of s. Thus all conditions are satisfied by these choices.
+-- 4. [Conclusion] Therefore, such natural numbers s and f exist; in particular, the son’s age s is 6.

@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest positive integer N such that 7 + 30N is composite, and show it is N = 6.
+-- 2. [Key Idea] Use arithmetic modulo 11. The expression 7 + 30N is divisible by 11 exactly when N ≡ 6 (mod 11). The first such N is 6; direct checks show N = 1 through 5 give primes.
+-- 3. [Proof] Work modulo 11:
+   a) Reduce the coefficient: 30 ≡ 8 (mod 11).
+   b) Impose divisibility by 11: 7 + 30N ≡ 0 ⇒ 7 + 8N ≡ 0 ⇒ 8N ≡ 4 (mod 11).
+   c) Invert 8 modulo 11: since 8·7 ≡ 1 (mod 11), multiply to get N ≡ 4·7 ≡ 28 ≡ 6 (mod 11).
+   Therefore, every N of the form N = 11k + 6 makes 7 + 30N a multiple of 11, hence composite. The smallest positive such N is k = 0 → N = 6, and 7 + 30·6 = 187 = 11·17 is composite.
+   For N = 1,…,5, compute: 37, 67, 97, 127, 157, all prime (checks up to the square-root bound 13 suffice).
+-- 4. [Conclusion] The least positive N making 7 + 30N composite is N = 6.

@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the larger of two consecutive positive even integers whose product is 288.
+-- 2. [Key Idea] Represent the integers as 2n and 2n + 2, translate the product condition into a quadratic equation in n, and solve for n.
+-- 3. [Proof] Let the two consecutive even integers be 2n and 2n + 2, where n is a natural number. The product condition gives:
+   2n(2n + 2) = 288 ⇒ 4n(n + 1) = 288 ⇒ n(n + 1) = 72.
+   This leads to the quadratic equation n² + n − 72 = 0. Factoring yields (n + 9)(n − 8) = 0, so n = 8 or n = −9. Since n must be nonnegative, take n = 8. Then the integers are 2n = 16 and 2n + 2 = 18. (Equivalently, using the quadratic formula: n = [−1 ± √(1 + 4·72)]/2 = [−1 ± 17]/2 gives n = 8 or n = −9; discard −9.)
+-- 4. [Conclusion] The larger integer is 18.

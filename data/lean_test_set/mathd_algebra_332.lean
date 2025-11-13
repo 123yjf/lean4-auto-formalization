@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given x + y = 14 and xy = 19, compute x² + y². 2. [Key Idea] Use the identity x² + y² = (x + y)² – 2xy, substituting the arithmetic and geometric-mean data. 3. [Proof] Arithmetic mean: (x + y)/2 = 7 ⇒ x + y = 14. Geometric mean: √(xy) = √19 ⇒ xy = 19. Now x² + y² = (x + y)² – 2xy = 14² – 2·19 = 196 – 38 = 158. (Alternative: Recognize that (x – y)² ≥ 0 gives x² + y² ≥ 2xy = 38, but the exact value still follows from the identity above.) 4. [Conclusion] Therefore, x² + y² equals 158.

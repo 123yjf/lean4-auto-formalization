@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the volume of a cone whose base area is 30 units² and height is 6.5 units. 2. [Key Idea] Use the cone-volume formula \(V=\tfrac13 Bh\) and substitute the given base area \(B\) and height \(h\). 3. [Proof] \(V=\frac13 Bh=\frac13(30)(6.5)=10\cdot6.5=65.\) 4. [Conclusion] The cone’s volume is 65 cubic units.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every positive integer n, show that n^(1/n) ≤ 2 − 1/n.
+-- 2. [Key Idea] Apply the AM-GM inequality to the n numbers consisting of n−1 copies of 1 and one copy of n; their geometric mean is n^(1/n) and their arithmetic mean is 2 − 1/n.
+-- 3. [Proof] Take the multiset {1, 1, ..., 1 (n−1 times), n}. Its arithmetic mean is A = ((n−1)*1 + n)/n = (2n − 1)/n = 2 − 1/n. Its geometric mean is G = (1^(n−1) * n)^(1/n) = n^(1/n). By AM-GM, G ≤ A, so n^(1/n) ≤ 2 − 1/n. Equality in AM-GM occurs only when all entries are equal, which in this setup happens only for n = 1.
+-- 4. [Conclusion] Hence, for every positive integer n, n^(1/n) ≤ 2 − 1/n, with equality only when n = 1.

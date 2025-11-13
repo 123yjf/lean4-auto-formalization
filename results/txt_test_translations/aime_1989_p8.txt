@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] For all real numbers S₀, S₁, S₂ with S₀ = 1, S₁ = 12, and S₂ = 123, show that S₀ − 3·S₁ + 3·S₂ = 334.
+-- 2. [Key Idea] Substitute the given values into the expression and simplify arithmetically.
+-- 3. [Proof] Let S₀, S₁, S₂ be real numbers with S₀ = 1, S₁ = 12, and S₂ = 123. Replacing S₀, S₁, S₂ in the expression S₀ − 3·S₁ + 3·S₂ with these values gives 1 − 3·12 + 3·123. Compute: 3·12 = 36 and 3·123 = 369, so the expression becomes 1 − 36 + 369 = (1 − 36) + 369 = −35 + 369 = 334. Thus S₀ − 3·S₁ + 3·S₂ = 334.
+-- 4. [Conclusion] After substituting the given equalities and simplifying, the target identity holds: S₀ − 3·S₁ + 3·S₂ = 334.

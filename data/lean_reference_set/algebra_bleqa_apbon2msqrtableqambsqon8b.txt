@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for positive real numbers a and b with b ≤ a, we have (a + b)/2 − √(ab) ≤ (a − b)² /(8b).
+-- 2. [Key Idea] Substitute t = √a and s = √b so that a = t², b = s², and t ≥ s > 0. This lets both sides factor a common non-negative term (t − s)². After cancelling it, the inequality reduces to 4s² ≤ (t + s)², which is evident when t ≥ s.
+-- 3. [Proof] Set t = √a and s = √b. Multiply both sides of the target inequality by 8b = 8s² to clear denominators:
+8s² [ (a + b)/2 − √(ab) ] ≤ (a − b)².
+Compute the left side:
+8s² [ (t² + s²)/2 − ts ] = 4s²( t² + s² − 2ts ) = 4s²( t − s )².
+Compute the right side:
+(a − b)² = (t² − s²)² = (t + s)² (t − s)².
+Substituting these gives 4s²( t − s )² ≤ (t + s)² (t − s)². Since (t − s)² ≥ 0, we can cancel it to get 4s² ≤ (t + s)². But (t + s)² = t² + 2ts + s² ≥ s² + 2s² + s² = 4s² because t ≥ s. Hence the inequality holds, and all steps are reversible, proving the original statement.
+Alternative quick check: (a + b)/2 − √(ab) = (√a − √b)²/2, while (a − b)² /(8b) = (√a − √b)² (√a + √b)² /(8b). Since (√a + √b)² ≥ 4b, the right-hand side is at least (√a − √b)²/2, so it dominates the left-hand side.
+-- 4. [Conclusion] Therefore, for all positive reals with b ≤ a, we have (a + b)/2 − √(ab) ≤ (a − b)² /(8b).

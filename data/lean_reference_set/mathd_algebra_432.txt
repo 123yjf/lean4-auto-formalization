@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Expand (x + 3)(2x − 6) and verify that it equals 2x^2 − 18.
+-- 2. [Key Idea] Apply the distributive law (FOIL): multiply each term in the first binomial by each term in the second, then combine like terms.
+-- 3. [Proof] (x + 3)(2x − 6) = x(2x − 6) + 3(2x − 6) by distribution = 2x^2 − 6x + 6x − 18 by multiplying = 2x^2 − 18 after combining −6x and +6x.
+-- 4. [Conclusion] Therefore, (x + 3)(2x − 6) simplifies to 2x^2 − 18.

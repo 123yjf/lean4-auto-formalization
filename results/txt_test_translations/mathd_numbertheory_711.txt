@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist positive natural numbers m and n such that gcd(m, n) = 8 and lcm(m, n) = 112, that among all positive pairs with these gcd and lcm the sum m + n is minimal, and that this minimal sum equals 72.
+
+-- 2. [Key Idea] Use the identity gcd(m, n) · lcm(m, n) = m · n. With gcd = 8 and lcm = 112, any admissible pair satisfies m n = 896. Since 8 divides both numbers, write m = 8a and n = 8b with a, b > 0. Then 64ab = 896, so ab = 14. Minimizing m + n = 8(a + b) reduces to minimizing a + b subject to ab = 14 and a, b > 0. The positive factor pairs of 14 are (1,14), (2,7), (7,2), (14,1), and the minimal sum is 2 + 7 = 9, giving m + n ≥ 8 · 9 = 72. The pair (m, n) = (16, 56) (i.e., a = 2, b = 7) attains this bound.
+
+-- 3. [Proof] 
+- Existence and verification: Take m = 16 and n = 56. Both are positive. Compute gcd(16, 56) = 8, and lcm(16, 56) = (16 · 56) / 8 = 112. Their sum is 16 + 56 = 72.
+- Minimality: Let m′, n′ > 0 with gcd(m′, n′) = 8 and lcm(m′, n′) = 112. Then m′ n′ = gcd(m′, n′) · lcm(m′, n′) = 8 · 112 = 896. Since gcd(m′, n′) = 8, we have 8 ∣ m′ and 8 ∣ n′, so write m′ = 8a and n′ = 8b with a, b > 0. Substituting gives 64ab = 896, hence ab = 14.
+  The positive factor pairs of 14 are (1,14), (2,7), (7,2), (14,1). Therefore a + b ≥ 9, with equality when {a, b} = {2, 7}. It follows that
+  m′ + n′ = 8a + 8b = 8(a + b) ≥ 8 · 9 = 72.
+  Our exhibited pair (16, 56) has sum 72, so it achieves the minimum, and for every admissible m′, n′ we have 16 + 56 ≤ m′ + n′.
+
+-- 4. [Conclusion] The pair (m, n) = (16, 56) is positive, satisfies gcd = 8 and lcm = 112, minimizes the sum among all such pairs, and has sum m + n = 72.

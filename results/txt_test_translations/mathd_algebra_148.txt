@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a unique real number c such that evaluating the function f(x) = c x^3 - 9x + 3 at x = 2 gives the value 9.
+
+-- 2. [Key Idea] Evaluate f at x = 2 and simplify to obtain a linear equation in c. Specifically, use 2^3 = 8 to rewrite f(2) as 8c - 15, then solve 8c - 15 = 9 to get c = 3. Uniqueness follows because a linear equation has at most one solution.
+
+-- 3. [Proof] 
+   - For any real c, evaluating at x = 2 yields f(2) = c · 2^3 - 9 · 2 + 3.
+   - Simplifying using 2^3 = 8 and -9 · 2 + 3 = -18 + 3 = -15 gives f(2) = 8c - 15.
+   - Compute at c = 3: 8 · 3 - 15 = 24 - 15 = 9, so c = 3 satisfies f(2) = 9. This proves existence.
+   - For uniqueness, suppose f(2) = 9 for some c. Then 8c - 15 = 9, so 8c = 24 and hence c = 3. Therefore, any c with the property must equal 3.
+
+-- 4. [Conclusion] There exists exactly one real number c satisfying f(2) = 9, namely c = 3.

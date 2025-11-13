@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the value of (log₂(x/y))² given (i) log₂ x = log_y 16 and (ii) xy = 64, for positive x ≠ 1 and y ≠ 1.
+-- 2. [Key Idea] Express everything in base 2 by setting p = log₂ x and q = log₂ y. Then the given conditions become simple equations in p and q, from which (p − q)² follows directly.
+-- 3. [Proof] Let p = log₂ x and q = log₂ y, so x = 2^p and y = 2^q. From (i), log_y 16 = log₂ x. Using change of base, log_y 16 = log₂ 16 / log₂ y = 4 / q, so p = 4 / q, hence pq = 4. From (ii), xy = 2^p · 2^q = 2^{p+q} = 64 = 2^6, so p + q = 6. We want (log₂(x/y))² = (p − q)². Using the identity (p − q)² = (p + q)² − 4pq, we get (p − q)² = 6² − 4·4 = 36 − 16 = 20.
+-- 4. [Conclusion] Therefore, (log₂(x/y))² = 20, which is choice (B).

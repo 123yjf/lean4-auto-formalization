@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the value of the expression −a − b² + 3ab when a = −1 and b = 5.
+-- 2. [Key Idea] Substitute the given values for a and b into the expression and simplify step by step.
+-- 3. [Proof] Substituting a = −1 and b = 5 gives: −a − b² + 3ab = −(−1) − 5² + 3(−1)(5) = 1 − 25 − 15 = −39. As a quick check, group terms: −a + 3ab = a(−1 + 3b). With b = 5, this is a(−1 + 15) = 14a = 14(−1) = −14. Then subtract b²: −14 − 25 = −39.
+-- 4. [Conclusion] Therefore, the expression evaluates to −39.

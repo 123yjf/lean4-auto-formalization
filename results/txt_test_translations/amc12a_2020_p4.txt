@@ -1,0 +1,6 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the product of the sizes of four finite sets of digits equals 100, namely:
+--    card({2, 4, 6, 8}) * card({0, 2, 4, 6, 8}) * card({0, 2, 4, 6, 8}) * card({0}) = 100.
+-- 2. [Key Idea] Compute the cardinality of each set directly: 4 choices for the thousands digit, 5 for the hundreds digit, 5 for the tens digit, and 1 for the units digit. Multiply these counts.
+-- 3. [Proof] By definition, thousands_digits = {2, 4, 6, 8} has 4 elements; hundreds_digits = {0, 2, 4, 6, 8} has 5 elements; tens_digits = {0, 2, 4, 6, 8} has 5 elements; and units_digits = {0} has 1 element. Therefore, the product of their cardinalities is 4 * 5 * 5 * 1 = 100. In the Lean proof, the tactic norm_num, when given these explicit set definitions, evaluates these cardinalities and performs the multiplication to confirm the equality.
+-- 4. [Conclusion] The product of the four cardinalities is 100.

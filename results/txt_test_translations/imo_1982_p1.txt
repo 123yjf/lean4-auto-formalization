@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define a function candidate_function from the positive natural numbers ℕ+ to ℕ by sending a positive integer n to n / 3 (ordinary natural-number division, i.e., the floor of n divided by 3). We then evaluate this function on several specific inputs: 1, 2, 3, 4, 6, 1982, and 9999, and we also note that the value at 3 is positive. Two statements compute the same value for 1982.
+-- 2. [Key Idea] Each proof simply unfolds the definition of candidate_function and computes the integer division n / 3. In Lean, simp [candidate_function] performs this unfolding and arithmetic simplification. The positivity claim for n = 3 follows from the computed value being 1. The notation ⟨k, Nat.succ_pos ...⟩ is how a positive integer equal to k is constructed in ℕ+, with a proof that k > 0.
+-- 3. [Proof]
+- By definition, candidate_function n = n.val / 3, where n.val is the underlying natural number.
+- Direct evaluations:
+  - For n = 2: 2 / 3 = 0, so candidate_function ⟨2, ...⟩ = 0.
+  - For n = 3: 3 / 3 = 1, so candidate_function ⟨3, ...⟩ = 1, hence it is > 0.
+  - For n = 1982: 1982 / 3 = 660 because 1982 = 3·660 + 2, so candidate_function ⟨1982, ...⟩ = 660. (This is stated twice: imo_1982_p1_answer and main_result_f1982.)
+  - For n = 9999: 9999 / 3 = 3333 because 9999 = 3·3333, so candidate_function ⟨9999, ...⟩ = 3333.
+  - For n = 1: 1 / 3 = 0, so candidate_function ⟨1, ...⟩ = 0.
+  - For n = 4: 4 / 3 = 1, so candidate_function ⟨4, ...⟩ = 1.
+  - For n = 6: 6 / 3 = 2, so candidate_function ⟨6, ...⟩ = 2.
+- In Lean, each of these is proved by simp [candidate_function], which unfolds the definition and evaluates the integer division; the positivity statement rewrites candidate_function ⟨3, ...⟩ to 1 and then concludes 1 > 0 by simplification.
+-- 4. [Conclusion] The function candidate_function is the floor of division by 3 on positive integers. The proofs confirm its values on the listed inputs, including that candidate_function(3) = 1 > 0 and that candidate_function(1982) = 660 (stated twice for emphasis).

@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers center_x, center_y, and radius such that radius > 0, radius = 5, and for all real x and y, the equation x^2 + 8x + y^2 - 6y = 0 is equivalent to (x - center_x)^2 + (y - center_y)^2 = radius^2.
+-- 2. [Key Idea] Complete the square in x and y: x^2 + 8x = (x + 4)^2 - 16 and y^2 - 6y = (y - 3)^2 - 9. Moving constants to the other side yields (x + 4)^2 + (y - 3)^2 = 25, which is the equation of a circle with center (-4, 3) and radius 5. The proof uses an axiom that directly states the equivalence between the original equation and the completed-square form, and then rewrites (x - (-4)) as (x + 4) and 5^2 as 25 to match the chosen center and radius.
+-- 3. [Proof] Choose center_x = -4, center_y = 3, and radius = 5.
+- Clearly, radius > 0 since 5 > 0.
+- Also, radius = 5 by definition.
+- For arbitrary x and y, use the given equivalence (the axiom) that x^2 + 8x + y^2 - 6y = 0 if and only if (x + 4)^2 + (y - 3)^2 = 25.
+  - For the forward direction: assuming x^2 + 8x + y^2 - 6y = 0, the axiom gives (x + 4)^2 + (y - 3)^2 = 25. Since x - center_x = x - (−4) = x + 4 and radius^2 = 5^2 = 25, this is exactly (x - center_x)^2 + (y - center_y)^2 = radius^2.
+  - For the reverse direction: assuming (x - center_x)^2 + (y - center_y)^2 = radius^2, i.e., (x + 4)^2 + (y - 3)^2 = 25, the axiom implies x^2 + 8x + y^2 - 6y = 0.
+-- 4. [Conclusion] The equation x^2 + 8x + y^2 - 6y = 0 describes a circle centered at (-4, 3) with radius 5, and the two forms of the equation are equivalent for all real x and y.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] The plumber’s fee is modeled by C(h)=N+xh; given C(1)=97 and C(5)=265, find C(2). 2. [Key Idea] Use the two known fees to solve the linear system for N and x, then substitute h=2. 3. [Proof] Let C(h)=N+xh, where N is the “house-call” fee and x is the hourly rate. Given N+x(1)=97 (1) N+x(5)=265 (2) Subtract (1) from (2): 5x−x=265−97 4x=168 ⇒ x=42. Substitute x into (1): N+42=97 ⇒ N=55. Therefore for two hours, C(2)=55+42·2=55+84=139. 4. [Conclusion] A two-hour repair costs \$139.

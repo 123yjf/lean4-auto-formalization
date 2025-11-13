@@ -1,0 +1,5 @@
+import Mathlib.Tactic
+
+
+theorem mathd_numbertheory_342 : 54 % 6 = 0 := by
+  decide

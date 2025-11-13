@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define a sequence D_mod2: ℕ → ZMod 2 by D_mod2 0 = 0, D_mod2 1 = 0, D_mod2 2 = 1, and for n ≥ 0, D_mod2 (n + 3) = D_mod2 (n + 2) + D_mod2 n (all arithmetic mod 2). We want to show that D_mod2 2021 = 0, D_mod2 2022 = 1, and D_mod2 2023 = 0.
+-- 2. [Key Idea] The sequence is periodic with period 7, so D_mod2 n depends only on n mod 7. Compute D_mod2 on small indices and then reduce 2021, 2022, 2023 modulo 7 to read off the values from the small table.
+-- 3. [Proof] 
+--    a) By direct evaluation from the defining recurrence (working mod 2), we tabulate small values:
+--       D_mod2 0 = 0, D_mod2 1 = 0, D_mod2 2 = 1, D_mod2 3 = 1, D_mod2 4 = 1, D_mod2 5 = 0, D_mod2 6 = 1, D_mod2 7 = 0, D_mod2 8 = 0, D_mod2 9 = 1, D_mod2 10 = 1, D_mod2 11 = 1, D_mod2 12 = 0, D_mod2 13 = 1.
+--    b) Compute remainders: 2021 ≡ 5 (mod 7), 2022 ≡ 6 (mod 7), 2023 ≡ 0 (mod 7).
+--    c) Using the 7-periodicity, we get D_mod2 2021 = D_mod2 5, D_mod2 2022 = D_mod2 6, and D_mod2 2023 = D_mod2 0.
+--    d) From the table in (a), these are D_mod2 5 = 0, D_mod2 6 = 1, and D_mod2 0 = 0, respectively. Hence D_mod2 2021 = 0, D_mod2 2022 = 1, D_mod2 2023 = 0.
+-- 4. [Conclusion] By periodicity and the precomputed small values, the desired values are D_mod2 2021 = 0, D_mod2 2022 = 1, and D_mod2 2023 = 0.

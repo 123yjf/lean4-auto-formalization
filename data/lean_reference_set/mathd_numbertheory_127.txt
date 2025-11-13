@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the remainder when the sum S = 1 + 2 + 2² + … + 2¹⁰⁰ is divided by 7.
+-- 2. [Key Idea] Since 2³ ≡ 1 (mod 7), powers of 2 repeat every three exponents modulo 7. Using the geometric-series formula gives S = 2¹⁰¹ − 1, so it suffices to compute 2¹⁰¹ mod 7; alternatively, sum repeating blocks of length 3 whose total is 0 mod 7.
+-- 3. [Proof] 
+   Method 1 (Geometric-series formula): The sum of a geometric series with ratio 2 is S = (2¹⁰¹ − 1)/(2 − 1) = 2¹⁰¹ − 1. Because 2³ ≡ 1 (mod 7), we have 2¹⁰¹ = 2⁹⁹·2² = (2³)³³·4 ≡ 1³³·4 ≡ 4 (mod 7). Therefore S ≡ 4 − 1 ≡ 3 (mod 7).
+   Method 2 (Cyclic block summation): The powers of 2 modulo 7 cycle as 1, 2, 4, and repeat, since 2³ ≡ 1 (mod 7). Partition the 101 terms into 33 full blocks of three terms plus two extra terms. Each block sums to 1 + 2 + 4 ≡ 0 (mod 7), so the 33 blocks contribute 0 modulo 7, and the remaining two terms contribute 1 + 2 ≡ 3 (mod 7). Thus S ≡ 3 (mod 7).
+-- 4. [Conclusion] The remainder when 1 + 2 + 2² + … + 2¹⁰⁰ is divided by 7 is 3.

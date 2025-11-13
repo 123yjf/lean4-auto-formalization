@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the composite value f(g(2)) for f(x) = x + 1 and g(x) = x² + 3. 2. [Key Idea] First evaluate g at 2, then apply f to that result. 3. [Proof] Method 1 (Direct computation) g(2) = 2² + 3 = 4 + 3 = 7. f(g(2)) = f(7) = 7 + 1 = 8. Method 2 (Explicit composition) (f ∘ g)(x) = f(g(x)) = (x² + 3) + 1 = x² + 4. Setting x = 2 gives (f ∘ g)(2) = 2² + 4 = 4 + 4 = 8. 4. [Conclusion] Both methods confirm f(g(2)) = 8.

@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] For a positive natural number n (i.e., n ≥ 1), prove the real inequality n^(1/n) ≤ 2 − 1/n.
+-- 2. [Key Idea] Use the weighted AM ≥ GM inequality on the two nonnegative numbers 1 and n with weights (n − 1)/n and 1/n, respectively. These weights are nonnegative and sum to 1, so AM ≥ GM applies. The geometric mean simplifies to n^(1/n), and the corresponding arithmetic mean simplifies to 2 − 1/n.
+-- 3. [Proof] 
+- Since n > 0, viewed in the reals we have 0 < (n : ℝ), hence (n : ℝ) ≠ 0, which allows division by n.
+- Define the weights w1 = (n − 1)/n and w2 = 1/n. Because n ≥ 1, we have n − 1 ≥ 0, so both w1 and w2 are ≥ 0. A direct calculation shows w1 + w2 = (n − 1)/n + 1/n = 1.
+- The bases 1 and n are nonnegative: 1 ≥ 0 and (n : ℝ) ≥ 0.
+- Apply the weighted AM ≥ GM inequality to the numbers x = 1 and y = n with weights w1 and w2:
+  (1)^(w1) * (n)^(w2) ≤ w1 * 1 + w2 * n.
+- Simplify both sides:
+  • Left side: 1^(w1) = 1, so the geometric mean becomes n^(1/n).
+  • Right side: w1 * 1 + w2 * n = (n − 1)/n + (1/n) * n = (n − 1)/n + 1 = 2 − 1/n.
+- Therefore, n^(1/n) ≤ 2 − 1/n.
+-- 4. [Conclusion] By applying the weighted AM ≥ GM inequality with weights (n − 1)/n and 1/n to the numbers 1 and n, and simplifying both sides, we conclude that for every positive integer n, n^(1/n) ≤ 2 − 1/n.

@@ -1,0 +1,30 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a function f: ℕ × ℕ → ℕ satisfying:
+--    (i) f(x, x) = x,
+--    (ii) f(x, y) = f(y, x),
+--    (iii) (x + y) · f(x, y) = y · f(x, x + y) for all natural numbers x, y.
+--    The goal is to compute f(14, 52).
+
+-- 2. [Key Idea] Define a “normalized” function g(x, y) = f(x, y) / (x y). Using (iii), one checks that g is invariant under the move (x, y) ↦ (x, x + y), and using (ii), g is invariant under swapping the arguments. These two moves generate all coprime pairs from (1, 1) (Stern–Brocot/Calkin–Wilf tree), so g depends only on d = gcd(x, y). Finally, (i) pins down the value of g at (d, d), giving g(x, y) = 1 / gcd(x, y), hence f(x, y) = x y / gcd(x, y) = lcm(x, y).
+
+-- 3. [Proof] 
+--    - Define g(x, y) = f(x, y) / (x y) for x, y > 0 (the given identities ensure the expressions make sense for positive inputs).
+--    - Invariance under adding one entry to the other: From (iii),
+--        (x + y) f(x, y) = y f(x, x + y).
+--      Divide both sides by x y (x + y) to obtain
+--        f(x, y) / (x y) = f(x, x + y) / (x (x + y)),
+--      i.e., g(x, y) = g(x, x + y).
+--    - Invariance under swapping: From (ii), f(x, y) = f(y, x), so
+--        g(x, y) = f(x, y) / (x y) = f(y, x) / (y x) = g(y, x).
+--    - Therefore g is invariant under the two basic moves (x, y) ↦ (x, x + y) and (x, y) ↦ (y, x). Starting from (1, 1), repeated applications of these moves generate every coprime pair of positive integers exactly once; more generally, starting from (d, d) they generate precisely the pairs with gcd equal to d. Hence g(x, y) depends only on d = gcd(x, y), and there exists a function c such that g(x, y) = c(gcd(x, y)).
+--    - Use (i) to determine c: for any d, f(d, d) = d, so
+--        g(d, d) = f(d, d) / (d · d) = d / d^2 = 1/d.
+--      Thus c(d) = 1/d, and therefore
+--        g(x, y) = 1 / gcd(x, y),
+--      which yields the explicit formula
+--        f(x, y) = x y · g(x, y) = x y / gcd(x, y) = lcm(x, y).
+--    - Apply this to (x, y) = (14, 52). Since gcd(14, 52) = 2, we get
+--        f(14, 52) = 14 · 52 / 2 = 364.
+--      Equivalently, lcm(14, 52) = 364, as also recorded by the code’s lemma.
+
+-- 4. [Conclusion] The axioms force f(x, y) = x y / gcd(x, y) = lcm(x, y). In particular, f(14, 52) = 364.

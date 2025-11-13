@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for all positive real numbers x, y, z, we have 9/(x + y + z) ≤ 2/(x + y) + 2/(y + z) + 2/(z + x).
+-- 2. [Key Idea] Apply either the Engel (Titu’s) form of the Cauchy–Schwarz inequality to the fractions 1^2/(x + y), 1^2/(y + z), 1^2/(z + x), or equivalently use the AM–HM inequality on the three positive numbers x + y, y + z, z + x.
+-- 3. [Proof] Method 1 (Engel/Titu’s inequality): Let S = 1/(x + y) + 1/(y + z) + 1/(z + x). By Engel’s inequality,
+S = 1^2/(x + y) + 1^2/(y + z) + 1^2/(z + x) ≥ (1 + 1 + 1)^2 / [(x + y) + (y + z) + (z + x)] = 9 / [2(x + y + z)].
+Multiplying both sides by 2 gives 2S ≥ 9/(x + y + z), which is exactly 2/(x + y) + 2/(y + z) + 2/(z + x) ≥ 9/(x + y + z).
+
+Method 2 (AM–HM): Set a1 = x + y, a2 = y + z, a3 = z + x, all positive. The harmonic mean is H = 3 / (1/a1 + 1/a2 + 1/a3), and the arithmetic mean is A = (a1 + a2 + a3)/3 = 2(x + y + z)/3. Since H ≤ A, we get
+3 / (1/a1 + 1/a2 + 1/a3) ≤ 2(x + y + z)/3,
+so 1/a1 + 1/a2 + 1/a3 ≥ 9 / [2(x + y + z)].
+Multiplying by 2 yields 2/(x + y) + 2/(y + z) + 2/(z + x) ≥ 9/(x + y + z).
+-- 4. [Conclusion] Therefore, for all positive x, y, z, the inequality 9/(x + y + z) ≤ 2/(x + y) + 2/(y + z) + 2/(z + x) holds.

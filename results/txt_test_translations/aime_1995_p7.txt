@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a real number t satisfying (1 + sin t)(1 + cos t) = 5/4, show that there exist natural numbers m, n, k with gcd(m, n) = 1 such that (1 − sin t)(1 − cos t) = m/n − sqrt(k) and k + m + n = 27.
+-- 2. [Key Idea] Let s = sin t and c = cos t, and set x = s + c. The given condition expands to a relation between x and s c. Using sin^2 t + cos^2 t = 1, we express s c in terms of x and derive a quadratic equation for x. Solving it and using the bound |sin t + cos t| ≤ √2 selects the correct root. Then compute (1 − s)(1 − c) = 1 − x + s c explicitly, identify it as m/n − √k, and verify gcd and the sum condition.
+-- 3. [Proof] 
+- Let s = sin t and c = cos t. Expanding (1 + s)(1 + c) = 1 + s + c + s c, the hypothesis implies s + c + s c = 1/4.
+- Put x = s + c. From (s + c)^2 = s^2 + 2 s c + c^2 and s^2 + c^2 = 1, we get x^2 = 1 + 2 s c, hence s c = (x^2 − 1)/2.
+- Substitute this into s + c + s c = 1/4 to obtain x + (x^2 − 1)/2 = 1/4. Clearing denominators gives 4x + 2(x^2 − 1) = 1, i.e. 2 x^2 + 4 x − 3 = 0.
+- Solve the quadratic: the discriminant is 4^2 − 4·2·(−3) = 40 = (2√10)^2, so x = [−4 ± 2√10]/(2·2) = (−2 ± √10)/2.
+- Use the standard bound |sin t + cos t| ≤ √2 to decide the sign. Note that √10 > 3, so (−2 − √10)/2 < (−2 − 3)/2 = −2.5, hence |(−2 − √10)/2| > 2.5. But √2 < 2.5, so |x| ≤ √2 rules out x = (−2 − √10)/2. Therefore x = (−2 + √10)/2.
+- Compute s c from s c = (x^2 − 1)/2 using x = (−2 + √10)/2. A straightforward calculation yields s c = (5 − 2√10)/4.
+- Now compute (1 − s)(1 − c) = 1 − (s + c) + s c = 1 − x + s c. Substituting x and s c gives (1 − s)(1 − c) = 13/4 − √10.
+- Set m = 13, n = 4, k = 10. Then (1 − s)(1 − c) = 13/4 − √10 = m/n − √k. Clearly gcd(13, 4) = 1, and k + m + n = 10 + 13 + 4 = 27.
+-- 4. [Conclusion] Choosing m = 13, n = 4, and k = 10 satisfies all requirements: gcd(m, n) = 1, (1 − sin t)(1 − cos t) = m/n − √k, and k + m + n = 27.

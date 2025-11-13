@@ -1,0 +1,23 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive real numbers a, b, c that satisfy the triangle inequalities a + b > c, b + c > a, and c + a > b, prove that a^2(b + c − a) + b^2(c + a − b) + c^2(a + b − c) ≤ 3abc.
+
+-- 2. [Key Idea] Use Ravi substitution (valid under the triangle inequalities) to write a = y + z, b = z + x, c = x + y with x, y, z > 0. This turns the inequality into a known symmetric inequality in x, y, z:
+   2·[x(y + z)^2 + y(z + x)^2 + z(x + y)^2] ≤ 3(x + y)(y + z)(z + x).
+
+-- 3. [Proof] 
+   - By the triangle inequalities and positivity, apply Ravi substitution to obtain x, y, z > 0 such that a = y + z, b = z + x, and c = x + y.
+   - Rewrite the left-hand side using these substitutions:
+     • b + c − a = (z + x) + (x + y) − (y + z) = 2x,
+     • c + a − b = (x + y) + (y + z) − (z + x) = 2y,
+     • a + b − c = (y + z) + (z + x) − (x + y) = 2z.
+     Hence
+     a^2(b + c − a) + b^2(c + a − b) + c^2(a + b − c)
+     = (y + z)^2·(2x) + (z + x)^2·(2y) + (x + y)^2·(2z)
+     = 2·[x(y + z)^2 + y(z + x)^2 + z(x + y)^2].
+   - The right-hand side becomes 3abc = 3(y + z)(z + x)(x + y); reordering factors if needed uses commutativity.
+   - Since x, y, z > 0, apply the known inequality
+     2·[x(y + z)^2 + y(z + x)^2 + z(x + y)^2] ≤ 3(x + y)(y + z)(z + x),
+     which yields exactly the desired inequality after the substitution.
+
+-- 4. [Conclusion] By Ravi substitution and a standard symmetric inequality in x, y, z, the given expression satisfies
+a^2(b + c − a) + b^2(c + a − b) + c^2(a + b − c) ≤ 3abc, as required.

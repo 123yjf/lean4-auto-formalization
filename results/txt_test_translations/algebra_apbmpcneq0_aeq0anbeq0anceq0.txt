@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers m and n with m^3 = 2 and n^3 = 4, and rational numbers a, b, c such that a + b·m + c·n = 0 (interpreting a, b, c as real numbers via the natural embedding), prove that a = 0, b = 0, and c = 0.
+-- 2. [Key Idea] Use the relation n = m^2 (which follows from m^3 = 2 and n^3 = 4) to rewrite the equation as a linear relation a + b·m + c·m^2 = 0. Then apply the linear independence of {1, m, m^2} over the rationals to conclude that all coefficients must be zero.
+-- 3. [Proof] 
+--    - From the axiomatic relation between cube roots, m^3 = 2 and n^3 = 4 imply n = m^2.
+--    - Substitute n = m^2 into the given equation a + b·m + c·n = 0 to obtain a + b·m + c·m^2 = 0 (with a, b, c viewed in ℝ).
+--    - By the axiom asserting linear independence of 1, m, m^2 over ℚ when m^3 = 2, the only rational coefficients a, b, c satisfying a + b·m + c·m^2 = 0 are a = 0, b = 0, and c = 0.
+-- 4. [Conclusion] Therefore, under the hypotheses m^3 = 2, n^3 = 4, and a + b·m + c·n = 0 with a, b, c ∈ ℚ, it follows that a = 0 ∧ b = 0 ∧ c = 0.

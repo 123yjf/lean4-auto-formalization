@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 91 squared equals 8281, i.e., (91 : ℕ)^2 = 8281.
+-- 2. [Key Idea] Compute the square by rewriting 91 as 90 + 1 and expanding (90 + 1)^2 using the binomial formula; then evaluate the resulting arithmetic. (An alternative, unused route also shows (100 − 9)^2 = 8281.)
+-- 3. [Proof] 
+--    - First, expand (90 + 1)^2 via the binomial identity: (90 + 1)^2 = 90^2 + 2·90·1 + 1^2.
+--    - Evaluate the right-hand side numerically: 90^2 + 2·90·1 + 1^2 = 8100 + 180 + 1 = 8281. Hence, (90 + 1)^2 = 8281.
+--    - Note that 91 = 90 + 1, so substituting gives (91)^2 = (90 + 1)^2 = 8281.
+--    - (For completeness, the code also shows independently that (100 − 9)^2 = 8281 by expanding to 100^2 − 2·100·9 + 9^2 and evaluating, though this is not used in the final step.)
+-- 4. [Conclusion] Therefore, (91 : ℕ)^2 = 8281.

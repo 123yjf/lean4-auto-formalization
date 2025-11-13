@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the unique value of f(1982) for a function f from positive integers to nonnegative integers satisfying f(2)=0, f(3)>0, f(9999)=3333, and f(m+n)=f(m)+f(n)+δ_{m,n} with δ_{m,n} in {0,1} for all positive integers m,n.
+-- 2. [Key Idea] The rule f(m+n)=f(m)+f(n)+δ with δ in {0,1} makes f superadditive and “almost additive,” allowing at most a carry of 1. This is exactly the behavior of g(n)=⌊n/3⌋, where the carry occurs when the residues of m and n modulo 3 sum to at least 3. Matching the tight value f(9999)=3333 forces minimal growth, hence f(n)=⌊n/3⌋ uniquely.
+-- 3. [Proof] 
+--    - From f(2)=f(1+1)=2f(1)+δ with δ in {0,1} and f(2)=0, nonnegativity forces f(1)=0 and δ=0. Then f(3)=f(1+2)=f(1)+f(2)+δ=δ>0, so f(3)=1.
+--    - Define g(n)=⌊n/3⌋. It satisfies g(2)=0, g(3)=1, g(9999)=3333, and g(m+n)=g(m)+g(n)+ε where ε is 0 or 1 depending on whether the residues of m and n modulo 3 sum to at least 3. Thus g meets all the axioms.
+--    - Uniqueness: suppose there is a smallest k with f(k)≥g(k)+1. Write k=3q+s with s∈{0,1,2}, so g(k)=q. For any m≥1,
+--      f(mk) ≥ m f(k) ≥ m(q+1) > m q + ⌊ms/3⌋ = ⌊mk/3⌋,
+--      hence f(mk) ≥ ⌊mk/3⌋+1. Choose m so that mk≤9999 and mk≡0 (mod 3), for example m=3⌊9999/(3k)⌋≥1; set r=9999−mk, so 0≤r<k. By minimality, f(r)=g(r)=⌊r/3⌋. Then
+--      f(9999)=f(mk+r) ≥ f(mk)+f(r) ≥ (⌊mk/3⌋+1)+⌊r/3⌋ = ⌊(mk+r)/3⌋+1 = ⌊9999/3⌋+1 = 3334,
+--      contradicting f(9999)=3333. Therefore no such k exists and f(n)=g(n)=⌊n/3⌋ for all n.
+--    - Hence f(1982)=⌊1982/3⌋=660.
+-- 4. [Conclusion] The unique function is f(n)=⌊n/3⌋, and therefore f(1982)=660.

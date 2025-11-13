@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the product of the real roots of the equation x² + 18x + 30 = 2√(x² + 18x + 45).
+-- 2. [Key Idea] Complete the square to simplify the expressions inside the square root, introduce substitutions to reduce the problem to a simple quadratic, solve it, back-substitute to get the x-roots, and compute their product (e.g., by difference of squares).
+-- 3. [Proof] Rewrite x² + 18x as (x + 9)² − 81. Then the left-hand side becomes (x + 9)² − 51, and the right-hand side becomes 2√((x + 9)² − 36). Let u = (x + 9)² (so u ≥ 0). The equation becomes u − 51 = 2√(u − 36), which forces u ≥ 36. Next, set v = √(u − 36) (v ≥ 0), so u = v² + 36. Substituting gives v² + 36 − 51 = 2v, i.e., v² − 2v − 15 = 0, which factors as (v − 5)(v + 3) = 0. Since v ≥ 0, we take v = 5. Then u = v² + 36 = 61, so (x + 9)² = 61, giving x = −9 ± √61. Both values satisfy the original equation (they yield equal sides: 10). The product of the roots is (−9 + √61)(−9 − √61) = (−9)² − (√61)² = 81 − 61 = 20.
+-- 4. [Conclusion] The product of the real roots is 20.

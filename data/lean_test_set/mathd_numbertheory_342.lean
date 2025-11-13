@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the remainder when 54 is divided by 6. 2. [Key Idea] If an integer is a multiple of 6, its remainder upon division by 6 is 0. 3. [Proof] Direct Computation 54 ÷ 6 = 9 with no leftover, because 54 = 6·9. Therefore the remainder is 0. Alternative (Congruence Notation) Since 54 = 6·9, we have 54 ≡ 0 (mod 6), so the remainder is 0. 4. [Conclusion] The remainder of 54 modulo 6 is 0.

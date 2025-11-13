@@ -1,0 +1,6 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for all positive real numbers a, b, c, d, the inequality a^2/b + b^2/c + c^2/d + d^2/a ≥ a + b + c + d holds.
+-- 2. [Key Idea] Use Cauchy’s inequality in Engel form (Titu’s Lemma): for positive y_i, we have Σ (x_i^2 / y_i) ≥ (Σ x_i)^2 / (Σ y_i).
+-- 3. [Proof] Apply Titu’s Lemma with (x_1, x_2, x_3, x_4) = (a, b, c, d) and (y_1, y_2, y_3, y_4) = (b, c, d, a). Then
+   a^2/b + b^2/c + c^2/d + d^2/a ≥ (a + b + c + d)^2 / (b + c + d + a) = a + b + c + d.
+-- 4. [Conclusion] Hence a^2/b + b^2/c + c^2/d + d^2/a is always at least a + b + c + d for positive a, b, c, d.

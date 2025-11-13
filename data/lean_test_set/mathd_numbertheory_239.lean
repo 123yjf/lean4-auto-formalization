@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the remainder when the sum 1 + 2 + … + 12 is divided by 4. 2. [Key Idea] Either compute the total 1 + … + 12 = 78 and reduce mod 4, or group terms in blocks whose sums have an obvious residue. 3. [Proof] Method A (direct computation). Sum = 12·13⁄2 = 78. 78 ≡ 78 − 4·19 = 2 (mod 4). Method B (modular grouping). Reduce each addend mod 4: (1 + 2 + 3 + 0) + (1 + 2 + 3 + 0) + (1 + 2 + 3 + 0) = 3·(1 + 2 + 3 + 0) = 3·6 = 18 ≡ 2 (mod 4). 4. [Conclusion] In every approach the sum leaves a remainder of 2 upon division by 4.

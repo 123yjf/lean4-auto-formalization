@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for any real x with x ≥ 0, we have
+--    sqrt(60x) · sqrt(12x) · sqrt(63x) = 36x · sqrt(35x).
+
+-- 2. [Key Idea] Combine the three square roots into a single square root using sqrt(a)·sqrt(b) = sqrt(ab) (valid for nonnegative a, b), collect constants and the powers of x, rewrite the large constant as 36^2 · 35, and then use sqrt((36x)^2) = 36x (since x ≥ 0) to simplify.
+
+-- 3. [Proof]
+--    - Because x ≥ 0 and the constants 60, 12, 63 are positive, each of 60x, 12x, 63x is ≥ 0. Hence
+--      sqrt(60x) · sqrt(12x) = sqrt(60x · 12x), and then
+--      sqrt(60x · 12x) · sqrt(63x) = sqrt(60x · 12x · 63x).
+--    - Rearranging factors, we get 60x · 12x · 63x = (60 · 12 · 63) · x^3.
+--    - Compute the constant: 60 · 12 · 63 = 45360, and note 45360 = 36^2 · 35.
+--      Therefore sqrt(60 · 12 · 63 · x^3) = sqrt(36^2 · 35 · x^3).
+--    - Rewrite 36^2 · 35 · x^3 as (36x)^2 · (35x). Thus
+--      sqrt(36^2 · 35 · x^3) = sqrt((36x)^2 · (35x)) = sqrt((36x)^2) · sqrt(35x).
+--    - Since x ≥ 0, we have 36x ≥ 0, so sqrt((36x)^2) = 36x. Hence the whole expression equals
+--      36x · sqrt(35x).
+
+-- 4. [Conclusion] Therefore, for all real x ≥ 0,
+--    sqrt(60x) · sqrt(12x) · sqrt(63x) = 36x · sqrt(35x).

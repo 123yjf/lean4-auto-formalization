@@ -1,0 +1,22 @@
+-- Proof content:
+-- 1. [Problem Restatement] For positive real numbers a, b, c with ab + bc + ca ≥ 3, prove that the cyclic sum a/√(a + b) + b/√(b + c) + c/√(c + a) is at least 3/√2.
+-- 2. [Key Idea] Reduce to the normalized case ab + bc + ca = 3 by a scaling argument. Then apply either Cauchy–Schwarz (twice) or Hölder’s inequality to bound the sum from below by an explicit function of p = a + b + c. Finally, verify that this function is minimized at p = 3, giving the desired bound.
+-- 3. [Proof] 
+- Reduction to ab + bc + ca = 3:
+  Let s = ab + bc + ca ≥ 3 and set t = √(3/s). Define a' = t a, b' = t b, c' = t c. Then ab' + bc' + ca' = t^2(ab + bc + ca) = 3. Consider S = Σ a/√(a + b) and S' = Σ a'/√(a' + b'). We have
+  S' = Σ (t a)/√(t(a + b)) = √t · Σ a/√(a + b) = √t · S.
+  If we can prove S' ≥ 3/√2 whenever ab' + bc' + ca' = 3, then √t · S ≥ 3/√2, so S ≥ (1/√t) · 3/√2. Since t = √(3/s), we have 1/√t = (s/3)^(1/4) ≥ 1, hence S ≥ 3/√2. Thus, it suffices to assume ab + bc + ca = 3.
+
+- Proof 1 (Cauchy–Schwarz):
+  Let S = Σ a/√(a + b). By Titu’s lemma (Cauchy–Schwarz in Engel form),
+  S = Σ a^2/(a√(a + b)) ≥ (a + b + c)^2 / Σ a√(a + b).
+  Apply Cauchy–Schwarz again to the denominator:
+  (Σ a√(a + b))^2 ≤ (Σ a)(Σ a(a + b)) = p(p^2 − 3), where p = a + b + c and we used ab + bc + ca = 3 to get Σ a(a + b) = (a^2 + b^2 + c^2) + (ab + bc + ca) = (p^2 − 6) + 3 = p^2 − 3.
+  Therefore S^2 ≥ p^4 / (p(p^2 − 3)) = p^3/(p^2 − 3).
+  It remains to show p^3/(p^2 − 3) ≥ 9/2 for p ≥ 3 (since (a + b + c)^2 ≥ 3(ab + bc + ca) = 9). This is equivalent to 2p^3 − 9p^2 + 27 ≥ 0, which factors as (p − 3)^2(2p + 3) ≥ 0. Hence S ≥ 3/√2, with equality at a = b = c = 1.
+
+- Proof 2 (Hölder):
+  With ab + bc + ca = 3 and S as above, Hölder’s inequality gives
+  (Σ a/√(a + b))^2 · Σ a(a + b) ≥ (a + b + c)^3.
+  Using Σ a(a + b) = p^2 − 3 as above, we get S^2 ≥ p^3/(p^2 − 3), which reduces to the same single-variable inequality handled in Proof 1. Thus S ≥ 3/√2, with equality at a = b = c = 1.
+-- 4. [Conclusion] By scaling to the case ab + bc + ca = 3 and applying either Cauchy–Schwarz (twice) or Hölder’s inequality, we obtain S ≥ 3/√2. Therefore, for all positive real a, b, c with ab + bc + ca ≥ 3, the inequality Σ a/√(a + b) ≥ 3/√2 holds, with equality at a = b = c = 1.

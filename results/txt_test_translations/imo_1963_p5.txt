@@ -1,0 +1,29 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 2 · sin(π/7) ≠ 0.
+-- 2. [Key Idea] Use that sin x > 0 for 0 < x < π. Here x = π/7 lies in (0, π), so sin(π/7) > 0. Since 2 ≠ 0, the product is nonzero.
+-- 3. [Proof] First, 0 < π/7 because π > 0 and 7 > 0. Next, π/7 < π/2 by monotonicity of division by a positive number (dividing the positive π by 7 gives a smaller positive number than dividing by 2), and π/2 < π is obvious. Thus 0 < π/7 < π, so sin(π/7) > 0. Therefore sin(π/7) ≠ 0, and since 2 ≠ 0, we have 2 · sin(π/7) ≠ 0.
+-- 4. [Conclusion] The product 2 · sin(π/7) is nonzero.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real a, b, prove sin(π · (−a/b)) = − sin(π · (a/b)).
+-- 2. [Key Idea] Use the oddness of sine: sin(−x) = − sin x, together with the algebraic identity π · (−a/b) = −(π · (a/b)).
+-- 3. [Proof] Rewrite π · (−a/b) as −(π · (a/b)) by basic algebra. Then apply sin(−x) = − sin x to get sin(π · (−a/b)) = − sin(π · (a/b)).
+-- 4. [Conclusion] The identity holds: sin(π · (−a/b)) = − sin(π · (a/b)).
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove cos(π/7) − cos(2π/7) + cos(3π/7) = 1/2.
+-- 2. [Key Idea] Multiply both sides by 2 · sin(π/7) (which is nonzero by the first lemma) and simplify using standard trigonometric identities:
+--    - sin(2x) = 2 sin x cos x,
+--    - 2 sin α cos β = sin(α + β) + sin(α − β),
+--    - sin(π − t) = sin t,
+--    - sin(−t) = − sin t.
+--    After simplification, the left-hand side becomes sin(π/7); dividing by 2 · sin(π/7) yields 1/2.
+-- 3. [Proof] Using the injectivity of multiplication on the right by a nonzero number, it suffices to prove the equality after multiplying both sides by 2 · sin(π/7). The left-hand side becomes
+--    2 sin(π/7) cos(π/7) − 2 sin(π/7) cos(2π/7) + 2 sin(π/7) cos(3π/7).
+--    Convert the first term via sin(2x) = 2 sin x cos x to sin(2π/7). Convert the other two via 2 sin α cos β = sin(α + β) + sin(α − β), obtaining:
+--    sin(2π/7) − [sin(3π/7) + sin(−π/7)] + [sin(4π/7) + sin(−2π/7)].
+--    Use sin(−t) = − sin t to rewrite sin(−π/7) = − sin(π/7) and sin(−2π/7) = − sin(2π/7), and use sin(4π/7) = sin(π − 3π/7) = sin(3π/7). The expression simplifies to
+--    sin(2π/7) − sin(3π/7) + sin(π/7) + sin(3π/7) − sin(2π/7) = sin(π/7).
+--    Thus, 2 sin(π/7) · [cos(π/7) − cos(2π/7) + cos(3π/7)] = sin(π/7).
+--    Since 2 sin(π/7) ≠ 0, divide both sides to obtain cos(π/7) − cos(2π/7) + cos(3π/7) = 1/2.
+-- 4. [Conclusion] The identity holds: cos(π/7) − cos(2π/7) + cos(3π/7) = 1/2.

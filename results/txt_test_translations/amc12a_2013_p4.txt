@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that over the rationals, (2^2014 + 2^2012) / (2^2014 - 2^2012) equals 5/3.
+
+-- 2. [Key Idea] Express 2^2014 as 2^2012 · 4 (since 2014 = 2012 + 2 and 2^2 = 4), factor 2^2012 out of the numerator and denominator, cancel this common nonzero factor, and then evaluate the resulting simple fraction.
+
+-- 3. [Proof] 
+- Note that 2014 = 2012 + 2, so 2^2014 = 2^(2012+2) = 2^2012 · 2^2 = 2^2012 · 4.
+- Substitute this into the original fraction:
+  (2^2014 + 2^2012) / (2^2014 − 2^2012) = (2^2012·4 + 2^2012) / (2^2012·4 − 2^2012).
+- Factor 2^2012 from numerator and denominator:
+  = [2^2012 · (4 + 1)] / [2^2012 · (4 − 1)].
+- Since 2 ≠ 0 in ℚ, we have 2^2012 ≠ 0, so we can cancel the common factor 2^2012:
+  = (4 + 1) / (4 − 1).
+- Compute the remaining arithmetic: (4 + 1) / (4 − 1) = 5 / 3.
+
+-- 4. [Conclusion] Therefore, (2^2014 + 2^2012) / (2^2014 − 2^2012) = 5/3.

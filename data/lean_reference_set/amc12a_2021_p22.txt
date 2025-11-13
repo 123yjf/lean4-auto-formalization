@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the product abc of the coefficients of the monic cubic P(x) = x^3 + a x^2 + b x + c whose roots are cos(2π/7), cos(4π/7), cos(6π/7).
+-- 2. [Key Idea] By Vieta’s formulas, a = −S1, b = S2, c = −S3, where S1, S2, S3 are the elementary symmetric sums of the three roots. Thus abc = S1 S2 S3. Compute S1, S2, S3 using trigonometric identities and simple root-of-unity algebra.
+-- 3. [Proof] Let r1 = cos(2π/7), r2 = cos(4π/7), r3 = cos(6π/7), and set S1 = r1 + r2 + r3, S2 = r1 r2 + r2 r3 + r3 r1, S3 = r1 r2 r3.
+   Step 1 (S1). Using cos(π − θ) = −cos θ, we have r1 + r2 + r3 = −(cos(π/7) + cos(3π/7) + cos(5π/7)). A standard identity (e.g., from taking real parts of appropriate sums of 7th roots of unity) gives cos(π/7) + cos(3π/7) + cos(5π/7) = 1/2, so S1 = −1/2.
+   Step 2 (S2). From (r1 + r2 + r3)^2 = r1^2 + r2^2 + r3^2 + 2S2, we compute r1^2 + r2^2 + r3^2 via cos^2 θ = (1 + cos 2θ)/2. The double angles are 4π/7, 8π/7, 12π/7, whose cosines are r2, r3, r1 respectively (since cos(8π/7) = cos(6π/7) and cos(12π/7) = cos(2π/7)). Hence r1^2 + r2^2 + r3^2 = 3/2 + (1/2)(r1 + r2 + r3) = 3/2 + (1/2)(−1/2) = 5/4. Therefore S2 = (S1^2 − (r1^2 + r2^2 + r3^2))/2 = ((1/4) − 5/4)/2 = −1/2.
+   Step 3 (S3). Let ζ = e^{2πi/7}. Then rk = (ζ^k + ζ^{−k})/2 for k = 1, 2, 3, so
+   8 S3 = (ζ + ζ^6)(ζ^2 + ζ^5)(ζ^3 + ζ^4).
+   Expanding and grouping terms using ∑_{m=0}^6 ζ^m = 0 shows all nonconstant contributions cancel, leaving 1. Thus 8 S3 = 1 and S3 = 1/8.
+   Step 4 (abc). By Vieta, abc = (−S1)(S2)(−S3) = S1 S2 S3 = (−1/2)(−1/2)(1/8) = 1/32.
+-- 4. [Conclusion] The product abc equals 1/32.

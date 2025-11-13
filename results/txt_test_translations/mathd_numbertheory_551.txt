@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 1529 mod 6 equals 5.
+-- 2. [Key Idea] Compute the Euclidean division of 1529 by 6: find integers q and r with 0 ≤ r < 6 such that 1529 = 6q + r. The remainder r is then 1529 % 6.
+-- 3. [Proof] Multiply 6 by 254 to get 6 * 254 = 1524. Then 1529 − 1524 = 5, so 1529 = 6 * 254 + 5 with 0 ≤ 5 < 6. Therefore, the remainder upon division by 6 is 5, i.e., 1529 % 6 = 5.
+-- 4. [Conclusion] Hence, 1529 % 6 = 5.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 1529 mod 6 equals 5.
+-- 2. [Key Idea] As above, use Euclidean division: express 1529 as 6 times a quotient plus a remainder less than 6.
+-- 3. [Proof] We have 6 * 254 = 1524, and 1529 = 1524 + 5, with 0 ≤ 5 < 6. Thus the remainder when dividing 1529 by 6 is 5, so 1529 % 6 = 5.
+-- 4. [Conclusion] Therefore, 1529 % 6 = 5.

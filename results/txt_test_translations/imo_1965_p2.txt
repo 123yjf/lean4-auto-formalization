@@ -1,0 +1,19 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a 3×3 real matrix A whose diagonal entries are positive, whose off-diagonal entries are negative, and whose row sums are positive. We must show that the only vector x satisfying Ax = 0 (i.e., for every row i, ∑j A i j · x j = 0) is the zero vector.
+
+-- 2. [Key Idea] Prove that A is strictly diagonally dominant by rows: for each i, the diagonal entry A i i is strictly larger than the sum of the absolute values of the off-diagonal entries in row i. This follows because off-diagonal entries are negative and the total row sum is positive. Strict diagonal dominance implies det A ≠ 0 (a Gershgorin/diagonal-dominance criterion). Hence A is nonsingular, so Ax = 0 forces x = 0.
+
+-- 3. [Proof]
+- Fix an arbitrary vector x with the property that for every i, ∑j A i j · x j = 0.
+- Show strict diagonal dominance for each row i:
+  * Start from the given positivity of the row sum: 0 < ∑j A i j.
+  * Split the row sum into the diagonal term and the sum over the off-diagonal terms: ∑j A i j = A i i + ∑_{j ≠ i} A i j.
+  * Since each off-diagonal entry is negative, for j ≠ i we have |A i j| = −A i j. Therefore, ∑_{j ≠ i} |A i j| = − ∑_{j ≠ i} A i j.
+  * Combining these facts with 0 < A i i + ∑_{j ≠ i} A i j yields A i i > − ∑_{j ≠ i} A i j = ∑_{j ≠ i} |A i j|. Thus A is strictly diagonally dominant by rows.
+- Conclude det A ≠ 0 from strict diagonal dominance:
+  * The cited lemma det_ne_zero_of_sum_row_lt_diag applies to the inequalities |A i i| > ∑_{j ≠ i} ‖A i j‖. Here A i i > 0, so ‖A i i‖ = A i i, and the off-diagonal absolute values match the norms. Hence det A ≠ 0.
+- Use nonsingularity to conclude x = 0:
+  * The given equations ∑j A i j · x j = 0 for all i mean exactly that the product Ax (as a column vector) is the zero vector.
+  * For a matrix with nonzero determinant, Ax = 0 implies x = 0. Therefore x is the zero vector.
+
+-- 4. [Conclusion] Under the given sign and row-sum conditions, A is strictly diagonally dominant and hence nonsingular; therefore the only solution to Ax = 0 is the trivial one, so x i = 0 for all i.

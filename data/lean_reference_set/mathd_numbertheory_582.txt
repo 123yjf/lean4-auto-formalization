@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given that n is congruent to 0 modulo 3 (that is, n is a multiple of 3), show that the sum S = (n + 4) + (n + 6) + (n + 8) leaves remainder 0 upon division by 9.
+-- 2. [Key Idea] Either rewrite the sum to factor out a multiple of 9 directly, or compute the sum modulo 9 by considering the possible residues of n modulo 9 consistent with n ≡ 0 (mod 3).
+-- 3. [Proof] 
+   Style A – Direct factoring:
+   Combine terms: S = (n + 4) + (n + 6) + (n + 8) = 3n + 18. Since n is a multiple of 3, write n = 3k. Then S = 3(3k) + 18 = 9k + 18 = 9(k + 2). Therefore, S is a multiple of 9, so its remainder upon division by 9 is 0.
+
+   Style B – Modular arithmetic:
+   From n ≡ 0 (mod 3), the possible residues modulo 9 are n ≡ 0, 3, or 6 (mod 9). Check S mod 9 in each case:
+   • If n ≡ 0: S ≡ (0 + 4) + (0 + 6) + (0 + 8) = 18 ≡ 0 (mod 9).
+   • If n ≡ 3: S ≡ (3 + 4) + (3 + 6) + (3 + 8) = 27 ≡ 0 (mod 9).
+   • If n ≡ 6: S ≡ (6 + 4) + (6 + 6) + (6 + 8) = 36 ≡ 0 (mod 9).
+   In all cases, S ≡ 0 (mod 9).
+-- 4. [Conclusion] Whenever n is a multiple of 3, the sum (n + 4) + (n + 6) + (n + 8) is divisible by 9, so the remainder upon division by 9 is 0.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Expand (x + 3)(2x − 6) and verify that it equals 2x² − 18. 2. [Key Idea] Apply the distributive law (FOIL) to multiply each term of the first factor by each term of the second, then combine like terms. 3. [Proof] (x + 3)(2x − 6) = x(2x − 6) + 3(2x − 6) (distributive law) = 2x² − 6x + 6x − 18 (multiply) = 2x² − 18 (combine −6x and +6x) 4. [Conclusion] The product (x + 3)(2x − 6) simplifies exactly to 2x² − 18.

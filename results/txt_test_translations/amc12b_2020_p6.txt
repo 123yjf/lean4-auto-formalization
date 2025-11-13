@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] For any natural number n with n ≥ 9, show that there exists a natural number k such that ((n + 2)! − (n + 1)!)/n! = k^2.
+-- 2. [Key Idea] Expand the factorials using (m + 1)! = (m + 1)·m!, simplify the numerator, factor out n!, and then cancel n! (which is nonzero). The result turns out to be (n + 1)^2, so we can take k = n + 1.
+-- 3. [Proof] Choose k = n + 1. Using the factorial identity, (n + 2)! = (n + 2)(n + 1)n! and (n + 1)! = (n + 1)n!. Then the numerator becomes:
+--    (n + 2)! − (n + 1)! = [(n + 2)(n + 1) − (n + 1)] n! = (n + 1)[(n + 2) − 1] n! = (n + 1)(n + 1)n! = (n + 1)^2 n!.
+--    Since n! ≠ 0 in ℕ, we can cancel n! in the division:
+--    ((n + 2)! − (n + 1)!)/n! = [(n + 1)^2 n!]/n! = (n + 1)^2.
+--    Therefore the expression equals k^2 with k = n + 1.
+-- 4. [Conclusion] There exists k (namely k = n + 1) such that ((n + 2)! − (n + 1)!)/n! is a perfect square, specifically (n + 1)^2. Note that the assumption n ≥ 9 is not used; the statement holds for all n ∈ ℕ.

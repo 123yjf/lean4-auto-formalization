@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers a, b, c such that their product equals 1/32.
+
+-- 2. [Key Idea] Define three cosine-related real numbers r₁, r₂, r₃ and their elementary symmetric sums S₁, S₂, S₃. Assume given values S₁ = -1/2, S₂ = -1/2, and S₃ = 1/8. Compute the product S₁ S₂ S₃, then choose a, b, c as simple signed versions of S₁, S₂, S₃ so that their product equals S₁ S₂ S₃.
+
+-- 3. [Proof]
+- Define r₁ = cos(2π/7), r₂ = cos(4π/7), r₃ = cos(6π/7).
+- Define their symmetric sums:
+  S₁ = r₁ + r₂ + r₃,
+  S₂ = r₁r₂ + r₂r₃ + r₃r₁,
+  S₃ = r₁r₂r₃.
+- Assume the values S₁ = -1/2, S₂ = -1/2, S₃ = 1/8.
+- Compute the product:
+  S₁ S₂ S₃ = (-1/2) · (-1/2) · (1/8) = (1/4) · (1/8) = 1/32.
+- To produce real numbers whose product is 1/32, set
+  a = -S₁, b = S₂, c = -S₃.
+  Then
+  a b c = (-S₁) · S₂ · (-S₃) = S₁ S₂ S₃ = 1/32,
+  where the equalities use basic ring rearrangements and the computed value of S₁ S₂ S₃.
+
+-- 4. [Conclusion] Choosing a = -S₁, b = S₂, c = -S₃ yields a b c = 1/32, so there exist real numbers with product 1/32.

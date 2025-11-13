@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for positive integers m ≤ n, the integer f(2ᵐ) = 4^{2ᵐ} + 6^{2ᵐ} + 9^{2ᵐ} divides f(2ⁿ) = 4^{2ⁿ} + 6^{2ⁿ} + 9^{2ⁿ}.
+-- 2. [Key Idea] Prove the basic step f(x) ∣ f(2x) for every positive integer x, then apply this divisibility repeatedly from x = 2ᵐ up to x = 2ⁿ by doubling k = n − m times.
+-- 3. [Proof] Let x be a positive integer and set r = 2ˣ and s = 3ˣ. Then f(x) = 4ˣ + 6ˣ + 9ˣ = r² + rs + s², and f(2x) = 4^{2x} + 6^{2x} + 9^{2x} = r⁴ + r²s² + s⁴. Factor f(2x) as follows:
+   r⁴ + r²s² + s⁴ = (r² + rs + s²)² − 2rs(r² + rs + s²) = (r² + rs + s²)(r² + rs + s² − 2rs).
+   Hence f(2x) = f(x) · (r² + rs + s² − 2rs), so f(x) divides f(2x). Now fix m ≤ n and write n = m + k with k ≥ 0. Applying the divisibility k times gives
+   f(2ᵐ) ∣ f(2·2ᵐ) = f(2^{m+1}) ∣ … ∣ f(2^{m+k}) = f(2ⁿ).
+-- 4. [Conclusion] Since f(x) always divides f(2x), iterating this along doublings from 2ᵐ to 2ⁿ shows f(2ᵐ) ∣ f(2ⁿ) for all positive integers m ≤ n.

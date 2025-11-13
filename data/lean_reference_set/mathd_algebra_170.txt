@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine how many integers x satisfy the inequality |x − 2| ≤ 5.6.
+-- 2. [Key Idea] Rewrite the absolute-value inequality as a closed interval for x, then count the integers within that interval (optionally using floor and ceiling).
+-- 3. [Proof] The inequality |x − 2| ≤ 5.6 is equivalent to −5.6 ≤ x − 2 ≤ 5.6. Adding 2 to all parts gives −3.6 ≤ x ≤ 7.6. The integers in this interval are −3, −2, −1, 0, 1, 2, 3, 4, 5, 6, 7, totaling 11 integers. Alternatively, the smallest integer at least −3.6 is ⌈−3.6⌉ = −3, and the largest integer at most 7.6 is ⌊7.6⌋ = 7, so the count is 7 − (−3) + 1 = 11.
+-- 4. [Conclusion] There are exactly 11 integers satisfying |x − 2| ≤ 5.6.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the residue n (0 ≤ n ≤ 46) satisfying 2n ≡ 15 (mod 47). 2. [Key Idea] Because 2 is invertible mod 47, multiply both sides by the modular inverse of 2 (which is 24) to isolate n. 3. [Proof] • Compute the inverse of 2 modulo 47: 2·24 = 48 ≡ 1 (mod 47) ⇒ 2⁻¹ ≡ 24 (mod 47). • Multiply the congruence by 24: 24·2n ≡ 24·15 (mod 47) ⇒ n ≡ 360 (mod 47). • Reduce 360 modulo 47: 360 − 7·47 = 360 − 329 = 31. Hence n ≡ 31 (mod 47). 4. [Conclusion] The unique residue between 0 and 46 satisfying 2n ≡ 15 (mod 47) is 31.

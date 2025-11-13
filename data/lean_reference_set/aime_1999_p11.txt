@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that the finite sum S = ∑_{k=1}^{35} sin(5k°) can be written as tan(m/n)° for coprime integers m, n with m/n < 90, and determine m + n.
+-- 2. [Key Idea] Use the standard identity for finite sine sums: ∑_{k=1}^{n} sin(kx) = [sin(nx/2) · sin((n+1)x/2)] / sin(x/2). Evaluate it at n = 35 and x = 5°, then simplify using sin(90°) = 1 and sin(90° − θ) = cos θ.
+-- 3. [Proof] Let S = ∑_{k=1}^{35} sin(5k°). Applying the identity with n = 35 and x = 5° gives S = sin(35·5°/2) · sin(36·5°/2) / sin(5°/2). Compute the angles: 35·5°/2 = 87.5°, 36·5°/2 = 90°, and 5°/2 = 2.5°. Thus S = sin(87.5°) · sin(90°) / sin(2.5°) = sin(87.5°) / sin(2.5°). Since sin(87.5°) = sin(90° − 2.5°) = cos(2.5°), we get S = cos(2.5°) / sin(2.5°) = cot(2.5°) = tan(90° − 2.5°) = tan(87.5°). Writing 87.5° as a rational number gives 87.5° = 175/2 degrees, so m = 175 and n = 2, which are coprime and satisfy m/n < 90. Therefore m + n = 175 + 2 = 177.
+-- 4. [Conclusion] S = tan(175/2)°, so the required coprime integers are (m, n) = (175, 2), and indeed m + n = 177.

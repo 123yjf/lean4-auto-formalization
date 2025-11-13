@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the least integer greater than 1 that is both a perfect cube and a perfect fourth power.
+-- 2. [Key Idea] Any integer that is simultaneously a cube and a fourth power must be a twelfth power, and the smallest nontrivial twelfth power is 2^12.
+-- 3. [Proof] Let n be a positive integer with n = a^3 and n = b^4.
+--    (i) Common-exponent argument:
+--    • Since n = a^3, every prime exponent in the prime factorization of n is a multiple of 3.
+--    • Since n = b^4, those exponents are also multiples of 4.
+--    • Therefore each exponent is a multiple of lcm(3, 4) = 12, so n = c^12 for some integer c.
+--    (ii) Minimality:
+--    • The smallest integer greater than 1 of the form c^12 occurs when c = 2, giving n = 2^12 = 4096.
+--    • Check: 4096 = 16^3 (a cube) and 4096 = 8^4 (a fourth power). No smaller integer works, because any candidate must be a twelfth power and c ≥ 2.
+-- 4. [Conclusion] The smallest integer other than 1 that is both a perfect cube and a perfect fourth power is 4096.

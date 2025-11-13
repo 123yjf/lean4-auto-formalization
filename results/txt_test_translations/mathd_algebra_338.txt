@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist rational numbers a, b, c satisfying the linear system
+--    3a + b + c = -3, a + 3b + c = 9, a + b + 3c = 19, and also having product a b c = -56.
+-- 2. [Key Idea] Solve the linear system by taking simple linear combinations to relate the variables:
+--    subtract the first equation from the second to relate b and a, and subtract the second from the third to relate c and b. Then substitute back to solve for a, and finally compute b, c, and the product.
+-- 3. [Proof] 
+--    - From (a + 3b + c) − (3a + b + c) = 9 − (−3) we get −2a + 2b = 12, hence b = a + 6.
+--    - From (a + b + 3c) − (a + 3b + c) = 19 − 9 we get −2b + 2c = 10, hence c = b + 5.
+--    - Substitute b = a + 6 and c = b + 5 = a + 11 into 3a + b + c = −3:
+--      3a + (a + 6) + (a + 11) = −3 ⇒ 5a + 17 = −3 ⇒ 5a = −20 ⇒ a = −4.
+--    - Then b = a + 6 = 2 and c = b + 5 = 7.
+--    - Check the equations:
+--      3(−4) + 2 + 7 = −12 + 9 = −3,
+--      (−4) + 3·2 + 7 = −4 + 6 + 7 = 9,
+--      (−4) + 2 + 3·7 = −2 + 21 = 19.
+--    - Compute the product: (−4)·2·7 = −56.
+-- 4. [Conclusion] The triple (a, b, c) = (−4, 2, 7) consists of rational numbers that satisfy all three linear equations and has product −56. Therefore, such rational numbers exist.

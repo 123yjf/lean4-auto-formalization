@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the two–digit integer AB whose cube is 912 673 and determine A + B.
+-- 2. [Key Idea] The last digit 3 of 912 673 forces the units digit B of AB to be 7 (since 7³ ≡ 3 (mod 10)); once B is fixed, only numbers near √[3]{912 673} ≈ 97 need testing.
+-- 3. [Proof] Let N = 10A + B be the required two–digit integer.
+   Step 1 (Units digit). Because N³ ends in 3, B must satisfy B³ ≡ 3 (mod 10). Among digits 0–9, only 7³ = 343 ends in 3, so B = 7.
+   Step 2 (Magnitude check). Since 90³ = 729 000 < 912 673 < 100³ = 1 000 000, we have 90 < N < 100; thus A = 9.
+   Step 3 (Verification). Compute 97³: 97² = 9409, 97³ = 97·9409 = 940 900 − 28 227 = 912 673. Hence N = 97.
+   Step 4 (Digit sum). A + B = 9 + 7 = 16.
+-- 4. [Conclusion] The two–digit integer is 97, so A + B = 16.

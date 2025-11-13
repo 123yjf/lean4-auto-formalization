@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the remainder when 121 · 122 · 123 is divided by 4 is 2; equivalently, (121 * 122 * 123) mod 4 = 2.
+-- 2. [Key Idea] Reduce each factor modulo 4, use that taking modulo is compatible with multiplication, and then compute the small product modulo 4.
+-- 3. [Proof] Compute the residues: 121 ≡ 1 (mod 4), 122 ≡ 2 (mod 4), and 123 ≡ 3 (mod 4). Hence the product is congruent to 1 · 2 · 3 modulo 4. By the multiplicative property of modulo (applied iteratively to a triple product), (121 · 122 · 123) mod 4 = ((121 mod 4) · (122 mod 4) · (123 mod 4)) mod 4 = (1 · 2 · 3) mod 4. Finally, (1 · 2 · 3) mod 4 = 6 mod 4 = 2.
+-- 4. [Conclusion] Therefore, (121 * 122 * 123) % 4 = 2.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] We have 239, 174, and 83 marbles. How many must be removed so that the remaining marbles can be partitioned into piles of exactly 10? Show that the answer is 6.
+-- 2. [Key Idea] Add the three counts to get the total and then use division with remainder (equivalently, compute the total modulo 10) to find how many marbles prevent divisibility by 10.
+-- 3. [Proof] The total number of marbles is T = 239 + 174 + 83 = 496. Dividing by 10 gives 496 = 10·49 + 6, so the remainder is 6. Therefore, removing exactly 6 marbles leaves 490 = 10·49 marbles, which can be split into 49 piles of 10. Alternatively, working modulo 10: 239 ≡ 9, 174 ≡ 4, and 83 ≡ 3 (mod 10). Then 9 + 4 + 3 ≡ 16 ≡ 6 (mod 10), confirming that 6 marbles are the obstruction to divisibility by 10.
+-- 4. [Conclusion] Exactly 6 marbles must be discarded so that the remaining 490 marbles form perfect piles of ten.

@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show a collection of simple arithmetic equalities involving 12, 4, 3, 2^2, and 6, and then combine all of them into a single statement that is a big conjunction of these equalities.
+-- 2. [Key Idea] Each individual equality is definitionally true by basic arithmetic (e.g., 12 = 4 * 3, 4 = 2^2, 2 * 3 = 6), so they can be proved by reflexivity (rfl), which in Lean closes goals whose two sides reduce to the same canonical value. To prove the final conjunctive statement, use conjunction introduction repeatedly (constructor) and supply each previously proved equality.
+-- 3. [Proof] 
+--    - For the equalities:
+--      • factorization_12: 12 = 4 * 3 is true by direct evaluation of 4 * 3 = 12; rfl closes it.
+--      • power_computation: 4 = 2^2 is true since 2^2 evaluates to 4; rfl closes it.
+--      • exponent_rule: 2^2 * 3 = 12 is true since 2^2 = 4 and 4 * 3 = 12; rfl closes it.
+--      • power_mult_rule_1: 2 * 3 = 6 is true by arithmetic; rfl closes it.
+--      • power_mult_rule_2: 3 * 2 = 6 is true by arithmetic; rfl closes it.
+--      • final_verification: 6 = 2 * 3 is true by arithmetic; rfl closes it.
+--    - For the combined theorem exponent_matching_theorem: the goal is a big conjunction. Use constructor to split the conjunction into its components step by step. For each component, provide the corresponding previously established lemma (via exact). This iteratively builds the full conjunction from the six individual equalities.
+-- 4. [Conclusion] Each arithmetic equality holds by straightforward evaluation, and by repeatedly introducing conjunctions and supplying these proofs, the final statement asserting all six equalities simultaneously is established.

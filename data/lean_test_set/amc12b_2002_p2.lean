@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the value of (3x − 2)(4x + 1) − (3x − 2)·4x + 1 when x = 4. 2. [Key Idea] Notice that (3x − 2) is a common factor of the first two terms; factoring it collapses the expression to something linear in x. 3. [Proof] (3x − 2)(4x + 1) − (3x − 2)4x + 1 = (3x − 2)[(4x + 1) − 4x] + 1 (extract the common factor 3x − 2) = (3x − 2)(1) + 1 = 3x − 2 + 1 = 3x − 1. Substituting x = 4: 3(4) − 1 = 12 − 1 = 11. 4. [Conclusion] The expression equals 11, so the correct choice is (D).

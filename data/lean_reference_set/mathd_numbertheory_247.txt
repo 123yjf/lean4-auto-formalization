@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the residue n with 0 ≤ n ≤ 10 such that 3n is congruent to 2 modulo 11.
+-- 2. [Key Idea] Solve the congruence by multiplying both sides by the modular inverse of 3 modulo 11. Since 3·4 = 12 ≡ 1 (mod 11), the inverse of 3 modulo 11 is 4.
+-- 3. [Proof] Starting from 3n ≡ 2 (mod 11), multiply both sides by 4 (the inverse of 3 modulo 11): 4·3n ≡ 4·2 (mod 11). This simplifies to 1·n ≡ 8 (mod 11), hence n ≡ 8 (mod 11).
+-- 4. [Conclusion] The unique residue modulo 11 satisfying 3n ≡ 2 is n = 8.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the units digit of the sum 1^2 + 2^2 + … + 9^2 and show that it is 5.
+-- 2. [Key Idea] Work modulo 10. Either add the last digits of each square directly, or compute the total using the sum-of-squares formula n(n + 1)(2n + 1)/6 with n = 9 and then take the result modulo 10.
+-- 3. [Proof] Method A (term-by-term modulo 10): The last digits of the squares 1^2 through 9^2 are 1, 4, 9, 6, 5, 6, 9, 4, 1. Their sum is 1 + 4 + 9 + 6 + 5 + 6 + 9 + 4 + 1 = 45, which has units digit 5. Method B (closed formula): The sum 1^2 + … + 9^2 equals 9·10·19 / 6 = 285. The number 285 has units digit 5.
+-- 4. [Conclusion] Both direct residue addition and the sum-of-squares formula show that the units digit of 1^2 + 2^2 + … + 9^2 is 5.

@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] In an arithmetic sequence, the 5th partial sum is S₅ = 70 and the 10th partial sum is S₁₀ = 210. Find the first term a of the sequence.
+-- 2. [Key Idea] Use the partial sum formula for an arithmetic sequence, Sₙ = (n/2)·[2a + (n − 1)d], to write two equations (for n = 5 and n = 10) and solve the resulting linear system for a.
+-- 3. [Proof] From Sₙ = (n/2)·[2a + (n − 1)d]:
+--    - For n = 5: S₅ = (5/2)[2a + 4d] = 70 ⇒ 5(2a + 4d) = 140 ⇒ 2a + 4d = 28 … (1)
+--    - For n = 10: S₁₀ = (10/2)[2a + 9d] = 210 ⇒ 5(2a + 9d) = 210 ⇒ 2a + 9d = 42 … (2)
+--    Subtract (1) from (2): (2a + 9d) − (2a + 4d) = 42 − 28 ⇒ 5d = 14 ⇒ d = 14/5.
+--    Substitute d into (1): 2a + 4(14/5) = 28 ⇒ 2a + 56/5 = 28 = 140/5 ⇒ 2a = 84/5 ⇒ a = 42/5.
+-- 4. [Conclusion] The first term of the arithmetic sequence is a = 42/5.

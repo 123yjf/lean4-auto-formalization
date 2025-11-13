@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove a sequence of straightforward arithmetic equalities:
+--    162 − 152 = 10, 10 + 170 = 180, 180 / 2 = 90, 170 − 90 = 80, 162 − 90 = 72,
+--    72 · 90 · 80 = 518400, and 720 · 720 = 518400. Then prove a final statement asserting the conjunction of all these equalities.
+-- 2. [Key Idea] Each individual equality is a direct numeric identity, so in Lean they are all proved by reflexivity (rfl), meaning both sides reduce to the same numeral by computation. The final combined statement is proved by repeatedly introducing conjunctions (constructor) and plugging in the previously proved equalities (exact ...).
+-- 3. [Proof]
+--    - For 162 − 152 = 10: compute the difference 162 − 152 to get 10; reflexivity closes the goal.
+--    - For 10 + 170 = 180: compute the sum 10 + 170 to get 180; reflexivity closes the goal.
+--    - For 180 / 2 = 90: compute the division 180 ÷ 2 to get 90; reflexivity closes the goal.
+--    - For 170 − 90 = 80: compute the difference 170 − 90 to get 80; reflexivity closes the goal.
+--    - For 162 − 90 = 72: compute the difference 162 − 90 to get 72; reflexivity closes the goal.
+--    - For 72 · 90 · 80 = 518400: multiply 72 · 90 = 6480 and then 6480 · 80 = 518400; reflexivity closes the goal.
+--    - For 720 · 720 = 518400: compute the square 720² = 518400; reflexivity closes the goal.
+--    - For the conjunction of all statements: build the big conjunction step-by-step using conjunction introduction (constructor) for each component, and supply each previously proved equality with exact. This yields the full tuple of equalities.
+-- 4. [Conclusion] Each arithmetic identity is a simple computation, so all hold by reflexivity. Consequently, their combined conjunction also holds by assembling the individual results.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve the linear system 3x + 4y − 12z = 10 and −2x − 3y + 9z = −4, and show that these equations force x = 14.
+-- 2. [Key Idea] Use elimination to combine the two equations so that the y- and z-terms cancel, leaving a single equation in x.
+-- 3. [Proof] Multiply the first equation by 3 to get 9x + 12y − 36z = 30, and the second equation by 4 to get −8x − 12y + 36z = −16. Adding these two equations cancels the y and z terms: (9x − 8x) + (12y − 12y) + (−36z + 36z) = 30 + (−16), which simplifies to x = 14. Thus, any solution of the system must have x = 14. The variables y and z remain undetermined by these two equations.
+-- 4. [Conclusion] By elimination, the system uniquely determines x and yields x = 14.

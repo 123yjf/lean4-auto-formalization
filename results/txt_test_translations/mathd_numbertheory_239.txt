@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the sum of all natural numbers from 0 to 12 is congruent to 2 modulo 4; that is, (∑ i in {0, 1, ..., 12}, i) ≡ 2 (mod 4).
+-- 2. [Key Idea] Compute the sum explicitly using the formula for the sum of the first n natural numbers and then check its congruence modulo 4.
+-- 3. [Proof] The set Finset.range 13 is {0, 1, ..., 12}. The sum of these numbers equals 0 + 1 + ... + 12 = 13·12/2 = 78. This is established in Lean by a simplification using the lemma for the sum of a range. Next, observe that 78 ≡ 2 (mod 4) because 78 − 2 = 76 is divisible by 4. In the code, this congruence is verified by a decision procedure. Combining these, we get both (∑ i=0 to 12 i) = 78 and 78 ≡ 2 (mod 4), hence the desired congruence for the original sum follows.
+-- 4. [Conclusion] Therefore, (Finset.range 13).sum id ≡ 2 [MOD 4].

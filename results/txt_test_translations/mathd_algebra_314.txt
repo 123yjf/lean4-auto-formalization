@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every integer n, in the rational numbers we have (1/4)^(n + 1) · 2^(2n) = 1/4.
+-- 2. [Key Idea] Rewrite 1/4 as 2^(-2), then use the laws of integer exponents: (a^b)^c = a^(bc) and a^x · a^y = a^(x + y) (with a ≠ 0). Simplify the resulting integer exponents and finally evaluate 2^(-2) = 1/4.
+-- 3. [Proof] 
+   - First, note that 1/4 = 2^(-2) in ℚ, so (1/4)^(n+1) = (2^(-2))^(n+1).
+   - Apply the rule (a^b)^c = a^(bc) for integer exponents to get (2^(-2))^(n+1) = 2^((-2)(n+1)).
+   - Expand the product of integers: (-2)(n+1) = -2n - 2.
+   - Now the whole expression is 2^(-2n - 2) · 2^(2n). Since 2 ≠ 0 in ℚ, we can combine exponents: 2^(-2n - 2) · 2^(2n) = 2^((-2n - 2) + 2n) = 2^(-2).
+   - Finally, compute 2^(-2) = 1/4.
+-- 4. [Conclusion] Therefore, for all integers n, (1/4)^(n + 1) · 2^(2n) = 1/4.

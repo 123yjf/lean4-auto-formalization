@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute 3 ⋆ 11 given a ⋆ b = ((1/b) − (1/a)) / (a − b).
+-- 2. [Key Idea] Rewrite the numerator (1/b − 1/a) as (a − b)/(ab), which cancels with the denominator (a − b), leaving 1/(ab).
+-- 3. [Proof] Starting from a ⋆ b = ((1/b) − (1/a)) / (a − b), note that (1/b − 1/a) = (a − b)/(ab). Thus a ⋆ b = [(a − b)/(ab)] / (a − b) = 1/(ab). Substituting a = 3 and b = 11 gives 3 ⋆ 11 = 1/(3·11) = 1/33.
+-- 4. [Conclusion] Therefore, 3 ⋆ 11 equals 1/33.

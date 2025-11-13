@@ -1,0 +1,33 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define product_seq(n) = ∏ over k = 0 to n−1 of (1 + 2^{-(k+1)}). The goal is to prove that for every natural number n > 0, we have product_seq(n) < 5/2.
+
+-- 2. [Key Idea] Handle the first few small values of n by direct computation. From a fixed index onward, bound the extra multiplicative tail of the product uniformly. The systematic way to control the tail is to use the inequality log(1 + x) ≤ x for x > −1, which converts a product into an exponential of a sum; the relevant sum is a geometric series with value 1/8. This yields product_seq(n) ≤ product_seq(3) · exp(1/8), and a numerical bound then shows this is < 5/2.
+
+-- 3. [Proof] 
+- Base and small cases:
+  - If n = 0, this contradicts the hypothesis n > 0.
+  - For n = 1 and n = 2, direct evaluation of the finite product gives values strictly less than 5/2.
+  - For n = 3, compute explicitly:
+    product_seq(3) = (1 + 1/2)(1 + 1/4)(1 + 1/8) = (3/2)(5/4)(9/8) = 135/64,
+    and 135/64 < 5/2.
+  - For n = 4, multiply the n = 3 value by the next factor:
+    product_seq(4) = (135/64)(1 + 1/16) = (135/64)(17/16),
+    and this is still < 5/2 by a straightforward numerical check.
+- General n (controlling the tail):
+  - Write the product for any n ≥ 3 as
+    product_seq(n) = product_seq(3) · ∏ over k = 3 to n−1 of (1 + 2^{-(k+1)}).
+  - To bound this tail factor, take logarithms and use log(1 + x) ≤ x for x > −1 (each x = 2^{-(k+1)} is positive):
+    log ∏ (1 + 2^{-(k+1)}) ≤ ∑ 2^{-(k+1)} over k = 3 to n−1.
+    Exponentiating gives
+    ∏ (1 + 2^{-(k+1)}) ≤ exp(∑ 2^{-(k+1)}).
+  - The sum of the tail is bounded by the full geometric tail:
+    ∑ over k = 3 to n−1 of 2^{-(k+1)} ≤ ∑ over k = 3 to ∞ of 2^{-(k+1)} = 1/8.
+    Therefore
+    ∏ over k = 3 to n−1 of (1 + 2^{-(k+1)}) ≤ exp(1/8).
+  - Combining,
+    product_seq(n) ≤ product_seq(3) · exp(1/8) = (135/64) · exp(1/8).
+  - A numerical estimate shows exp(1/8) < 37/32, so
+    (135/64) · exp(1/8) < (135/64) · (37/32) = 4995/2048 < 5/2.
+- Thus for all n ≥ 3 we have product_seq(n) < 5/2. Together with the small cases n = 1,2,4 handled above, the result holds for all n > 0.
+
+-- 4. [Conclusion] By direct computation for small n and by bounding the multiplicative tail using log(1 + x) ≤ x and the geometric tail sum 1/8, we obtain product_seq(n) < 5/2 for every n > 0.

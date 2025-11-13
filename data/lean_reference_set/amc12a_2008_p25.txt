@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] We have a linear recurrence on pairs (a_n, b_n) given by (a_{n+1}, b_{n+1}) = (√3 a_n − b_n, √3 b_n + a_n). Given that (a_{100}, b_{100}) = (2, 4), find the value of a₁ + b₁.
+-- 2. [Key Idea] Combine the pair (a_n, b_n) into a single complex number z_n = a_n + i b_n. Then the recurrence becomes simple multiplication by √3 + i. Write √3 + i in polar form (modulus 2, argument 30°) and use de Moivre’s theorem to relate z_1 to z_{100}.
+-- 3. [Proof] Define z_n = a_n + i b_n. Then
+   - z_{n+1} = (√3 a_n − b_n) + i(√3 b_n + a_n) = (√3 + i)(a_n + i b_n) = (√3 + i) z_n.
+   - Hence z_n = (√3 + i)^{n−1} z_1. For n = 100, z_{100} = (√3 + i)^{99} z_1 = 2 + 4i, so z_1 = (2 + 4i) / (√3 + i)^{99}.
+   - Write √3 + i = 2(cos 30° + i sin 30°). Then (√3 + i)^{99} = 2^{99}(cos(99·30°) + i sin(99·30°)) = 2^{99}(cos 90° + i sin 90°) = i · 2^{99}.
+   - Therefore z_1 = (2 + 4i) / (i · 2^{99}) = (4 − 2i) / 2^{99}. Thus a_1 = 4 / 2^{99} and b_1 = −2 / 2^{99}.
+   - Hence a_1 + b_1 = (4 − 2) / 2^{99} = 2 / 2^{99} = 1 / 2^{98}.
+-- 4. [Conclusion] Therefore, a₁ + b₁ = 1/2^{98}.

@@ -1,0 +1,30 @@
+-- Proof content:
+-- ### Problem Restatement
+-- Show that if positive integers \(a\), \(b\), and \(k\) satisfy \(2^k = (a + b^2)(b + a^2)\), then \(a = 1\).
+-- 
+-- ### Key Idea
+-- If \(a \geq 2\), then \(a\) divides \(2^k\) and hence must be a power of 2, but substituting leads to an expression that factors as \(2^d\) times an odd integer greater than 1, which cannot be a power of 2.
+-- 
+-- ### Proof
+-- Assume for contradiction that \(a \geq 2\). Let \(m = a + b^2\) and \(n = b + a^2\), so \(m n = 2^k\) with \(m, n > 1\). Thus, \(m = 2^r\) and \(n = 2^s\) for integers \(r, s \geq 1\) with \(r + s = k\).
+-- 
+-- Since \(m = a + b^2 \equiv 0 \pmod{a}\), it follows that \(a\) divides \(2^r\). As \(a \geq 2\) divides a power of 2, \(a = 2^d\) for some integer \(d \geq 1\).
+-- 
+-- Now, \(b = 2^s - a^2 = 2^s - 2^{2d}\), so \(s > 2d\) (as \(b > 0\)). Substitute into \(m\):
+-- 
+-- \[
+-- 2^r = 2^d + (2^s - 2^{2d})^2 = 2^{2s} - 2^{s+2d} + 2^{4d} + 2^d.
+-- \]
+-- 
+-- The exponents satisfy \(2s > s + 2d > 4d > d\). Factor out \(2^d\):
+-- 
+-- \[
+-- 2^r = 2^d \left( 2^{2s - d} - 2^{s + d} + 2^{3d} + 1 \right).
+-- \]
+-- 
+-- The bracket is an odd integer greater than 1 (odd as even terms plus 1; greater than 1 as the dominant positive difference \(2^{2s - d} - 2^{s + d} = 2^{s + d}(2^{s - 2d} - 1) > 2^{3d} + 1\)). Thus, \(2^r\) factors as \(2^d\) times an odd integer greater than 1, contradicting that it is a power of 2.
+-- 
+-- \emph{Alternative proof (via cases on parity):} The above suffices, but note that the assumption \(a \geq 2\) forces \(a\) to be a power of 2, and explicit checks for small \(d\) (e.g., \(d=1, a=2\); \(d=2, a=4\)) confirm no \(b\) works, with the general case yielding the same valuation contradiction.
+-- 
+-- ### Conclusion
+-- Thus, \(a = 1\).

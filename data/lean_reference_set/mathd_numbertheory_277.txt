@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest possible value of m + n given that gcd(m, n) = 6 and lcm(m, n) = 126.
+-- 2. [Key Idea] Factor out the greatest common divisor by writing m = 6a and n = 6b. Then a and b are coprime, and lcm(m, n) = 6ab, so ab = 21. Minimize a + b among coprime factor pairs of 21, then multiply by 6 to get m + n.
+-- 3. [Proof] Write m = 6a and n = 6b with gcd(a, b) = 1. Using the identity m · n = gcd(m, n) · lcm(m, n), we have (6a)(6b) = 6 · 126, so 36ab = 756, hence ab = 21. Since a and b are coprime and ab = 21, the only possibilities are (a, b) = (1, 21) or (3, 7). Their sums are 22 and 10, respectively, so the minimum is achieved at (a, b) = (3, 7). Therefore m + n = 6(a + b) = 6 · 10 = 60. There are no other coprime factor pairs of 21, so this is minimal.
+-- 4. [Conclusion] The least possible value of m + n is 60.

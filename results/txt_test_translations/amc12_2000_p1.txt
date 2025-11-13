@@ -1,0 +1,22 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to analyze the integer 2001 by factoring it and then consider triples of positive, pairwise distinct natural numbers whose product is 2001. We will compute the sums of some natural candidate triples built from these factorizations, compare those sums, and finally verify that a specific triple satisfies all the required conditions.
+-- 2. [Key Idea] Factor 2001 into primes to see how its factors can be grouped into three positive integers. Since 2001 = 3 · 23 · 29, the natural “with a 1 included” triples are (1, 3, 667), (1, 23, 87), and (1, 29, 69), where the larger entry in each case is the product of the two remaining primes. We verify basic arithmetic facts (products, sums, distinctness, positivity), note that 3 is prime, and compare the sums of these triples.
+-- 3. [Proof] 
+- Factorization: We compute 2001 = 3 · 23 · 29.
+- Primality fact: As a supporting arithmetic fact, 3 is prime.
+- Product checks: We verify the pairwise groupings of the prime factors:
+  • 3 · 667 = 2001, with 667 = 23 · 29;
+  • 23 · 87 = 2001, with 87 = 3 · 29;
+  • 29 · 69 = 2001, with 69 = 3 · 23;
+  and of course 1 · 2001 = 2001.
+- Sums: For the three candidate triples that include 1, we compute their sums:
+  • 1 + 3 + 667 = 671;
+  • 1 + 23 + 87 = 111;
+  • 1 + 29 + 69 = 99.
+- Distinctness: In each triple, the three entries are pairwise distinct:
+  • 1 ≠ 3, 3 ≠ 667, 1 ≠ 667;
+  • 1 ≠ 23, 23 ≠ 87, 1 ≠ 87;
+  • 1 ≠ 29, 29 ≠ 69, 1 ≠ 69.
+- Ordering of sums: The computed sums satisfy 671 > 111 and 111 > 99, so among these three candidates, (1, 3, 667) has the largest sum.
+- Verified candidate: Setting a = 1, b = 3, c = 667, we have a ≠ b, b ≠ c, a ≠ c, all are positive, a · b · c = 2001, and a + b + c = 671.
+-- 4. [Conclusion] Using the prime factorization 2001 = 3 · 23 · 29, the natural triples of the form (1, x, y) with product 2001 are (1, 3, 667), (1, 23, 87), and (1, 29, 69). They are pairwise distinct and positive. Their sums are 671, 111, and 99 respectively, so (1, 3, 667) yields the largest sum among these candidates and indeed satisfies all required conditions: distinctness, positivity, product 2001, and sum 671.

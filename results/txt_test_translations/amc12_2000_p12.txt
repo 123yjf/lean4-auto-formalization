@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to find the maximum value of S = A*M*C + A*M + A*C + M*C over natural numbers A, M, C satisfying A + M + C = 12, and to show that this maximum is achieved.
+
+-- 2. [Key Idea] Use the factorization (A + 1)(M + 1)(C + 1) = A*M*C + A*M + A*C + M*C + A + M + C + 1. Under the constraint A + M + C = 12, this gives S = (A + 1)(M + 1)(C + 1) − 13. Thus, maximizing S is equivalent to maximizing the product (A + 1)(M + 1)(C + 1) subject to (A + 1) + (M + 1) + (C + 1) = 15 and each term at least 1. By the standard product-maximization principle for nonnegative integers with fixed sum (achieved when the numbers are as equal as possible), the product is at most 125, attained at 5, 5, 5. Hence S ≤ 125 − 13 = 112, with equality when A = M = C = 4.
+
+-- 3. [Proof] 
+- Factorization step: From the identity (A + 1)(M + 1)(C + 1) = A*M*C + A*M + A*C + M*C + A + M + C + 1 and the sum constraint A + M + C = 12, we obtain
+  S = A*M*C + A*M + A*C + M*C = (A + 1)(M + 1)(C + 1) − 13.
+- Let x = A + 1, y = M + 1, z = C + 1. Then x, y, z are natural numbers with x, y, z ≥ 1 and sum x + y + z = 15.
+- Product bound: Under these conditions, the product x*y*z is maximized at x = y = z = 5, giving x*y*z ≤ 125.
+- Translating back, we get S = x*y*z − 13 ≤ 125 − 13 = 112.
+- Achievability: Taking A = M = C = 4 gives x = y = z = 5, so S = 5*5*5 − 13 = 125 − 13 = 112. Directly, 4*4*4 + 4*4 + 4*4 + 4*4 = 64 + 16 + 16 + 16 = 112.
+
+-- 4. [Conclusion] The maximum value of A*M*C + A*M + A*C + M*C subject to A + M + C = 12 is 112, and it is achieved at A = M = C = 4.

@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a function f: ℕ × ℕ → ℕ such that (i) f(x, x) = x, (ii) f(x, y) = f(y, x), and (iii) (x + y) f(x, y) = y f(x, x + y). Compute f(14, 52).
+-- 2. [Key Idea] Normalize by xy: define g(x, y) = f(x, y)/(x y). Then g is invariant under the two basic moves of the Euclidean algorithm—adding one entry to the other and swapping the entries—so g depends only on gcd(x, y).
+-- 3. [Proof] 
+   Step 1 (Linearize). Let g(x, y) = f(x, y)/(x y). From (iii),
+     (x + y) x y g(x, y) = y · x (x + y) g(x, x + y),
+   so g(x, y) = g(x, x + y). By symmetry (ii), g(x, y) = g(y, x).
+   Step 2 (Dependence on gcd). The relations g(x, y) = g(x, x + y) and g(x, y) = g(y, x) are exactly the Euclidean moves (add one coordinate to the other; swap). These moves preserve gcd and connect any pair (x, y) to (d, d), where d = gcd(x, y). Hence g(x, y) = g(d, d).
+   Step 3 (Evaluate on the diagonal). From (i), f(d, d) = d, so g(d, d) = f(d, d)/(d · d) = d/d² = 1/d. Therefore g(x, y) = 1/gcd(x, y).
+   Step 4 (Recover f). We get f(x, y) = x y · g(x, y) = x y / gcd(x, y). This is an integer since if x = d a and y = d b with gcd(a, b) = 1, then x y / d = d a b ∈ ℕ.
+   Step 5 (Compute f(14, 52)). gcd(14, 52) = 2, so f(14, 52) = 14 · 52 / 2 = 14 · 26 = 364.
+-- 4. [Conclusion] The axioms force f(x, y) = x y / gcd(x, y); in particular, f(14, 52) = 364.

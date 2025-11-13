@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the intersection point A of the lines 3y = x and 2x + 5y = 11, and show that the sum of its coordinates satisfies x + y = 4.
+-- 2. [Key Idea] Solve the linear system by substitution: express x from 3y = x, plug into 2x + 5y = 11 to find y, then recover x and add them. (Equivalently, use elimination.)
+-- 3. [Proof] From 3y = x, we get x = 3y. Substituting into 2x + 5y = 11 gives 2(3y) + 5y = 11 → 6y + 5y = 11 → 11y = 11, so y = 1. Then x = 3y = 3. Therefore, x + y = 3 + 1 = 4. Alternatively, write the first equation as x − 3y = 0. Doubling it gives 2x − 6y = 0; subtracting this from 2x + 5y = 11 yields 11y = 11 → y = 1, and then x = 3. Hence x + y = 4.
+-- 4. [Conclusion] The intersection point is A = (3, 1), and indeed x + y = 4.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the constant c in f(x)=cx³−9x+3 given that f(2)=9. 2. [Key Idea] Substitute x=2 into the polynomial and solve the resulting linear equation for c. 3. [Proof] Evaluate f at x=2: f(2)=c·2³−9·2+3=8c−18+3=8c−15. Set this equal to the prescribed value 9: 8c−15=9 ⇒ 8c=24 ⇒ c=3. 4. [Conclusion] The constant satisfying f(2)=9 is c=3.

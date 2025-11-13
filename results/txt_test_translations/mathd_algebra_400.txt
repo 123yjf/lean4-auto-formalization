@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show there exists a real number x such that 5 + 5 · 10 = 1.1 · x and x = 50.
+-- 2. [Key Idea] Explicitly choose x = 50 and verify both required equalities: compute each side numerically to check 5 + 5 · 10 = 1.1 · 50, and note that x = 50 holds by definition.
+-- 3. [Proof] We take x = 50. To prove 5 + 5 · 10 = 1.1 · x, compute both sides: 5 + 5 · 10 = 5 + 50 = 55, and 1.1 · 50 = 55, so the equality holds. The second condition x = 50 is immediate from our choice.
+-- 4. [Conclusion] Therefore, x = 50 satisfies both 5 + 5 · 10 = 1.1 · x and x = 50, establishing the existence of such an x.

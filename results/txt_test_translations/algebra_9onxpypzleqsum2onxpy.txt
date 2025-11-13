@@ -1,0 +1,34 @@
+-- Proof content:
+-- 1. [Problem Restatement] For positive real numbers a, b, c, prove (a + b + c) * (1/a + 1/b + 1/c) ≥ 9.
+-- 2. [Key Idea] Expand the product into symmetric terms and then apply the AM ≥ GM inequality to each pair a/b + b/a, a/c + c/a, and b/c + c/b, each of which is ≥ 2. Summing yields the claim.
+-- 3. [Proof] 
+--    - First, expand the product algebraically:
+--      (a + b + c)(1/a + 1/b + 1/c) = 3 + (a/b + b/a) + (a/c + c/a) + (b/c + c/b).
+--      This is obtained by straightforward clearing of denominators and collecting terms.
+--    - Next, show a/b + b/a ≥ 2. Use the weighted AM ≥ GM inequality with weights 1/2 and 1/2:
+--        (1/2)(a/b) + (1/2)(b/a) ≥ [(a/b)^(1/2) (b/a)^(1/2)].
+--      Since (a/b)(b/a) = 1, the geometric mean on the right is 1, yielding
+--        ((a/b) + (b/a))/2 ≥ 1, hence a/b + b/a ≥ 2.
+--      The code verifies positivity and uses Real.mul_rpow to combine the square roots, plus a simple field simplification for (a/b)(b/a) = 1.
+--    - The same argument gives a/c + c/a ≥ 2 and b/c + c/b ≥ 2.
+--    - Summing these three inequalities and adding the constant 3 from the expansion gives
+--      3 + 2 + 2 + 2 = 9, so (a + b + c)(1/a + 1/b + 1/c) ≥ 9.
+-- 4. [Conclusion] The inequality holds for all positive real a, b, c: (a + b + c)(1/a + 1/b + 1/c) ≥ 9.
+
+-- Proof content:
+-- 1. [Problem Restatement] For positive real numbers x, y, z, prove
+--    9 / (x + y + z) ≤ 2 / (x + y) + 2 / (y + z) + 2 / (z + x).
+-- 2. [Key Idea] Apply the previous inequality to the three positive numbers x + y, y + z, z + x. Note that their sum equals 2(x + y + z). Then divide by x + y + z > 0 to isolate the desired sum of reciprocals.
+-- 3. [Proof]
+--    - Since x, y, z > 0, we have x + y > 0, y + z > 0, z + x > 0, and x + y + z > 0.
+--    - Apply the first lemma to a = x + y, b = y + z, c = z + x:
+--        ((x + y) + (y + z) + (z + x)) * (1/(x + y) + 1/(y + z) + 1/(z + x)) ≥ 9.
+--    - Observe that (x + y) + (y + z) + (z + x) = 2(x + y + z). Substituting yields
+--        2(x + y + z) * (1/(x + y) + 1/(y + z) + 1/(z + x)) ≥ 9.
+--    - Since x + y + z > 0, divide both sides by x + y + z to get
+--        2 * (1/(x + y) + 1/(y + z) + 1/(z + x)) ≥ 9 / (x + y + z).
+--      The code encapsulates this as a general rule: if a > 0 and a*b ≥ c, then b ≥ c/a.
+--    - Expanding the left-hand side gives exactly
+--        2/(x + y) + 2/(y + z) + 2/(z + x) ≥ 9/(x + y + z),
+--      which is the desired inequality.
+-- 4. [Conclusion] The inequality holds: 9/(x + y + z) ≤ 2/(x + y) + 2/(y + z) + 2/(z + x) for all positive real x, y, z.

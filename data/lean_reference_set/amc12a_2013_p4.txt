@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the value of (2^{2014} + 2^{2012}) / (2^{2014} - 2^{2012}).
+-- 2. [Key Idea] Factor out the common power 2^{2012} from both the numerator and denominator to reduce the expression to a ratio of small integers.
+-- 3. [Proof] We rewrite the expression as [2^{2012}(2^2 + 1)] / [2^{2012}(2^2 - 1)] by factoring out 2^{2012}. The factor 2^{2012} cancels, leaving (4 + 1)/(4 - 1) = 5/3.
+-- 4. [Conclusion] The expression equals 5/3.

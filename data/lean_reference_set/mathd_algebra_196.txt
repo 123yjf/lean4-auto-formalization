@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the sum of all real numbers x that satisfy |2 − x| = 3.
+-- 2. [Key Idea] For k > 0, the equation |A| = k is equivalent to A = k or A = −k; solve both cases and add the resulting roots.
+-- 3. [Proof] Method 1 (Direct): From |2 − x| = 3, we have either 2 − x = 3 or 2 − x = −3. If 2 − x = 3, then x = −1. If 2 − x = −3, then x = 5. The sum of the solutions is (−1) + 5 = 4. Method 2 (Symmetry): The graph of y = |2 − x| is a V-shape symmetric about x = 2. The horizontal line y = 3 intersects this graph at two points equally distant from x = 2, namely x = 2 − 3 = −1 and x = 2 + 3 = 5. Their sum is (2 − 3) + (2 + 3) = 4.
+-- 4. [Conclusion] The sum of all real solutions to |2 − x| = 3 is 4.

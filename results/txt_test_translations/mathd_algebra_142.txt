@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] We need to show there exist real numbers m and b such that the line y = m x + b passes through both points (7, −1) and (−1, 7), and moreover satisfies m + b = 5.
+-- 2. [Key Idea] Use the two-point formula for the slope of a line through the given points to define m, then determine b from one of the points. Verify the line equation holds at both points and compute m + b directly.
+-- 3. [Proof] Define m = (7 − (−1)) / ((−1) − 7) = 8 / (−8) = −1. Then define b = −1 − m·7; substituting m = −1 gives b = −1 − (−1)·7 = −1 + 7 = 6. 
+   - To verify the line equation for the two cases:
+     • If x = 7 and y = −1, then y = −1 = (−1)·7 + 6 = m x + b.
+     • If x = −1 and y = 7, then y = 7 = (−1)·(−1) + 6 = 1 + 6 = 7 = m x + b.
+   Thus, in either case, y = m x + b holds.
+   - Finally, m + b = (−1) + 6 = 5.
+-- 4. [Conclusion] Taking m = −1 and b = 6 works: the line y = m x + b passes through (7, −1) and (−1, 7), and m + b = 5. Hence such real numbers m and b exist.

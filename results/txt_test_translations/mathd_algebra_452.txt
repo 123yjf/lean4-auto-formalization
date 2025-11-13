@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist rational numbers a₁ and d such that a₁ = 2/3, a₁ + 8d = 4/5, and a₁ + 4d = 11/15.
+-- 2. [Key Idea] Provide explicit candidates for a₁ and d and verify the equations directly. From a₁ = 2/3, solving the other two equations yields d = (4/5 − 2/3)/8 and d = (11/15 − 2/3)/4; both simplify to 1/60.
+-- 3. [Proof] Choose a₁ = 2/3 and d = 1/60. Then:
+--    - The first condition a₁ = 2/3 holds by definition.
+--    - For the second: a₁ + 8d = 2/3 + 8·(1/60) = 2/3 + 2/15 = 10/15 + 2/15 = 12/15 = 4/5.
+--    - For the third: a₁ + 4d = 2/3 + 4·(1/60) = 2/3 + 1/15 = 10/15 + 1/15 = 11/15.
+--    These are straightforward rational arithmetic simplifications (performed in the code by norm_num).
+-- 4. [Conclusion] With a₁ = 2/3 and d = 1/60, all three equalities hold, so such rational numbers exist.

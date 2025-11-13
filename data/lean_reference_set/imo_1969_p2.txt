@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let f(x) = cos(a1 + x) + (1/2) cos(a2 + x) + (1/4) cos(a3 + x) + … + (1/2^{n-1}) cos(an + x). If f(x1) = 0 and f(x2) = 0 for some real numbers x1 and x2, show that x2 − x1 is an integer multiple of π.
+-- 2. [Key Idea] View f(x) as the real part of a single complex exponential S e^{i x}, where S is a fixed nonzero complex number depending only on the ak. Then f(x) = 0 exactly when cos(x + φ) = 0 for the argument φ of S, which forces x to differ by multiples of π. Hence any two zeros differ by an integer multiple of π.
+-- 3. [Proof] 
+   a. Rewrite as a complex exponential. Define S = ∑_{k=1}^{n} 2^{-(k-1)} e^{i a_k}. Since Re(e^{i(a_k + x)}) = cos(a_k + x), we have
+      f(x) = Re(S e^{i x}).
+   b. Show S ≠ 0. The first term of S has modulus 1. The sum of the remaining terms has modulus at most (1/2) + (1/4) + … + (1/2^{n-1}) = 1 − 1/2^{n-1} < 1. By the reverse triangle inequality, |S| ≥ 1 − (1 − 1/2^{n-1}) = 1/2^{n-1} > 0, so S is nonzero.
+   c. Describe the zeros. Write S = |S| e^{i φ} with real φ. Then
+      f(x) = Re(|S| e^{i(φ + x)}) = |S| cos(x + φ).
+      Therefore f(x) = 0 if and only if cos(x + φ) = 0, i.e., x + φ = π/2 + m π for some integer m. Equivalently, every zero has the form x = π/2 − φ + m π.
+   d. Compare two zeros. If x1 and x2 are zeros, then x1 = π/2 − φ + m1 π and x2 = π/2 − φ + m2 π for some integers m1, m2. Hence
+      x2 − x1 = (m2 − m1) π,
+      which is an integer multiple of π.
+-- 4. [Conclusion] Any two zeros of f(x) differ by an integer multiple of π. In particular, x2 − x1 = m π for some integer m.

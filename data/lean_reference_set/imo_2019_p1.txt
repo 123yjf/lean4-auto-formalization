@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine all functions f: ℤ → ℤ such that for every pair of integers a, b, the identity f(2a) + 2f(b) = f(f(a + b)) holds.
+-- 2. [Key Idea] First set c = f(0). Use special choices of a and b to derive relations linking f at 2a, f at a + b, and f composed with itself. This yields an additive relation after shifting by c, reducing the problem to linear (Cauchy-type) solutions on ℤ. Finally, check which linear forms satisfy the original equation; this forces the slope to be 0 or 2, with a compatibility condition on the constant term.
+-- 3. [Proof] Step 1. Let a = 0. Then f(0) + 2f(b) = f(f(b)) for all b, i.e., c + 2f(b) = f(f(b)). (1)
+Step 2. Let b = 0. Then f(2a) + 2f(0) = f(f(a)) for all a, i.e., f(2a) + 2c = f(f(a)). (2)
+Combining (1) and (2) with b = a gives f(2a) = 2f(a) − c for all a. (3)
+Step 3. Substitute (3) and the instance of (1) with b replaced by a + b (namely f(f(a + b)) = c + 2f(a + b)) into the original equation:
+(2f(a) − c) + 2f(b) = c + 2f(a + b).
+Rearranging yields f(a + b) = f(a) + f(b) − c for all a, b. (4)
+Step 4. Define g(x) = f(x) − c. Then (4) becomes g(a + b) = g(a) + g(b) for all a, b. Over ℤ, all additive functions are linear, so there exists an integer d such that g(x) = d x. Hence f(x) = d x + c. (5)
+Step 5. Substitute (5) back into the original equation. The left-hand side is d(2a) + c + 2(db + c) = 2d(a + b) + 3c. The right-hand side is d(d(a + b) + c) + c = d²(a + b) + dc + c. Equality for all integers a, b forces coefficient matching: d(d − 2) = 0 and (d − 2)c = 0. Thus either d = 0, which then implies c = 0, giving f(x) = 0; or d = 2, in which case c is arbitrary, giving f(x) = 2x + c. No other values satisfy both conditions.
+-- 4. [Conclusion] The only solutions are:
+(i) the zero function f(x) ≡ 0, and
+(ii) the affine family f(x) = 2x + c with arbitrary integer c.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers x and y with x + y = 14 and xy = 19, compute x² + y².
+-- 2. [Key Idea] Use the identity x² + y² = (x + y)² − 2xy to express the result in terms of the given sum and product.
+-- 3. [Proof] We have x + y = 14 and xy = 19. Then (x + y)² = 14² = 196. Substituting into the identity yields x² + y² = 196 − 2·19 = 196 − 38 = 158. (As a check, (x − y)² ≥ 0 implies x² + y² ≥ 2xy = 38; the precise value comes from the identity above.)
+-- 4. [Conclusion] Therefore, x² + y² = 158.

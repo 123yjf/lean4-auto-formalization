@@ -1,0 +1,19 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let real numbers a, b, c satisfy a ≤ b ≤ c, a + b + c = 2, and ab + bc + ca = 1. Prove the bounds 0 ≤ a ≤ 1/3, 1/3 ≤ b ≤ 1, and 1 ≤ c ≤ 4/3.
+-- 2. [Key Idea] For fixed a, the numbers b and c are the two real roots of the quadratic x^2 − (2 − a)x + (1 − a)^2 = 0 (from b + c = 2 − a and bc = (1 − a)^2). The requirement that b, c be real forces the discriminant a(4 − 3a) ≥ 0, which gives basic bounds on a; then comparing the ordered triple a ≤ b ≤ c with the quadratic’s smaller and larger roots sharpens these bounds. The same symmetric reasoning applied to c gives its bounds. Finally, b is trapped between the bounds for a and c using a + b + c = 2.
+-- 3. [Proof] 
+   - Compute for b, c: since a + b + c = 2, we have b + c = 2 − a. Also, from (a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) and ab + bc + ca = 1, one gets b^2 + c^2 = 2 − a^2. Hence (b + c)^2 = b^2 + c^2 + 2bc gives (2 − a)^2 = (2 − a^2) + 2bc, so bc = (1 − a)^2. Thus b and c are the roots of x^2 − (2 − a)x + (1 − a)^2 = 0, whose discriminant is Δ = (2 − a)^2 − 4(1 − a)^2 = a(4 − 3a).
+   - Bounds for a:
+     • Since b, c are real, Δ ≥ 0. If a < 0, then 4 − 3a > 0, so Δ = a(4 − 3a) < 0, a contradiction. Hence a ≥ 0.
+     • Suppose a > 1/3. Because a is the smallest of a, b, c and their average is 2/3, we have a ≤ 2/3, so Δ > 0 and b, c are distinct roots:
+       smaller root r_min = (2 − a − √Δ)/2, larger root r_max = (2 − a + √Δ)/2.
+       For 1/3 < a ≤ 2/3, one checks (by squaring) that 2 − 3a < √Δ. This implies r_min < a, contradicting a ≤ b ≤ c (since b ≥ r_min). Therefore a ≤ 1/3.
+     Combining, 0 ≤ a ≤ 1/3.
+   - Bounds for c (symmetric argument):
+     Now treat a, b as the roots for fixed c. Then a + b = 2 − c and ab = (1 − c)^2, with discriminant Δ' = c(4 − 3c).
+     • If c > 4/3, then c > 0 and 4 − 3c < 0, so Δ' < 0, contradicting that a, b are real. Hence c ≤ 4/3.
+     • If c < 1, then as the largest of a, b, c with average 2/3, we have c ≥ 2/3, so 2/3 ≤ c < 1. For this range, the same inequality 2 − 3c < √Δ' holds. The larger root of the quadratic for a, b is (2 − c + √Δ')/2, which then exceeds c, contradicting a ≤ b ≤ c. Hence c ≥ 1.
+     So 1 ≤ c ≤ 4/3.
+   - Bounds for b:
+     If b < 1/3, then since a ≤ b, we get a + b < 2/3, so c = 2 − (a + b) > 4/3, contradicting c ≤ 4/3. If b > 1, then because b ≤ c, we have b + c > 2, so a = 2 − (b + c) < 0, contradicting a ≥ 0. Thus 1/3 ≤ b ≤ 1.
+-- 4. [Conclusion] The constraints a + b + c = 2, ab + bc + ca = 1, and a ≤ b ≤ c force the bounds 0 ≤ a ≤ 1/3, 1/3 ≤ b ≤ 1, and 1 ≤ c ≤ 4/3.

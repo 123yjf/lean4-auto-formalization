@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 8·9^2 + 5·9^1 + 2·9^0 = 695 (this is the standard base-9 expansion of the digits 8, 5, 2).
+-- 2. [Key Idea] Evaluate the powers of 9, multiply by the corresponding digits, and add the results.
+-- 3. [Proof] First, unfold the definition of base_nine_852_standard to the expression 8·9^2 + 5·9^1 + 2·9^0. Compute the powers: 9^2 = 81, 9^1 = 9, 9^0 = 1. Multiply: 8·81 = 648, 5·9 = 45, 2·1 = 2. Sum: 648 + 45 + 2 = 695. Hence the original expression equals 695.
+-- 4. [Conclusion] base_nine_852_standard = 695.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that ((8·9 + 5)·9 + 2) = 695 (this is the Horner form of evaluating the same base-9 digits 8, 5, 2).
+-- 2. [Key Idea] Evaluate the nested expression via Horner’s method: combine the inner terms step by step.
+-- 3. [Proof] Compute 8·9 + 5 = 77. Then compute 77·9 + 2 = 695. Therefore, after unfolding the definition of base_nine_852_horner, the whole expression equals 695.
+-- 4. [Conclusion] base_nine_852_horner = 695.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that the two representations of the same base-9 number agree: base_nine_852_standard = base_nine_852_horner.
+-- 2. [Key Idea] Both expressions were shown to equal 695; therefore, they are equal to each other.
+-- 3. [Proof] From the first result, base_nine_852_standard = 695. From the second result, base_nine_852_horner = 695. Rewriting both sides by these equalities yields base_nine_852_standard = base_nine_852_horner.
+-- 4. [Conclusion] The standard expansion and the Horner form for the base-9 number 852 are equal.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show there exists a natural number b with b < 121, (24 * b) mod 121 = 1, and b = 116.
+-- 2. [Key Idea] Explicitly choose b = 116 and verify that 24 * 116 leaves remainder 1 upon division by 121. This can be seen either via the Euclidean algorithm identity 121 = 5*24 + 1 (so −5 is an inverse of 24 mod 121, hence 116 ≡ −5 mod 121), or by direct computation of the quotient and remainder.
+-- 3. [Proof] Take b = 116. Clearly 116 < 121. Using the Euclidean algorithm, 121 = 5*24 + 1, so 1 = 121 − 5*24, which implies 24*(−5) ≡ 1 (mod 121). Since −5 ≡ 116 (mod 121), it follows that 24*116 ≡ 1 (mod 121). Equivalently, computing directly: 24*116 = 2784 and 2784 = 23*121 + 1, so (24*116) % 121 = 1. The condition b = 116 holds by construction.
+-- 4. [Conclusion] Such a b exists; specifically, b = 116 satisfies b < 121 and (24 * b) % 121 = 1.

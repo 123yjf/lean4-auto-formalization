@@ -1,0 +1,6 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest positive multiple of 1342 whose remainder upon division by 13 is less than the remainder of 1342 itself.
+-- 2. [Key Idea] Compute 1342 mod 13 to get 1342 ≡ 3 (mod 13). Then any multiple k·1342 has remainder 3k mod 13. We want the least k such that 3k ≡ 0, 1, or 2 (mod 13).
+-- 3. [Proof] Divide 1342 by 13: 1342 = 13·103 + 3, so the remainder is 3. For N = k·1342, we have N ≡ k·3 ≡ 3k (mod 13). We test k starting from 1 until 3k mod 13 is less than 3:
+   k = 1 gives remainder 3; k = 2 gives 6; k = 3 gives 9; k = 4 gives 12; k = 5 gives 15 ≡ 2, which is less than 3. Thus the smallest such k is 5, yielding N = 5·1342 = 6710. For completeness, the other possibilities occur at k ≡ 9 (mod 13) for remainder 1 and k ≡ 0 (mod 13) for remainder 0, whose smallest positive k are 9 and 13, both larger than 5.
+-- 4. [Conclusion] The least positive multiple is 6710.

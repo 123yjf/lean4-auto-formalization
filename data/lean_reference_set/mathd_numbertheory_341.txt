@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the last three digits of 5^100, then add those three digits and show the sum is 13.
+-- 2. [Key Idea] Compute 5^100 modulo 1000 by splitting 1000 into 8·125 and using the Chinese Remainder Theorem: note that 5^100 ≡ 0 (mod 125) and 5^100 ≡ 1 (mod 8), then recombine to find the unique residue modulo 1000.
+-- 3. [Proof] 
+   - Modulo 125: Since 125 = 5^3, the number 5^100 is divisible by 5^3, hence 5^100 ≡ 0 (mod 125).
+   - Modulo 8: We have 5^2 = 25 ≡ 1 (mod 8), so 5^100 = (5^2)^50 ≡ 1^50 = 1 (mod 8).
+   - Combine by CRT: Seek x with x ≡ 0 (mod 125) and x ≡ 1 (mod 8). Write x = 125k. Then 125k ≡ 1 (mod 8). Since 125 ≡ 5 (mod 8), this is 5k ≡ 1 (mod 8). The inverse of 5 modulo 8 is 5 (because 5·5 = 25 ≡ 1), so k ≡ 5 (mod 8). Taking the smallest such k = 5 gives x = 125·5 = 625. Thus the last three digits are 625.
+   - Digit sum: 6 + 2 + 5 = 13.
+-- 4. [Conclusion] The last three digits of 5^100 are 625, and their sum is 13.

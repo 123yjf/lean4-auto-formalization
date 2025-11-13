@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that in the ring Z/7Z, we have (29)^13 − (5)^13 = 3.
+-- 2. [Key Idea] Reduce the bases modulo 7 and use Fermat’s little theorem (for the prime 7): for any a not divisible by 7, a^6 ≡ 1 (mod 7). Then use 13 = 2·6 + 1 to reduce the exponents.
+-- 3. [Proof] 
+--    - First, note that 7 is prime, so Fermat’s little theorem applies in Z/7Z.
+--    - Reduce the bases: 29 ≡ 1 (mod 7), so (29)^13 ≡ 1^13 = 1 in Z/7Z.
+--    - By Fermat’s little theorem, 5^6 ≡ 1 (mod 7). Since 13 = 2·6 + 1, we get
+--      5^13 = 5^(2·6+1) = (5^6)^2 · 5 ≡ 1^2 · 5 = 5 (mod 7).
+--    - Therefore, (29)^13 − (5)^13 ≡ 1 − 5 ≡ −4 ≡ 3 (mod 7).
+-- 4. [Conclusion] Hence, in Z/7Z, (29)^13 − (5)^13 equals 3.

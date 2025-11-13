@@ -1,0 +1,6 @@
+-- Proof content:
+-- 1. [Problem Restatement] For any commutative ring R and elements a, b ∈ R, define f(a, b, x) = a x^4 − b x^2 + x + 5. Show that if f(a, b, −3) = 2, then f(a, b, 3) = 8.
+-- 2. [Key Idea] The polynomial f has only even-power terms plus a linear term x. Therefore, f(x) − f(−x) cancels the even parts and equals 2x. Plugging in x = 3 gives a relation between f(3) and f(−3), which, together with the hypothesis f(−3) = 2, determines f(3).
+-- 3. [Proof] First, establish the identity valid in any commutative ring: for all x, f(a, b, x) − f(a, b, −x) = 2x. This follows because the x^4 and x^2 terms are even and cancel in the difference, while x − (−x) = 2x.
+Applying this with x = 3 yields f(a, b, 3) − f(a, b, −3) = 2·3 = 6. Using the hypothesis f(a, b, −3) = 2, we obtain f(a, b, 3) − 2 = 6. Hence f(a, b, 3) = 2 + 6 = 8.
+-- 4. [Conclusion] Under the assumption f(a, b, −3) = 2, it follows that f(a, b, 3) = 8.

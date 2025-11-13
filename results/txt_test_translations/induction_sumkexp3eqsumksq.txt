@@ -1,0 +1,34 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every natural number n, show that the difference between the squares of two consecutive triangular numbers equals n^3:
+   ((n + 1) * n / 2)^2 − (n * (n − 1) / 2)^2 = n^3.
+-- 2. [Key Idea] Use the difference-of-squares factorization a^2 − b^2 = (a − b)(a + b), with
+   a = (n + 1)n/2 and b = n(n − 1)/2. Then compute a − b = n and a + b = n^2, so the product is n · n^2 = n^3.
+-- 3. [Proof] One expands
+   ((n + 1)n/2)^2 − (n(n − 1)/2)^2 = [(n + 1)n/2 − n(n − 1)/2] · [(n + 1)n/2 + n(n − 1)/2].
+   The first bracket simplifies to n, and the second simplifies to n^2. Hence the whole expression is n^3.
+   In the provided Lean code, this argument is intended but not carried out: the proof block is left as sorry (a placeholder for the missing algebraic steps).
+-- 4. [Conclusion] The identity follows from a straightforward algebraic calculation via the difference-of-squares formula; the Lean proof is unfinished but the intended computation is clear.
+
+-- Proof content:
+-- 1. [Problem Restatement] For every natural number n, show that the sum of cubes over k = 0, 1, …, n − 1 equals the square of the sum of k over the same range:
+   ∑ k ∈ range n, k^3 = (∑ k ∈ range n, k)^2.
+   Equivalently, using the known formula ∑ k ∈ range n, k = n(n − 1)/2, this asserts
+   ∑ k ∈ range n, k^3 = (n(n − 1)/2)^2.
+-- 2. [Key Idea] Combine:
+   - the triangular-number formula ∑ k ∈ range n, k = n(n − 1)/2, and
+   - induction on n for the cubes sum,
+   together with the algebraic step showing that adding the next cube advances the square of the triangular number:
+   ((n + 1)n/2)^2 − (n(n − 1)/2)^2 = n^3 (the previous lemma).
+-- 3. [Proof] The code first rewrites the right-hand side square using the triangular-number formula:
+   ∑ k ∈ range n, k = n(n − 1)/2.
+   It then sets up an auxiliary statement
+   cubes_formula: ∑ k ∈ range n, k^3 = (n(n − 1)/2)^2
+   and proves it by induction on n.
+   - Base case n = 0: both sides are 0 by simplification (no terms in the sum).
+   - Inductive step n → n + 1: rewrite the sum over range (n + 1) using sum_range_succ to get
+     ∑ k ∈ range (n + 1), k^3 = ∑ k ∈ range n, k^3 + n^3.
+     Apply the induction hypothesis to replace ∑ k ∈ range n, k^3 with (n(n − 1)/2)^2.
+     What remains is a purely algebraic identity:
+     (n(n − 1)/2)^2 + n^3 = ((n + 1)n/2)^2,
+     which is exactly the content of the previous lemma (difference of consecutive triangular-number squares equals n^3). The code indicates simplifying natural-number subtractions (simp [Nat.add_sub_cancel]) and calling ring_nf to normalize the algebra, but leaves the crucial algebraic step as sorry.
+-- 4. [Conclusion] The classical identity “sum of cubes equals the square of the triangular sum” is obtained by induction together with the elementary algebraic fact about consecutive triangular-number squares. In the Lean script, the structure matches this plan, but the final algebraic verifications are left unfinished (sorries).

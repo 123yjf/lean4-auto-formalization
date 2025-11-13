@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the equation of the line passing through B(7, −1) and C(−1, 7) in the form y = mx + b, then compute m + b.
+-- 2. [Key Idea] Compute the slope m as the change in y divided by the change in x; then substitute one of the points into y = mx + b to solve for b.
+-- 3. [Proof] The slope is m = (7 − (−1)) / (−1 − 7) = 8 / (−8) = −1. Using point B(7, −1) in y = mx + b gives −1 = (−1)(7) + b, so −1 = −7 + b, hence b = 6. Therefore the line is y = −x + 6, and m + b = −1 + 6 = 5.
+-- 4. [Conclusion] The value of m + b is 5.

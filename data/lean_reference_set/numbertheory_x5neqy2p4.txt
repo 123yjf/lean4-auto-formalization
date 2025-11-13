@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the Diophantine equation x^5 = y^2 + 4 has no solutions in integers x and y.
+-- 2. [Key Idea] Work modulo 11. The only possible residues for a fifth power mod 11 are 0, 1, and 10 (which is −1 mod 11), while y^2 + 4 never takes any of these residues mod 11. Hence no congruence solution exists, so no integer solution exists.
+-- 3. [Proof] Consider the equation modulo 11. 
+   Step 1. Fifth-power residues mod 11: By Fermat’s little theorem, for any a not divisible by 11, a^10 ≡ 1 (mod 11), so (a^5)^2 ≡ 1 and thus a^5 ≡ ±1 (i.e., 1 or 10) mod 11. If 11 divides a, then a^5 ≡ 0. Therefore x^5 can only be 0, 1, or 10 modulo 11.
+   Step 2. Values of y^2 + 4 mod 11: The quadratic residues mod 11 are 0, 1, 3, 4, 5, 9. Adding 4 gives the set {4, 5, 7, 8, 9, 2} modulo 11.
+   Step 3. Comparison: The sets {0, 1, 10} and {2, 4, 5, 7, 8, 9} are disjoint. Hence x^5 ≡ y^2 + 4 (mod 11) cannot hold for any integers x, y.
+-- 4. [Conclusion] Since the required congruence fails modulo 11, the original equation x^5 = y^2 + 4 has no integer solutions.

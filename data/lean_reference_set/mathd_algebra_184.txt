@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the positive number a such that the triples (6, a, b) and (1/b, a, 54) are geometric progressions.
+-- 2. [Key Idea] In any geometric progression, the square of the middle term equals the product of its neighbors. Applying this to each triple yields two equations relating a and b, which can be solved to determine a (choosing positive roots because the terms are positive).
+-- 3. [Proof] 
+   Style A – Using the geometric mean property:
+   - From (6, a, b): a^2 = 6b.  (1)
+   - From (1/b, a, 54): a^2 = (1/b)·54 = 54/b.  (2)
+   - Equate (1) and (2): 6b = 54/b ⇒ 6b^2 = 54 ⇒ b^2 = 9 ⇒ b = 3 (take the positive root).
+   - Substitute into (1): a^2 = 6·3 = 18 ⇒ a = √18 = 3√2 (take the positive root).
+
+   Style B – Using common ratios:
+   - Let r1 be the common ratio of (6, a, b). Then a/6 = b/a, so a^2 = 6b.  (same as (1))
+   - Let r2 be the common ratio of (1/b, a, 54). Then a/(1/b) = 54/a, so a^2 b = 54.  (2')
+   - Substitute b from (1) into (2'): a^2·(a^2/6) = 54 ⇒ a^4 = 324 ⇒ a = 3√2 (positive root).
+-- 4. [Conclusion] The unique positive solution is a = 3√2.

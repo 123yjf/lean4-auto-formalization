@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a monic polynomial of degree 6 with positive integer roots r1, …, r6 such that r1 + … + r6 = 10 and r1 r2 … r6 = 16. Let B be the coefficient of z^3 in the expanded polynomial. Since the coefficient of z^3 is (−1)^3 S3 = −S3, where S3 is the sum of all r_i r_j r_k with i < j < k, we need to determine B = −S3.
+-- 2. [Key Idea] Because the product is 16 = 2^4 and all roots are positive integers, each root must be a power of 2. The sum constraint excludes roots larger than 4, so each root is in {1, 2, 4}. Let a, b, c be the counts of 4’s, 2’s, and 1’s, respectively, so a + b + c = 6. The product gives 2a + b = 4 and the sum gives 4a + 2b + c = 10, which simplifies (using c = 6 − a − b) to 3a + b = 4. Solving yields a = 0, b = 4, c = 2, so the roots are {1, 1, 2, 2, 2, 2}. Then compute S3 by counting triples by how many 1’s they contain.
+-- 3. [Proof] From a + b + c = 6, 4^a · 2^b = 16 (so 2a + b = 4), and 4a + 2b + c = 10, we substitute c = 6 − a − b into the sum to get 4a + 2b + 6 − a − b = 10, i.e. 3a + b = 4. Subtracting (3a + b) − (2a + b) = 4 − 4 gives a = 0, hence b = 4 and c = 2. Therefore the roots are exactly 1, 1, 2, 2, 2, 2.
+
+Now compute S3, the sum of all triple products:
+- Triples with no 1’s: choose 3 of the 4 twos, C(4, 3) = 4 triples, each product 2·2·2 = 8, contributing 4·8 = 32.
+- Triples with exactly one 1: choose 1 of the 2 ones and 2 of the 4 twos, 2·C(4, 2) = 12 triples, each product 1·2·2 = 4, contributing 12·4 = 48.
+- Triples with exactly two 1’s: choose both ones and 1 of the 4 twos, C(2, 2)·4 = 4 triples, each product 1·1·2 = 2, contributing 4·2 = 8.
+
+Thus S3 = 32 + 48 + 8 = 88, so B = −S3 = −88.
+
+In the Lean code, this computation appears as
+C(4,3)*8 + (2*C(4,2))*4 + (C(2,2)*4)*2 = 88,
+proved automatically (by decide). The subsequent theorem maps this natural-number equality into the integers and negates both sides to state B = −88.
+-- 4. [Conclusion] The coefficient B of z^3 is −88.

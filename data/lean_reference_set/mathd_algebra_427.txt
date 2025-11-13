@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given three linear equations: 3x + y = 17, 5y + z = 14, and 3x + 5z = 41. We are asked to find the value of x + y + z.
+-- 2. [Key Idea] Add all three equations together so that the coefficients of x, y, and z each become 6. This directly yields an equation for x + y + z, which we can solve by dividing by 6.
+-- 3. [Proof] Adding the three equations:
+   (3x + y) + (5y + z) + (3x + 5z) = 17 + 14 + 41
+   This simplifies to 6x + 6y + 6z = 72.
+   Dividing both sides by 6 gives x + y + z = 12.
+   For completeness, an elimination approach also works: from 3x + y = 17, get y = 17 − 3x. Then z = 14 − 5y = 14 − 5(17 − 3x) = 15x − 71. Substitute into 3x + 5z = 41 to get 3x + 5(15x − 71) = 41, so 78x = 396 and x = 66/13. Then y = 23/13 and z = 67/13, yielding x + y + z = (66 + 23 + 67)/13 = 156/13 = 12.
+-- 4. [Conclusion] Therefore, the sum is x + y + z = 12.

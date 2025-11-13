@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 15 equals 15.
+-- 2. [Key Idea] Use the reflexivity of equality: every object is equal to itself.
+-- 3. [Proof] The statement 15 = 15 is a direct instance of equality reflexivity. In Lean, the tactic simp can close such goals automatically by recognizing they are definitionally true (essentially applying reflexivity).
+-- 4. [Conclusion] Therefore, 15 = 15 holds.

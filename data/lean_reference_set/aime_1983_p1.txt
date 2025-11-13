@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given log base x of w equals 24, log base y of w equals 40, and log base (x y z) of w equals 12, with x, y, z > 1, find log base z of w.
+-- 2. [Key Idea] Rewrite each logarithm using natural logarithms. This lets us relate ln x, ln y, and ln z, solve for ln z in terms of ln x, and then compute log base z of w as (ln w)/(ln z).
+-- 3. [Proof] Let ln be the natural logarithm.
+From log_x w = 24, we have ln w = 24 ln x.
+From log_y w = 40, we have ln w = 40 ln y, so 24 ln x = 40 ln y, hence ln y = (3/5) ln x.
+From log_{xyz} w = 12, we have ln w = 12 ln(xyz) = 12(ln x + ln y + ln z). Using ln w = 24 ln x gives 24 ln x = 12(ln x + ln y + ln z), so 2 ln x = ln x + ln y + ln z, hence ln z = ln x − ln y. Substituting ln y = (3/5) ln x yields ln z = (2/5) ln x.
+Therefore, log_z w = (ln w)/(ln z) = (24 ln x)/((2/5) ln x) = 24 · (5/2) = 60.
+(Equivalently, y = x^{3/5}, z = x^{2/5}, and w = x^{24}, so log_{x^{2/5}} x^{24} = 24 ÷ (2/5) = 60.)
+-- 4. [Conclusion] The value of log base z of w is 60.

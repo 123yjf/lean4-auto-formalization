@@ -1,0 +1,70 @@
+-- Proof content:
+-- **[Problem Restatement]**
+-- Given four odd integers $0 < a < b < c < d$ satisfying $ad=bc$, $a+d=2^k$, and $b+c=2^m$, prove that $a=1$.
+-- 
+-- **[Key Idea]**
+-- The conditions on the sums and products of the integers imply that $\{a,d\}$ and $\{b,c\}$ are roots of quadratic equations $x^2 - 2^k x + N = 0$ and $x^2 - 2^m x + N = 0$ respectively. Analyzing the integer solutions via their discriminants reveals a Diophantine equation whose constraints force the desired result.
+-- 
+-- **[Proof]**
+-- Let $a, b, c, d$ be odd integers such that $0 < a < b < c < d$, $ad=bc$, $a+d=2^k$, and $b+c=2^m$.
+-- Let $N=ad=bc$. The pairs $\{a,d\}$ and $\{b,c\}$ are the roots of the quadratic polynomials $P(x)=x^2-(a+d)x+ad = x^2-2^k x+N$ and $Q(x)=x^2-(b+c)x+bc = x^2-2^m x+N$, respectively.
+-- 
+-- The roots of $P(x)=0$ are $x = \frac{2^k \pm \sqrt{2^{2k}-4N}}{2} = 2^{k-1} \pm \sqrt{2^{2k-2}-N}$.
+-- The roots of $Q(x)=0$ are $x = \frac{2^m \pm \sqrt{2^{2m}-4N}}{2} = 2^{m-1} \pm \sqrt{2^{2m-2}-N}$.
+-- 
+-- For the roots to be integers, the discriminants must be perfect squares. Let
+-- $u^2 = 2^{2k-2}-N$ and $v^2 = 2^{2m-2}-N$ for some non-negative integers $u,v$.
+-- From the ordering $a<d$ and $b<c$, we have:
+-- $a = 2^{k-1}-u, \quad d = 2^{k-1}+u$
+-- $b = 2^{m-1}-v, \quad c = 2^{m-1}+v$
+-- 
+-- Since $a,b,c,d$ are odd and positive, $k,m \ge 2$, which means $2^{k-1}$ and $2^{m-1}$ are even. Thus, $u$ and $v$ must be odd positive integers.
+-- Subtracting the two discriminant equations yields:
+-- $u^2-v^2 = (2^{2k-2}-N) - (2^{2m-2}-N) = 2^{2k-2}-2^{2m-2}$.
+-- From $a<b<c<d$, we have $a+d > b+c$, so $2^k>2^m$, which implies $k>m$.
+-- $(u-v)(u+v) = 2^{2m-2}(2^{2(k-m)}-1)$.
+-- 
+-- Since $u,v$ are odd, $u-v$ and $u+v$ are both even. Let $u-v=2p$ and $u+v=2q$. Then $u=p+q$ and $v=q-p$.
+-- Substituting gives $4pq = 2^{2m-2}(2^{2(k-m)}-1)$, so $pq = 2^{2m-4}(2^{2(k-m)}-1)$.
+-- For $u,v$ to be odd, $p$ and $q$ must have different parity. Since $2^{2(k-m)}-1$ is odd, one of $\{p,q\}$ contains all factors of 2. As $m \ge 2$, we check $m=2$. If $m=2$, $b+c=4$. As $b,c$ are odd with $0<b<c$, we must have $b=1, c=3$. Then $ad=bc=3$, implying $a=1,d=3$. But this contradicts $a<b$. So $m \ne 2$, and thus $m \ge 3$. Therefore, $2m-4 \ge 2$.
+-- 
+-- The condition $a<b$ implies $2^{k-1}-u < 2^{m-1}-v$, which simplifies to $u-v > 2^{k-1}-2^{m-1}$.
+-- $2p > 2^{m-1}(2^{k-m}-1) \implies p > 2^{m-2}(2^{k-m}-1)$.
+-- Also, $v=q-p > 0$ implies $q>p$.
+-- 
+-- Two cases arise from the parity of $p,q$:
+-- **Case 1: $p$ is odd, $q$ is even.**
+-- $p=2^{2(k-m)}-1$ and $q=2^{2m-4}$.
+-- The condition $q>p$ becomes $2^{2m-4} > 2^{2(k-m)}-1$.
+-- The condition $p > 2^{m-2}(2^{k-m}-1)$ becomes $2^{2(k-m)}-1 > 2^{m-2}(2^{k-m}-1)$. Since $k>m$, we divide by $2^{k-m}-1$ to get $2^{k-m}+1 > 2^{m-2}$.
+-- Let $X=k-m \ge 1$ and $Y=m-2 \ge 1$. The inequalities are:
+-- (1) $2^{2Y} > 2^{2X}-1$
+-- (2) $2^X+1 > 2^Y$
+-- From (2), $2^{2X}+2^{X+1}+1 > 2^{2Y}$. Combined with (1), we get $2^{2X}-1 < 2^{2Y} < 2^{2X}+2^{X+1}+1$.
+-- If $X<Y$, then $2X < 2Y$, so $2^{2X} \le 2^{2Y-1}$. Then $2^{2X}-1 < 2^{2Y}$ is satisfied. However, $2^X+1 > 2^Y$ fails for $X,Y \ge 1$ since $Y \ge X+1$ implies $2^Y \ge 2^{X+1} = 2 \cdot 2^X > 2^X+1$.
+-- If $X>Y$, then $2^{2X} > 2^{2Y+1} = 2 \cdot 2^{2Y} = 2^{2Y}+2^{2Y}$. Then (1) holds. (2) $2^X+1>2^Y$ also holds.
+-- If $X=Y$, then $k-m=m-2 \implies k=2m-2$. Inequality (1) becomes $2^{2X} > 2^{2X}-1$ (true) and (2) becomes $2^X+1 > 2^X$ (true).
+-- Thus, this case holds if and only if $k \ge 2m-2$.
+-- However, we must satisfy $2^{2Y} > 2^{2X}-1$. If $k > 2m-2$, then $X > Y$, so $X \ge Y+1$.
+-- $2^{2Y} > 2^{2(Y+1)}-1 = 4 \cdot 2^{2Y}-1 \implies 1 > 3 \cdot 2^{2Y}$, which is impossible for $Y \ge 1$.
+-- Therefore, we must have $X=Y$, which implies $k=2m-2$.
+-- 
+-- **Case 2: $p$ is even, $q$ is odd.**
+-- $p=2^{2m-4}$ and $q=2^{2(k-m)}-1$.
+-- The condition $q>p$ is $2^{2(k-m)}-1 > 2^{2m-4}$.
+-- The condition $p > 2^{m-2}(2^{k-m}-1)$ is $2^{2m-4} > 2^{m-2}(2^{k-m}-1) \implies 2^{m-2} > 2^{k-m}-1$.
+-- With $X=k-m$ and $Y=m-2$, these are $2^{2X}-1 > 2^{2Y}$ and $2^Y > 2^X-1$.
+-- The second inequality implies $2^{2Y} > (2^X-1)^2 = 2^{2X}-2^{X+1}+1$.
+-- So we need $2^{2X}-1 > 2^{2Y} > 2^{2X}-2^{X+1}+1$.
+-- The length of this interval is $2^{X+1}-2$. There can be no power of 2 (like $2^{2Y}$) in it for $X \ge 1$. Let's check. $2^{2X-1}$ is the largest power of 2 less than $2^{2X}$. Is $2^{2X-1}$ in the interval? $2^{2X-1} < 2^{2X}-1$ for $X \ge 1$. We need $2^{2X-1} > 2^{2X}-2^{X+1}+1 \iff 2^{X+1}-1 > 2^{2X-1} \iff 4 \cdot 2^{X-1}-1 > 2^{X-1} \cdot 2^{X-1}$, which fails for $X \ge 3$. For $X=1,2$ it also fails. Thus this case is impossible.
+-- 
+-- The conditions require Case 1 to hold with $k=2m-2$. Let's find $a$.
+-- $a = 2^{k-1}-u = 2^{k-1}-(p+q) = 2^{2m-3}-( (2^{2(k-m)}-1) + 2^{2m-4} )$.
+-- Substitute $k=2m-2$ and $k-m=m-2$:
+-- $a = 2^{2m-3} - ( (2^{2(m-2)}-1) + 2^{2m-4} )$
+-- $a = 2^{2m-3} - ( 2^{2m-4}-1 + 2^{2m-4} )$
+-- $a = 2^{2m-3} - ( 2 \cdot 2^{2m-4} - 1 )$
+-- $a = 2^{2m-3} - ( 2^{2m-3} - 1 ) = 1$.
+-- 
+-- **[Conclusion]**
+-- The strict ordering of the integers and the structure of their sums and products forces a unique relationship between the exponents $k$ and $m$, which in turn demonstrates that the integer $a$ must be 1.

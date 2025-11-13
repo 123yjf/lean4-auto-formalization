@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Convert the base-three number 1222₃ to its base-ten value. 2. [Key Idea] Expand the base-three digits as a sum of powers of 3 and simplify. 3. [Proof] Standard expansion 1222₃ = 1·3³ + 2·3² + 2·3¹ + 2·3⁰ = 1·27 + 2·9 + 2·3 + 2·1 = 27 + 18 + 6 + 2 = 53. Alternate “left-to-right” accumulation Start with 0. (0·3 + 1) = 1 (1·3 + 2) = 5 (5·3 + 2) = 17 (17·3 + 2) = 53 Thus 1222₃ = 53₁₀. 4. [Conclusion] The number 1222 written in base three equals 53 in base ten.

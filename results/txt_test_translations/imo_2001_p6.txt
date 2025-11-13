@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive integers K, L, M, N with strict order N < M < L < K and a special condition relating K, L, M, N, show that the number K·L + M·N is not prime.
+-- 2. [Key Idea] Use a key factorization identity to see that K·M + L·N divides the product (K·L + M·N)(K·N + L·M). If K·L + M·N were prime, a divisibility lemma forces it to divide one of the two factors K·M + L·N or K·N + L·M. But established ordering inequalities show K·L + M·N is strictly larger than each of those, so it cannot divide them—contradiction.
+-- 3. [Proof] Assume, for contradiction, that K·L + M·N is prime. The key identity (derived from the given condition) states:
+   (K·M + L·N)(L^2 + L·N + N^2) = (K·L + M·N)(K·N + L·M).
+   Hence K·M + L·N divides (K·L + M·N)(K·N + L·M). A prime-divisibility lemma then implies:
+   either (i) K·L + M·N divides K·M + L·N, or (ii) K·L + M·N divides K·N + L·M.
+   In case (i), because K·M + L·N > 0, divisibility forces K·L + M·N ≤ K·M + L·N. But the ordering N < M < L < K yields the strict inequality K·L + M·N > K·M + L·N, a contradiction.
+   In case (ii), similarly K·N + L·M > 0 implies K·L + M·N ≤ K·N + L·M, while the ordering gives K·L + M·N > K·N + L·M, again a contradiction.
+-- 4. [Conclusion] Both possibilities contradict the strict inequalities forced by N < M < L < K. Therefore the assumption that K·L + M·N is prime is false, and K·L + M·N is not prime.

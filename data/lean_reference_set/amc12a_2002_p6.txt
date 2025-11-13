@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find how many positive integers m have at least one positive integer n such that mn ≤ m + n.
+-- 2. [Key Idea] Take n = 1. Then the inequality becomes m ≤ m + 1, which is true for every positive m. Alternatively, rewrite mn ≤ m + n as (m − 1)(n − 1) ≤ 1; setting n = 1 makes the left-hand side 0, which certainly satisfies the inequality.
+-- 3. [Proof] Let m be any positive integer. Choose n = 1. Then mn = m · 1 = m, and m ≤ m + 1 = m + n holds. Thus, for every positive m, there exists a positive n (namely 1) satisfying the inequality. Equivalently, since (m − 1)(n − 1) ≤ 1 when n = 1 (giving 0 ≤ 1), the condition is met for all positive m.
+-- 4. [Conclusion] Every positive integer m works, so there are infinitely many such m (i.e., all of them).

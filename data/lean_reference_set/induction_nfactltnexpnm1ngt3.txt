@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every integer n ≥ 3, the factorial n! is strictly less than n raised to the power n−1; that is, n! < n^{n−1}.
+-- 2. [Key Idea] Prove the claim by induction on n. Use the identity n! = n·(n−1)! and the fact that for any positive exponent, increasing the base increases the power: if a < b and m > 0, then a^m < b^m.
+-- 3. [Proof] 
+   (i) Base case n = 3: We have 3! = 6 and 3^{2} = 9, so 6 < 9, as required.
+   (ii) Induction step: Assume for some k ≥ 3 that k! < k^{k−1}. Consider n = k+1. Then
+       (k+1)! = (k+1)·k! < (k+1)·k^{k−1}   (by the induction hypothesis).
+     Since k < k+1 and the exponent k−1 ≥ 2 is positive, we have k^{k−1} < (k+1)^{k−1}. Multiplying by the positive number (k+1) preserves the inequality:
+       (k+1)·k^{k−1} < (k+1)·(k+1)^{k−1} = (k+1)^{k}.
+     Therefore, (k+1)! < (k+1)^{k}, completing the induction.
+-- 4. [Conclusion] By induction, for every integer n ≥ 3, we have n! < n^{n−1}.

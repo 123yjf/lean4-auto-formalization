@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate f(1) for the linear function f(x) = 5x + 4. 2. [Key Idea] Substitute x = 1 directly into the function; linearity makes this immediate. 3. [Proof] Direct substitution: f(1) = 5·1 + 4 = 5 + 4 = 9. (Alternate style—point-slope verification) The line f(x) = 5x + 4 has slope 5 and y-intercept 4; moving one unit right from x = 0 raises y by 5, so at x = 1 the value is 4 + 5 = 9. 4. [Conclusion] Therefore, f(1) = 9.

@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find how many integers n with 15 ≤ n ≤ 85 are divisible by 20.
+-- 2. [Key Idea] Count the multiples of 20 up to the upper bound 85, then subtract the multiples of 20 that lie below the lower bound 15.
+-- 3. [Proof] Let floor(x) denote the greatest integer ≤ x.
+--    a) Formula method: The number of multiples of 20 not exceeding 85 is floor(85/20) = 4. The number not exceeding 14 (one less than 15) is floor(14/20) = 0. Therefore, the count in the interval is 4 − 0 = 4.
+--    b) Direct listing: The multiples of 20 between 15 and 85 are 20, 40, 60, 80, which gives 4 numbers.
+-- 4. [Conclusion] Exactly four integers in the interval 15 ≤ n ≤ 85 are divisible by 20.

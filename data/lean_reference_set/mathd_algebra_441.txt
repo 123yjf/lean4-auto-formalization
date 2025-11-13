@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that (12)/(x·x) · (x⁴)/(14x) · (35)/(3x) equals 10 for every non-zero x.
+-- 2. [Key Idea] Combine the three fractions into a single fraction by multiplying numerators and denominators, cancel the common factor x⁴ (justified since x ≠ 0), and then simplify the remaining constant fraction.
+-- 3. [Proof] Let x ≠ 0. Then
+--    (12)/(x·x) · (x⁴)/(14x) · (35)/(3x)
+--    = (12·x⁴·35)/(x²·14x·3x) by grouping numerators and denominators
+--    = (420·x⁴)/(42·x⁴) since 12·35 = 420 and 14·3 = 42
+--    = 420/42 after canceling the common factor x⁴ (valid because x ≠ 0)
+--    = 10 by division.
+-- 4. [Conclusion] For every non-zero x, the product simplifies exactly to 10.

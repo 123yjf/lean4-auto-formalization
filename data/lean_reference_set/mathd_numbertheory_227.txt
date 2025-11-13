@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Each of n family members drank an 8-ounce coffee–milk mixture. Angela’s 8-ounce cup contained exactly 1/4 of all the milk used and 1/6 of all the coffee used. Find n, the number of family members.
+-- 2. [Key Idea] Model the situation with two linear equations: one for total volume (milk plus coffee) across all cups, and one for Angela’s cup as specific fractions of the totals. Solving these and requiring both total milk and total coffee to be positive forces a unique integer value of n.
+-- 3. [Proof] Let n be the number of cups, M the total ounces of milk, and C the total ounces of coffee.
+   - Total volume across all cups: M + C = 8n. (1)
+   - Angela’s cup contains 1/4 of all milk and 1/6 of all coffee, summing to 8 ounces: (1/4)M + (1/6)C = 8. (2)
+   - Clear denominators in (2) by multiplying by 12: 3M + 2C = 96. (3)
+   - From (1), C = 8n − M. Substitute into (3):
+     3M + 2(8n − M) = 96 ⇒ 3M + 16n − 2M = 96 ⇒ M + 16n = 96 ⇒ M = 96 − 16n.
+   - Then C = 8n − M = 8n − (96 − 16n) = 24n − 96.
+   - Since both milk and coffee were used, M > 0 and C > 0:
+     • M > 0 ⇒ 96 − 16n > 0 ⇒ n < 6.
+     • C > 0 ⇒ 24n − 96 > 0 ⇒ n > 4.
+   - The only integer n with 4 < n < 6 is n = 5.
+-- 4. [Conclusion] The family has exactly 5 members.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the product √(60x) · √(12x) · √(63x) and write it in simplest radical form. 2. [Key Idea] Combine the radicals under a single square root, then extract perfect squares from both the numerical and the x-parts. 3. [Proof] Single‐radical step: √(60x)·√(12x)·√(63x) = √(60·12·63·x³). Numerical part: 60·12·63 = 45360 = 36²·35 ⇒ √45360 = 36√35. Variable part: x³ = x²·x ⇒ √(x³) = x√x. Combining: √(60·12·63·x³) = (36√35)(x√x) = 36x√(35x). 4. [Conclusion] The product simplifies to 36x√(35x).

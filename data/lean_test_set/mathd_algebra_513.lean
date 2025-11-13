@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve the simultaneous equations 3a + 2b = 5 and a + b = 2. 2. [Key Idea] Eliminate one variable by a simple linear combination of the two equations. 3. [Proof] Let (1) 3a + 2b = 5 (2) a + b = 2 Multiply (2) by 2: 2a + 2b = 4. Subtract this from (1): (3a − 2a) + (2b − 2b) = 5 − 4 ⇒ a = 1. Substitute a = 1 into (2): 1 + b = 2 ⇒ b = 1. Hence (a, b) = (1, 1). 4. [Conclusion] The unique ordered pair satisfying both equations is (1, 1).

@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest positive integer X such that X ≡ 2 (mod 3) and the last digit of X matches the last digit of some integer congruent to 4 modulo 5.
+-- 2. [Key Idea] Any integer ≡ 4 (mod 5) has last digit 4 or 9, so X must end in 4 or 9. Check the smallest numbers with these endings against X ≡ 2 (mod 3).
+-- 3. [Proof] 
+--    - Possible last digits are 4 or 9 (since 4 ≡ 4 (mod 5) and 9 ≡ 4 (mod 5)).
+--    - Test small candidates:
+--      • 4 ≡ 1 (mod 3): fails
+--      • 9 ≡ 0 (mod 3): fails
+--      • 14 ≡ 2 (mod 3): succeeds
+--    - Therefore, 14 satisfies both conditions, and anything smaller (4 or 9) does not.
+--    - Alternative: Let X = 10k + d with d ∈ {4, 9}. Since 10 ≡ 1 (mod 3), we have k + d ≡ 2 (mod 3).
+--      • If d = 4: k ≡ 1 (mod 3) → smallest k = 1 → X = 14.
+--      • If d = 9: k ≡ 2 (mod 3) → smallest k = 2 → X = 29.
+--      The smallest across cases is 14.
+-- 4. [Conclusion] The least positive integer satisfying the conditions is 14.

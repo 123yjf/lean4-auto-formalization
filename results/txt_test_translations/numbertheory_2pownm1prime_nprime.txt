@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove the combined statement: (4 − 1 = 3) ∧ (16 − 1 = 15) ∧ (1 < 3) ∧ (1 < 2) ∧ (15 = 3 * 5) ∧ (1 < 5).
+-- 2. [Key Idea] Each arithmetic fact is a straightforward computation: equalities are verified by reflexivity after simplification (rfl), and inequalities between numerals are decidable automatically (decide). The final statement is a conjunction, so we build it by repeatedly applying conjunction introduction (constructor), supplying each previously established fact.
+-- 3. [Proof] 
+- 4 − 1 simplifies to 3, so 4 − 1 = 3 holds by reflexivity.
+- 16 − 1 simplifies to 15, so 16 − 1 = 15 holds by reflexivity.
+- 1 < 3 is a true numerical comparison, verified automatically.
+- 1 < 2 is a true numerical comparison, verified automatically.
+- 3 * 5 simplifies to 15, so 15 = 3 * 5 holds by reflexivity.
+- 1 < 5 is a true numerical comparison, verified automatically.
+Using conjunction introduction repeatedly, we combine these six facts into the required single conjunctive statement.
+-- 4. [Conclusion] All six elementary arithmetic facts are true, and therefore their conjunction (4 − 1 = 3) ∧ (16 − 1 = 15) ∧ (1 < 3) ∧ (1 < 2) ∧ (15 = 3 * 5) ∧ (1 < 5) holds.

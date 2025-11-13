@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given the polynomial f(x) = a x⁴ − b x² + x + 5 and the value f(−3) = 2. We must prove that f(3) = 8.
+-- 2. [Key Idea] The quartic and quadratic terms are even (they do not change when x is replaced by −x), while the linear term is odd (it changes sign). Therefore f(x) − f(−x) = 2x. Knowing f(−3) then directly determines f(3).
+-- 3. [Proof] Using symmetry, compute f(−x) = a x⁴ − b x² − x + 5, so f(x) − f(−x) = (a x⁴ − b x² + x + 5) − (a x⁴ − b x² − x + 5) = 2x. Plugging in x = 3 gives f(3) − f(−3) = 6. Since f(−3) = 2, it follows that f(3) = 2 + 6 = 8. Alternatively, from f(−3) = 81a − 9b − 3 + 5 = 2 we get 81a − 9b = 0; then f(3) = 81a − 9b + 3 + 5 = 0 + 8 = 8.
+-- 4. [Conclusion] Therefore, f(3) = 8.

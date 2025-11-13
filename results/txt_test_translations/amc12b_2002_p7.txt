@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that there exist natural numbers a, b, c such that a > 0, b = a + 1, c = a + 2, a*b*c = 8*(a + b + c), and a^2 + b^2 + c^2 = 77.
+-- 2. [Key Idea] Exhibit a specific triple of consecutive integers, namely a = 4, b = 5, c = 6, and verify all the required equalities by direct computation.
+-- 3. [Proof] Choose a = 4, b = 5, c = 6. Then a > 0 since 4 > 0. We have b = a + 1 because 5 = 4 + 1, and c = a + 2 because 6 = 4 + 2. Compute the product: a*b*c = 4*5*6 = 120. Compute the sum: a + b + c = 4 + 5 + 6 = 15, so 8*(a + b + c) = 8*15 = 120. Hence a*b*c = 8*(a + b + c). For the sum of squares, a^2 + b^2 + c^2 = 4^2 + 5^2 + 6^2 = 16 + 25 + 36 = 77. All conditions are satisfied. (The intermediate “verification” statement in the code performs the same computations after defining b := a + 1 and c := a + 2 with a = 4; the final “answer” theorem repeats the same witness and checks.)
+-- 4. [Conclusion] The triple (a, b, c) = (4, 5, 6) satisfies all the conditions, so such natural numbers exist.

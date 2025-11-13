@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists exactly one natural number n such that n < 10, 18 divides four_digit_number n = 3740 + n, and n = 4. Equivalently, among the digits 0–9, the unique n for which 3740 + n is divisible by 18 is 4.
+
+-- 2. [Key Idea] Work modulo 18. Since 3740 ≡ 14 (mod 18), the condition 18 ∣ (3740 + n) is equivalent to 14 + n ≡ 0 (mod 18), i.e., n ≡ 4 (mod 18). With 0 ≤ n < 10, this forces n = 4. Existence is then checked by verifying 3744 is divisible by 18.
+
+-- 3. [Proof] 
+- Existence: Choose n = 4. We have 4 < 10. Also, four_digit_number 4 = 3740 + 4 = 3744, and 3744 = 18 · 208, so 18 divides four_digit_number 4. Finally, n = 4 holds by definition.
+- Uniqueness: Suppose n < 10 and 18 ∣ four_digit_number n. The code splits into cases n = 0, 1, …, 9 (using interval_cases from n < 10). For each case other than n = 4, unfolding four_digit_number (so checking 18 ∣ 3740 + n) and simplifying shows a contradiction to divisibility. In the case n = 4, the goal n = 4 is immediate by reflexivity. Conceptually, this corresponds to the modular argument: from 3740 ≡ 14 (mod 18), divisibility forces n ≡ 4 (mod 18), and among 0–9 only n = 4 satisfies this.
+
+-- 4. [Conclusion] There is exactly one n with n < 10 and 18 ∣ (3740 + n), namely n = 4.

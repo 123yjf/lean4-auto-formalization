@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] We must show there exist natural numbers a and b such that a > 0, b > 0, both a and b are even, b = a + 2, a * b = 288, and specifically b = 18. Equivalently, we aim to exhibit a concrete pair (a, b) satisfying all these conditions.
+-- 2. [Key Idea] Because a and b are even and differ by 2, write a = 2n and b = 2n + 2. Then a * b = 288 becomes 4n(n + 1) = 288, so n(n + 1) = 72. Solving n^2 + n − 72 = 0 gives (n + 9)(n − 8) = 0, and with n > 0 we get n = 8. Hence a = 16 and b = 18.
+-- 3. [Proof] Set n = 8. Then 2n = 16 and 2n + 2 = 18, and indeed 16 * 18 = 288. Thus choosing a = 16 and b = 18 works. These satisfy:
+   - a > 0 and b > 0 (obvious numerically).
+   - a and b are even, since a = 2 * 8 and b = 2 * 9.
+   - b = a + 2, since 18 = 16 + 2.
+   - a * b = 288, since 16 * 18 = 288.
+   - b = 18 by construction.
+   The intermediate computations reflect solving n(n + 1) = 72, which factors as (n + 9)(n − 8) = 0, yielding the positive solution n = 8 used above.
+-- 4. [Conclusion] Taking a = 16 and b = 18 satisfies all the required conditions, so such a pair exists.

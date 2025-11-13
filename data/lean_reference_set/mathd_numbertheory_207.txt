@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Convert the base-9 number 852₉ into its base-10 value, and check that this value is 695₁₀.
+-- 2. [Key Idea] Treat the digits 8, 5, and 2 as coefficients of 9², 9¹, and 9⁰ respectively, then add the resulting terms. Equivalently, use Horner’s method: iteratively multiply by 9 and add the next digit.
+-- 3. [Proof] Method 1 (place-value expansion): 852₉ = 8·9² + 5·9¹ + 2·9⁰ = 8·81 + 5·9 + 2·1 = 648 + 45 + 2 = 695. Method 2 (Horner form): (((8)·9 + 5)·9 + 2) = (72 + 5)·9 + 2 = 77·9 + 2 = 693 + 2 = 695.
+-- 4. [Conclusion] Therefore, 852₉ equals 695₁₀.

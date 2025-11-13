@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate (16 ⋅ ∛(a²))^{1/3} for a = 8. 2. [Key Idea] First compute the inner cube root, then notice the result is a perfect cube whose cube root is easy to recognize. 3. [Proof] Let a = 8. a² = 8² = 64. ∛(a²) = ∛64 = 4, because 4³ = 64. Hence (16 ⋅ ∛(a²))^{1/3} = (16 ⋅ 4)^{1/3} = 64^{1/3} = 4, since 4³ = 64. 4. [Conclusion] Therefore (16 ∛(a²))^{1/3} equals 4 when a = 8.

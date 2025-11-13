@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there do not exist integers x and y such that 4x^3 − 7y^3 = 2003.
+-- 2. [Key Idea] Work modulo 7. Reduce the equation mod 7 to force x^3 ≡ 2 (mod 7). But the cubic residues modulo 7 are exactly 0, 1, and 6, so 2 is not a cube mod 7. This contradiction rules out any integer solution.
+-- 3. [Proof] Consider the equation 4x^3 − 7y^3 = 2003 modulo 7. Since 7y^3 ≡ 0 (mod 7), the equation reduces to 4x^3 ≡ 2003 (mod 7). We are given that 2003 ≡ 1 (mod 7), so 4x^3 ≡ 1 (mod 7). The inverse of 4 modulo 7 is 2 (because 4 · 2 = 8 ≡ 1 (mod 7)), hence multiplying both sides by 2 gives x^3 ≡ 2 (mod 7). However, the only cubic residues modulo 7 are 0, 1, and 6, and 2 is not among them. This contradiction shows that no integers x, y can satisfy the original equation. In the Lean code, these modular facts are postulated as axioms (mod_2003_eq_1, inv_4_eq_2_mod_7, cubic_residues_mod_7, two_not_cubic_residue_mod_7), and the nonexistence of solutions is bundled into the axiom main_result; the theorem simply restates main_result.
+-- 4. [Conclusion] There are no integers x and y such that 4x^3 − 7y^3 = 2003.

@@ -1,0 +1,26 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a function f: ℝ → ℝ such that for all real x we have f(x) + f(x − 1) = x^2, that f(19) = 94, and that 4561 ≡ 561 (mod 1000), i.e., (4561 : ℤ) % 1000 = 561.
+-- 2. [Key Idea] Construct f as the sum of:
+--    - a particular solution p(x) that satisfies p(x) + p(x − 1) = x^2, and
+--    - a “homogeneous” term h(x) with h(x) + h(x − 1) = 0.
+--    A quadratic p(x) = (1/2) x^2 + (1/2) x works. For the homogeneous part, make h(x) alternate by integer steps: set h(x) = 96 if floor(x) is even and h(x) = −96 if floor(x) is odd. Since floor(x − 1) = floor(x) − 1, the parity flips and the two values cancel.
+-- 3. [Proof]
+--    - Numeric check: Using straightforward arithmetic, 4561 % 1000 = 561.
+--    - Define the function:
+--      f(x) = (1/2) x^2 + (1/2) x + (if floor(x) is even then 96 else −96).
+--    - Particular solution identity: By expanding and simplifying,
+--      [(1/2) x^2 + (1/2) x] + [(1/2) (x − 1)^2 + (1/2) (x − 1)] = x^2.
+--    - Floor shift: floor(x − 1) = floor(x) − 1.
+--    - Homogeneous cancellation: For any integer n, the sum
+--      (if n is even then 96 else −96) + (if n − 1 is even then 96 else −96) = 0.
+--      This is proved by a parity split:
+--        • If n is even, then n − 1 is odd, giving 96 + (−96) = 0.
+--        • If n is odd, then n − 1 is even, giving (−96) + 96 = 0.
+--      Applied with n = floor(x), and using floor(x − 1) = floor(x) − 1, we get h(x) + h(x − 1) = 0.
+--    - Combine the two parts:
+--      f(x) + f(x − 1) = [p(x) + p(x − 1)] + [h(x) + h(x − 1)] = x^2 + 0 = x^2.
+--    - Initial condition: Since floor(19) = 19 and 19 is odd, h(19) = −96. Also,
+--      (1/2)·19^2 + (1/2)·19 = (1/2)·361 + 9.5 = 180.5 + 9.5 = 190.
+--      Hence f(19) = 190 − 96 = 94.
+--    - Therefore, the constructed f satisfies all requirements, and the given congruence holds.
+-- 4. [Conclusion] The function f(x) = (1/2) x^2 + (1/2) x + (96 if floor(x) is even, −96 otherwise) satisfies f(x) + f(x − 1) = x^2 for all real x and f(19) = 94. Additionally, 4561 % 1000 = 561. Thus, there exists such an f with the stated properties, completing the proof.

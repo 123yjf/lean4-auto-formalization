@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a unique natural number n with n < 1399 such that (160 * n) % 1399 = 1. In particular, verify that n = 1058 works and is the only such n. Additionally, several auxiliary modular computations are established: (160 * 1058) % 1399 = 1; (40 * 35) % 1399 = 1400 % 1399; (4 * 350) % 1399 = 1400 % 1399; 1400 % 1399 = 1; 160 = 4 * 40; and (350 * 35) % 1399 = 1058.
+
+-- 2. [Key Idea] 
+- Existence: Exhibit an explicit inverse by direct computation: 1058 satisfies (160 * 1058) % 1399 = 1.
+- Uniqueness: If 160 m ≡ 1 (mod 1399) and 160 · 1058 ≡ 1 (mod 1399), then 160 m ≡ 160 · 1058 (mod 1399). Because gcd(160, 1399) = 1, we can cancel the factor 160 from both sides modulo 1399, obtaining m ≡ 1058 (mod 1399). With both representatives chosen in [0, 1399), this congruence forces m = 1058.
+- The auxiliary lemmas show how the inverse 1058 can be constructed from the factorization 160 = 4 · 40 by multiplying modular inverses of 4 and 40: 350 is an inverse of 4 and 35 is an inverse of 40 modulo 1399, and their product reduces to 1058 modulo 1399.
+
+-- 3. [Proof]
+- Existence: Compute directly that (160 * 1058) % 1399 = 1. This confirms that n = 1058 is a solution and also that 1058 < 1399.
+- Uniqueness: Suppose m is a natural number with m < 1399 and (160 * m) % 1399 = 1. Then (160 * m) % 1399 = (160 * 1058) % 1399 by substituting the two equal remainders. Interpreting equality of remainders as a congruence, we get 160 m ≡ 160 · 1058 (mod 1399).
+  Since gcd(1399, 160) = 1, we may cancel the factor 160 in this congruence to deduce m ≡ 1058 (mod 1399).
+  Reducing both sides modulo 1399 and using m < 1399 and 1058 < 1399, we have m % 1399 = m and 1058 % 1399 = 1058, so the congruence implies m = 1058. This proves uniqueness.
+- Auxiliary computations:
+  • (40 * 35) % 1399 = 1400 % 1399 and (4 * 350) % 1399 = 1400 % 1399 by direct calculation; together with 1400 % 1399 = 1, these show that 35 is an inverse of 40 mod 1399 and 350 is an inverse of 4 mod 1399.
+  • Using 160 = 4 * 40, the inverse of 160 modulo 1399 is the product of the inverses of 4 and 40, namely 350 * 35; indeed, (350 * 35) % 1399 = 1058, agreeing with the explicit inverse found above.
+
+-- 4. [Conclusion] There is exactly one n with 0 ≤ n < 1399 such that 160 n ≡ 1 (mod 1399), namely n = 1058. The auxiliary identities consistently support this by exhibiting modular inverses for the factors of 160 and reconstructing the inverse of 160 as 1058.

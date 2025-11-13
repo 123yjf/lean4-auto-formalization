@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let a > 0 with 2 < a^2 < 3, and suppose the fractional parts satisfy ⟨a⁻¹⟩ = ⟨a²⟩. Prove that a¹² − 144 a⁻¹ = 233.
+-- 2. [Key Idea] The bounds force ⟨a²⟩ = a² − 2 and ⟨a⁻¹⟩ = a⁻¹, so equality of fractional parts gives a⁻¹ = a² − 2. This is equivalent to the cubic a³ − 2a − 1 = 0, whose only positive root is the golden ratio φ = (1 + √5)/2. Powers of φ satisfy φⁿ = Fₙ φ + Fₙ₋₁ (F₀ = 0, F₁ = 1), which lets us compute a¹² − 144 a⁻¹ explicitly.
+-- 3. [Proof] 
+--    Step 1: Reduce the fractional parts. Since 2 < a² < 3, the integer part of a² is 2, hence ⟨a²⟩ = a² − 2. Also, from 2 < a² we get a < √3, so 0 < a⁻¹ < 1 and thus ⟨a⁻¹⟩ = a⁻¹. The hypothesis ⟨a⁻¹⟩ = ⟨a²⟩ becomes a⁻¹ = a² − 2, i.e. a³ − 2a − 1 = 0.
+--    Step 2: Solve the cubic. Factor a³ − 2a − 1 = (a + 1)(a² − a − 1). The root a = −1 is inadmissible (a > 0), so a must satisfy a² − a − 1 = 0, giving a = φ := (1 + √5)/2. This φ obeys φ² = φ + 1 ≈ 2.618, so indeed 2 < a² < 3.
+--    Step 3: Use Fibonacci identities. From φ² = φ + 1 one proves by induction that for all n ≥ 0, φⁿ = Fₙ φ + Fₙ₋₁, where (Fₙ) is the Fibonacci sequence with F₀ = 0, F₁ = 1. In particular, F₁₂ = 144 and F₁₁ = 89, so φ¹² = 144 φ + 89. Also, φ⁻¹ = φ − 1 (since φ(φ − 1) = 1).
+--    Step 4: Compute the target expression. With a = φ, a¹² − 144 a⁻¹ = (144 φ + 89) − 144(φ − 1) = 144 φ + 89 − 144 φ + 144 = 233.
+-- 4. [Conclusion] Under the given hypotheses, a = φ and a¹² − 144 a⁻¹ = 233.

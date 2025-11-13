@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] We have functions f, h: ℝ → ℝ such that h is both a left inverse and a right inverse of f; that is, h(f x) = x and f(h y) = y for all real numbers. We are also given h(2) = 10, h(10) = 1, and h(1) = 2. We must show that f(f(10)) = 1.
+-- 2. [Key Idea] Use the right-inverse property f(h y) = y to compute f(10) and f(2) by rewriting 10 as h(2) and 2 as h(1), then chain these equalities to evaluate f(f(10)).
+-- 3. [Proof] 
+--    - Since f is a right inverse of h, f(h 2) = 2. Given h(2) = 10, this implies f(10) = 2.
+--    - Again by the right-inverse property, f(h 1) = 1. Given h(1) = 2, this implies f(2) = 1.
+--    - Therefore, f(f(10)) = f(2) = 1.
+-- 4. [Conclusion] Hence f(f(10)) = 1. Only the right-inverse property and the values h(2) = 10 and h(1) = 2 are used; the fact h(10) = 1 and the left-inverse property are not needed.

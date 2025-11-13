@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want natural numbers m and n such that:
+--    (a) m and n are coprime,
+--    (b) m < 90·n,
+--    (c) ∑_{k=0}^{34} sin(5k·π/180) = tan(m·π/(n·180)),
+--    (d) m + n = 177.
+--    We are given (as an axiom) the identity ∑_{k=0}^{34} sin(5k·π/180) = tan(175·π/360).
+-- 2. [Key Idea] Choose specific values m = 175 and n = 2. Then:
+--    - The given trigonometric identity matches condition (c) because n·180 = 2·180 = 360, so tan(175·π/(n·180)) = tan(175·π/360).
+--    - The coprimality, inequality, and sum conditions are straightforward numerical checks.
+-- 3. [Proof]
+--    - Set m = 175 and n = 2.
+--    - Coprimality: gcd(175, 2) = 1 since 175 is odd and 2 is even, so Nat.Coprime 175 2 holds.
+--    - Inequality: 175 < 90·2 = 180, which is true.
+--    - Trigonometric equality: By the given identity ∑ sin(5k·π/180) = tan(175·π/360), and since 2·180 = 360, we have tan(175·π/(2·180)) = tan(175·π/360). Thus the required equality in (c) holds for m = 175 and n = 2.
+--    - Sum condition: 175 + 2 = 177.
+-- 4. [Conclusion] The choice m = 175 and n = 2 satisfies all required conditions, so such m, n exist.

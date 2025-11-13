@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers a and b such that a > 0, b > 0, a ≡ 2 (mod 10), b ≡ 4 (mod 10), gcd(a, b) = 6, and lcm(a, b) = 108.
+-- 2. [Key Idea] Provide explicit witnesses a = 12 and b = 54, then verify each condition by straightforward computation.
+-- 3. [Proof] Choose a = 12 and b = 54. Clearly 12 > 0 and 54 > 0. Their last digits are 2 and 4 respectively, so 12 % 10 = 2 and 54 % 10 = 4. Computing gcd(12, 54) gives 6, and computing lcm(12, 54) gives 108. Each of these verifications is immediate by evaluation.
+-- 4. [Conclusion] Therefore, such natural numbers exist, for example a = 12 and b = 54.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that lcm(12, 54) = 108.
+-- 2. [Key Idea] Evaluate the least common multiple directly.
+-- 3. [Proof] By computation, the least common multiple of 12 and 54 is 108; this follows directly from the definition/evaluation of lcm.
+-- 4. [Conclusion] Hence lcm(12, 54) = 108.
+
+-- Proof content:
+-- 1. [Problem Restatement] For all natural numbers a and b, prove gcd(a, b) * lcm(a, b) = a * b.
+-- 2. [Key Idea] Use the standard gcd–lcm identity from the library.
+-- 3. [Proof] Apply the known theorem Nat.gcd_mul_lcm, which states exactly that gcd(a, b) * lcm(a, b) = a * b.
+-- 4. [Conclusion] Therefore, the product of the gcd and lcm of a and b equals the product a * b for all natural numbers a and b.

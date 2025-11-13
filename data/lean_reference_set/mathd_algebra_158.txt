@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest integer in a set of five consecutive even integers whose sum is 4 less than the sum of the first eight odd positive integers.
+-- 2. [Key Idea] Represent consecutive even and odd numbers as arithmetic sequences, compute their sums, set the required sums equal per the condition, and solve the resulting linear equation.
+-- 3. [Proof] Let the five consecutive even integers be x, x + 2, x + 4, x + 6, x + 8, where x is even. Their sum is S₁ = x + (x + 2) + (x + 4) + (x + 6) + (x + 8) = 5x + 20. The first eight odd positive integers are 1, 3, 5, 7, 9, 11, 13, 15, whose sum is S₂ = 8 · (1 + 15)/2 = 8 · 8 = 64. The condition says S₁ = S₂ − 4, so 5x + 20 = 64 − 4 = 60. Hence 5x = 40, so x = 8. Therefore, the smallest of the five even integers is 8. (Alternative quick view: the eight odds sum to 64; four less is 60. Averaging over five consecutive evens puts the middle at 12, so the smallest is 8.)
+-- 4. [Conclusion] The smallest of the five consecutive even integers is 8.

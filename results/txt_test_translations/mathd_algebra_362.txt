@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers a and b such that a^2 · b^3 = 32/27, a / b^3 = 27/4, and a + b = 8/3.
+-- 2. [Key Idea] Provide explicit values for a and b and verify each equation by straightforward arithmetic.
+-- 3. [Proof] Choose a = 2 and b = 2/3. Then:
+--    - Compute a^2 · b^3 = 2^2 · (2/3)^3 = 4 · (8/27) = 32/27.
+--    - Compute a / b^3 = 2 / (2/3)^3 = 2 / (8/27) = 2 · (27/8) = 27/4.
+--    - Compute a + b = 2 + 2/3 = 6/3 + 2/3 = 8/3.
+--    All three required equalities hold for these choices.
+-- 4. [Conclusion] Therefore, such real numbers exist; namely, a = 2 and b = 2/3 satisfy all the given conditions.

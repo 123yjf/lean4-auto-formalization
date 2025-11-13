@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define three quantities: separate_surface_area = 6 × (1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2), hidden_area = 2 × (1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2), and exposed_surface_area = separate_surface_area − hidden_area. The goal is to show that exposed_surface_area = 658.
+
+-- 2. [Key Idea] Compute the sums of squares explicitly, then carry out the multiplications and subtraction to obtain the final value.
+
+-- 3. [Proof] 
+- First compute the sums of squares:
+  1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2 = 140,
+  1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 = 91.
+- Multiply by the given coefficients:
+  separate_surface_area = 6 × 140 = 840,
+  hidden_area = 2 × 91 = 182.
+- Subtract to get the exposed area:
+  exposed_surface_area = 840 − 182 = 658.
+- Therefore, substituting these computed values confirms the desired equality.
+
+-- 4. [Conclusion] The exposed surface area equals 658.

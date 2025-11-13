@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the digit d that makes the four-digit number 20d7 divisible by 11.
+-- 2. [Key Idea] Use the divisibility test for 11: for a four-digit number with digits a₁ a₂ a₃ a₄, the difference (a₁ + a₃) − (a₂ + a₄) must be a multiple of 11.
+-- 3. [Proof] Label the digits of 20d7 as a₁ = 2, a₂ = 0, a₃ = d, a₄ = 7. Then the alternating sum is (a₁ + a₃) − (a₂ + a₄) = (2 + d) − (0 + 7) = d − 5. For 20d7 to be divisible by 11, we need d − 5 ≡ 0 (mod 11). Because d is a single digit (0 through 9), the only value satisfying this is d = 5. Equivalently, using modular arithmetic: 20d7 = 2007 + 10d. Since 10 ≡ −1 (mod 11) and 2007 ≡ 5 (mod 11), we get 2007 + 10d ≡ 5 − d (mod 11). Setting this to 0 mod 11 yields d ≡ 5 (mod 11), and with 0 ≤ d ≤ 9, we again obtain d = 5.
+-- 4. [Conclusion] The required digit is 5; indeed, 2057 ÷ 11 = 187.

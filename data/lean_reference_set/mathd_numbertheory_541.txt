@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the sum of two positive integers, both greater than 1, whose product is 2005.
+-- 2. [Key Idea] Factor 2005; if there is only one nontrivial factor pair, those factors are forced, and their sum is immediate.
+-- 3. [Proof] Compute the factorization: 2005 ÷ 5 = 401. Check that 401 is prime by noting that no integer up to √401 ≈ 20 divides it (in particular, none of 2, 3, 5, 7, 11, 13, 17, 19 divides 401). Thus the only factorization of 2005 into integers greater than 1 is 2005 = 5 · 401. Therefore, the two numbers are 5 and 401, and their sum is 5 + 401 = 406.
+-- 4. [Conclusion] Since 2005 has the unique nontrivial factor pair (5, 401), the required sum is 406.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the number x such that 5 + 500 % of 10 equals 110 % of x. 2. [Key Idea] Translate each percentage into its decimal form and solve the resulting linear equation. 3. [Proof] 500 % of 10 = 5 · 10 = 50 So 5 + 500 % of 10 = 5 + 50 = 55. 110 % of x = 1.10 x. Set them equal: 1.10 x = 55 x = 55 / 1.10 x = 50. 4. [Conclusion] The number whose 110 % equals 5 plus 500 % of 10 is 50.

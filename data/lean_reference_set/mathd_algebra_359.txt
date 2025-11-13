@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the number y such that the three consecutive terms y + 6, 12, y form an arithmetic sequence.
+-- 2. [Key Idea] In an arithmetic sequence, the common difference is constant; equivalently, the middle term equals the average of its two neighbors.
+-- 3. [Proof] Method 1 (common difference): Let d be the common difference. Then 12 − (y + 6) = d and y − 12 = d, so 12 − y − 6 = y − 12, hence 6 − y = y − 12, thus 18 = 2y and y = 9. Method 2 (averaging property): For three consecutive arithmetic terms a, b, c, we have b = (a + c)/2. Thus 12 = (y + 6 + y)/2, so 24 = 2y + 6, hence 18 = 2y and y = 9.
+-- 4. [Conclusion] The required value is y = 9, giving the arithmetic sequence 15, 12, 9.

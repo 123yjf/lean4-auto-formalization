@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] For a natural number n ≥ 1 and a real number x > -1, show that 1 + n·x ≤ (1 + x)^n.
+-- 2. [Key Idea] Invoke a standard Bernoulli-type inequality from the library (one_add_mul_le_pow), which guarantees 1 + n·x ≤ (1 + x)^n provided we know a crude lower bound x ≥ -2. Since x > -1 implies x ≥ -2, the lemma applies directly. (Note: the hypothesis n ≥ 1 is not actually needed for this lemma.)
+-- 3. [Proof] From x > -1 we immediately obtain -2 ≤ x (because -2 ≤ -1 < x). With this bound, the library lemma one_add_mul_le_pow yields 1 + n·x ≤ (1 + x)^n for the given n. Thus the desired inequality follows. The condition n ≥ 1 is unused.
+-- 4. [Conclusion] The inequality 1 + n·x ≤ (1 + x)^n holds; it follows by applying a known Bernoulli-type lemma once we note that x > -1 implies the required lower bound x ≥ -2.

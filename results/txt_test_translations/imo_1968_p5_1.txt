@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a real number a > 0 and a function f : ℝ → ℝ satisfying the functional equation f(x + a) = 1/2 + √(f(x) − (f(x))^2) for all real x, show that there exists a positive real number b such that f(x + b) = f(x) for all x.
+-- 2. [Key Idea] Use the provided periodicity result: any function satisfying the given functional equation is 2a-periodic. Then take b = 2a, which is positive because a > 0.
+-- 3. [Proof] By the given axiom (functional_equation_periodicity), from the hypotheses a > 0 and f(x + a) = 1/2 + √(f(x) − (f(x))^2) for all x, we obtain that f(x + 2a) = f(x) for all x. Define b := 2a. Since 2 > 0 and a > 0, we have b = 2a > 0. The established periodicity then gives f(x + b) = f(x) for all x.
+-- 4. [Conclusion] There exists b = 2a > 0 such that f(x + b) = f(x) for all x.

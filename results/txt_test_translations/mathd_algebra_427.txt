@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist rational numbers x, y, z such that
+--    3x + y = 17, 5y + z = 14, 3x + 5z = 41, and x + y + z = 12.
+-- 2. [Key Idea] Add the first three equations: the left-hand sides sum to 6x + 6y + 6z and the right-hand sides to 72, yielding 6(x + y + z) = 72 and hence x + y + z = 12. Then explicitly exhibit a triple (x, y, z) that satisfies the first three equations and verify that its sum is 12.
+-- 3. [Proof] 
+--    - Algebraic identity: For any x, y, z, (3x + y) + (5y + z) + (3x + 5z) = 6x + 6y + 6z (by expanding and collecting terms).
+--    - Numeric sum: 17 + 14 + 41 = 72.
+--    - Therefore, any x, y, z satisfying the first three equations also satisfy 6x + 6y + 6z = 72. Since 6x + 6y + 6z = 6(x + y + z), it follows that 6(x + y + z) = 72, hence x + y + z = 12.
+--    - Provide an explicit solution: take x = 66/13, y = 23/13, z = 67/13. Direct calculation verifies:
+--      3x + y = 3·(66/13) + 23/13 = 198/13 + 23/13 = 221/13 = 17,
+--      5y + z = 5·(23/13) + 67/13 = 115/13 + 67/13 = 182/13 = 14,
+--      3x + 5z = 3·(66/13) + 5·(67/13) = 198/13 + 335/13 = 533/13 = 41.
+--    - For this triple, the sum is x + y + z = 66/13 + 23/13 + 67/13 = 156/13 = 12.
+--    - Hence this explicit triple satisfies all four required equations.
+-- 4. [Conclusion] There exist rationals x, y, z satisfying the system, for example x = 66/13, y = 23/13, z = 67/13; in particular, x + y + z = 12, which also follows by summing the first three equations.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine n such that a point in the third quadrant, 6 units below the x-axis and 15 units from (8, 3), is at a distance √n from the origin.
+-- 2. [Key Idea] A point 6 units below the x-axis has y = −6. Use the distance formula to (8, 3) to find x, enforce the third-quadrant condition (x < 0), then compute the squared distance to the origin to get n.
+-- 3. [Proof] Let the point be (x, y) with x < 0 and y < 0. Since it is 6 units below the x-axis, y = −6. Its distance to (8, 3) is 15, so (x − 8)² + (−6 − 3)² = 15² ⇒ (x − 8)² + 81 = 225 ⇒ (x − 8)² = 144 ⇒ x − 8 = ±12, giving x = 20 or x = −4. The third-quadrant condition forces x = −4. Thus the point is (−4, −6). Its squared distance to the origin is (−4)² + (−6)² = 16 + 36 = 52, so the distance is √52.
+-- 4. [Conclusion] The value is n = 52.

@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Choose two distinct primes from the set {5, 7, 11, 13, 17}. Among the listed options, determine which number can equal (product) − (sum) of the two chosen primes.
+-- 2. [Key Idea] Rewrite pq − (p + q) as (p − 1)(q − 1) − 1. Since all primes in the set are odd, p − 1 and q − 1 are even, so their product is a multiple of 4. Hence pq − (p + q) ≡ 3 (mod 4). Also, the value is maximized when p and q are the largest primes, giving an upper bound.
+-- 3. [Proof] Let p < q be the chosen primes.
+--    (i) Congruence test: pq − (p + q) = (p − 1)(q − 1) − 1. Because p and q are odd, (p − 1)(q − 1) is divisible by 4, so pq − (p + q) ≡ −1 ≡ 3 (mod 4). Among the options, 22 ≡ 2 (mod 4), 60 ≡ 0, 119 ≡ 3, 180 ≡ 0, 231 ≡ 3. Only 119 and 231 satisfy the congruence condition.
+--    (ii) Size bound: The largest primes available are 13 and 17, giving (p − 1)(q − 1) − 1 = 16 · 12 − 1 = 192 − 1 = 191. Therefore any candidate must be at most 191; this excludes 231.
+--    (iii) Verification: Take p = 11 and q = 13. Then pq − (p + q) = 143 − 24 = 119, which is achievable.
+-- 4. [Conclusion] The only attainable value is 119, which corresponds to option (C).

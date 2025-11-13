@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the remainder when the sum 2000 + 2001 + 2002 + 2003 + 2004 + 2005 + 2006 is divided by 7.
+-- 2. [Key Idea] Either recognize that seven consecutive integers form a complete set of residues modulo 7, so their sum is 0 modulo 7, or note that the sum equals 7 times their average, hence is a multiple of 7.
+-- 3. [Proof] Method 1 (residues).
+--    • Reduce each term modulo 7: 2000 ≡ 5, 2001 ≡ 6, 2002 ≡ 0, 2003 ≡ 1, 2004 ≡ 2, 2005 ≡ 3, 2006 ≡ 4 (mod 7).
+--    • Sum the residues: 5 + 6 + 0 + 1 + 2 + 3 + 4 = 21 ≡ 0 (mod 7).
+--    • Therefore, the original sum is congruent to 0 modulo 7.
+--    Method 2 (arithmetic mean).
+--    • The average of seven consecutive integers is (first + last)/2 = (2000 + 2006)/2 = 2003.
+--    • Their sum is 7 × 2003, which is divisible by 7.
+-- 4. [Conclusion] The remainder upon dividing 2000 + 2001 + 2002 + 2003 + 2004 + 2005 + 2006 by 7 is 0.

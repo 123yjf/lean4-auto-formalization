@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find a natural number b such that gcd(120, b) = 8 and lcm(120, b) = 3720, and show that necessarily b = 248.
+-- 2. [Key Idea] Use the product formula ab = gcd(a, b) · lcm(a, b). Check that b = 248 satisfies the gcd and lcm conditions. For uniqueness, observe that fixing both gcd and lcm fixes the product 120 · b, hence fixes b by cancellation since 120 > 0. Simple arithmetic and (optionally) prime factorizations verify the numerical claims.
+-- 3. [Proof] 
+   - Existence: Take b = 248. Direct computation shows gcd(120, 248) = 8 and lcm(120, 248) = 3720, and clearly b = 248.
+   - Product identity: For all natural numbers a, b, one has a · b = gcd(a, b) · lcm(a, b).
+   - Numerical verification: 120 · 248 = 8 · 3720 = 29760. Also, 120 = 2^3 · 3 · 5 and 248 = 2^3 · 31, which confirms gcd(120, 248) = 2^3 = 8 and lcm(120, 248) = 2^3 · 3 · 5 · 31 = 3720.
+   - Uniqueness: If some b satisfies gcd(120, b) = 8 and lcm(120, b) = 3720, then by the product formula 120 · b = 8 · 3720 = 29760. Since also 120 · 248 = 29760 and 120 > 0, cancel 120 to get b = 248.
+-- 4. [Conclusion] There exists a unique natural number b with gcd(120, b) = 8 and lcm(120, b) = 3720, namely b = 248.

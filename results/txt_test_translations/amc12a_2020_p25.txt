@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers p and q such that gcd(p, q) = 1, p > 0, q > 0, there exists a real number sum_value with sum_value = 420, and p + q = 929.
+-- 2. [Key Idea] Provide explicit witnesses: take p = 29 and q = 900. Then 900 = 29 · 31 + 1, so gcd(29, 900) = 1. Choose sum_value = 420. Check positivity and that 29 + 900 = 929.
+-- 3. [Proof] Let p = 29 and q = 900. We compute 900 = 29 · 31 + 1, which implies gcd(29, 900) = gcd(29, 1) = 1, so p and q are coprime. Clearly p > 0 and q > 0. For the existential statement about a real number equal to 420, take sum_value = 420, which trivially satisfies sum_value = 420. Finally, p + q = 29 + 900 = 929. Thus all required conditions are met.
+-- 4. [Conclusion] Such numbers exist; for example, p = 29, q = 900, and sum_value = 420 satisfy gcd(p, q) = 1, p > 0, q > 0, and p + q = 929.

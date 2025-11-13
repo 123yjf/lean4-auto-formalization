@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let a₁,…,aₙ be nonnegative real numbers with a₁ + ⋯ + aₙ = n. Prove that their product a₁a₂⋯aₙ ≤ 1.
+-- 2. [Key Idea] Use the AM–GM inequality: the arithmetic mean is at least the geometric mean. Equality occurs exactly when all the numbers are equal, which here forces every aᵢ to be 1.
+-- 3. [Proof] By AM–GM, (a₁ + ⋯ + aₙ)/n ≥ (a₁a₂⋯aₙ)^{1/n}. Since the sum is n, the left side is 1, so (a₁a₂⋯aₙ)^{1/n} ≤ 1, hence a₁a₂⋯aₙ ≤ 1. If some aᵢ = 0, then the product is 0 ≤ 1, so the claim still holds. Alternatively, because ln is concave on (0, ∞), Jensen’s inequality gives (ln a₁ + ⋯ + ln aₙ)/n ≤ ln[(a₁ + ⋯ + aₙ)/n] = ln 1 = 0, so summing and exponentiating yields a₁a₂⋯aₙ ≤ 1. In either approach, equality holds only when all aᵢ are equal; given the sum n, that means aᵢ = 1 for every i.
+-- 4. [Conclusion] Among nonnegative reals with fixed sum n, the product is maximized at 1, achieved exactly when a₁ = ⋯ = aₙ = 1.

@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive real numbers a, b, c satisfying a(b + c) = 152, b(c + a) = 162, and c(a + b) = 170, find the value of the product abc.
+-- 2. [Key Idea] Each given equation is the sum of two pairwise products. By letting x = ab, y = bc, and z = ca, we can solve a linear system for x, y, z and then compute (abc)^2 = (ab)(bc)(ca) = xyz, from which abc is the positive square root.
+-- 3. [Proof] Set x = ab, y = bc, z = ca. Then the equations become:
+   (1) x + z = 152
+   (2) x + y = 162
+   (3) y + z = 170
+   Subtract (1) from (2): y − z = 10. Together with (3): y + z = 170. Adding these gives 2y = 180, so y = 90, and then z = 80. Substitute into (2): x + 90 = 162, so x = 72. Thus ab = 72, bc = 90, ca = 80. Therefore (abc)^2 = (ab)(bc)(ca) = 72 × 90 × 80 = 518400, so abc = sqrt(518400) = 720 (taking the positive root).
+-- 4. [Conclusion] The product is abc = 720 (choice D).

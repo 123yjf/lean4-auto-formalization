@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the parity (even/odd) of (D₍₂₀₂₁₎, D₍₂₀₂₂₎, D₍₂₀₂₃₎) for the sequence defined by D₀ = 0, D₁ = 0, D₂ = 1, and Dₙ = Dₙ₋₁ + Dₙ₋₃ for n ≥ 3.
+-- 2. [Key Idea] Work modulo 2. The recurrence is linear over GF(2), so the parity sequence is periodic; its period is 7.
+-- 3. [Proof] Let dₙ = Dₙ mod 2. Starting with d₀ = 0, d₁ = 0, d₂ = 1 and using dₙ = dₙ₋₁ + dₙ₋₃ (mod 2), we get:
+   n:   0 1 2 3 4 5 6 7 8 9 10 11 12 13
+   dₙ:  0 0 1 1 1 0 1 0 0 1  1  1  0  1
+   The block 0 0 1 1 1 0 1 repeats, so the period is 7. Reduce the indices modulo 7:
+   2021 ≡ 5 ⇒ d₂₀₂₁ = d₅ = 0 (even)
+   2022 ≡ 6 ⇒ d₂₀₂₂ = d₆ = 1 (odd)
+   2023 ≡ 0 ⇒ d₂₀₂₃ = d₀ = 0 (even)
+   Alternatively, over GF(2) the recurrence is dₙ + dₙ₋₁ + dₙ₋₃ = 0 with characteristic polynomial x³ + x² + 1, which is primitive of order 7; thus any non-zero solution has period 7. The initial state (1,0,0) yields the same 7-cycle and the same parities.
+-- 4. [Conclusion] The parities are (even, odd, even), i.e., (E, O, E).

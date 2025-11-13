@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are told the father is currently five times as old as his son, and that three years ago the sum of their ages was 30. We are asked to find the son’s present age.
+-- 2. [Key Idea] Introduce variables for the present ages of the son (s) and the father (f). Translate the verbal conditions into linear equations: f = 5s and (f − 3) + (s − 3) = 30. Solve this system for s.
+-- 3. [Proof] Let s be the son’s current age and f be the father’s current age. The condition “the father is five times as old” gives f = 5s. The condition about three years ago gives (f − 3) + (s − 3) = 30, which simplifies to f + s = 36. Substituting f = 5s into f + s = 36 yields 5s + s = 36, so 6s = 36, hence s = 6.
+-- 4. [Conclusion] The son is 6 years old today.

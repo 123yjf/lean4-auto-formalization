@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given s₁ = ax + by = 3, s₂ = ax² + by² = 7, s₃ = ax³ + by³ = 16, and s₄ = ax⁴ + by⁴ = 42. We must find s₅ = ax⁵ + by⁵.
+-- 2. [Key Idea] Because each sₙ has the form axⁿ + byⁿ with two bases x and y, the sequence (sₙ) satisfies a second-order linear recurrence sₙ = p sₙ₋₁ − q sₙ₋₂, where p = x + y and q = xy. We can determine p and q from the given values and then compute s₅ from the recurrence.
+-- 3. [Proof] Define sₙ = axⁿ + byⁿ for n ≥ 1. The polynomial (t − x)(t − y) = t² − p t + q, with p = x + y and q = xy, implies the recurrence sₙ = p sₙ₋₁ − q sₙ₋₂ for all n ≥ 3. Using n = 3 and n = 4 gives two equations in p and q:
+   (i) From n = 3: 16 = p·7 − q·3, so 7p − 3q = 16.
+   (ii) From n = 4: 42 = p·16 − q·7, so 16p − 7q = 42.
+   Solve this system: multiply the first by 7 to get 49p − 21q = 112, and the second by 3 to get 48p − 21q = 126. Subtracting yields p = −14. Substitute back into 7p − 3q = 16: 7(−14) − 3q = 16 ⇒ −98 − 3q = 16 ⇒ q = −38. Now apply the recurrence with n = 5: s₅ = p s₄ − q s₃ = (−14)(42) − (−38)(16) = −588 + 608 = 20. (Equivalently, once p and q are known, the characteristic polynomial t² + 14t − 38 annihilates the sequence, and reducing t⁵ modulo this polynomial gives the same result.)
+-- 4. [Conclusion] The desired value is s₅ = ax⁵ + by⁵ = 20.

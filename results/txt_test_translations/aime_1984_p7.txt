@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] The code verifies a collection of straightforward arithmetic equalities and inequalities over the natural numbers involving values near 1000, and concludes by exhibiting a natural number equal to 997.
+-- 2. [Key Idea] Each statement follows from direct computation with natural numbers: simple inequalities, additions, and subtractions where the minuend is at least as large as the subtrahend. In Lean, these are handled automatically by numeric normalization.
+-- 3. [Proof] 
+- 1000 > 999 because 1000 = 999 + 1.
+- 999 < 1000 is the same inequality restated.
+- 84 < 1000 since 84 is much smaller than 1000.
+- 1003 − 3 = 1000 by direct subtraction.
+- 1000 − 3 = 997 by direct subtraction.
+- 998 + 5 = 1003 by direct addition.
+- 999 + 5 = 1004 by direct addition.
+- 1004 − 3 = 1001 by direct subtraction.
+- 1001 − 3 = 998 by direct subtraction.
+- 1003 ≥ 1000, 1004 ≥ 1000, and 1001 ≥ 1000 since each left-hand side exceeds 1000.
+- 997 = 1000 − 3 and 998 = 1001 − 3 by the same subtractions noted above.
+- There exists a natural number equal to 997: take result = 997.
+-- 4. [Conclusion] All listed identities and inequalities hold by immediate arithmetic in the natural numbers, and the existence statement is satisfied by explicitly choosing 997.

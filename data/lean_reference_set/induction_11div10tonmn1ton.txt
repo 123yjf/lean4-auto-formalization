@@ -1,0 +1,6 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every natural number n, the integer 10^n − (−1)^n is divisible by 11.
+-- 2. [Key Idea] Since 10 is congruent to −1 modulo 11, raising both sides to the n-th power preserves the congruence: 10^n ≡ (−1)^n (mod 11). Therefore, their difference is 0 modulo 11.
+-- 3. [Proof] Using modular arithmetic: 10 ≡ −1 (mod 11). Exponentiation preserves congruence, so 10^n ≡ (−1)^n (mod 11). Subtracting gives 10^n − (−1)^n ≡ 0 (mod 11), which means 11 divides 10^n − (−1)^n.
+Alternative induction: Base case n = 1: 10^1 − (−1)^1 = 11, which is divisible by 11. Inductive step: assume 11 | (10^k − (−1)^k), i.e., 10^k ≡ (−1)^k (mod 11). Multiplying by 10 gives 10^(k+1) ≡ 10·(−1)^k ≡ (−1)^(k+1) (mod 11). Thus 11 | (10^(k+1) − (−1)^(k+1)). Hence the claim holds for all n.
+-- 4. [Conclusion] For every natural number n, 10^n and (−1)^n are congruent modulo 11, so 11 divides their difference.

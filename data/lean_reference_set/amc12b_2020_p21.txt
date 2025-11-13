@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Count the positive integers n such that (n + 1000)/70 equals the floor of sqrt(n).
+-- 2. [Key Idea] Let k = floor(sqrt(n)). Then the equation forces n = 70k − 1000, and consistency with the definition of the floor requires k^2 ≤ n < (k + 1)^2. Solve these inequalities for k and count the valid integers.
+-- 3. [Proof] Set k = floor(sqrt(n)) with k ∈ N, k ≥ 1. From (n + 1000)/70 = k we get n = 70k − 1000. Impose the floor bounds:
+   - Lower bound: k^2 ≤ 70k − 1000 ⇔ k^2 − 70k + 1000 ≤ 0. The quadratic has roots 20 and 50, so 20 ≤ k ≤ 50.
+   - Upper bound: 70k − 1000 < (k + 1)^2 ⇔ k^2 − 68k + 1001 > 0. The quadratic opens upward; its roots are (68 ± sqrt(620))/2 ≈ 21.95 and 46.45, so the inequality holds for k < 21.95 or k > 46.45.
+   - Intersecting these gives k ∈ {20, 21} ∪ {47, 48, 49, 50}. For each such k, n = 70k − 1000 is positive and satisfies the original relation: k=20→n=400, k=21→470, k=47→2290, k=48→2360, k=49→2430, k=50→2500.
+-- 4. [Conclusion] There are exactly 6 positive integers n that satisfy the condition.

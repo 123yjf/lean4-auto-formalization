@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for real numbers a and b with a^2 + b^2 = 1, we always have ab + (a − b) ≤ 1.
+-- 2. [Key Idea] Rewrite the inequality as a product (1 − a)(1 + b) ≥ 0, and then note each factor is nonnegative since |a| ≤ 1 and |b| ≤ 1.
+-- 3. [Proof] Start with the target inequality:
+   ab + (a − b) ≤ 1 ⇔ 1 − ab − a + b ≥ 0 ⇔ 1 + b − a − ab ≥ 0.
+   Factor the left-hand side: 1 + b − a − ab = (1 − a)(1 + b). Thus the inequality is equivalent to (1 − a)(1 + b) ≥ 0.
+   From a^2 + b^2 = 1 we have |a| ≤ 1 and |b| ≤ 1, hence −1 ≤ a ≤ 1 and −1 ≤ b ≤ 1. Therefore 1 − a ≥ 0 and 1 + b ≥ 0. The product of two nonnegative numbers is nonnegative, so (1 − a)(1 + b) ≥ 0, which gives ab + (a − b) ≤ 1.
+   Alternative (trigonometric) proof: Write a = cos θ and b = sin θ. Then
+   ab + (a − b) = sin θ cos θ + cos θ − sin θ = 1 − (1 − cos θ)(1 + sin θ) ≤ 1,
+   since (1 − cos θ)(1 + sin θ) ≥ 0 for all θ.
+-- 4. [Conclusion] For every pair (a, b) on the unit circle, the quantity ab + (a − b) never exceeds 1.

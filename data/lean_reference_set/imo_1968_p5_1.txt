@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a > 0 and a function f: ℝ → ℝ satisfying f(x + a) = 1/2 + √(f(x) − f(x)^2) for every real x, prove that f is periodic.
+-- 2. [Key Idea] (i) The expression 1/2 + √(t − t^2) is always at least 1/2, so the functional equation rules out any values of f below 1/2. (ii) Introducing F(x) = 2f(x) − 1 (so that 0 ≤ F(x) ≤ 1) transforms the equation into F(x + a) = √(1 − F(x)^2). This mapping is an involution on [0,1], giving F(x + 2a) = F(x), and hence f(x + 2a) = f(x).
+-- 3. [Proof] Step 1 – Exclude small values. Suppose, for contradiction, that f(x₀) < 1/2 for some x₀. Let y = x₀ − a. Then f(x₀) = f(y + a) = 1/2 + √(f(y) − f(y)^2) ≥ 1/2, contradicting f(x₀) < 1/2. Therefore, for all x ∈ ℝ, f(x) ≥ 1/2. (1)
+Step 2 – Recenter the function. Define F(x) = 2f(x) − 1. From (1), we have 0 ≤ F(x) ≤ 1. The given relation becomes F(x + a) = √(1 − F(x)^2) for all x. (2) Because F(x) ≥ 0, we can drop any absolute value when taking square roots.
+Step 3 – Iterate twice. Applying (2) twice gives
+F(x + 2a) = √(1 − F(x + a)^2) = √(1 − (√(1 − F(x)^2))^2) = √(F(x)^2) = F(x),
+where the last equality uses F(x) ≥ 0.
+Step 4 – Translate back to f. Since F(x) = 2f(x) − 1, the equality F(x + 2a) = F(x) implies f(x + 2a) = f(x) for all real x. If we write b = 2a > 0, this shows periodicity with period b.
+-- 4. [Conclusion] The function satisfies f(x + 2a) = f(x) for all real x, so f is periodic with positive period 2a.

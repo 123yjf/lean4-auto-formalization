@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the remainder when the sum 2^0 + 2^1 + ... + 2^100 is divided by 7 equals 3.
+-- 2. [Key Idea] Use the geometric series formula to rewrite the sum as 2^101 − 1, then compute 2^101 modulo 7 using the fact that 2^3 ≡ 1 (mod 7), which implies a period of 3 for powers of 2 modulo 7.
+-- 3. [Proof] 
+--    - The finite geometric series with ratio 2 sums to (2^101 − 1)/(2 − 1) = 2^101 − 1. Thus, ∑_{i=0}^{100} 2^i = 2^101 − 1.
+--    - Since 2^3 = 8 ≡ 1 (mod 7), powers of 2 repeat modulo 7 with period 3. Therefore, 2^101 ≡ 2^(101 mod 3) = 2^2 = 4 (mod 7).
+--    - Hence, (2^101 − 1) mod 7 = (4 − 1) mod 7 = 3.
+-- 4. [Conclusion] The sum ∑_{i=0}^{100} 2^i leaves remainder 3 upon division by 7, as claimed.

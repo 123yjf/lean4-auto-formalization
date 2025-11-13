@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given f(x)=ax⁴−bx²+x+5 and f(−3)=2, prove that f(3)=8. 2. [Key Idea] Because the quartic and quadratic terms are even while the linear term is odd, f(x)−f(−x)=2x, so knowing f(−3) immediately gives f(3). 3. [Proof] Style A – Symmetry. f(x)=ax⁴−bx²+x+5 f(−x)=ax⁴−bx²−x+5 ⇒ f(x)−f(−x)=2x. Substitute x=3: f(3)−f(−3)=2·3=6. Since f(−3)=2, we have f(3)=2+6=8. Style B – Coefficient elimination (for completeness). f(−3)=81a−9b−3+5=2 ⇒ 81a−9b=0. f(3)=81a−9b+3+5=81a−9b+8=0+8=8. 4. [Conclusion] Hence f(3)=8.

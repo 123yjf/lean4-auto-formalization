@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the remainder when 5^30 is divided by 7.
+-- 2. [Key Idea] By Fermat’s Little Theorem, since 7 is prime and coprime to 5, we have 5^6 ≡ 1 (mod 7). Therefore, exponents can be reduced modulo 6 to evaluate 5^30 mod 7.
+-- 3. [Proof] 
+   a. Using Fermat’s Little Theorem: Because gcd(5, 7) = 1 and 7 is prime, 5^6 ≡ 1 (mod 7). Since 30 = 6 × 5, we get 5^30 = (5^6)^5 ≡ 1^5 = 1 (mod 7).
+   b. Alternatively, observe the cycle of powers modulo 7: 5^1 ≡ 5, 5^2 ≡ 4, 5^3 ≡ 6, 5^4 ≡ 2, 5^5 ≡ 3, 5^6 ≡ 1 (mod 7). The pattern repeats every 6 powers. Because 30 is a multiple of 6, 5^30 aligns with the end of a full cycle, so 5^30 ≡ 1 (mod 7).
+-- 4. [Conclusion] In both approaches, the remainder of 5^30 upon division by 7 is 1.

@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] For any natural number n > 0, in the ring ZMod(2^(n+3)), we have (3)^(2^n) − 1 = 2^(n+2). Equivalently, 3^(2^n) ≡ 1 + 2^(n+2) mod 2^(n+3).
+-- 2. [Key Idea] Compute the 2-adic valuation v2 of 3^(2^n) − 1 using the lifting-the-exponent (LTE) formula for p = 2: when a and b are odd and the exponent is even, v2(a^m − b^m) = v2(a − b) + v2(a + b) + v2(m) − 1. Here a = 3, b = 1, m = 2^n is even. This gives v2(3^(2^n) − 1) = n + 2. Hence 3^(2^n) − 1 is exactly 2^(n+2) times an odd integer k. Modulo 2^(n+3), multiplying 2^(n+2) by an odd number is congruent to 2^(n+2).
+-- 3. [Proof]
+- Since n > 0, 2^n is even and nonzero.
+- Apply LTE at p = 2 with a = 3, b = 1, and m = 2^n (even):
+  v2(3^(2^n) − 1) + 1 = v2(3 + 1) + v2(3 − 1) + v2(2^n).
+  Using v2(4) = 2, v2(2) = 1, and v2(2^n) = n, we get v2(3^(2^n) − 1) + 1 = 2 + 1 + n = n + 3, hence v2(3^(2^n) − 1) = n + 2.
+- Therefore 2^(n+2) divides 3^(2^n) − 1. Write 3^(2^n) − 1 = 2^(n+2)·k for some natural k. Since 3^(2^n) > 1 (as n > 0 implies 2^n ≥ 2), we have k ≠ 0.
+- Using multiplicativity of v2, v2(2^(n+2)·k) = v2(2^(n+2)) + v2(k) = (n+2) + v2(k). Comparing with v2(3^(2^n) − 1) = n + 2 shows v2(k) = 0, so k is odd. Thus k = 2s + 1 for some s.
+- Reduce modulo 2^(n+3) in ZMod(2^(n+3)):
+  3^(2^n) − 1 = 2^(n+2)·k = 2^(n+2)·(2s + 1) = 2^(n+2) + 2^(n+3)·s ≡ 2^(n+2).
+  Hence (3 : ZMod(2^(n+3)))^(2^n) − 1 = (2^(n+2) : ZMod(2^(n+3))).
+-- 4. [Conclusion] By LTE and valuation arguments, 3^(2^n) − 1 has exact 2-adic valuation n + 2, so modulo 2^(n+3) it equals 2^(n+2). Therefore, in ZMod(2^(n+3)), (3)^(2^n) − 1 = 2^(n+2).

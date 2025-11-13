@@ -1,0 +1,59 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 9999 = 2 * 4999 + 1.
+-- 2. [Key Idea] This is a straightforward arithmetic evaluation.
+-- 3. [Proof] Compute 2 * 4999 = 9998, then 9998 + 1 = 9999. Lean’s norm_num confirms this equality.
+-- 4. [Conclusion] Therefore, 9999 equals 2 * 4999 + 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 10000 = 2 * 5000.
+-- 2. [Key Idea] This is a direct numeric identity.
+-- 3. [Proof] Compute 2 * 5000 = 10000. Lean’s norm_num verifies the equality.
+-- 4. [Conclusion] Hence, 10000 equals 2 times 5000.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 0 < 5000!.
+-- 2. [Key Idea] Factorials of natural numbers are always positive.
+-- 3. [Proof] Apply the general result factorial_pos to n = 5000, which yields 0 < 5000!.
+-- 4. [Conclusion] Thus, 5000! is positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 0 < 10000!.
+-- 2. [Key Idea] Factorials of natural numbers are always positive.
+-- 3. [Proof] Apply factorial_pos with n = 10000 to get 0 < 10000!.
+-- 4. [Conclusion] Therefore, 10000! is positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 0 < 2 (as a natural number).
+-- 2. [Key Idea] This is an obvious numerical fact.
+-- 3. [Proof] Lean’s norm_num confirms 0 < 2.
+-- 4. [Conclusion] So, 2 is positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 0 < 2^5000.
+-- 2. [Key Idea] A positive base raised to any natural power remains positive.
+-- 3. [Proof] From 0 < 2, apply the lemma pow_pos to conclude 0 < 2^5000.
+-- 4. [Conclusion] Hence, 2^5000 is positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 0 < 2^5000 * 5000!.
+-- 2. [Key Idea] The product of two positive natural numbers is positive.
+-- 3. [Proof] Combine 0 < 2^5000 (from pow_pos) and 0 < 5000! (from factorial_pos), then apply mul_pos to get 0 < 2^5000 * 5000!.
+-- 4. [Conclusion] Therefore, the product 2^5000 * 5000! is positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 1 < 10000.
+-- 2. [Key Idea] This is a basic numerical inequality.
+-- 3. [Proof] Lean’s norm_num directly verifies 1 < 10000.
+-- 4. [Conclusion] Thus, 1 is less than 10000.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 5000 < 10000.
+-- 2. [Key Idea] This is a basic numerical inequality.
+-- 3. [Proof] Lean’s norm_num directly verifies 5000 < 10000.
+-- 4. [Conclusion] Therefore, 5000 is less than 10000.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 0 < 4999.
+-- 2. [Key Idea] This is a basic numerical inequality.
+-- 3. [Proof] Lean’s norm_num directly verifies 0 < 4999.
+-- 4. [Conclusion] Hence, 4999 is positive.

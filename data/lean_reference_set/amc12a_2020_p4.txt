@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Count the 4-digit integers whose digits are all even and that are divisible by 5.
+-- 2. [Key Idea] A number divisible by 5 must end in 0 or 5, but the last digit must also be even; therefore the units digit must be 0. Then count the choices for the remaining even digits.
+-- 3. [Proof] Let the 4-digit number have digits d1 d2 d3 d4.
+- Units digit d4: Divisible by 5 implies d4 is 0 or 5. The even-digit requirement rules out 5, so d4 = 0 (1 choice).
+- Thousands digit d1: Must be nonzero and even, so d1 ∈ {2, 4, 6, 8} (4 choices).
+- Hundreds digit d2: Any even digit, so d2 ∈ {0, 2, 4, 6, 8} (5 choices).
+- Tens digit d3: Same as d2, so 5 choices.
+Total count = 4 × 5 × 5 × 1 = 100.
+-- 4. [Conclusion] Exactly 100 such 4-digit integers exist, so the answer is (B) 100.

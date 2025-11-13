@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] It is not the case that for all integers a and b, “a and b are both even” is equivalent to “8 divides a^2 + b^2.” In other words, the claimed equivalence fails for some specific integers.
+-- 2. [Key Idea] Provide a concrete counterexample: take a = 2 and b = 0. Then both numbers are even, but 8 does not divide 2^2 + 0^2 = 4.
+-- 3. [Proof] Negating the universal equivalence means we must exhibit integers a, b such that either (Even a ∧ Even b) holds but 8 ∤ a^2 + b^2, or 8 ∣ a^2 + b^2 holds but at least one of a, b is odd. We choose the first case. Set a = 2 and b = 0. Then 2 is even and 0 is even. Next, compute the sum of squares: 2^2 + 0^2 = 4. Since 8 does not divide 4, we have (Even 2 ∧ Even 0) and not (8 ∣ 2^2 + 0^2), which refutes the equivalence for this pair.
+-- 4. [Conclusion] Therefore, the statement “for all integers a, b, (Even a ∧ Even b) ↔ (8 ∣ a^2 + b^2)” is false; the pair (a, b) = (2, 0) is a counterexample.

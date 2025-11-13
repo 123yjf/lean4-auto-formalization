@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a real number s such that: (i) for every real x, if |2 − x| = 3 then x = −1 or x = 5; (ii) s = (−1) + 5; and (iii) s = 4.
+-- 2. [Key Idea] Solve the absolute value equation |2 − x| = 3 by splitting into the two cases 2 − x = 3 or 2 − x = −3, yielding x = −1 or x = 5. Choose s = 4 and verify that (−1) + 5 = 4.
+-- 3. [Proof] Take s = 4. For any real x with |2 − x| = 3, consider the sign of 2 − x. If 2 − x ≥ 0, then |2 − x| = 2 − x, so 2 − x = 3 and hence x = −1. If 2 − x < 0, then |2 − x| = −(2 − x), so −(2 − x) = 3, i.e., 2 − x = −3, hence x = 5. Therefore, from |2 − x| = 3 we conclude x = −1 or x = 5. Next, with s = 4, we have s = (−1) + 5 since −1 + 5 = 4, and clearly s = 4 by construction.
+-- 4. [Conclusion] Such an s exists; specifically, s = 4 satisfies all the required properties.

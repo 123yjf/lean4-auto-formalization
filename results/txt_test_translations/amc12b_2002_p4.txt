@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement] The code proves three statements about rational numbers.
+   (a) The sum of the three fractions 1/2, 1/3, and 1/7 equals 41/42.
+   (b) Adding 1/42 to that sum gives exactly 1.
+   (c) For a positive natural number n, the sum 1/2 + 1/3 + 1/7 + 1/n is an integer if and only if n = 42.
+
+-- 2. [Key Idea] Compute the base sum 1/2 + 1/3 + 1/7 explicitly as 41/42. Then, to characterize when adding 1/n yields an integer, observe that 41/42 < 1 and that 0 < 1/n ≤ 1 for n ≥ 1. If the total equals an integer k, these bounds force 41/42 < k < 2, so k must be 1. Hence 1/n = 1 − 41/42 = 1/42, which implies n = 42. Conversely, when n = 42 the sum is 1, an integer.
+
+-- 3. [Proof]
+   (a) Direct computation: 1/2 + 1/3 + 1/7 simplifies to 41/42. This is an arithmetic identity checked by clearing denominators or reducing to a common denominator.
+
+   (b) Using (a), we get 1/2 + 1/3 + 1/7 + 1/42 = 41/42 + 1/42 = 1.
+
+   (c) Let n be a positive natural number.
+       Forward direction: Assume there exists an integer k with 1/2 + 1/3 + 1/7 + 1/n = k. By (a), this reads 41/42 + 1/n = k.
+       Since n > 0, we have 0 < 1/n. Therefore 41/42 < 41/42 + 1/n = k, so k > 41/42.
+       Also, because n ≥ 1, we have 1/n ≤ 1, hence k = 41/42 + 1/n ≤ 41/42 + 1 < 2. Thus 41/42 < k < 2.
+       As k is an integer strictly between 41/42 and 2, it must be k = 1. Substituting back, 41/42 + 1/n = 1, so 1/n = 1 − 41/42 = 1/42. With n > 0, equality of positive rationals 1/n = 1/42 implies n = 42 (equivalently, cross-multiplying with nonzero denominators gives n = 42).
+       Reverse direction: If n = 42, then by (b) the sum equals 1, so taking k = 1 shows the sum is an integer.
+
+-- 4. [Conclusion] The three-fraction sum is 41/42; adding 1/42 produces 1; and for positive n, the sum 1/2 + 1/3 + 1/7 + 1/n is an integer precisely when n = 42, in which case the sum equals 1.

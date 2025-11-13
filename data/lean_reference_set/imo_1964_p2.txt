@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that for the side lengths a, b, c of any triangle, the inequality a²(b + c − a) + b²(c + a − b) + c²(a + b − c) ≤ 3abc holds.
+-- 2. [Key Idea] Use the Ravi substitution a = y + z, b = z + x, c = x + y with x, y, z > 0. This converts the inequality into a symmetric, homogeneous form that simplifies to (x + y + z)(xy + yz + zx) ≥ 9xyz, which follows directly from the AM–GM inequality.
+-- 3. [Proof] Set a = y + z, b = z + x, c = x + y with x, y, z > 0. Then b + c − a = 2x, c + a − b = 2y, and a + b − c = 2z. Hence
+   a²(b + c − a) + b²(c + a − b) + c²(a + b − c) = 2[x(y + z)² + y(z + x)² + z(x + y)²].
+   The right-hand side is 3abc = 3(x + y)(y + z)(z + x).
+   Therefore the desired inequality is equivalent to
+   0 ≤ 3(x + y)(y + z)(z + x) − 2[x(y + z)² + y(z + x)² + z(x + y)²].
+   Using the identity (x + y)(y + z)(z + x) = (x + y + z)(xy + yz + zx) − xyz, one simplifies the right-hand side to
+   Δ = (x + y + z)(xy + yz + zx) − 9xyz.
+   By AM–GM, x + y + z ≥ 3∛(xyz) and xy + yz + zx ≥ 3(∛(xyz))², so (x + y + z)(xy + yz + zx) ≥ 9xyz. Thus Δ ≥ 0, proving the inequality. Equality occurs exactly when x = y = z, which corresponds to a = b = c (the equilateral triangle).
+-- 4. [Conclusion] For any triangle, a²(b + c − a) + b²(c + a − b) + c²(a + b − c) ≤ 3abc, with equality only in the equilateral case.

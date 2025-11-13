@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given 0 < p < 15 and p ≤ x ≤ 15, prove that the minimum of f(x) = |x − p| + |x − 15| + |x − (p + 15)| is 15.
+-- 2. [Key Idea] On the interval [p, 15], each absolute value has a fixed sign, so f(x) simplifies to the linear function 30 − x, whose minimum on this interval occurs at x = 15.
+-- 3. [Proof] 
+   - Algebraic argument:
+     a) For p ≤ x ≤ 15, we have:
+        |x − p| = x − p (since x ≥ p),
+        |x − 15| = 15 − x (since x ≤ 15),
+        |x − (p + 15)| = −(x − (p + 15)) = 15 + p − x (since x ≤ 15 < p + 15).
+     b) Therefore, f(x) = (x − p) + (15 − x) + (15 + p − x) = 30 − x.
+     c) The function 30 − x is strictly decreasing in x, so on [p, 15] its smallest value occurs at x = 15, yielding f_min = 30 − 15 = 15.
+   - Geometric argument:
+     Place points A = p, B = 15, and C = p + 15 on the number line. For x constrained to [p, 15], A lies to the left of x, B is the right endpoint, and C lies to the right of x. Moving x to the right by Δx increases its distance to A by Δx, but decreases its distances to B and C by a total of 2Δx; the net change in the sum is −Δx. Thus f(x) decreases at unit rate as x moves rightward and attains its minimum at x = 15, where f(15) = 15.
+-- 4. [Conclusion] For any p with 0 < p < 15, the minimal value of f(x) on p ≤ x ≤ 15 is 15.

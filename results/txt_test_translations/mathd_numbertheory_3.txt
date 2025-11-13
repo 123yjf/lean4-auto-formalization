@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the sum of the squares of the integers from 0 to 9, taken modulo 10, leaves remainder 5; that is, (0^2 + 1^2 + ... + 9^2) % 10 = 5.
+-- 2. [Key Idea] Compute the finite sum explicitly and then reduce modulo 10. In Lean, we first rewrite the sum over range 10 by splitting off the last term, and then let a numeric tactic evaluate the arithmetic.
+-- 3. [Proof] The lemma Finset.sum_range_succ rewrites the sum over Finset.range 10 as the sum over Finset.range 9 plus the last term 9^2. After this simplification, all quantities are concrete numerals, so a numeric evaluation shows that 0^2 + 1^2 + ... + 9^2 = 285, and hence 285 % 10 = 5. The tactic norm_num carries out these computations automatically.
+-- 4. [Conclusion] Therefore, the sum of the squares from 0 to 9 leaves remainder 5 upon division by 10, as required.

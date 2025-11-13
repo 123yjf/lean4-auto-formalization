@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Two five-digit numbers written as AMC10 and AMC12 (where A, M, C are decimal digits and A ≠ 0) sum to 123422. Find A + M + C.
+-- 2. [Key Idea] Express AMC10 and AMC12 in base-10 expanded form, set their sum equal to 123422, and use that A, M, C are single digits to determine their values.
+-- 3. [Proof] Interpreting the strings as decimal numbers gives AMC10 = 10000A + 1000M + 100C + 10 and AMC12 = 10000A + 1000M + 100C + 12. Their sum is 20000A + 2000M + 200C + 22. Setting this equal to 123422 yields 20000A + 2000M + 200C = 123400. Dividing both sides by 200 gives 100A + 10M + C = 617. Since A, M, C are digits with A ≠ 0, the hundreds place must come from 100A, so A = 6. The remaining 17 must be made by 10M + C, forcing M = 1 and C = 7.
+-- 4. [Conclusion] A + M + C = 6 + 1 + 7 = 14.

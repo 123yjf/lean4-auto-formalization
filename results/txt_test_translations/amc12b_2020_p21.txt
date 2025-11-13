@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] No Lean4 code was provided, so there is no theorem or lemma to restate.
+-- 2. [Key Idea] Not applicable; translating a proof requires specific Lean4 statements and tactics.
+-- 3. [Proof] Not applicable; there is no code to translate into a step-by-step explanation.
+-- 4. [Conclusion] Please provide the Lean4 theorem and its proof code so I can translate it into a clear English explanation following the requested format.

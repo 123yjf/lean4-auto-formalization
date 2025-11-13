@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a rational number y such that both 12 − (y + 6) and y − 12 are equal to the same rational number d, and moreover y = 9. In other words, we need to exhibit a y (and corresponding d) that satisfies these equations and confirm that y equals 9.
+
+-- 2. [Key Idea] The proof proceeds by direct construction: take y = 9 and choose d = −3. Then check that both expressions 12 − (y + 6) and y − 12 equal −3. The code also includes auxiliary linear-arithmetic lemmas showing that if such a d exists, then necessarily y = 9, but the final proof only needs the direct construction.
+
+-- 3. [Proof]
+- First, several linear steps are recorded:
+  • If there exists d with 12 − (y + 6) = d and y − 12 = d, then eliminating d gives 12 − (y + 6) = y − 12, which simplifies to 6 − y = y − 12 (step1).
+  • From 6 − y = y − 12, adding y and 12 to both sides yields 18 = 2y (step2).
+  • From 18 = 2y, it follows that y = 9 (step3).
+  • Two additional algebraic steps (step4 and step5) show an equivalent route: from 12 = (y + 6 + y)/2 derive 24 = 2y + 6, hence 18 = 2y; these are not used later.
+- Crucially, the proof constructs a witness when y = 9 (step6):
+  • If y = 9, set d = −3. Then 12 − (y + 6) = 12 − (9 + 6) = 12 − 15 = −3, and y − 12 = 9 − 12 = −3. Thus both expressions equal the same d.
+- Finally, take y = 9. By the previous point, there exists d (namely −3) satisfying the pair of equations, and clearly y = 9 holds.
+
+-- 4. [Conclusion] Choosing y = 9 and d = −3 satisfies 12 − (y + 6) = d and y − 12 = d, and y = 9. Therefore, such a rational y exists, as required.

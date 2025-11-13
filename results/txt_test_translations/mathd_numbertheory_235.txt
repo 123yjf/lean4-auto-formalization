@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that (29 * 79 + 31 * 81) modulo 10 equals 2.
+-- 2. [Key Idea] Work modulo 10 by replacing each number with its remainder mod 10 (its last digit). Then use that modular reduction is compatible with addition and multiplication: (a*b) % m = ((a % m) * (b % m)) % m and (a + b) % m = ((a % m) + (b % m)) % m.
+-- 3. [Proof] Compute the last digits: 29 % 10 = 9, 79 % 10 = 9, 31 % 10 = 1, 81 % 10 = 1. Therefore,
+   (29 * 79 + 31 * 81) % 10 = (9 * 9 + 1 * 1) % 10.
+   The right-hand side evaluates to (81 + 1) % 10 = 82 % 10 = 2. As an independent check, the full value is 29*79 + 31*81 = 4802, and 4802 % 10 = 2, agreeing with the modular computation.
+-- 4. [Conclusion] Hence, (29 * 79 + 31 * 81) % 10 = 2.

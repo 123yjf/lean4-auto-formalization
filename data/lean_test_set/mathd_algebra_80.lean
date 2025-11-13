@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the value of x satisfying (x − 9)/(x + 1) = 2. 2. [Key Idea] Clear the denominator to obtain a linear equation, then isolate x. 3. [Proof] Starting with (x − 9)/(x + 1) = 2, x ≠ −1. Multiply both sides by (x + 1): x − 9 = 2(x + 1). Expand the right side: x − 9 = 2x + 2. Subtract x from both sides: −9 = x + 2. Subtract 2 from both sides: x = −11. 4. [Conclusion] The unique solution is x = −11.

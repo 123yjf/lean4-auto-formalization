@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate the composite value f(f(1)) for f(x)=1/(x+2). 2. [Key Idea] First find f(1); then feed that result back into f. 3. [Proof] Step 1. Compute f(1): f(1)=1/(1+2)=1/3. Step 2. Compute f(f(1))=f(1/3): f(1/3)=1/(1/3+2)=1/(1/3+6/3)=1/(7/3)=3/7. 4. [Conclusion] Hence f(f(1))=3/7.

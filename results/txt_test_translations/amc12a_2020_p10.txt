@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to show there exists a natural number n > 0 such that log base 2 of (log base 16 of n) equals log base 4 of (log base 4 of n), and the sum of the base-10 digits of n is 13.
+
+-- 2. [Key Idea] Exhibit a specific n that works, namely n = 256. Then:
+- Compute log_16(256) and log_4(256) using the fact that 256 = 16^2 and 256 = 4^4.
+- Use that log_a(a^x) = x (for a > 0, a ≠ 1) and log_a(a) = 1 (for a > 1) to simplify both sides to 1.
+- Verify the base-10 digits of 256 are 2, 5, and 6 (sum 13).
+
+-- 3. [Proof] Choose n = 256.
+- Positivity: 256 > 0 is immediate.
+- Equality of logarithmic expressions:
+  • Left-hand side: Since 256 = 16^2, we have log_16(256) = 2 (because for a > 0, a ≠ 1, log_a(a^x) = x). Then log_2(log_16(256)) = log_2(2) = 1 (since for a > 1, log_a(a) = 1).
+  • Right-hand side: Since 256 = 4^4, we have log_4(256) = 4. Then log_4(log_4(256)) = log_4(4) = 1.
+  Hence both sides equal 1.
+- Sum of digits: The base-10 digits of 256 are 2, 5, and 6 (in Lean’s list form [6, 5, 2]), and 6 + 5 + 2 = 13.
+
+-- 4. [Conclusion] With n = 256, we have n > 0, log_2(log_16 n) = log_4(log_4 n) = 1, and the sum of the decimal digits of n is 13. Thus such an n exists.

@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the smallest integer greater than 10 that is both a perfect square and a perfect cube.
+-- 2. [Key Idea] An integer is simultaneously a square and a cube exactly when it is a sixth power. The smallest sixth power exceeding 10 is 2^6.
+-- 3. [Proof] Suppose n is an integer with n = a^2 = b^3 for some integers a and b.
+--    • Write the prime factorizations a = p₁^{α₁} … p_k^{α_k} and b = p₁^{β₁} … p_k^{β_k}. Then n = p₁^{2α₁} … p_k^{2α_k} = p₁^{3β₁} … p_k^{3β_k}.
+--    • Therefore, for each prime p_i, the exponent in n must be a common multiple of 2 and 3, hence a multiple of 6. Thus n = c^6 for some integer c (n is a sixth power).
+--    • The positive sixth powers are 1, 64, 729, …; among these, the least one greater than 10 is 64. Indeed, 64 = 2^6 = (2^3)^2 = (2^2)^3, so it is both a square and a cube.
+-- 4. [Conclusion] The smallest integer greater than 10 that is both a perfect square and a perfect cube is 64.

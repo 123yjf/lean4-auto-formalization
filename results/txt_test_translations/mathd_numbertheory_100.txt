@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists exactly one natural number n such that gcd(n, 40) = 10 and lcm(n, 40) = 280.
+-- 2. [Key Idea] Use the identity a · b = gcd(a, b) · lcm(a, b). Applied to (n, 40), this gives n · 40 = 10 · 280 = 2800. Cancelling the factor 40 yields n = 70. Verify that n = 70 indeed has gcd 10 and lcm 280. Uniqueness follows from the cancellation.
+-- 3. [Proof] 
+- First, recall the general fact: for all natural numbers a and b, a · b = gcd(a, b) · lcm(a, b).
+- Suppose gcd(n, 40) = 10 and lcm(n, 40) = 280. Substituting into the identity gives n · 40 = 10 · 280.
+- Compute 10 · 280 = 2800. Hence n · 40 = 2800.
+- Cancelling 40 (which is positive) from both sides gives n = 2800 / 40 = 70.
+- Check that n = 70 satisfies the conditions: gcd(70, 40) = 10 and lcm(70, 40) = 280 (these follow by straightforward computation; one can also note the factorizations 40 = 2^3 · 5 and 70 = 2 · 5 · 7).
+- For uniqueness, if any n satisfies the conditions, then from n · 40 = 2800 and 70 · 40 = 2800, cancellation of the positive factor 40 yields n = 70.
+-- 4. [Conclusion] There exists a unique natural number n with gcd(n, 40) = 10 and lcm(n, 40) = 280, namely n = 70.

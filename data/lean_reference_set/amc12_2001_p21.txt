@@ -1,0 +1,22 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive integers a, b, c, d with product 8! and (a+1)(b+1)=525, (b+1)(c+1)=147, (c+1)(d+1)=105, find a−d.
+-- 2. [Key Idea] Set x=a+1, y=b+1, z=c+1, w=d+1. Then xy=525, yz=147, zw=105. Use these to express y, z, w in terms of x, impose that all are integers, narrow down x by divisibility, test possibilities, and enforce that abcd=8!.
+-- 3. [Proof] Let x=a+1, y=b+1, z=c+1, w=d+1 (so x,y,z,w ≥ 2). The equations become:
+   • xy = 525 = 3·5²·7
+   • yz = 147 = 3·7²
+   • zw = 105 = 3·5·7
+   Solve in terms of x:
+   • y = 525/x
+   • z = 147/y = 147x/525 = (7/25)x
+   • w = 105/z = 105·25/(7x) = 375/x
+   Integer constraints give:
+   • z integral ⇒ 25 | x
+   • y integral ⇒ x | 525
+   • w integral ⇒ x | 375
+   Hence x | gcd(525,375) = 75 and 25 | x, so x ∈ {25, 75}.
+   Test x:
+   • If x=25: y=525/25=21 ⇒ a=24, b=20; z=(7/25)·25=7 ⇒ c=6; w=375/25=15 ⇒ d=14. Then abcd=24·20·6·14=40320=8!, so all conditions hold.
+   • If x=75: y=525/75=7 ⇒ a=74, b=6; z=(7/25)·75=21 ⇒ c=20; w=375/75=5 ⇒ d=4. Then abcd=74·6·20·4=35520≠8!, so this fails.
+   Only x=25 yields a valid solution.
+   Therefore a−d=24−14=10.
+-- 4. [Conclusion] The required value is 10.

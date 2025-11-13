@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that cos(π/7) − cos(2π/7) + cos(3π/7) = 1/2.
+-- 2. [Key Idea] Multiply the sum by 2 sin(π/7) and use the product-to-sum identity 2 sin x cos y = sin(x + y) + sin(x − y) so that almost all terms cancel, leaving a simple expression to evaluate.
+-- 3. [Proof] Let a = π/7 and define S = cos a − cos 2a + cos 3a. Consider 2 sin a · S:
+   2 sin a · S = 2 sin a cos a − 2 sin a cos 2a + 2 sin a cos 3a.
+   Apply 2 sin x cos y = sin(x + y) + sin(x − y) term by term:
+   • 2 sin a cos a = sin 2a.
+   • −2 sin a cos 2a = −[sin(3a) + sin(−a)] = −sin 3a + sin a.
+   • 2 sin a cos 3a = sin(4a) + sin(−2a) = sin 4a − sin 2a.
+   Adding gives 2 sin a · S = sin 2a − sin 3a + sin a + sin 4a − sin 2a = −sin 3a + sin a + sin 4a.
+   Since a = π/7, we have 4a = π − 3a, so sin 4a = sin(π − 3a) = sin 3a. Hence −sin 3a + sin 4a = 0, and thus 2 sin a · S = sin a.
+   Because sin a ≠ 0 (a = π/7 is not a multiple of π), divide both sides by 2 sin a to get S = 1/2.
+-- 4. [Conclusion] Therefore cos(π/7) − cos(2π/7) + cos(3π/7) = 1/2.

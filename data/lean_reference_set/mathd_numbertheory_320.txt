@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the unique integer n with 0 ≤ n < 101 such that 123456 ≡ n (mod 101).
+-- 2. [Key Idea] Use that 100 ≡ −1 (mod 101), which implies 10² ≡ −1, so higher powers of 10 cycle: even powers to ±1 and odd powers to ±10. This lets us reduce the decimal expansion of 123456 term-by-term.
+-- 3. [Proof] Express 123456 in base 10: 123456 = 1·10⁵ + 2·10⁴ + 3·10³ + 4·10² + 5·10 + 6. Since 100 ≡ −1 (mod 101), we get 10² ≡ −1, hence 10³ ≡ −10, 10⁴ ≡ 1, and 10⁵ ≡ 10 (all modulo 101). Substituting these into the expansion yields:
+n ≡ 1·10 + 2·1 + 3·(−10) + 4·(−1) + 5·10 + 6
+= 10 + 2 − 30 − 4 + 50 + 6
+= 34 (mod 101).
+As 0 ≤ 34 < 101, this is the required representative.
+-- 4. [Conclusion] The residue of 123456 modulo 101 is n = 34.

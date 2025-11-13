@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to show that there exists a unique element n in ZMod 47 such that 2 · n = 15 and n.val < 47. In modular terms, this asks for the unique residue class modulo 47 solving 2n ≡ 15 (mod 47), together with the tautological fact that its canonical representative lies between 0 and 46.
+-- 2. [Key Idea] Since gcd(2, 47) = 1, the element 2 is invertible in ZMod 47. Compute its inverse explicitly (it is 24, because 2 · 24 = 48 ≡ 1 mod 47). Then any solution n must be n = 2⁻¹ · 15 = 24 · 15, which reduces to 31 mod 47. This gives both existence (31 works) and uniqueness (any solution equals 31).
+-- 3. [Proof] 
+   - 2 is a unit in ZMod 47 because 2 and 47 are coprime.
+   - Compute the inverse: (2)⁻¹ = 24, since 2 · 24 = 48 ≡ 1 (mod 47).
+   - For any n with 2 · n = 15, multiply both sides by (2)⁻¹ to get n = (2)⁻¹ · (2 · n) = (2)⁻¹ · 15 = 24 · 15.
+   - Compute 24 · 15 in ZMod 47: 24 · 15 = 360 ≡ 31 (mod 47).
+   - Verify that 31 is indeed a solution: 2 · 31 = 62 ≡ 15 (mod 47).
+   - Therefore, taking n = 31 satisfies both 2 · n = 15 and n.val < 47 (the latter is the standard property of the canonical representative in ZMod).
+   - For uniqueness, if n solves 2 · n = 15, then by the inverse step above n = 24 · 15 = 31, so n must be 31.
+-- 4. [Conclusion] There exists exactly one n in ZMod 47 with 2 · n = 15 and n.val < 47, namely n = 31.

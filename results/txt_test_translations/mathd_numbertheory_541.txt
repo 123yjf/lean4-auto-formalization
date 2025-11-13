@@ -1,0 +1,22 @@
+-- Proof content:
+-- 1. [Problem Restatement] We aim to establish several straightforward numerical facts and then bundle them into a single combined statement:
+- 5 · 401 = 2005,
+- 2005 / 5 = 401,
+- 5 + 401 = 406,
+- 1 < 401,
+- 20 · 20 = 400,
+- 400 < 401.
+Finally, we prove the conjunction of all six statements.
+
+-- 2. [Key Idea] Each equality is a direct calculation, verified by reflexivity (rfl) because Lean evaluates these numeral expressions definitionally. Each inequality is a simple numerical comparison that Lean’s decision procedure (decide) can confirm automatically. The final combined statement is proved by repeatedly introducing conjunctions and supplying the previously established facts.
+
+-- 3. [Proof]
+- For 5 · 401 = 2005: This holds by direct computation of the product; Lean confirms it by reflexivity since both sides reduce to the same numeral.
+- For 2005 / 5 = 401: Division of natural numerals here evaluates to 401; Lean recognizes this equality by reflexivity.
+- For 5 + 401 = 406: This is an immediate sum of numerals, verified by reflexivity.
+- For 1 < 401: This is an obvious numerical inequality; Lean’s decision procedure confirms it automatically.
+- For 20 · 20 = 400: This is a straightforward multiplication of numerals, verified by reflexivity.
+- For 400 < 401: This is an immediate inequality between consecutive naturals, confirmed by the decision procedure.
+- To prove the combined statement, we use conjunction introduction repeatedly (“constructor” in Lean), inserting each of the six previously proved facts in order to build the full conjunction.
+
+-- 4. [Conclusion] All six numerical facts are true—three by direct computation and three by simple comparisons—and together they form the stated conjunction.

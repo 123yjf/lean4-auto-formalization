@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the remainder when the sum 1 + 2 + 3 + … + 100 is divided by 6.
+-- 2. [Key Idea] Use either the closed-form formula for the sum of the first n integers, n(n+1)/2, or analyze the repeating pattern of residues modulo 6.
+-- 3. [Proof] 
+--    Style A – Using the formula: Let S = 1 + 2 + … + 100. Then S = 100·101 / 2 = 5050. Compute 5050 modulo 6: 5050 = 6·841 + 4, so S ≡ 4 (mod 6).
+--    Style B – Using residue cycles: The residues of 1,2,3,4,5,6 modulo 6 are 1,2,3,4,5,0, which repeat every six numbers and sum to 15 ≡ 3 (mod 6). In 1 through 96 there are 16 full cycles, contributing 16·3 ≡ 48 ≡ 0 (mod 6). The remaining terms 97,98,99,100 have residues 1,2,3,4, summing to 10 ≡ 4 (mod 6). Thus the total sum ≡ 0 + 4 ≡ 4 (mod 6).
+-- 4. [Conclusion] The sum 1 + 2 + … + 100 leaves a remainder of 4 upon division by 6.

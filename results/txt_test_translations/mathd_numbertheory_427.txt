@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the sum of the distinct prime factors of σ₁(500) equals 25; that is, ∑ p ∈ primeFactors(σ₁(500)) p = 25, where σ₁(n) is the sum-of-divisors function.
+-- 2. [Key Idea] Compute σ₁(500) using multiplicativity and the prime-power formula: factor 500 as 2^2 · 5^3, evaluate σ₁ on each prime power, and multiply (since the factors are coprime). Then factor the resulting number, list its distinct prime divisors, and sum them.
+-- 3. [Proof] 
+   - First factor 500: 500 = 2^2 · 5^3.
+   - Evaluate σ₁ on each prime power using the formula σ₁(p^k) = 1 + p + ⋯ + p^k:
+     • σ₁(2^2) = 1 + 2 + 4 = 7.
+     • σ₁(5^3) = 1 + 5 + 25 + 125 = 156.
+   - Since 2 and 5 are coprime, so are 2^2 and 5^3. By multiplicativity of σ₁ on coprime arguments, σ₁(500) = σ₁(2^2) · σ₁(5^3) = 7 · 156 = 1092.
+   - Factor 1092: 1092 = 2^2 · 3 · 7 · 13. Hence its set of distinct prime factors is {2, 3, 7, 13}. This is justified by repeatedly applying the rule for prime factors of a product and noting that a prime (or prime power) contributes its base prime as a singleton to the set of prime factors.
+   - Sum these primes: 2 + 3 + 7 + 13 = 25.
+-- 4. [Conclusion] Therefore, ∑ p ∈ primeFactors(σ₁(500)) p = 25.

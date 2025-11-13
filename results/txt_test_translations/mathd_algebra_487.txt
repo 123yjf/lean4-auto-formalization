@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find two distinct real points (x₁, y₁) and (x₂, y₂) that lie on both the parabola y = x² and the line x + y = 1, and show that the distance between them is √10.
+-- 2. [Key Idea] Solve the intersection of the parabola and the line: substituting y = x² into x + y = 1 gives the quadratic x² + x − 1 = 0, which has two real roots. Use these roots to define the two points, verify they are distinct and satisfy both equations, then compute their Euclidean distance.
+-- 3. [Proof] Solving x² + x − 1 = 0 yields x = (-1 ± √5)/2. Define
+--    - x₁ = (-1 + √5)/2, x₂ = (-1 − √5)/2,
+--    - y₁ = 1 − x₁ = (3 − √5)/2, y₂ = 1 − x₂ = (3 + √5)/2.
+--    Then xᵢ + yᵢ = 1 by construction. Also, since each xᵢ satisfies xᵢ² + xᵢ − 1 = 0, we have xᵢ² = 1 − xᵢ, so yᵢ = xᵢ². The points are distinct because x₁ − x₂ = √5 ≠ 0 (hence (x₁, y₁) ≠ (x₂, y₂)). For the distance, compute
+--    - x₁ − x₂ = √5 and y₁ − y₂ = −√5,
+--    so (x₁ − x₂)² + (y₁ − y₂)² = (√5)² + (−√5)² = 5 + 5 = 10, and therefore the distance is √10.
+-- 4. [Conclusion] The points (x₁, y₁) = ((-1 + √5)/2, (3 − √5)/2) and (x₂, y₂) = ((-1 − √5)/2, (3 + √5)/2) satisfy yᵢ = xᵢ² and xᵢ + yᵢ = 1, are distinct, and have distance √10, as required.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve 2x² = 4x + 9 for the positive value of x. When this solution is written in the form (a + √b) / c in simplest form with a, b, c ∈ ℕ, show that a + b + c = 26.
+-- 2. [Key Idea] Rewrite the equation as a standard quadratic, apply the quadratic formula, choose the positive root, simplify, and identify a, b, c.
+-- 3. [Proof] From 2x² = 4x + 9, move all terms to one side: 2x² − 4x − 9 = 0. Using the quadratic formula for ax² + bx + c = 0 with a = 2, b = −4, c = −9, we get x = [4 ± √(16 + 72)] / 4 = [4 ± √88] / 4 = [4 ± 2√22] / 4 = (2 ± √22) / 2. Since x > 0, take the positive root: x = (2 + √22) / 2. This is in simplest form, so a = 2, b = 22, c = 2, and a + b + c = 2 + 22 + 2 = 26.
+-- 4. [Conclusion] The positive solution is x = (2 + √22) / 2, and a + b + c = 26.

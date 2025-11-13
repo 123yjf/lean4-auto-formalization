@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a real number x such that ((11)^(1/4))^(3x − 3) = 1/5, prove that ((11)^(1/4))^(6x + 2) = 121/25.
+-- 2. [Key Idea] Let a = 11^(1/4). Rewrite the exponent 6x + 2 as 2(3x − 3) + 8 and apply exponent rules: a^(u+v) = a^u · a^v and a^(2u) = (a^u)^2. Then compute a^8 = (11^(1/4))^8 = 11^2 = 121.
+-- 3. [Proof] Set a = 11^(1/4). The base a is positive, so the real-power laws apply. Observe that 6x + 2 = 2(3x − 3) + 8. Hence
+a^(6x + 2) = a^(2(3x − 3) + 8) = a^(2(3x − 3)) · a^8 = (a^(3x − 3))^2 · a^8.
+By the hypothesis, a^(3x − 3) = 1/5, so (a^(3x − 3))^2 = (1/5)^2 = 1/25. Also, a^8 = (11^(1/4))^8 = 11^2 = 121. Therefore,
+a^(6x + 2) = (1/25) · 121 = 121/25.
+-- 4. [Conclusion] Under the given assumption, ((11)^(1/4))^(6x + 2) equals 121/25.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine how many integers x satisfy the inequality |x| < 3π.
+-- 2. [Key Idea] For integer x, the condition |x| < 3π is equivalent to −3π < x < 3π. The integers in this open interval are precisely those with −⌊3π⌋ ≤ x ≤ ⌊3π⌋, so the count is 2⌊3π⌋ + 1.
+-- 3. [Proof] Numerically, 3π ≈ 9.424…, so ⌊3π⌋ = 9. Thus, the admissible integers are those with −9 ≤ x ≤ 9. The number of integers from −9 to 9 inclusive is 9 − (−9) + 1 = 19, equivalently 2·9 + 1 = 19.
+-- 4. [Conclusion] There are exactly 19 integers satisfying |x| < 3π, so the answer is (D).

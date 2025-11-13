@@ -1,0 +1,22 @@
+-- Proof content:
+-- ### Problem Restatement
+-- Determine the number of θ in (0, 2π] satisfying 1 - 3 sin θ + 5 cos 3θ = 0.
+-- 
+-- ### Key Idea
+-- Express cos 3θ = cos θ (1 - 4 sin² θ), substitute x = sin θ to obtain 5 cos θ (1 - 4x²) = 3x - 1, and square both sides using cos² θ = 1 - x², yielding a degree-6 polynomial in x whose six roots in (-1, 1) each correspond to exactly one valid θ.
+-- 
+-- ### Proof
+-- Let x = sin θ, so cos 3θ = cos θ (1 - 4x²). The equation becomes 1 - 3x + 5 cos θ (1 - 4x²) = 0, or 5 cos θ (1 - 4x²) = 3x - 1.
+-- 
+-- Assuming 1 - 4x² ≠ 0 (verified not to hold at solutions), cos θ = (3x - 1) / [5 (1 - 4x²)] ≡ C.
+-- 
+-- For validity, |C| = √(1 - x²) (since cos² θ = 1 - x²), leading to 25 (1 - x²) (1 - 4x²)² = (3x - 1)².
+-- 
+-- Expanding and simplifying gives the polynomial 400x⁶ - 600x⁴ + 234x² - 6x - 24 = 0.
+-- 
+-- Evaluation at test points shows sign changes indicating six roots in (-1, 1): three in (-1, 0) and three in (0, 1).
+-- 
+-- For each such x ∈ (-1, 1), there are two θ in (0, 2π] with sin θ = x and cos θ = ±√(1 - x²). Since |C| = √(1 - x²), C equals exactly one of these, yielding one θ per x, for a total of six solutions.
+-- 
+-- ### Conclusion
+-- There are 6 values of θ in (0, 2π] satisfying the equation.

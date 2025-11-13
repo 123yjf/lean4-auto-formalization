@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] If a and b are positive natural numbers and (a + b^2)(b + a^2) = 2, then this is impossible.
+-- 2. [Key Idea] Each factor a + b^2 and b + a^2 is at least 2 (since a, b ≥ 1 and hence a^2, b^2 ≥ 1). Therefore their product is at least 4, which contradicts the given product being 2.
+-- 3. [Proof] From 0 < a and 0 < b, we get 1 ≤ a and 1 ≤ b. Hence 1 ≤ a^2 and 1 ≤ b^2. Therefore a + b^2 ≥ 1 + 1 = 2 and b + a^2 ≥ 1 + 1 = 2. Multiplying these inequalities gives (a + b^2)(b + a^2) ≥ 2 · 2 = 4. But by assumption, (a + b^2)(b + a^2) = 2, which would imply 4 ≤ 2, an impossibility.
+-- 4. [Conclusion] No positive natural numbers a and b can satisfy (a + b^2)(b + a^2) = 2.
+
+-- Proof content:
+-- 1. [Problem Restatement] Let a, b, k be natural numbers with a > 0 and b > 0. If (a + b^2)(b + a^2) = 2^k, then there exist natural numbers r and s such that a + b^2 = 2^r and b + a^2 = 2^s.
+-- 2. [Key Idea] Each factor divides the product 2^k, and for a prime p (here p = 2), every divisor of p^k is itself a power of p. Thus both a + b^2 and b + a^2 must be powers of 2. The positivity ensures these factors are at least 2, though the divisor characterization already suffices.
+-- 3. [Proof] From a > 0 and b > 0, we have 1 ≤ a and 1 ≤ b, hence 1 ≤ a^2 and 1 ≤ b^2. Thus a + b^2 ≥ 2 and b + a^2 ≥ 2. From the equality (a + b^2)(b + a^2) = 2^k, each factor divides 2^k. By the standard result on divisors of prime powers, any divisor of 2^k has the form 2^t for some t with t ≤ k. Applying this to each factor yields integers r, s with a + b^2 = 2^r and b + a^2 = 2^s (with r, s ≤ k).
+-- 4. [Conclusion] There exist natural numbers r and s such that a + b^2 = 2^r and b + a^2 = 2^s.

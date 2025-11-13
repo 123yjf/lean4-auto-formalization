@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find \(p + q\) where \(a = p/q\) in lowest terms satisfies that the sum of all real solutions \(x\) to \(\lfloor x \rfloor \cdot \{x\} = a x^2\) is 420.
+-- 
+-- 2. [Key Idea] The solutions are \(x = 0\) and \(x_n = \frac{30n}{29}\) for \(n = 1\) to 28 when \(a = \frac{29}{900}\), summing to 420, with no other solutions.
+-- 
+-- 3. [Proof]  
+-- For \(a = \frac{29}{900}\), \(t = \sqrt{1 - 4a} = \frac{14}{15}\), so solutions satisfy \(x = \frac{2n}{1+t} = \frac{30n}{29}\) for positive integers \(n < \frac{1+t}{1-t} = 29\), i.e., \(n = 1\) to 28, plus \(x = 0\).  
+-- The sum is \(\sum_{n=1}^{28} \frac{30n}{29} + 0 = \frac{30}{29} \cdot \frac{28 \cdot 29}{2} = 30 \cdot 14 = 420\).  
+-- No negative solutions exist, as fractional parts would be negative.  
+-- Quadratic analysis confirms these are all solutions.
+-- 
+-- 4. [Conclusion] Thus, \(p = 29\), \(q = 900\), and \(p + q = 929\).

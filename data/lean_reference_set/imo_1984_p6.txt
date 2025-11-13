@@ -1,0 +1,38 @@
+-- Proof content:
+-- 1. [Problem Restatement]
+-- We are given odd integers 0 < a < b < c < d with ad = bc, a + d = 2^k, and b + c = 2^m. Prove that a = 1.
+-- 
+-- 2. [Key Idea]
+-- The pairs {a, d} and {b, c} are roots of quadratic equations with the same product N = ad = bc but different sums 2^k and 2^m. Writing the roots via the quadratic formula forces the discriminants to be perfect squares, yielding integers u, v that measure how far the roots are from the half-sums 2^{k-1} and 2^{m-1}. Comparing these discriminants produces a factorizable Diophantine equation in u and v. Parity and size constraints then force a specific relation between k and m, from which a can be explicitly computed and shown to be 1.
+-- 
+-- 3. [Proof]
+-- Let N = ad = bc. Then {a, d} are the roots of x^2 − 2^k x + N = 0, and {b, c} are the roots of x^2 − 2^m x + N = 0.
+-- By the quadratic formula, the roots must be
+-- a = 2^{k−1} − u, d = 2^{k−1} + u, with u^2 = 2^{2k−2} − N,
+-- b = 2^{m−1} − v, c = 2^{m−1} + v, with v^2 = 2^{2m−2} − N,
+-- for some integers u, v ≥ 0. Since a, b, c, d are odd while 2^{k−1}, 2^{m−1} are even (k, m ≥ 2), it follows that u and v are odd positive integers.
+-- Subtracting the two discriminant equations gives
+-- u^2 − v^2 = 2^{2k−2} − 2^{2m−2} = 2^{2m−2}(2^{2(k−m)} − 1).
+-- Because a < b < c < d and a + d = 2^k, b + c = 2^m, we must have a + d > b + c, hence 2^k > 2^m and so k > m.
+-- Factor the left-hand side as (u − v)(u + v). Since u, v are odd, both u − v and u + v are even; write u − v = 2p and u + v = 2q with integers p, q ≥ 1 and q > p (because v > 0). Then u = p + q, v = q − p, and
+-- 4pq = 2^{2m−2}(2^{2(k−m)} − 1) ⇒ pq = 2^{2m−4}(2^{2(k−m)} − 1).
+-- Here 2^{2(k−m)} − 1 is odd. Since u, v are odd, p and q must have opposite parity. Thus exactly one of p, q absorbs all the powers of 2 coming from 2^{2m−4}, leading to two assignments:
+-- Case 1 (p odd, q even): p = 2^{2(k−m)} − 1 and q = 2^{2m−4}.
+-- Case 2 (p even, q odd): p = 2^{2m−4} and q = 2^{2(k−m)} − 1.
+-- We first rule out m = 2. If m = 2, then b + c = 4, and with b, c odd and 0 < b < c, we must have (b, c) = (1, 3). Then N = bc = 3, so (a, d) = (1, 3), which contradicts a < b. Hence m ≥ 3, so 2m − 4 ≥ 2.
+-- Next we bound p using a < b, i.e., 2^{k−1} − u < 2^{m−1} − v ⇒ u − v > 2^{k−1} − 2^{m−1}, which becomes
+-- 2p > 2^{m−1}(2^{k−m} − 1) ⇒ p > 2^{m−2}(2^{k−m} − 1).
+-- Consider the two cases:
+-- Case 2 (p = 2^{2m−4}, q = 2^{2(k−m)} − 1) is impossible. Writing X = k − m ≥ 1 and Y = m − 2 ≥ 1, the conditions q > p and p > 2^{m−2}(2^{k−m} − 1) become
+-- 2^{2X} − 1 > 2^{2Y} and 2^Y > 2^X − 1.
+-- These force 2^{2X} − 1 > 2^{2Y} > 2^{2X} − 2^{X+1} + 1. The gap between the endpoints is 2^{X+1} − 2, which contains no power of 2 for X ≥ 1, so 2^{2Y} cannot lie strictly between them. Hence this case cannot occur.
+-- Case 1 (p = 2^{2(k−m)} − 1, q = 2^{2m−4}) remains. Let X = k − m ≥ 1 and Y = m − 2 ≥ 1. The requirements q > p and p > 2^{m−2}(2^{k−m} − 1) become
+-- 2^{2Y} > 2^{2X} − 1 and 2^X + 1 > 2^Y.
+-- A comparison of these inequalities shows they can hold only when X = Y, that is, k − m = m − 2, so k = 2m − 2. (If X > Y, the first inequality fails for Y ≥ 1; if X < Y, the second fails. When X = Y, both hold.)
+-- With k = 2m − 2 in hand, compute a:
+-- a = 2^{k−1} − u = 2^{k−1} − (p + q) = 2^{2m−3} − [(2^{2(k−m)} − 1) + 2^{2m−4}]
+-- = 2^{2m−3} − [(2^{2(m−2)} − 1) + 2^{2m−4}]
+-- = 2^{2m−3} − (2^{2m−4} − 1 + 2^{2m−4}) = 2^{2m−3} − (2^{2m−3} − 1) = 1.
+-- 
+-- 4. [Conclusion]
+-- The discriminant analysis forces a factorization constraint on u and v that, together with parity and ordering, yields k = 2m − 2 and then a = 1. Thus, under the given hypotheses, a must be 1.

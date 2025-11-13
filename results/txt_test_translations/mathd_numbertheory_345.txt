@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that (2000 + 2001 + 2002 + 2003 + 2004 + 2005 + 2006) mod 7 = 0; equivalently, the sum is divisible by 7.
+-- 2. [Key Idea] Reduce each addend modulo 7 and use that addition respects mod: (a + b) mod n = ((a mod n) + (b mod n)) mod n. The seven consecutive numbers 2000–2006 yield the complete set of residues 0 through 6 (in some order), whose sum is 21, divisible by 7.
+-- 3. [Proof] Compute each remainder modulo 7:
+   - 2000 ≡ 5 (mod 7), 2001 ≡ 6 (mod 7), 2002 ≡ 0 (mod 7),
+     2003 ≡ 1 (mod 7), 2004 ≡ 2 (mod 7), 2005 ≡ 3 (mod 7), 2006 ≡ 4 (mod 7).
+  By the modular addition rule applied repeatedly,
+  (2000 + 2001 + 2002 + 2003 + 2004 + 2005 + 2006) mod 7
+  = (5 + 6 + 0 + 1 + 2 + 3 + 4) mod 7.
+  The sum 5 + 6 + 0 + 1 + 2 + 3 + 4 = 21, and 21 mod 7 = 0.
+-- 4. [Conclusion] Therefore, the given sum is divisible by 7, so (2000 + 2001 + 2002 + 2003 + 2004 + 2005 + 2006) mod 7 = 0.

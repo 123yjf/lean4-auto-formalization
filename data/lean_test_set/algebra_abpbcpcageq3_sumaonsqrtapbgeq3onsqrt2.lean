@@ -1,0 +1,50 @@
+-- Proof content:
+-- ### [Problem Restatement]
+-- For positive real numbers $a, b, c$ such that $ab+bc+ca \geq 3$, prove that $\sum_{cyc} \frac{a}{\sqrt{a+b}} \geq \frac{3}{\sqrt{2}}$.
+-- 
+-- ### [Key Idea]
+-- The inequality can be solved by first reducing the condition to the equality case $ab+bc+ca=3$. Then, an application of the Cauchy-Schwarz or Hölder inequality transforms the problem into a straightforward single-variable polynomial inequality.
+-- 
+-- ### [Proof]
+-- 
+-- First, we show that it is sufficient to prove the inequality for the case $ab+bc+ca=3$.
+-- Let $ab+bc+ca = k^2$ for some $k \geq \sqrt{3}$. Let $a' = a/k, b' = b/k, c' = c/k$. Then $a'b'+b'c'+c'a' = (ab+bc+ca)/k^2 = 1$.
+-- The inequality is equivalent to $\sum_{cyc} \frac{a}{\sqrt{a+b}} \geq \frac{3}{\sqrt{2}}$. Let's scale this by $\sqrt{k}$:
+-- $\sum_{cyc} \frac{ka'}{\sqrt{k(a'+b')}} = \sqrt{k} \sum_{cyc} \frac{a'}{\sqrt{a'+b'}}$.
+-- If we prove that for any $x,y,z$ with $xy+yz+zx=3$, the inequality $\sum \frac{x}{\sqrt{x+y}} \geq \frac{3}{\sqrt{2}}$ holds, we can apply this to our problem.
+-- Suppose $ab+bc+ca = k \geq 3$. Define $a' = \sqrt{3/k} \cdot a$, $b'=\sqrt{3/k} \cdot b$, $c'=\sqrt{3/k} \cdot c$.
+-- Then $a'b'+b'c'+c'a' = (3/k)(ab+bc+ca) = 3$.
+-- Assuming the inequality holds for the equality case, we have $\sum_{cyc} \frac{a'}{\sqrt{a'+b'}} \geq \frac{3}{\sqrt{2}}$.
+-- Substituting back: $\sum_{cyc} \frac{\sqrt{3/k} \cdot a}{\sqrt{\sqrt{3/k}(a+b)}} \geq \frac{3}{\sqrt{2}} \implies \sqrt[4]{3/k} \sum_{cyc} \frac{a}{\sqrt{a+b}} \geq \frac{3}{\sqrt{2}}$.
+-- This gives $\sum_{cyc} \frac{a}{\sqrt{a+b}} \geq \sqrt[4]{k/3} \cdot \frac{3}{\sqrt{2}}$. Since $k \geq 3$, we have $\sqrt[4]{k/3} \geq 1$, which proves the claim.
+-- Thus, we can assume without loss of generality that $ab+bc+ca = 3$.
+-- 
+-- **Proof 1: Using Cauchy-Schwarz Inequality**
+-- 
+-- Let $S = \sum_{cyc} \frac{a}{\sqrt{a+b}}$. We apply the Cauchy-Schwarz inequality (in Titu's form):
+-- $$ S = \sum_{cyc} \frac{a^2}{a\sqrt{a+b}} \geq \frac{(a+b+c)^2}{\sum_{cyc} a\sqrt{a+b}} $$
+-- To bound the denominator, we use Cauchy-Schwarz again:
+-- $$ \left(\sum_{cyc} a\sqrt{a+b}\right)^2 \leq \left(\sum_{cyc} a\right) \left(\sum_{cyc} a(a+b)\right) = (a+b+c)(a^2+b^2+c^2+ab+bc+ca) $$
+-- Let $p=a+b+c$. Since $ab+bc+ca=3$, we have $a^2+b^2+c^2 = p^2-2(ab+bc+ca) = p^2-6$.
+-- The denominator is bounded by:
+-- $$ \left(\sum_{cyc} a\sqrt{a+b}\right)^2 \leq p(p^2-6+3) = p(p^2-3) $$
+-- Combining our results, we get:
+-- $$ S^2 \geq \frac{p^4}{p(p^2-3)} = \frac{p^3}{p^2-3} $$
+-- We must show $S^2 \geq (3/\sqrt{2})^2 = 9/2$. This means we need to prove:
+-- $$ \frac{p^3}{p^2-3} \geq \frac{9}{2} \iff 2p^3 \geq 9(p^2-3) \iff 2p^3 - 9p^2 + 27 \geq 0 $$
+-- From the known inequality $(a+b+c)^2 \geq 3(ab+bc+ca)$, we have $p^2 \geq 3(3)=9$, so $p \geq 3$.
+-- The polynomial $f(p)=2p^3 - 9p^2 + 27$ can be factored as $(p-3)^2(2p+3)$.
+-- For $p \geq 3$, $(p-3)^2 \geq 0$ and $2p+3 > 0$, so the inequality holds. Equality occurs when $p=3$, which implies $a=b=c=1$.
+-- 
+-- **Proof 2: Using Hölder's Inequality**
+-- 
+-- Assume $ab+bc+ca=3$. Let $S = \sum_{cyc} \frac{a}{\sqrt{a+b}}$.
+-- By Hölder's inequality:
+-- $$ \left(\sum_{cyc} \frac{a}{\sqrt{a+b}}\right)^2 \left(\sum_{cyc} a(a+b)\right) \geq (a+b+c)^3 $$
+-- Let $p=a+b+c$. The second term is $\sum a^2 + \sum ab = (p^2-2(ab+bc+ca)) + (ab+bc+ca) = p^2-3$.
+-- Thus, Hölder's inequality gives:
+-- $$ S^2 \cdot (p^2-3) \geq p^3 \implies S^2 \geq \frac{p^3}{p^2-3} $$
+-- This yields the same algebraic inequality as in the first proof. Since $p=a+b+c \geq 3$, we have shown that $\frac{p^3}{p^2-3} \geq \frac{9}{2}$.
+-- 
+-- ### [Conclusion]
+-- Therefore, for positive real numbers $a, b, c$ satisfying $3 \leq ab+bc+ca$, the stated inequality is true.

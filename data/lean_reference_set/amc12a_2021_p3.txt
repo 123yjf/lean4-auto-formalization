@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Two natural numbers add up to 17,402. One ends with a 0, and if that trailing 0 is removed, the result is exactly the other number. Find their difference.
+-- 2. [Key Idea] Let x be the number that ends in 0. Removing the trailing 0 divides by 10, so the other number is x/10. Use the equation x + x/10 = 17,402 to solve for x, then compute the difference.
+-- 3. [Proof] Let x be the multiple of 10 and y the other number. Then y = x/10 and x + y = 17,402. Substituting gives x + x/10 = 17,402, so (11/10)x = 17,402. Hence x = 17,402 × 10 / 11 = 15,820. Then y = x/10 = 1,582. The difference is x − y = 15,820 − 1,582 = 14,238. Alternatively, the difference is x − x/10 = (9/10)x = (9/10)(17,402 × 10 / 11) = 14,238.
+-- 4. [Conclusion] The two numbers differ by 14,238.

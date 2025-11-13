@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that applying the function f, defined by f(n) = n² if n is odd and f(n) = n² − 4n − 1 if n is even, five consecutive times to the starting value 4 yields 1.
+-- 2. [Key Idea] The first application uses the even branch and produces an odd number. From then on, the input is odd, so f becomes squaring. Squaring sends −1 to 1 and fixes 1 thereafter.
+-- 3. [Proof] First application (n even): f(4) = 4² − 4·4 − 1 = 16 − 16 − 1 = −1. Second application (n odd): f(−1) = (−1)² = 1. Third application (n odd): f(1) = 1² = 1. Fourth application (n odd): f(1) = 1. Fifth application (n odd): f(1) = 1. Therefore, f(f(f(f(f(4))))) = 1.
+-- 4. [Conclusion] After five iterations the value is 1 (and remains 1 thereafter), so the required result is 1.

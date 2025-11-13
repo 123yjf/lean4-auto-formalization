@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive integers m and n with gcd(m, n) = 8 and lcm(m, n) = 112, find the minimum possible value of m + n.
+-- 2. [Key Idea] Express m = 8a and n = 8b with gcd(a, b) = 1; then the identity lcm · gcd = m · n forces ab = 14, so we minimize a + b over coprime factor pairs of 14.
+-- 3. [Proof] Let d = gcd(m, n) = 8. Then m = 8a and n = 8b for some positive integers a, b with gcd(a, b) = 1. From lcm(m, n) · gcd(m, n) = m · n, we have 112 · 8 = (8a)(8b) = 64ab, so ab = 14. The coprime factor pairs of 14 are (1, 14), (2, 7), (7, 2), and (14, 1), with sums 15, 9, 9, and 15, respectively. The minimum sum is 9, achieved by (2, 7) or (7, 2). Thus m + n = 8(a + b) = 8 · 9 = 72.
+-- 4. [Conclusion] The minimum possible value of m + n is 72.

@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let S be the sum of the consecutive integers from 2010 to 4018 inclusive, i.e., S = ∑_{i=0}^{4018-2010} (2010 + i). Prove that 2009 divides S. Along the way, identify S via the arithmetic-series formula.
+-- 2. [Key Idea] View S as the sum of an arithmetic progression. The standard formula says: sum = (number of terms) × (average of first and last terms). Here, the number of terms is 4018 − 2010 + 1 = 2009, and the average of the first and last terms is (2010 + 4018)/2 = 3014. Thus S = 2009 × 3014, making the divisibility by 2009 immediate. A modular viewpoint also confirms the structure: 2010 ≡ 1 (mod 2009), so 2010 + k ≡ k + 1 (mod 2009), and the final term 4018 ≡ 0 (mod 2009).
+-- 3. [Proof] 
+--    - Define S as S := ∑_{i ∈ range(4018 − 2010 + 1)} (2010 + i), i.e., the sum from 2010 up to 4018.
+--    - Derive the arithmetic-series formula (lemma sum_formula): rewrite the range length as 2009, then split the sum (2010 + i) into the sum of the constant part and the sum of i. Using sum_add_distrib, sum_const with card_range = 2009, and the identity ∑_{i=0}^{n−1} i = n(n−1)/2 (sum_range_id), this yields S = (4018 − 2010 + 1) · ((2010 + 4018)/2).
+--    - Evaluate the numerical factors (lemma arithmetic_progression_method): 4018 − 2010 + 1 = 2009 and (2010 + 4018)/2 = 3014, so S = 2009 · 3014.
+--    - Conclude divisibility (theorem mathd_numbertheory_353): since S is 2009 times an integer, 2009 ∣ S by the basic fact that a divides a·b.
+--    - Auxiliary modular checks (not needed for the final step but consistent with the structure): for all k ≤ 2008, 2010 + k ≡ k + 1 (mod 2009), because 2010 = 2009 + 1; and 4018 ≡ 0 (mod 2009), since 4018 = 2·2009. Numeric verifications confirm 4018 − 2010 + 1 = 2009 and (2010 + 4018)/2 = 3014.
+-- 4. [Conclusion] The sum S of the integers from 2010 to 4018 equals 2009 · 3014, so 2009 divides S.

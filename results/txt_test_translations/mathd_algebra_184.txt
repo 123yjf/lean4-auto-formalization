@@ -1,0 +1,22 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the unique real number a > 0 for which there exists a real number b > 0 satisfying both equations a^2 = 6b and a^2 = 54/b.
+
+-- 2. [Key Idea] Combine the two equations to eliminate a and solve for b: from 6b = 54/b we get b^2 = 9, hence (using b > 0) b = 3. Then a^2 = 6b = 18, and since a > 0 we get a = √18 = 3√2. This also shows uniqueness.
+
+-- 3. [Proof] 
+- Existence:
+  - Take a = 3√2. This is positive because 3 > 0 and √2 > 0.
+  - Choose b = 3, which is also positive.
+  - Check the equations:
+    - a^2 = (3√2)^2 = 9 · 2 = 18 = 6 · 3 = 6b.
+    - a^2 = 18 = 54/3 = 54/b.
+  Thus a = 3√2 with b = 3 satisfies all conditions.
+
+- Uniqueness:
+  - Suppose a' > 0 and there exists b' > 0 with a'^2 = 6b' and a'^2 = 54/b'.
+  - From these, 6b' = 54/b'. Clearing denominators (allowed since b' > 0), we get 6(b')^2 = 54, hence (b')^2 = 9.
+  - Because b' > 0, it follows that b' = 3.
+  - Then a'^2 = 6b' = 6 · 3 = 18. Since a' > 0, we have a' = √18.
+  - Compute √18 = √(9·2) = √9 · √2 = 3√2. Hence a' = 3√2, the same value constructed above.
+
+-- 4. [Conclusion] There exists exactly one a > 0 for which a^2 = 6b and a^2 = 54/b hold for some b > 0, namely a = 3√2 (with the corresponding b uniquely determined as b = 3).

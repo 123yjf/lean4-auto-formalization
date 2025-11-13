@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every rational number x with x ≠ 0, the product (12 / (x · x)) · (x^4 / (14 · x)) · (35 / (3 · x)) equals 10.
+-- 2. [Key Idea] Combine the three fractions into a single fraction, group numeric factors together and powers of x together, use x ≠ 0 to cancel x^4 from numerator and denominator, and then compute the remaining numeric ratio.
+-- 3. [Proof] Start by rewriting the product of fractions as one fraction:
+   (12 / (x^2)) · (x^4 / (14x)) · (35 / (3x)) = (12 · x^4 · 35) / (x · x · 14 · x · 3 · x).
+   Compute the numeric products 12 · 35 = 420 and 14 · 3 = 42. Also note that x · x · x · x = x^4. Therefore the numerator becomes 420 · x^4 and the denominator becomes 42 · x^4.
+   Since x ≠ 0, we have x^4 ≠ 0, so we can cancel x^4 from numerator and denominator to get (420 · x^4) / (42 · x^4) = 420 / 42.
+   Finally, compute 420 / 42 = 10.
+-- 4. [Conclusion] The given product simplifies to 10 for all rational x ≠ 0.

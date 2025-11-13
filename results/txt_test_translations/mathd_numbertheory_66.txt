@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the remainder when 194 is divided by 11 is 7; that is, prove 194 % 11 = 7.
+-- 2. [Key Idea] Use the division algorithm: find integers q and r with 0 ≤ r < 11 such that 194 = 11·q + r. If we can write 194 = 11·17 + 7 and verify 0 ≤ 7 < 11, then the remainder is r = 7.
+-- 3. [Proof] Compute 11·17 = 187, so 194 − 187 = 7, hence 194 = 11·17 + 7. The candidate remainder 7 satisfies 0 ≤ 7 < 11. Therefore, by the definition of Euclidean division, the remainder of 194 upon division by 11 is 7. In the Lean code, the first two theorems use norm_num to evaluate 194 % 11 directly. In the third theorem, the helper facts 11·17 = 187, 187 + 7 = 194, and 7 < 11 are established, and then norm_num confirms the modular equality.
+-- 4. [Conclusion] Therefore, 194 % 11 = 7.

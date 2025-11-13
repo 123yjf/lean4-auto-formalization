@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve for x in the continued-fraction equation 2 + 1 / (1 + 1 / (2 + 2 / (3 + x))) = 144/53.
+-- 2. [Key Idea] Introduce a temporary variable for the innermost expression to simplify layer by layer, then equate the resulting rational expression to 144/53 and back-substitute to find x.
+-- 3. [Proof] Let y := 2 + 2/(3 + x). Then:
+   - Compute the outer layers: 1 + 1/y = (y + 1)/y, so 1 / (1 + 1/y) = y/(y + 1). Thus the whole expression becomes 2 + y/(y + 1) = (3y + 2)/(y + 1).
+   - Set this equal to 144/53: (3y + 2)/(y + 1) = 144/53 ⇔ 53(3y + 2) = 144(y + 1) ⇔ 159y + 106 = 144y + 144 ⇔ 15y = 38 ⇔ y = 38/15.
+   - Back-substitute: 2 + 2/(3 + x) = 38/15 ⇒ 2/(3 + x) = 38/15 − 2 = 8/15 ⇒ 3 + x = 2·15/8 = 15/4 ⇒ x = 15/4 − 3 = 3/4.
+-- 4. [Conclusion] The unique solution is x = 3/4.

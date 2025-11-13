@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine m − n given that the curves y = x^4 and y = 5x^2 − 6 intersect at x = ±√m and x = ±√n, with m > n.
+-- 2. [Key Idea] Equate the two expressions and set t = x^2 to reduce the quartic equation to a quadratic; its (nonnegative) roots will be m and n.
+-- 3. [Proof] At intersection: x^4 = 5x^2 − 6 ⇔ x^4 − 5x^2 + 6 = 0. Let t = x^2 (t ≥ 0). Then t^2 − 5t + 6 = 0, which factors as (t − 2)(t − 3) = 0. Hence t = 2 or t = 3, so x = ±√2 and x = ±√3. Therefore n = 2 and m = 3, giving m − n = 1.
+-- 4. [Conclusion] The required difference is m − n = 1.

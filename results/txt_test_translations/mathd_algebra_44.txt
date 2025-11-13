@@ -1,0 +1,25 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there is exactly one real pair p = (s, t) such that s = 9 − 2t and t = 3s + 1, and that this pair is (1, 4).
+
+-- 2. [Key Idea] Solve the linear system by substitution (or elimination): substitute s = 9 − 2t into t = 3s + 1 to get a single equation in t, solve for t, then back-substitute to get s. Verify that (1, 4) satisfies both equations, and argue that any other solution must coincide with it.
+
+-- 3. [Proof]
+- Existence: Direct computation shows that s = 1 and t = 4 satisfy the system:
+  - s = 9 − 2t becomes 1 = 9 − 2·4, which is true.
+  - t = 3s + 1 becomes 4 = 3·1 + 1, which is true.
+  Hence, (1, 4) is a solution.
+- Uniqueness: Let (s, t) be any solution with s = 9 − 2t and t = 3s + 1. Substitute s into the second equation:
+  - t = 3(9 − 2t) + 1 = 27 − 6t + 1 = 28 − 6t.
+  - Rearranging gives 7t = 28, hence t = 4.
+  - Back-substitute into s = 9 − 2t to get s = 9 − 2·4 = 1.
+  Therefore, any solution must be (1, 4).
+- The auxiliary lemmas reflect these steps:
+  - substitution_step: justifies replacing s by 9 − 2t in t = 3s + 1.
+  - simplify_substitution: simplifies t = 3(9 − 2t) + 1 to t = 28 − 6t.
+  - solve_for_t and t_equals_4: solve t = 28 − 6t to get t = 4.
+  - back_substitute_s: with t = 4, deduces s = 1 from s = 9 − 2t.
+  - verify_solution: checks (1, 4) satisfies both equations.
+  - uniqueness: any two pairs satisfying the system must have equal components, hence are equal.
+  - elimination_method: explicitly constructs the solution (1, 4) and verifies it.
+
+-- 4. [Conclusion] The system s = 9 − 2t and t = 3s + 1 has exactly one solution over the reals, namely (s, t) = (1, 4). Thus, the unique pair p satisfying the given conditions is p = (1, 4).

@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given positive integers a < b < c < d, all odd, such that ad = bc and a + d = 2^k, b + c = 2^m for some integers k, m. The goal is to prove that a = 1.
+-- 2. [Key Idea] Use the “power-of-two sum” structure to write each pair (a, d) and (b, c) symmetrically around the halves of those powers of two: a = 2^(k−1) − u, d = 2^(k−1) + u and b = 2^(m−1) − v, c = 2^(m−1) + v with u, v odd. The product condition ad = bc then yields quadratic relations for u and v. A Diophantine factorization argument forces a rigid relationship between k and m, namely k = 2m − 2. With this in hand, the explicit form of u can be computed, and one finds 2^(k−1) − u = 1, hence a = 1.
+-- 3. [Proof] 
+- From the hypotheses that a + d = 2^k and b + c = 2^m with a, b, c, d odd and positive, we first obtain lower bounds k ≥ 2 and m ≥ 2. We also deduce, using the order a < b < c < d together with these sums, that k > m, and a more precise bound m ≥ 3.
+- Using the standard “symmetric around the midpoint” parametrization for odd summands of a power of two, we obtain odd integers u and v such that:
+  • a = 2^(k−1) − u and d = 2^(k−1) + u,
+  • b = 2^(m−1) − v and c = 2^(m−1) + v,
+  together with quadratic identities tying u^2 and v^2 to the products ad and bc. This comes from expanding (2^(k−1) ± u) and (2^(m−1) ± v) and comparing with ad = bc.
+- A Diophantine analysis of the resulting identities produces a controlled factorization p q = 2^(2m−4) (2^(2(k−m)) − 1) with specified parity and size inequalities between p and q. A case analysis on this factorization shows that necessarily k = 2m − 2.
+- With k now fixed as 2m − 2, the quadratic relations simplify enough to give an explicit expression for u, namely u = 2^(2(m−2)) − 1 + 2^(2m−4).
+- A direct computation using this explicit u and k = 2m − 2 shows that 2^(k−1) − u = 1.
+- Since a = 2^(k−1) − u from the symmetric representation, we conclude a = 1.
+-- 4. [Conclusion] Under the given conditions (odd positive integers a < b < c < d with ad = bc and a + d, b + c powers of two), the only possibility is a = 1.

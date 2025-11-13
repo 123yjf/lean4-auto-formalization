@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the product a b c d given 4ᵃ = 5, 5ᵇ = 6, 6ᶜ = 7, and 7ᵈ = 8.
+-- 2. [Key Idea] Express each exponent as a logarithm, then use the identity logₓy · log_yz = logₓz so the factors telescope: log₄5 · log₅6 · log₆7 · log₇8 = log₄8.
+-- 3. [Proof] From 4ᵃ = 5, 5ᵇ = 6, 6ᶜ = 7, 7ᵈ = 8, we have a = log₄5, b = log₅6, c = log₆7, d = log₇8. Thus
+   a b c d = (log₄5)(log₅6)(log₆7)(log₇8).
+   Using logₓy · log_yz = logₓz step by step:
+   • (log₄5)(log₅6) = log₄6.
+   • log₄6 · log₆7 = log₄7.
+   • log₄7 · log₇8 = log₄8.
+   Now compute log₄8. Since 4 = 2² and 8 = 2³, change of base gives
+   log₄8 = (log₂8)/(log₂4) = 3/2.
+   Therefore a b c d = 3/2.
+   (Equivalent change-of-base view) a b c d = (ln 5/ln 4) · (ln 6/ln 5) · (ln 7/ln 6) · (ln 8/ln 7) = ln 8/ln 4 = ln 2³/ln 2² = 3/2.
+-- 4. [Conclusion] The product a·b·c·d equals 3/2.

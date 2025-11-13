@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a real number x such that x > 0, 2x^2 = 4x + 9, x equals (2 + √22)/2, and 2 + 22 + 2 = 26.
+-- 2. [Key Idea] Choose the specific value x = (2 + √22)/2 (the positive root of the quadratic 2x^2 − 4x − 9 = 0) and verify directly that it is positive and satisfies the equation. The remaining equalities are immediate.
+-- 3. [Proof] 
+   - Define x = (2 + √22)/2.
+   - Positivity: Since √22 ≥ 0, we have 2 + √22 > 0, and the denominator 2 > 0, so x > 0.
+   - Verify 2x^2 = 4x + 9:
+     • Compute x^2 = ((2 + √22)^2)/4. Expanding the numerator gives (2 + √22)^2 = 4 + 4√22 + 22 = 26 + 4√22.
+     • Therefore 2x^2 = (26 + 4√22)/2 = 13 + 2√22.
+     • Also, 4x = 4 + 2√22, so 4x + 9 = 13 + 2√22.
+     • Both sides equal 13 + 2√22, hence 2x^2 = 4x + 9.
+   - The identity x = (2 + √22)/2 holds by our definition of x.
+   - The arithmetic 2 + 22 + 2 = 26 is a straightforward calculation.
+-- 4. [Conclusion] With x = (2 + √22)/2, all required properties hold (x > 0, 2x^2 = 4x + 9, x equals the given expression, and 2 + 22 + 2 = 26), so the existential statement is true.

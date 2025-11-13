@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] Define the polynomial euler_poly(n) = n^2 − n + 41. Show:
+--    (a) euler_poly(41) = 1681 and euler_poly(42) = 1763.
+--    (b) gcd(euler_poly(41), euler_poly(42)) = 41.
+--    (c) euler_poly(41) = 41 · 41 and euler_poly(42) = 41 · 43.
+--    (d) gcd(euler_poly(1), euler_poly(2)) = 1.
+-- 2. [Key Idea] Compute the values of the polynomial at the specified integers by direct substitution and arithmetic. Observe that the values at 41 and 42 share a common factor 41, and their co-factors are coprime (41 and 43), which forces the gcd to be 41. For the small case, compute the two values (41 and 43) and note they are coprime.
+-- 3. [Proof] 
+--    For (a): Substitute n = 41 and n = 42 into n^2 − n + 41.
+--    • euler_poly(41) = 41^2 − 41 + 41 = 41^2 = 1681.
+--    • euler_poly(42) = 42^2 − 42 + 41 = 1764 − 1 = 1763.
+--    These match the stated values.
+--    For (c): From the computations above,
+--    • euler_poly(41) = 1681 = 41 · 41.
+--    • euler_poly(42) = 1763 = 41 · 43.
+--    For (b): Since euler_poly(41) = 41 · 41 and euler_poly(42) = 41 · 43, both numbers are multiples of 41, so gcd(euler_poly(41), euler_poly(42)) is a multiple of 41. The remaining co-factors, 41 and 43, are coprime (in fact, both are primes and distinct), so no larger common factor is possible. Hence gcd(euler_poly(41), euler_poly(42)) = 41.
+--    For (d): Compute euler_poly(1) = 1 − 1 + 41 = 41 and euler_poly(2) = 4 − 2 + 41 = 43. Since 41 and 43 are distinct primes, gcd(41, 43) = 1.
+-- 4. [Conclusion] Direct evaluation of Euler’s polynomial at 41 and 42 yields 1681 and 1763, which factor as 41·41 and 41·43, respectively; thus their gcd is 41. For the smaller case, euler_poly(1) = 41 and euler_poly(2) = 43 are coprime, so their gcd is 1.

@@ -1,0 +1,27 @@
+-- Proof content:
+-- ### Problem Restatement
+-- Prove that the only positive integer solutions $(x, y)$ to $x^{y^2} = y^x$ are $(1, 1)$, $(16, 2)$, and $(27, 3)$.
+-- 
+-- ### Key Idea
+-- The prime factors of $x$ and $y$ must coincide for $x > 1$, $y > 1$; this implies $x = y^c$ for rational $c$, reducing to cases where only the given pairs satisfy the equation.
+-- 
+-- ### Proof
+-- First, verify $(1,1)$: $1^{1^2} = 1^1 = 1$.  
+-- If $y=1$ and $x > 1$, then $x = 1^x = 1$, a contradiction.  
+-- If $x=1$ and $y > 1$, then $1 = y^1 = y$, a contradiction.  
+-- Thus, for $x=1$ or $y=1$, only $(1,1)$ works.  
+-- 
+-- Now assume $x > 1$, $y > 1$. The prime factors of $x$ and $y$ must be identical, as otherwise $x^{y^2}$ and $y^x$ have differing prime factors. Let $y = \prod p_i^{a_i}$ and $x = \prod p_i^{b_i}$ over the same primes (with $a_i, b_i \geq 0$ and positive for some). Equating exponents gives $b_i y^2 = a_i x$ for each $i$, so $b_i / a_i = x / y^2 = c$ (constant) for all $i$ with $a_i > 0$. Thus $x = y^c$.  
+-- 
+-- Substitute into $c = x / y^2$: $y^c = c y^2$, so $y^{c-2} = c$ (as $y > 1$). Here $c > 0$ is rational; let $c = p/q$ in lowest terms ($p, q > 0$, $\gcd(p,q)=1$). Then $y = z^q$ for integer $z \geq 2$ (to make $x = y^{p/q} = z^p$ integer), and $p/q = z^{p - 2q}$.  
+-- 
+-- - If $p - 2q = 0$, then $p/q = 1$ but $p = 2q$ yields $2 = 1$, a contradiction.  
+-- - If $p - 2q > 0$, then $q=1$ (as right side integer $\geq 2$), so $p = y^{p-2}$. Solutions are $p=4, y=2$ ($x=2^4=16$) and $p=3, y=3$ ($x=3^3=27$).  
+-- - If $p - 2q < 0$, let $m = 2q - p > 0$; then $p/q = 1/z^m$, so $p=1$, $q = z^m \geq 2$. But $2z^m = 1 + m$ yields no integer $z \geq 2$, $m \geq 3$.  
+-- 
+-- No other cases work.  
+-- 
+-- **Alternative proof (functional):** For $y > 1$ fixed, $x = y^{x / y^2}$. Testing small $y$: $y=2$ gives $x=16$; $y=3$ gives $x=27$; $y=4$ gives $x^{16} = 4^x$, no integer $x > 1$ (e.g., $x=4^k$ fails for $k \geq 1$); higher $y$ yield $y^{x / y^2}$ non-integer or inconsistent with growth rates.
+-- 
+-- ### Conclusion
+-- The only positive integer solutions are $(x, y) = (1, 1)$, $(16, 2)$, $(27, 3)$.

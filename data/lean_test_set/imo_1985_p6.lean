@@ -1,0 +1,71 @@
+-- Proof content:
+-- **1. [Problem Restatement]**
+-- Prove that there is precisely one real number $x_1$ that generates a sequence via $x_{n+1}=x_n(x_n + 1/n)$ where $0<x_n<x_{n+1}<1$ for all $n \ge 1$.
+-- 
+-- **2. [Key Idea]**
+-- Uniqueness is established by showing that the difference between two such sequences would grow exponentially, leading to a contradiction. Existence is proven by constructing a nested sequence of non-empty intervals whose intersection contains exactly one point, which is the required value of $x_1$.
+-- 
+-- **3. [Proof]**
+-- 
+-- First, let's analyze the conditions on the sequence $\{x_n\}$.
+-- 1.  $x_n > 0$ for all $n$.
+-- 2.  $x_{n+1} > x_n \implies x_n(x_n+1/n) > x_n$. Since $x_n>0$, this simplifies to $x_n+1/n > 1$, or $x_n > 1-1/n$.
+-- 3.  $x_{n+1} < 1 \implies x_n^2 + x_n/n - 1 < 0$. Let $g_n(y)$ be the positive root of $x^2+x/n-y=0$, so $g_n(y) = \frac{-1/n + \sqrt{1/n^2+4y}}{2}$. The condition becomes $x_n < g_n(1)$.
+-- 
+-- Combining these, the condition $0<x_n<x_{n+1}<1$ for all $n$ is equivalent to $x_n \in (1-1/n, g_n(1))$ for all $n \geq 1$, where we define $1-1/1=0$.
+-- 
+-- **Uniqueness**
+-- 
+-- Assume $x_1$ and $y_1$ are two distinct values that both generate sequences satisfying the conditions. Let $y_1 < x_1$.
+-- Let $\{x_n\}$ and $\{y_n\}$ be the corresponding sequences. The function $f_n(t) = t(t+1/n)$ is strictly increasing for $t>0$. Since $x_1, y_1 > 1-1/1=0$, an easy induction shows $0 < y_n < x_n$ for all $n$.
+-- The conditions imply $x_n > 1-1/n$ and $y_n > 1-1/n$ for all $n$.
+-- 
+-- Let $d_n = x_n - y_n > 0$.
+-- $d_{n+1} = x_{n+1} - y_{n+1} = (x_n^2 + x_n/n) - (y_n^2 + y_n/n)$
+-- $d_{n+1} = (x_n^2 - y_n^2) + (x_n-y_n)/n$
+-- $d_{n+1} = (x_n-y_n)(x_n+y_n) + d_n/n = d_n(x_n+y_n+1/n)$.
+-- 
+-- Using the bounds on $x_n$ and $y_n$:
+-- $x_n + y_n + 1/n > (1-1/n) + (1-1/n) + 1/n = 2-1/n$.
+-- Thus, $d_{n+1} > d_n(2-1/n)$.
+-- 
+-- Iterating this inequality gives:
+-- $d_n > d_1 \prod_{k=1}^{n-1} \left(2-\frac{1}{k}\right)$.
+-- The product $\prod_{k=1}^{n-1}(2-1/k) = 1 \cdot \frac{3}{2} \cdot \frac{5}{3} \cdots \frac{2n-3}{n-1}$. The logarithm of the product is $\sum_{k=2}^{n-1} \ln(2-1/k)$. Since $\ln(2-1/k) > \ln(1.5)$ for $k \ge 2$, the sum diverges to infinity. Thus, $\lim_{n\to\infty} d_n = \infty$.
+-- 
+-- However, $x_n < 1$ and $y_n > 0$, which implies $d_n = x_n - y_n < 1$ for all $n$. This is a contradiction.
+-- Therefore, there can be at most one such value of $x_1$.
+-- 
+-- **Existence**
+-- 
+-- Let $I_n = (1-1/n, 1)$ for $n \ge 1$ (with $1-1/1=0$). The required conditions on the sequence are equivalent to $x_n \in I_n$ and $x_{n+1}<1$ for all $n \ge 1$.
+-- Let $f_n(x) = x(x+1/n)$. Note that $f_n$ is strictly increasing on $(0,\infty)$.
+-- Let $K_n = \{c>0 \mid \text{the sequence starting with } x_1=c \text{ satisfies } 0<x_k<x_{k+1}<1 \text{ for } k=1, \ldots, n\}$.
+-- $c \in K_n$ if and only if for $k=1, \dots, n$, $x_k > 1-1/k$ and $x_{k+1} < 1$.
+-- 
+-- Let's analyze these sets. $K_n$ is the set of $c$ such that:
+-- $x_1(c) \in (1-1/1, g_1(1))$
+-- $x_2(c) \in (1-1/2, g_2(1))$
+-- ...
+-- $x_{n+1}(c) < 1 \iff x_n(c) < g_n(1)$.
+-- 
+-- Since each $x_k(c)$ is a continuous, strictly increasing function of $c$, each $K_n$ is an open interval, say $(a_n, b_n)$.
+-- It is clear that $K_1 \supset K_2 \supset K_3 \supset \dots$.
+-- Let's show $K_n$ is non-empty for all $n$.
+-- $K_1 = (0, g_1(1)) = (0, (\sqrt{5}-1)/2)$, which is non-empty.
+-- Assume $K_n$ is a non-empty open interval. The set of values $\{x_{n+1}(c) \mid c \in K_n\}$ is also a non-empty open interval. For $K_{n+1}$ to be non-empty, we need this image interval to have a non-empty intersection with $(1-1/(n+1), 1)$. This is guaranteed because $1-1/(n+1) > 1-1/n$, and for any $c \in K_n$, $x_n(c)>1-1/n$, so $x_{n+1}(c) = x_n(x_n+1/n) > (1-1/n)(1-1/n+1/n)=1-1/n$.
+-- The interval of possible values for $x_{n+1}$ will overlap with $(1-1/(n+1), 1)$, ensuring $K_{n+1}$ is non-empty.
+-- 
+-- We have a sequence of non-empty nested intervals $[a_n, b_n]$. By the Nested Interval Theorem, the intersection $\bigcap_{n=1}^\infty [a_n, b_n]$ is non-empty. The uniqueness proof implies this intersection can contain at most one point. Thus, there is a unique point $\alpha = \lim a_n = \lim b_n$ in the intersection.
+-- 
+-- Let's show $x_1 = \alpha$ is the desired value.
+-- For any $n$, $\alpha \in [a_n, b_n]$, so by construction, $x_k(\alpha)$ satisfies $1-1/k \le x_k \le g_k(1)$ for $k=1, \ldots, n$. As this holds for all $n$, it holds for all $k \ge 1$.
+-- We must show the inequalities are strict.
+-- Suppose $x_k(\alpha) = g_k(1)$ for some $k$. This means $x_{k+1}(\alpha)=1$. By definition, $b_k$ is the value of $c$ such that $x_{k+1}(c)=1$. So $\alpha=b_k$. But the nesting is strict ($b_{k+1} < b_k$), so $\alpha \le b_{k+1} < b_k$, a contradiction.
+-- Suppose $x_k(\alpha) = 1-1/k$ for some $k \ge 2$. By definition, $a_k$ is the value of $c$ such that $x_k(c)=1-1/k$. So $\alpha=a_k$. But the nesting is strict ($a_{k+1} > a_k$), so $\alpha \ge a_{k+1} > a_k$, a contradiction.
+-- For $k=1$, $x_1(\alpha) = \alpha$. We need $\alpha>0$. Since $a_2$ is the solution to $x_2=1/2$, i.e., $x_1(x_1+1)=1/2$, we get $a_2 = (\sqrt{3}-1)/2 > 0$. So $\alpha \ge a_2 > 0$.
+-- 
+-- Therefore, for $x_1 = \alpha$, we have $x_k \in (1-1/k, g_k(1))$ for all $k \ge 1$, which ensures $0<x_k<x_{k+1}<1$ for all $n$.
+-- 
+-- **4. [Conclusion]**
+-- There exists exactly one initial value $x_1$ for which the sequence satisfies $0<x_n<x_{n+1}<1$ for all $n$.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given that the inverse function h(x)=f⁻¹(x) satisfies h(2)=10, h(10)=1, and h(1)=2, determine f(f(10)). 2. [Key Idea] Use the property of inverses: h(y)=x ⇔ f(x)=y, then chain the obtained f-values. 3. [Proof] Because h=f⁻¹: • h(2)=10 ⇒ f(10)=2 • h(1)=2 ⇒ f(2)=1 Now compute: f(f(10)) = f(2) = 1. 4. [Conclusion] Therefore f(f(10)) equals 1.

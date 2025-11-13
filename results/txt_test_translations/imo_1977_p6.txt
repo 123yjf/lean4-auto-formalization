@@ -1,0 +1,27 @@
+-- Proof content (ℕ-version):
+-- 1. [Problem Restatement] Given a function f : ℕ → ℕ such that for every n we have f(f(n)) < f(n + 1), prove that f(n) = n for all n.
+-- 2. [Key Idea] 
+--    - First show a very strong lower bound: for all k ≤ n, we have k ≤ f(n). In particular, n ≤ f(n).
+--    - This implies f is strictly increasing.
+--    - Then the hypothesis f(f(n)) < f(n+1), together with strict monotonicity, forces f(n) < n+1. Combining n ≤ f(n) and f(n) < n+1 yields f(n) = n.
+-- 3. [Proof]
+--    - Define h'(k, n): “if k ≤ n then k ≤ f(n)”, and prove it by induction on k.
+--      • Base k = 0: Trivial, since 0 ≤ f(n).
+--      • Step k → k+1: Assume k ≤ n implies k ≤ f(n) for all n. Fix n with k+1 ≤ n. Then k ≤ n−1 (because k+1 ≤ n). By the induction hypothesis applied twice, first to n−1 and then to f(n−1), we get k ≤ f(f(n−1)). By the given hypothesis, f(f(n−1)) < f((n−1)+1) = f(n), so k < f(n). Hence k+1 ≤ f(n).
+--      This proves h'(k, n). In particular, taking k = n gives n ≤ f(n).
+--    - From n ≤ f(n) and the hypothesis f(f(n)) < f(n+1), we deduce f(n) < f(n+1). A standard result then gives that f is strictly increasing.
+--    - Apply strict monotonicity to the inequality f(f(n)) < f(n+1): since f is strictly increasing, this is equivalent to f(n) < n+1.
+--    - Now combine n ≤ f(n) and f(n) < n+1 to conclude f(n) = n (an integer lying between n and n+1 must equal n).
+-- 4. [Conclusion] For all n, f(n) = n; that is, f is the identity on ℕ.
+
+-- Proof content (ℕ+-version):
+-- 1. [Problem Restatement] Given a function f : ℕ+ → ℕ+ on the positive integers such that for every n we have f(f(n)) < f(n + 1), prove that f(n) = n for all n in ℕ+.
+-- 2. [Key Idea] Extend f to a function g on all of ℕ by setting g(0) = 0 and g(m) = f(m) for m > 0. Check that g satisfies the same type of inequality on ℕ, apply the ℕ-version of the result to conclude g(m) = m for all m, and then restrict back to positive integers to get f(n) = n.
+-- 3. [Proof]
+--    - Define g : ℕ → ℕ by g(m) = 0 if m = 0, and g(m) = f(m) (interpreting m as a positive integer) if m > 0.
+--    - Verify the hypothesis for g:
+--      • For x = 0: g(g(0)) = g(0) = 0, and g(1) = f(1) > 0, so g(g(0)) < g(1).
+--      • For x > 0: then g(x) > 0 and x+1 > 0, so g(g(x)) = f(f(x)) and g(x+1) = f(x+1); the given hypothesis on f yields g(g(x)) < g(x+1).
+--    - By the ℕ-version proved above, g(n) = n for all n ∈ ℕ.
+--    - For a positive n, we have g(n) = f(n) by definition of g; hence f(n) = n.
+-- 4. [Conclusion] For all positive integers n, f(n) = n; that is, f is the identity on ℕ+.

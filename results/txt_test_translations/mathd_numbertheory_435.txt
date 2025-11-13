@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show simultaneously that the following six arithmetic facts hold:
+--    (i) 5 + 1 = 6, (ii) 1 < 2, (iii) 2 + 1 = 3, (iv) 3 − 1 = 2, (v) 4 − 3 = 1, and (vi) 6 = 2 · 3.
+-- 2. [Key Idea] Each statement is a straightforward arithmetic identity or strict inequality:
+--    - The equalities are proved by reflexivity (both sides reduce to the same numeral).
+--    - The inequality 1 < 2 is decidable and holds trivially.
+--    The final claim is a conjunction, so we prove each component separately and combine them using conjunction introduction.
+-- 3. [Proof] 
+--    - Prove 5 + 1 = 6 by direct computation; Lean closes this with reflexivity (rfl).
+--    - Prove 1 < 2 using the decision procedure for linear arithmetic (decide).
+--    - Prove 2 + 1 = 3 by reflexivity.
+--    - Prove 3 − 1 = 2 by reflexivity.
+--    - Prove 4 − 3 = 1 by reflexivity.
+--    - Prove 6 = 2 * 3 by reflexivity.
+--    - Combine these six results into a single proof of their conjunction by repeatedly applying the constructor rule for conjunction and inserting each established fact.
+-- 4. [Conclusion] All six arithmetic facts hold, so their conjunction (5 + 1 = 6) ∧ (1 < 2) ∧ (2 + 1 = 3) ∧ (3 − 1 = 2) ∧ (4 − 3 = 1) ∧ (6 = 2 * 3) is true.

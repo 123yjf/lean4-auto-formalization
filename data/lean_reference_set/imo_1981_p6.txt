@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the value of the function f at (4, 1981), where f is defined by the standard Ackermann recursion.
+-- 2. [Key Idea] Recognize that f is the classical Ackermann function A(x, y). Use known closed forms for small first arguments: A(3, y) = 2^(y+3) − 3 and A(4, y) = 2↑↑(y+3) − 3, where 2↑↑n denotes a power tower of n twos.
+-- 3. [Proof] 
+--    Step 0 (Identification): The three defining rules for f match exactly the recursive definition of the classical Ackermann function A, so f ≡ A.
+--    Step 1 (Closed forms for small x): By routine induction on y using the recursion,
+--      A(0, y) = y + 1,
+--      A(1, y) = y + 2,
+--      A(2, y) = 2y + 3,
+--      A(3, y) = 2^(y + 3) − 3.
+--    Step 2 (Case x = 4): Let g(y) = A(4, y). Then:
+--      Initial value: g(0) = A(3, 1) = 2^4 − 3 = 13.
+--      Recurrence: g(y + 1) = A(3, g(y)) = 2^(g(y) + 3) − 3.
+--      We claim by induction that g(y) = 2↑↑(y + 3) − 3.
+--        Base case y = 0: 2↑↑3 = 2^(2^2) = 16, so 16 − 3 = 13 = g(0).
+--        Inductive step: If g(y) = 2↑↑(y + 3) − 3, then
+--          g(y + 1) = 2^(g(y) + 3) − 3 = 2^((2↑↑(y + 3) − 3) + 3) − 3 = 2^(2↑↑(y + 3)) − 3 = 2↑↑(y + 4) − 3,
+--          so the formula holds for y + 1.
+--    Step 3 (Evaluation at 1981): Substituting y = 1981 gives
+--      f(4, 1981) = A(4, 1981) = 2↑↑(1981 + 3) − 3 = 2↑↑1984 − 3.
+-- 4. [Conclusion] The value is f(4, 1981) = 2↑↑1984 − 3, i.e., a tower of 1984 twos minus three.

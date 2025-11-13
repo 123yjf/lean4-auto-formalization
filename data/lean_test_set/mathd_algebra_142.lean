@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the line through B(7, –1) and C(–1, 7), write it as y = mx + b, and compute m + b. 2. [Key Idea] The slope m is the change in y divided by the change in x; once m is known, substitute either point to obtain b. 3. [Proof] Slope: m = (7 – (–1)) / (–1 – 7) = 8 / (–8) = –1. Intercept: use B(7, –1). –1 = (–1)(7) + b ⇒ b = 6. Therefore y = –x + 6 and m + b = –1 + 6 = 5. 4. [Conclusion] The required sum is m + b = 5.

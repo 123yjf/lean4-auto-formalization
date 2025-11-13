@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show two things about integers: (a) 8 is even; (b) 8 + (8 + 2) + (8 + 4) + (8 + 6) + (8 + 8) equals (1 + 3 + 5 + 7 + 9 + 11 + 13 + 15) − 4.
+-- 2. [Key Idea] For (a), exhibit a number whose double is 8. For (b), directly simplify both sides arithmetically; both evaluate to the same integer.
+-- 3. [Proof] 
+--    - Split the conjunction into two goals.
+--    - Evenness: Take 4 as a witness; indeed 8 = 4 + 4 (equivalently, 8 = 2 · 4), so 8 is even.
+--    - Equality: Compute both sides. The left-hand side is 8 + 10 + 12 + 14 + 16 = 60. The right-hand side is the sum of the first eight odd numbers, 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = 64, then subtract 4, giving 60. Hence the two sides are equal. In Lean, this is dispatched by simplification of numerals.
+-- 4. [Conclusion] Both claims hold: 8 is even, and the two given expressions are equal (both equal 60).

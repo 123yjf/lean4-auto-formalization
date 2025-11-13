@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given sec x + tan x = 22/7, compute csc x + cot x in lowest terms, then return the sum of its numerator and denominator.
+-- 2. [Key Idea] Use the identity (sec x + tan x)(sec x − tan x) = 1 to find sec x − tan x. From the sum and difference, solve for sec x and tan x, then get sin x and cos x, and finally compute csc x + cot x.
+-- 3. [Proof] Since (sec x + tan x)(sec x − tan x) = 1 and sec x + tan x = 22/7, we have sec x − tan x = 7/22. Then:
+   - sec x = [(sec x + tan x) + (sec x − tan x)]/2 = (22/7 + 7/22)/2 = 533/308
+   - tan x = [(sec x + tan x) − (sec x − tan x)]/2 = (22/7 − 7/22)/2 = 435/308
+  Hence cos x = 1/sec x = 308/533 and sin x = tan x · cos x = (435/308)(308/533) = 435/533.
+  Therefore csc x = 1/sin x = 533/435 and cot x = cos x/sin x = 308/435, so
+  csc x + cot x = (533 + 308)/435 = 841/435 = 29/15 after simplifying by 29. Thus the numerator and denominator are 29 and 15.
+-- 4. [Conclusion] The sum of the numerator and denominator is 29 + 15 = 44.

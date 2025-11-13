@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for all real numbers a and b, we have |a + b| /(1 + |a + b|) ≤ |a| /(1 + |a|) + |b| /(1 + |b|).
+-- 2. [Key Idea] Let x = |a| ≥ 0 and y = |b| ≥ 0. Define g(t) = t /(1 + t) for t ≥ 0. It suffices to prove g is sub-additive on [0, ∞): g(x) + g(y) − g(x + y) ≥ 0.
+-- 3. [Proof] Set x = |a| and y = |b|, so x, y ≥ 0. Define g(t) = t /(1 + t). We need to show g(x) + g(y) ≥ g(x + y). Consider the difference Δ = g(x) + g(y) − g(x + y) = x/(1 + x) + y/(1 + y) − (x + y)/(1 + x + y). Bring this to the common denominator (1 + x)(1 + y)(1 + x + y) to get
+Δ = [x(1 + y)(1 + x + y) + y(1 + x)(1 + x + y) − (x + y)(1 + x)(1 + y)] / [(1 + x)(1 + y)(1 + x + y)].
+Expanding the numerator and simplifying yields xy(2 + x + y), which is ≥ 0 since x, y ≥ 0. The denominator (1 + x)(1 + y)(1 + x + y) is strictly positive, so Δ ≥ 0. Therefore g(x) + g(y) ≥ g(x + y). Substituting back x = |a| and y = |b| gives the desired inequality. (Alternatively, note g''(t) = −2/(1 + t)³ < 0, so g is concave and increasing on [0, ∞); concavity implies g(x + y) ≤ g(x) + g(y], consistent with the direct algebra.)
+-- 4. [Conclusion] Hence, for all real a and b, the inequality |a + b| /(1 + |a + b|) ≤ |a| /(1 + |a|) + |b| /(1 + |b|) holds.

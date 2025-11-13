@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for integers a = -1 and b = 5, the expression -a - b^2 + 3ab equals -39.
+-- 2. [Key Idea] Directly substitute the values of a and b and simplify using basic integer arithmetic.
+-- 3. [Proof] Substitute a = -1 and b = 5:
+--    -a = -(-1) = 1,
+--    b^2 = 25, so -b^2 = -25,
+--    3ab = 3 · (-1) · 5 = -15.
+--    Summing gives 1 + (-25) + (-15) = 1 - 25 - 15 = 1 - 40 = -39.
+-- 4. [Conclusion] Therefore, -a - b^2 + 3ab = -39 when a = -1 and b = 5, as claimed.

@@ -1,0 +1,49 @@
+-- Proof content:
+-- 1. [Problem Restatement]
+-- Show that there is exactly one real initial value x₁ such that the sequence defined by x_{n+1} = x_n(x_n + 1/n) satisfies 0 < x_n < x_{n+1} < 1 for every n ≥ 1.
+--
+-- 2. [Key Idea]
+-- Uniqueness: If two different initial values produced such sequences, the difference between the two sequences would be multiplied at each step by a factor uniformly larger than 1, forcing that difference to blow up, which contradicts the global bound x_n < 1.
+-- Existence: View the condition 0 < x_n < x_{n+1} < 1 as a pair of bounds on x_n, namely 1 − 1/n < x_n < r_n where r_n is the positive root of x^2 + x/n − 1 = 0. Then construct, by induction on n, a nested family of nonempty open intervals K_n of admissible x₁’s. Continuity and monotonicity of the iterates in the initial value ensure each K_n is a nonempty open interval, the K_n are nested, and their closures have a single common point α. That α is the unique required x₁, and the inequalities are strict by excluding boundary cases.
+--
+-- 3. [Proof]
+-- Reformulating the constraints:
+-- - For each n, the map f_n(t) := t(t + 1/n) is strictly increasing on (0, ∞).
+-- - The requirement x_{n+1} > x_n with x_n > 0 is equivalent to x_n + 1/n > 1, i.e., x_n > 1 − 1/n.
+-- - The requirement x_{n+1} < 1 is equivalent to x_n^2 + x_n/n − 1 < 0, i.e., x_n is less than the positive root of x^2 + x/n − 1 = 0. Writing
+--   r_n := (−1/n + sqrt(1/n^2 + 4))/2,
+--   we have x_{n+1} < 1 iff x_n < r_n.
+-- Thus 0 < x_n < x_{n+1} < 1 for all n exactly when, for every n ≥ 1 (with 1 − 1/1 interpreted as 0), we have
+--   1 − 1/n < x_n < r_n.
+--
+-- Uniqueness:
+-- Suppose two initial values x₁ ≠ y₁ produce sequences (x_n) and (y_n) satisfying 0 < y_n < x_n < 1 and x_n increasing. Because each f_n is increasing and both x₁, y₁ ≥ 0, we have 0 < y_n < x_n for all n. Define d_n := x_n − y_n > 0. Then
+--   d_{n+1} = (x_n^2 + x_n/n) − (y_n^2 + y_n/n)
+--           = (x_n − y_n)(x_n + y_n) + (x_n − y_n)/n
+--           = d_n (x_n + y_n + 1/n).
+-- From the lower bounds x_n > 1 − 1/n and y_n > 1 − 1/n, we get
+--   x_n + y_n + 1/n > (1 − 1/n) + (1 − 1/n) + 1/n = 2 − 1/n,
+-- hence
+--   d_{n+1} > d_n (2 − 1/n).
+-- Iterating yields
+--   d_n > d_1 ∏_{k=1}^{n−1} (2 − 1/k).
+-- For k ≥ 2, 2 − 1/k ≥ 3/2, so
+--   ln d_n ≥ ln d_1 + ∑_{k=2}^{n−1} ln(2 − 1/k) ≥ ln d_1 + (n − 2) ln(3/2),
+-- which diverges to +∞ as n → ∞. Thus d_n → ∞. But 0 < y_n and x_n < 1 for all n imply 0 < d_n = x_n − y_n < 1 for all n, a contradiction. Therefore, at most one such x₁ exists.
+--
+-- Existence:
+-- For n ≥ 1, define the admissible set K_n of initial values by
+--   K_n := { c > 0 | the sequence starting at x₁ = c satisfies 0 < x_k < x_{k+1} < 1 for k = 1, …, n }.
+-- By the reformulation above, c ∈ K_n iff for k = 1, …, n we have 1 − 1/k < x_k(c) < r_k, where x_{k+1}(c) = f_k(x_k(c)) and x_1(c) = c. By induction on k using that f_k and x_k(·) are strictly increasing and continuous, each x_k(·) is strictly increasing and continuous in c. Consequently, each K_n is an open interval (a_n, b_n) (possibly after intersecting with (0, ∞)), and clearly K_{n+1} ⊆ K_n, so (a_n) is nondecreasing and (b_n) is nonincreasing.
+-- Nonemptiness is shown by induction:
+-- - For n = 1, K_1 = (0, r_1) = (0, (√5 − 1)/2), which is nonempty.
+-- - Assume K_n = (a_n, b_n) is nonempty. The image I := { x_{n+1}(c) | c ∈ K_n } is a nonempty open interval because x_{n+1}(·) is continuous and strictly increasing on K_n. As c ↑ b_n, by definition of b_n we have x_{n+1}(c) ↑ 1. Hence sup I = 1. Therefore I intersects the open interval (1 − 1/(n+1), 1). Because K_{n+1} = { c ∈ K_n | x_{n+1}(c) ∈ (1 − 1/(n+1), 1) } is the preimage of that open interval under a continuous strictly increasing map, K_{n+1} is a nonempty open interval contained in K_n.
+-- Thus we have a nested sequence of nonempty compact intervals [a_n, b_n] with a_n < b_n. By the Nested Interval Theorem, ⋂_{n≥1} [a_n, b_n] ≠ ∅. By the uniqueness already proved, this intersection contains at most one point, so it must be a singleton {α}, with α = lim a_n = lim b_n.
+-- We claim x₁ = α works. For each fixed n, α ∈ [a_n, b_n] implies that along the sequence generated from α we have 1 − 1/k ≤ x_k(α) ≤ r_k for k = 1, …, n, hence for all k. We now exclude boundary equalities to make the inequalities strict:
+-- - If x_k(α) = r_k for some k, then x_{k+1}(α) = 1. By construction b_k is the unique c with x_{k+1}(c) = 1, so α = b_k. But K_{k+1} ⊊ K_k implies b_{k+1} < b_k, hence α ≤ b_{k+1} < b_k, a contradiction.
+-- - If x_k(α) = 1 − 1/k for some k ≥ 2, then by definition α = a_k. But K_{k+1} ⊊ K_k implies a_{k+1} > a_k, hence α ≥ a_{k+1} > a_k, a contradiction.
+-- - For k = 1, we must have α > 0. Indeed, a_2 is the (unique) solution of x_1(x_1 + 1) = 1/2, namely a_2 = (√3 − 1)/2 > 0, and α ≥ a_2.
+-- Hence for x₁ = α we have strict inequalities 1 − 1/k < x_k(α) < r_k for all k, which exactly means 0 < x_k < x_{k+1} < 1 for every n.
+--
+-- 4. [Conclusion]
+-- There exists exactly one real initial value x₁ such that the sequence defined by x_{n+1} = x_n(x_n + 1/n) satisfies 0 < x_n < x_{n+1} < 1 for all n ≥ 1.

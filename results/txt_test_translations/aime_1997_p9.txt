@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a real number a such that a > 0, 2 < a^2 < 3, and the fractional parts of a⁻¹ and a^2 are equal: fract(a⁻¹) = fract(a^2). We must prove that a^12 − 144·a⁻¹ = 233.
+-- 2. [Key Idea] Use the bounds on a^2 to identify fract(a^2) explicitly as a^2 − 2, and show that 0 ≤ a⁻¹ < 1 so fract(a⁻¹) = a⁻¹. The given equality of fractional parts then forces a⁻¹ = a^2 − 2, which yields a cubic equation a^3 − 2a − 1 = 0. Factoring this shows a satisfies the golden ratio quadratic a^2 − a − 1 = 0, and positivity singles out a = φ = (1 + √5)/2. Known identities for φ then give φ^12 = 144φ + 89 and φ⁻¹ = φ − 1, from which the desired value follows.
+-- 3. [Proof]
+- First, determine fract(a^2). Since 2 < a^2 < 3, the integer part of a^2 is 2, so fract(a^2) = a^2 − 2.
+- Next, show fract(a⁻¹) = a⁻¹. Because a > 0, we have a⁻¹ ≥ 0. The inequality 2 < a^2 implies a > 1 (otherwise a ≤ 1 would give a^2 ≤ 1, a contradiction), so a⁻¹ < 1. Hence 0 ≤ a⁻¹ < 1, and thus fract(a⁻¹) = a⁻¹.
+- Using the hypothesis fract(a⁻¹) = fract(a^2), we conclude a⁻¹ = a^2 − 2. Multiplying both sides by a > 0 gives 1 = a(a^2 − 2) = a^3 − 2a, so a^3 − 2a − 1 = 0.
+- Factor the cubic: a^3 − 2a − 1 = (a + 1)(a^2 − a − 1). Since a > 0, we have a + 1 > 0, so the factor a^2 − a − 1 must be zero. Thus a is a root of x^2 − x − 1 = 0.
+- The quadratic x^2 − x − 1 = 0 has roots (1 ± √5)/2. The root (1 − √5)/2 is negative because √5 > 1, while a > 0 by hypothesis. Therefore a = (1 + √5)/2, the golden ratio φ.
+- Use standard identities for the golden ratio:
+  • φ^2 = φ + 1 (equivalently, φ satisfies φ^2 − φ − 1 = 0).
+  • φ⁻¹ = φ − 1.
+  • For Fibonacci numbers F_n, one has φ^n = φ·F_n + F_{n−1}. In particular, F_{12} = 144 and F_{11} = 89, so φ^12 = 144·φ + 89.
+- Substituting a = φ into the target expression:
+  a^12 − 144·a⁻¹ = (144·a + 89) − 144·(a − 1) = 144a + 89 − 144a + 144 = 233.
+-- 4. [Conclusion] The conditions force a to be the golden ratio φ. Using φ^12 = 144φ + 89 and φ⁻¹ = φ − 1, we compute a^12 − 144·a⁻¹ = 233.

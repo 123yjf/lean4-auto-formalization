@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given two real numbers with sum 25 and difference 11, find the larger number.
+-- 2. [Key Idea] Model the numbers with two equations and solve; adding the sum and the difference yields twice the larger number.
+-- 3. [Proof] Let x be the larger number and y the smaller. Then: (1) x + y = 25 and (2) x − y = 11. Adding (1) and (2) gives 2x = 36, so x = 18. Equivalently, (sum + difference)/2 = (25 + 11)/2 = 18.
+-- 4. [Conclusion] The larger number is 18.

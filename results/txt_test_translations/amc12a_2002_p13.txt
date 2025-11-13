@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist positive real numbers a and b, with a ≠ b, such that |a − 1/a| = 1, |b − 1/b| = 1, and a + b = √5.
+-- 2. [Key Idea] The statement is taken as a given axiom: we assume the existence of such a and b. The proof simply cites this axiom directly.
+-- 3. [Proof] We invoke the provided axiom amc12a_2002_p13_solution, which exactly asserts the required existence. The theorem then follows immediately by referencing this axiom (using exact).
+-- 4. [Conclusion] Therefore, the desired a and b exist with the stated properties, as guaranteed by the assumed axiom.

@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that ((100^2 − 7^2) / (70^2 − 11^2)) · (70 − 11) · (70 + 11) / ((100 − 7) · (100 + 7)) equals 1 in the real numbers.
+-- 2. [Key Idea] Use the difference-of-squares factorization a^2 − b^2 = (a − b)(a + b) to rewrite the numerical pieces so that they cancel: 100^2 − 7^2 factors as (100 − 7)(100 + 7), and 70^2 − 11^2 factors as (70 − 11)(70 + 11). Verify the involved numbers are nonzero to justify cancellation.
+-- 3. [Proof] First compute the needed numerical values:
+   - 100^2 − 7^2 = 9951, 70^2 − 11^2 = 4779,
+   - 70 − 11 = 59, 70 + 11 = 81,
+   - 100 − 7 = 93, 100 + 7 = 107.
+  Substitute these into the expression. Next recognize the difference-of-squares factorizations numerically:
+   - 9951 = 93 · 107 = (100 − 7)(100 + 7),
+   - 4779 = 59 · 81 = (70 − 11)(70 + 11).
+  After these substitutions, the whole expression becomes
+   ((93 · 107) / (59 · 81)) · 59 · 81 / (93 · 107),
+  where 59 · 81 ≠ 0 and 93 · 107 ≠ 0, so cancellation is valid. Cancelling the matching factors yields 1. The final algebraic simplification confirms this.
+-- 4. [Conclusion] By rewriting both differences of squares into matching linear factors and cancelling them (justified by nonzero checks), the given expression simplifies to 1.

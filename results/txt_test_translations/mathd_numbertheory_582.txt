@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] For any integer n, if n is congruent to 0 modulo 3 (i.e., 3 divides n), then the sum (n + 4) + (n + 6) + (n + 8) is congruent to 0 modulo 9.
+-- 2. [Key Idea] Rewrite the sum as 3n + 18. Using the hypothesis n = 3k for some integer k, this becomes 9(k + 2), which is a multiple of 9. Hence the sum is 0 modulo 9.
+-- 3. [Proof] First compute the sum: (n + 4) + (n + 6) + (n + 8) = 3n + 18. From n ≡ 0 (mod 3), we have 3 ∣ n, so there exists an integer k with n = 3k. Substituting gives 3n + 18 = 9k + 18 = 9(k + 2). Any multiple of 9 is congruent to 0 modulo 9, so 9(k + 2) ≡ 0 (mod 9). Therefore, the original sum is congruent to 0 modulo 9.
+-- 4. [Conclusion] Given n ≡ 0 (mod 3), the sum (n + 4) + (n + 6) + (n + 8) equals 9(k + 2) for some integer k, hence is 0 modulo 9.

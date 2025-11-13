@@ -1,0 +1,59 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the sum from 1 to 100, defined as sum_1_to_100 = 100 * 101 / 2, leaves remainder 4 when divided by 6.
+-- 2. [Key Idea] Expand the definition and compute the remainder directly by arithmetic evaluation.
+-- 3. [Proof] By definition, sum_1_to_100 = 100 * 101 / 2 = 5050. Computing modulo 6 gives 5050 % 6 = 4.
+-- 4. [Conclusion] Therefore, sum_1_to_100 % 6 = 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that sum_1_to_100 = 5050.
+-- 2. [Key Idea] Use the standard arithmetic series formula n(n + 1)/2 with n = 100.
+-- 3. [Proof] Substituting n = 100, we get 100 * 101 / 2 = 5050 by direct calculation.
+-- 4. [Conclusion] Hence, sum_1_to_100 = 5050.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify that 100 * 101 / 2 = 5050.
+-- 2. [Key Idea] Perform straightforward arithmetic.
+-- 3. [Proof] Compute 100 * 101 = 10100, then 10100 / 2 = 5050.
+-- 4. [Conclusion] Thus, 100 * 101 / 2 = 5050.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 5050 % 6 = 4.
+-- 2. [Key Idea] Use division with remainder: find q such that 5050 = 6q + r with 0 ≤ r < 6.
+-- 3. [Proof] Since 6 * 841 = 5046, we have 5050 = 6 * 841 + 4, so the remainder is 4.
+-- 4. [Conclusion] Therefore, 5050 % 6 = 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify the equality 5050 = 6 * 841 + 4.
+-- 2. [Key Idea] Direct multiplication and addition.
+-- 3. [Proof] Compute 6 * 841 = 5046, then 5046 + 4 = 5050.
+-- 4. [Conclusion] The equality holds: 5050 = 6 * 841 + 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] Re-prove that sum_1_to_100 % 6 = 4 using previously established equalities.
+-- 2. [Key Idea] Replace sum_1_to_100 by 5050 and then take the remainder modulo 6.
+-- 3. [Proof] From sum_1_to_100 = 5050, we have sum_1_to_100 % 6 = 5050 % 6. From earlier, 5050 % 6 = 4. Hence sum_1_to_100 % 6 = 4.
+-- 4. [Conclusion] The remainder of the sum from 1 to 100 upon division by 6 is 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (1 + 2 + 3 + 4 + 5 + 0) % 6 = 3.
+-- 2. [Key Idea] Compute the sum and then reduce modulo 6.
+-- 3. [Proof] The sum is 1 + 2 + 3 + 4 + 5 + 0 = 15. Then 15 % 6 = 3.
+-- 4. [Conclusion] Therefore, (1 + 2 + 3 + 4 + 5 + 0) % 6 = 3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (16 * 3) % 6 = 0.
+-- 2. [Key Idea] Multiply and reduce modulo 6.
+-- 3. [Proof] Compute 16 * 3 = 48. Since 48 is divisible by 6, 48 % 6 = 0.
+-- 4. [Conclusion] Hence, (16 * 3) % 6 = 0.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (97 + 98 + 99 + 100) % 6 = 4.
+-- 2. [Key Idea] Add the numbers and take the result modulo 6.
+-- 3. [Proof] The sum is 97 + 98 + 99 + 100 = 394. Since 6 * 65 = 390, the remainder is 394 − 390 = 4, so 394 % 6 = 4.
+-- 4. [Conclusion] Therefore, (97 + 98 + 99 + 100) % 6 = 4.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove both that sum_1_to_100 = 5050 and that 5050 % 6 = 4.
+-- 2. [Key Idea] Combine previously established results into a conjunction.
+-- 3. [Proof] We already have sum_1_to_100 = 5050 from the arithmetic series formula, and 5050 % 6 = 4 from the modular computation. Taking these together gives the desired conjunction.
+-- 4. [Conclusion] Both statements hold: sum_1_to_100 = 5050 and 5050 % 6 = 4.

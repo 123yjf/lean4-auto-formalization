@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the units digit (last digit) of 16^17 · 17^18 · 18^19.
+-- 2. [Key Idea] Compute the product modulo 10. Replace each base by its last digit and use the cyclic patterns of powers modulo 10: 6^k ≡ 6 for all k ≥ 1; powers of 7 and 8 repeat with period 4.
+-- 3. [Proof] Let P = 16^17 · 17^18 · 18^19. Working modulo 10:
+--    a) 16 ≡ 6 (mod 10), and 6^k ≡ 6 (mod 10) for any k ≥ 1, so 16^17 ≡ 6 (mod 10).
+--    b) 17 ≡ 7 (mod 10). The powers of 7 modulo 10 cycle every 4: 7^1 ≡ 7, 7^2 ≡ 9, 7^3 ≡ 3, 7^4 ≡ 1. Since 18 ≡ 2 (mod 4), we get 7^18 ≡ 7^2 ≡ 9 (mod 10).
+--    c) 18 ≡ 8 (mod 10). The powers of 8 modulo 10 cycle every 4: 8^1 ≡ 8, 8^2 ≡ 4, 8^3 ≡ 2, 8^4 ≡ 6. Since 19 ≡ 3 (mod 4), we get 8^19 ≡ 8^3 ≡ 2 (mod 10).
+--    Multiplying the residues: 6 · 9 · 2 = 108 ≡ 8 (mod 10). Therefore, P ≡ 8 (mod 10).
+-- 4. [Conclusion] The units digit of 16^17 · 17^18 · 18^19 is 8.

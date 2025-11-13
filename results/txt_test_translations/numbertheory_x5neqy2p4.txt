@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there do not exist integers x and y such that x^5 = y^2 + 4.
+-- 2. [Key Idea] Reduce the equation modulo 11. In Z/11Z, every nonzero element raised to the 5th power is ±1, so the set of 5th powers is {0, 1, 10}. The set of quadratic residues is {0, 1, 3, 4, 5, 9}, so adding 4 gives {4, 5, 7, 8, 9, 2}. These two sets are disjoint, hence no solution can exist modulo 11, and thus none over the integers.
+-- 3. [Proof] Suppose there exist integers x, y with x^5 = y^2 + 4. Map this equality into Z/11Z; because ring homomorphisms preserve addition and powers, we obtain (x mod 11)^5 = (y mod 11)^2 + 4 in Z/11Z. But a direct check in Z/11Z (either by the above residue-class analysis or by finite brute force) shows there are no a, b in Z/11Z with a^5 = b^2 + 4. This contradicts the reduced equation obtained from x and y.
+-- 4. [Conclusion] Therefore, there are no integers x and y satisfying x^5 = y^2 + 4.

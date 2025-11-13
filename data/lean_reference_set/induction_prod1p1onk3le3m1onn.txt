@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every positive integer n, the product ∏_{k=1}^{n} (1 + 1/k³) is at most 3 − 1/n.
+-- 2. [Key Idea] Use mathematical induction on n. The inductive hypothesis gives an upper bound for the product up to n; multiplying by the next factor reduces the claim to a simple numerical inequality that is always true.
+-- 3. [Proof] Define P_n = ∏_{k=1}^{n} (1 + 1/k³).
+   Base case (n = 1): P₁ = 1 + 1 = 2 = 3 − 1, so the statement holds.
+   Inductive step: Assume P_n ≤ 3 − 1/n for some n ≥ 1. Then
+   P_{n+1} = P_n (1 + 1/(n+1)³) ≤ (3 − 1/n)(1 + 1/(n+1)³).
+   It suffices to prove (3 − 1/n)(1 + 1/(n+1)³) ≤ 3 − 1/(n+1).
+   Expanding and rearranging gives
+   (3 − 1/n)/(n+1)³ ≤ 1/(n(n+1)).
+   Multiplying both sides by the positive quantity n(n+1)³ yields
+   3n − 1 ≤ (n+1)².
+   Equivalently, (n+1)²/n ≥ 3 − 1/n, i.e., n + 2 + 1/n ≥ 3 − 1/n, which simplifies to n − 1 + 2/n ≥ 0. This is true for all n ≥ 1. Hence the inductive step holds.
+-- 4. [Conclusion] By induction, for all n ∈ ℕ with n ≥ 1, ∏_{k=1}^{n} (1 + 1/k³) ≤ 3 − 1/n.

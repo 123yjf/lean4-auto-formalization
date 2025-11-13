@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every natural number n, the integer 11 divides 10^n − (-1)^n.
+-- 2. [Key Idea] Use congruences modulo 11. Since 10 ≡ -1 (mod 11), taking n-th powers preserves congruence, giving 10^n ≡ (-1)^n (mod 11). Subtracting the two sides yields 10^n − (-1)^n ≡ 0 (mod 11), which is equivalent to 11 dividing the difference.
+-- 3. [Proof] 
+   - First, observe that 10 ≡ -1 (mod 11). This is immediate because 10 and -1 leave the same remainder modulo 11.
+   - Congruence is preserved under taking powers, so from 10 ≡ -1 (mod 11) we get 10^n ≡ (-1)^n (mod 11).
+   - From a ≡ b (mod m) it follows that a − b ≡ 0 (mod m). Applying this with a = 10^n and b = (-1)^n gives 10^n − (-1)^n ≡ 0 (mod 11).
+   - By the equivalence between “x ≡ 0 (mod m)” and “m divides x,” we conclude that 11 divides 10^n − (-1)^n.
+-- 4. [Conclusion] For every n ∈ ℕ, 11 ∣ (10^n − (-1)^n).

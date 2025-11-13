@@ -1,0 +1,30 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every integer n, if n ≡ 3 (mod 5), then 2n ≡ 1 (mod 5). Along the way, several standard lemmas about modular arithmetic are established:
+- If n % 5 = 3, then n ≡ 3 (mod 5).
+- Congruence is preserved under multiplication on the left: from n ≡ 3 (mod 5), deduce 2n ≡ 2·3 (mod 5).
+- Compute 6 ≡ 1 (mod 5).
+- Transitivity: from 2n ≡ 6 (mod 5) and 6 ≡ 1 (mod 5), conclude 2n ≡ 1 (mod 5).
+- General preservation: if a ≡ b (mod m), then c·a ≡ c·b (mod m) for all integers a, b, c, m.
+- Direct check: the residues of 2·k modulo 5 for k = 0, 1, 2, 3, 4 are 0, 2, 4, 1, 3 respectively.
+- Arithmetic check: 6 = 5 + 1 and hence 6 ≡ 1 (mod 5).
+
+-- 2. [Key Idea] Use basic properties of modular congruence: it is compatible with multiplication (left-multiplication preserves congruence) and it is transitive. Since 6 = 5 + 1, we have 6 ≡ 1 (mod 5). Therefore, from n ≡ 3 (mod 5), multiplying by 2 gives 2n ≡ 6 ≡ 1 (mod 5).
+
+-- 3. [Proof]
+- Main theorem (mathd_numbertheory_185): Let n be an integer with n ≡ 3 (mod 5). Multiplying the congruence by 2 preserves congruence, so 2n ≡ 2·3 (mod 5). The right-hand side is 6, so 2n ≡ 6 (mod 5). Since 6 ≡ 1 (mod 5), transitivity of congruence yields 2n ≡ 1 (mod 5).
+
+- Lemma (remainder_to_congruence): If n % 5 = 3, then by the definition of congruence modulo 5 via remainders, n ≡ 3 (mod 5).
+
+- Lemma (multiply_congruence): From n ≡ 3 (mod 5), multiplying both sides by 2 gives 2n ≡ 2·3 (mod 5), i.e., congruence is preserved under left-multiplication.
+
+- Lemma (compute_six_mod_five): Since 6 = 5 + 1, 6 leaves remainder 1 upon division by 5, so 6 ≡ 1 (mod 5).
+
+- Lemma (transitivity_step): If 2n ≡ 6 (mod 5) and 6 ≡ 1 (mod 5), then by transitivity of ≡ (mod 5), we conclude 2n ≡ 1 (mod 5).
+
+- Lemma (modular_multiplication_preserves): For any integers a, b, c, m, if a ≡ b (mod m), then c·a ≡ c·b (mod m). This is the general statement of left-multiplication preserving congruence.
+
+- Lemma (case_analysis_verification): Checking k = 0, 1, 2, 3, 4 directly shows 2·k modulo 5 yields residues 0, 2, 4, 1, 3 respectively, confirming the stated congruences.
+
+- Lemma (arithmetic_verification): The identity 6 = 5 + 1 is immediate, and thus 6 ≡ 1 (mod 5).
+
+-- 4. [Conclusion] Using standard properties of modular arithmetic—compatibility with multiplication and transitivity—together with the simple computation 6 ≡ 1 (mod 5), we conclude that any integer n congruent to 3 modulo 5 satisfies 2n ≡ 1 modulo 5. The accompanying lemmas formalize these basic facts and straightforward numerical checks.

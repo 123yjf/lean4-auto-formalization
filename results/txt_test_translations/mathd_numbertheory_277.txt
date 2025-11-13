@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers m and n such that m > 0, n > 0, gcd(m, n) = 6, lcm(m, n) = 126, and m + n = 60.
+-- 2. [Key Idea] Provide explicit witnesses for m and n; choose m = 18 and n = 42, and verify each required property.
+-- 3. [Proof] Let m = 18 and n = 42. Then 18 > 0 and 42 > 0. For the gcd, note 18 = 6·3 and 42 = 6·7 with gcd(3, 7) = 1, so gcd(18, 42) = 6. For the lcm, using lcm(m, n) = m·n / gcd(m, n), we get lcm(18, 42) = (18·42)/6 = 18·7 = 126 (equivalently, from prime factorization: 18 = 2·3^2 and 42 = 2·3·7, so lcm = 2·3^2·7 = 126). Finally, 18 + 42 = 60.
+-- 4. [Conclusion] The numbers m = 18 and n = 42 satisfy all conditions, so such natural numbers exist.

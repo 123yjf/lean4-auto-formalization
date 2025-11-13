@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve the linear system: f + 3z = 11 and 3(f − 1) − 5z = −68.
+-- 2. [Key Idea] Use elimination: first simplify the second equation, then combine the two equations to eliminate one variable, solve for the other, and back-substitute.
+-- 3. [Proof] Start by simplifying the second equation: 3(f − 1) − 5z = −68 expands to 3f − 3 − 5z = −68, so 3f − 5z = −65. Now the system is:
+   (1) f + 3z = 11
+   (2) 3f − 5z = −65
+   Multiply equation (1) by 3 to align f-coefficients: 3f + 9z = 33. Subtract equation (2) from this: (3f + 9z) − (3f − 5z) = 33 − (−65), which gives 14z = 98, so z = 7. Substitute z = 7 into equation (1): f + 3·7 = 11, hence f + 21 = 11, so f = −10.
+-- 4. [Conclusion] The system has the unique solution f = −10 and z = 7.

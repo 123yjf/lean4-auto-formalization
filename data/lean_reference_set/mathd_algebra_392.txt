@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Three consecutive positive even integers have the sum of their squares equal to 12296; determine their product divided by 8.
+-- 2. [Key Idea] Represent the integers as 2k − 2, 2k, and 2k + 2. Convert the given sum-of-squares condition into a quadratic equation in k, solve for k, then compute the product and divide by 8.
+-- 3. [Proof] Let the three consecutive even integers be a = 2k − 2, b = 2k, and c = 2k + 2, with k ∈ ℕ and k ≥ 2. Their squares sum to (2k − 2)² + (2k)² + (2k + 2)² = (4k² − 8k + 4) + 4k² + (4k² + 8k + 4) = 12k² + 8. Setting this equal to 12296 gives 12k² + 8 = 12296, so 12k² = 12288, hence k² = 1024 and k = 32 (taking the positive root). Therefore a = 62, b = 64, c = 66. Their product divided by 8 is (a b c)/8 = (62 × 64 × 66)/8 = 62 × 8 × 66 = 496 × 66 = 32736.
+-- 4. [Conclusion] The product of the three integers divided by 8 is 32736.

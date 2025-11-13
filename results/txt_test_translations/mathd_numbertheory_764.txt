@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let p be a prime number with p ≥ 7. In the finite field ZMod p, show that the sum over i = 0, 1, …, p − 3 of (i+1)⁻¹ · (i+2)⁻¹ equals 2.
+-- 2. [Key Idea] Use the algebraic identity (i+1)⁻¹ · (i+2)⁻¹ = (i+1)⁻¹ − (i+2)⁻¹, which holds because both sides equal 1/((i+1)(i+2)) in a field. Summing these differences over consecutive i makes the sum telescope, leaving only the first and last terms: 1⁻¹ − (p−1)⁻¹. Then note that 1⁻¹ = 1 and (p−1) ≡ −1 (mod p), so (p−1)⁻¹ = (−1)⁻¹ = −1, giving 1 − (−1) = 2.
+-- 3. [Proof] 
+--    a) For each i in {0, …, p−3}, the elements i+1 and i+2 are nonzero modulo p, so their inverses exist in ZMod p. The identity (i+1)⁻¹ · (i+2)⁻¹ = (i+1)⁻¹ − (i+2)⁻¹ holds by the calculation (1/(i+1)) − (1/(i+2)) = ((i+2) − (i+1))/((i+1)(i+2)) = 1/((i+1)(i+2)) = (1/(i+1))(1/(i+2)).
+--    b) Therefore, replacing each summand by a difference of consecutive inverses turns the whole sum into a telescoping sum:
+--       ∑_{i=0}^{p−3} [(i+1)⁻¹ − (i+2)⁻¹] = 1⁻¹ − (p−1)⁻¹.
+--    c) In ZMod p, 1⁻¹ = 1. Also, p−1 ≡ −1, and (−1)⁻¹ = −1, so 1 − (p−1)⁻¹ = 1 − (−1) = 2.
+-- 4. [Conclusion] The sum ∑_{i=0}^{p−3} (i+1)⁻¹ · (i+2)⁻¹ equals 2 in ZMod p.

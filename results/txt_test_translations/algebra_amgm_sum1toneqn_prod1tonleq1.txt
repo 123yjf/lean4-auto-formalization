@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] For a positive integer n, let a : Fin n → ℝ be a family of real numbers with each a i ≥ 0 and with total sum ∑ i, a i = n. Show that the product ∏ i, a i ≤ 1.
+-- 2. [Key Idea] Use a case split. If some a i = 0, then the product is 0 and the claim is trivial. Otherwise, all a i > 0 and we can apply the weighted AM-GM inequality with equal weights 1/n. This gives (∏ i, a i)^(1/n) ≤ (1/n) ∑ i a i = 1. Since 1/n > 0 and the product is nonnegative, monotonicity of x ↦ x^(1/n) yields ∏ i, a i ≤ 1.
+-- 3. [Proof] 
+   - First, handle the degenerate case: if there exists i with a i = 0, then the full product over Fin n is 0, so 0 ≤ 1 and we are done.
+   - Otherwise, assume no a i is zero. Together with a i ≥ 0, this implies a i > 0 for all i. In particular, the product ∏ i, a i is strictly positive.
+   - Set equal weights w i = 1/n on the finite index set Fin n. Since n > 0, these weights satisfy w i ≥ 0 and ∑ i w i = 1 (because there are exactly n indices).
+   - Apply the weighted AM-GM inequality to the nonnegative family a i with weights w i:
+     ∏ i a i^(w i) ≤ ∑ i w i a i.
+     Here, the left side is the weighted geometric mean and the right side is the weighted arithmetic mean.
+   - Compute both sides:
+     • Left side: ∏ i a i^(1/n) equals (∏ i a i)^(1/n) by the product–power rule.
+     • Right side: ∑ i (1/n) a i = (1/n) ∑ i a i = (1/n) · n = 1 by the given sum condition.
+     Hence we obtain (∏ i, a i)^(1/n) ≤ 1.
+   - Since 1/n > 0 and ∏ i, a i ≥ 0, the function x ↦ x^(1/n) is order-preserving on [0, ∞). Therefore, from (∏ i, a i)^(1/n) ≤ 1^(1/n) = 1, we conclude ∏ i, a i ≤ 1.
+-- 4. [Conclusion] In all cases, the product ∏ i, a i is at most 1. If any a i is zero, the product is 0. Otherwise, weighted AM-GM with equal weights and the normalization ∑ i a i = n yields (∏ i, a i)^(1/n) ≤ 1, and monotonicity of taking the 1/n-th power gives the desired bound ∏ i, a i ≤ 1.

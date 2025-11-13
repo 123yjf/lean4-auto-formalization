@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a real number p with 0 < p (and also p < 15, though it is not used), show that for every real x with p ≤ x ≤ 15, we have 15 ≤ |x − p| + |x − 15| + |x − (p + 15)|.
+-- 2. [Key Idea] Because x lies between p and 15, each absolute value can be simplified to a linear expression with a known sign. After simplifying, the sum becomes a simple linear function of x, which is then bounded below using x ≤ 15.
+-- 3. [Proof] Let x be any real number with p ≤ x ≤ 15.
+- Since x ≥ p, we have x − p ≥ 0, so |x − p| = x − p.
+- Since x ≤ 15, we have 15 − x ≥ 0, so |x − 15| = 15 − x (using |x − 15| = |15 − x|).
+- Also, x ≤ 15 and 0 < p imply x < p + 15, hence (p + 15) − x ≥ 0, so |x − (p + 15)| = (p + 15) − x (using |x − (p + 15)| = |(p + 15) − x|).
+Adding these gives
+|x − p| + |x − 15| + |x − (p + 15)| = (x − p) + (15 − x) + ((p + 15) − x) = 30 − x.
+Because x ≤ 15, we get 30 − x ≥ 30 − 15 = 15. Therefore 15 ≤ |x − p| + |x − 15| + |x − (p + 15)|.
+-- 4. [Conclusion] For every x with p ≤ x ≤ 15, the sum of the three absolute values is at least 15; in fact it equals 30 − x, so the minimum 15 occurs at x = 15.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the unique pair (s, t) that satisfies the system s = 9 − 2t and t = 3s + 1.
+-- 2. [Key Idea] Use substitution: replace s from the first equation into the second to get a single linear equation in t, solve for t, then back-substitute to find s.
+-- 3. [Proof] From s = 9 − 2t, substitute into t = 3s + 1 to obtain t = 3(9 − 2t) + 1 = 27 − 6t + 1 = 28 − 6t. Thus 7t = 28, so t = 4. Substitute back into s = 9 − 2t to get s = 9 − 2(4) = 9 − 8 = 1. Therefore, the solution is (s, t) = (1, 4).
+-- 4. [Conclusion] The system has the unique solution (1, 4); the two lines intersect exactly at this point.

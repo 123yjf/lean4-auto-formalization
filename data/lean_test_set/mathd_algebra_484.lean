@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the logarithm of 27 to the base 3 equals 3. 2. [Key Idea] By definition, log₃ 27 is the exponent x satisfying 3ˣ = 27, and since 3³ = 27, the desired exponent is 3. 3. [Proof] Direct Definition Let x = log₃ 27. By definition of logarithm: 3ˣ = 27. But 27 = 3³, so 3ˣ = 3³. Because the base 3 is positive and not 1, equality of powers implies x = 3. Hence log₃ 27 = 3. Alternative (Change-of-Base) log₃ 27 = ln 27 / ln 3 = ln(3³) / ln 3 = (3 ln 3) / ln 3 = 3. 4. [Conclusion] Therefore, log₃ 27 equals 3.

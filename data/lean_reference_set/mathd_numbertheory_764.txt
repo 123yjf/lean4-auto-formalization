@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] For a prime p ≥ 7, show that the sum S := Σ_{i=1}^{p−2} i^{-1}(i+1)^{-1} is congruent to 2 modulo p.
+-- 2. [Key Idea] Observe that i^{-1}(i+1)^{-1} equals the telescoping difference i^{-1} − (i+1)^{-1}. Summing these differences collapses the series to its first term minus its last term.
+-- 3. [Proof] Work in the field ℤ/pℤ, where every nonzero element has a multiplicative inverse. For each i with 1 ≤ i ≤ p − 2, compute:
+   i^{-1} − (i+1)^{-1} = ((i+1) − i) / (i(i+1)) = 1 / (i(i+1)) = i^{-1}(i+1)^{-1}.
+   Therefore the sum telescopes:
+   S = Σ_{i=1}^{p−2} [i^{-1} − (i+1)^{-1}] = (1^{-1} − 2^{-1}) + (2^{-1} − 3^{-1}) + … + ((p−2)^{-1} − (p−1)^{-1}) = 1^{-1} − (p−1)^{-1}.
+   Now 1^{-1} = 1. Also p − 1 ≡ −1 mod p, so (p − 1)^{-1} ≡ (−1)^{-1} ≡ −1, since (−1)·(−1) = 1 in ℤ/pℤ. Hence S ≡ 1 − (−1) ≡ 2 (mod p).
+-- 4. [Conclusion] The sum S equals 2 modulo p for any prime p ≥ 7.

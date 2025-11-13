@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists exactly one real number y such that sqrt(19 + 3y) = 7.
+-- 2. [Key Idea] Since 7 > 0, we can safely square both sides: sqrt(19 + 3y) = 7 is equivalent to 19 + 3y = 7^2 = 49. This reduces the problem to solving a simple linear equation, which yields y = 10. The same equivalence also gives uniqueness.
+-- 3. [Proof] 
+--    Existence: Take y = 10. Because 7 > 0, the lemma sqrt_eq_iff_mul_self_eq_of_pos lets us replace sqrt(19 + 3·10) = 7 with 19 + 3·10 = 49, which is true (since 19 + 30 = 49). Hence y = 10 is a solution.
+--    Uniqueness: Suppose y is any real number with sqrt(19 + 3y) = 7. Again using that 7 > 0, the same lemma gives 19 + 3y = 49. Simplifying yields 3y = 30, hence y = 10. Therefore any solution must be 10, proving uniqueness.
+-- 4. [Conclusion] There exists a unique real number y satisfying sqrt(19 + 3y) = 7, namely y = 10.

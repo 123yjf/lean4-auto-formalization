@@ -1,0 +1,46 @@
+-- Proof content:
+-- ### 1. [Problem Restatement]
+-- For sides $a, b, c$ of a triangle, prove $a^2 b(a - b) + b^2 c(b - c) + c^2 a(c - a) \geq 0$, with equality if and only if $a = b = c$.
+-- 
+-- ### 2. [Key Idea]
+-- Assume without loss of generality $a \geq b \geq c > 0$; treat the expression as a function of $a$ for fixed $b, c$ and show it is minimized at $a = b$ with value $bc(b - c)^2 \geq 0$, equality only if $b = c$.
+-- 
+-- ### 3. [Proof]
+-- Let $E = a^2 b(a - b) + b^2 c(b - c) + c^2 a(c - a)$. Assume $a \geq b \geq c > 0$ with triangle inequalities (notably $a < b + c$); relabeling covers all cases.
+-- 
+-- Regard $E$ as a function of $a \in [b, b + c)$:
+-- \[
+-- E(a) = b a^3 - (b^2 + c^2) a^2 + c^3 a + b^3 c - b^2 c^2.
+-- \]
+-- The derivative is
+-- \[
+-- E'(a) = 3b a^2 - 2(b^2 + c^2) a + c^3.
+-- \]
+-- This quadratic in $a$ opens upwards. Its discriminant is $D = 4(b^2 + c^2)^2 - 12 b c^3 = 4b^4 + 8b^2 c^2 + 4c^4 - 12 b c^3$. The larger root is at most $b$, since $\sqrt{D} \leq 4b^2 - 2c^2$ (verified by squaring and showing $b^3 + c^3 - 2bc^2 \geq 0$ for $b \geq c$, with equality iff $b = c$). Thus, $E'(a) \geq 0$ for $a \geq b$, with equality only if $b = c$ and $a = b$.
+-- 
+-- Hence, $E(a)$ is non-decreasing for $a \in [b, b + c)$, minimized at $a = b$:
+-- \[
+-- E(b) = b c (b - c)^2 \geq 0,
+-- \]
+-- with equality iff $b = c$ (implying $a = b = c$).
+-- 
+-- **Alternative proof (using Muirhead/Schur):** Note $E = \sum a^3 b - \sum a^2 b^2$. By Schur's inequality of degree 3 (for positive $a, b, c$): $\sum a^3 + 3abc \geq \sum a^2 b + \sum a b^2 = \sum a^2 b + \sum a^2 b = 2 \sum a^2 b$, wait no.
+-- 
+-- Actually, the standard Schur: for positive x,y,z, r>0, $x^r (x-y)(x-z) + y^r (y-x)(y-z) + z^r (z-x)(z-y) \geq 0$.
+-- 
+-- This is a known form of Schur. Here, set r=2, x=a, y=b, z=c: then the expression is $\sum a^2 (a-b)(a-c) \geq 0$.
+-- 
+-- Expand: $\sum a^2 (a^2 - a b - a c + b c) = \sum (a^4 - a^3 b - a^3 c + a^2 b c)$.
+-- 
+-- Then full sum: $\sum a^4 - \sum a^3 b - \sum a^3 c + \sum a^2 b c$, but since $\sum a^3 b + \sum a^3 c = \sum a^3 (a+b+c) - \sum a^4$ wait, complicated.
+-- 
+-- Note that our E = \frac{1}{2} \sum_{cyc} (a^3 b - a b^3 + a^3 c - a c^3 - 2 a^2 b c + 2 a b^2 c)$ or something, perhaps not easy.
+-- 
+-- Since the analysis works, and Schur might apply directly if we adjust.
+-- 
+-- Upon check, our E = \sum a^2 (a b - b^2) = \sum a^2 b (a - b).
+-- 
+-- This is similar to Schur form, but perhaps the first proof is sufficient and direct.
+-- 
+-- ### 4. [Conclusion]
+-- Thus, $E \geq 0$, with equality precisely when the triangle is equilateral.

@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist integers A and B such that for every real x, (A x − 8)(B x + 3) equals 10 x^2 − x − 24, and additionally A B + B = 12.
+-- 2. [Key Idea] Expand the product (A x − 8)(B x + 3) to get AB x^2 + (3A − 8B) x − 24. Matching coefficients with 10 x^2 − x − 24 requires AB = 10 and 3A − 8B = −1 (the constant term already matches). Choose integers satisfying these, for example A = 5 and B = 2. Then check the extra condition AB + B = 12.
+-- 3. [Proof] First, for arbitrary integers A, B and real x, expand (A x − 8)(B x + 3) to AB x^2 + (3A − 8B) x − 24. Now take A = 5 and B = 2. Then AB = 10 and 3A − 8B = 15 − 16 = −1, so for all real x,
+   (5 x − 8)(2 x + 3) = 10 x^2 − x − 24.
+   Finally, AB + B = 10 + 2 = 12, as required.
+-- 4. [Conclusion] Choosing A = 5 and B = 2 satisfies both the polynomial identity for all real x and the condition AB + B = 12, so such integers exist.

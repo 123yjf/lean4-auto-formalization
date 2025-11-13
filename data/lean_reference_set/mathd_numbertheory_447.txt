@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the sum of the units digits of all multiples of 3 from 0 through 50 (inclusive), and show that this sum equals 78.
+-- 2. [Key Idea] The units digit of 3k depends only on k modulo 10, so the sequence of units digits repeats every 10 terms: 0, 3, 6, 9, 2, 5, 8, 1, 4, 7.
+-- 3. [Proof] For k = 0,…,9, the units digits of 3k are 0, 3, 6, 9, 2, 5, 8, 1, 4, 7, which sum to 45. The multiples of 3 not exceeding 50 are 3k with k = 0,…,16 (since 3·16 = 48), giving 17 multiples in total. Split these into two blocks: (i) k = 0,…,9 contributes 45; (ii) k = 10,…,16 contributes the first seven terms of the repeating pattern, 0, 3, 6, 9, 2, 5, 8, which sum to 33. Therefore, the total sum is 45 + 33 = 78.
+-- 4. [Conclusion] The sum of the units digits of all multiples of 3 between 0 and 50 is 78.

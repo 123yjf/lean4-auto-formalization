@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the integer b with 0 ≤ b < 121 such that 24·b ≡ 1 (mod 121).
+-- 2. [Key Idea] Use the extended Euclidean algorithm to express 1 as an integer linear combination of 24 and 121; the coefficient of 24, taken modulo 121, is the modular inverse.
+-- 3. [Proof] Compute: 121 = 5·24 + 1, so 1 = 121 − 5·24. Reducing modulo 121 gives 1 ≡ −5·24 (mod 121), hence 24·(−5) ≡ 1 (mod 121). Since −5 ≡ 116 (mod 121), we have 24·116 ≡ 1 (mod 121). Check: 24·116 = 2784 = 23·121 + 1.
+-- 4. [Conclusion] The modular inverse of 24 modulo 121 is b = 116.

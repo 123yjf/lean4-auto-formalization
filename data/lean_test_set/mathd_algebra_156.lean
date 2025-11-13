@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the difference m − n when the curves y = x⁴ and y = 5x² − 6 meet at x = ±√m and x = ±√n (with m > n). 2. [Key Idea] Reduce the intersection equation to a quadratic by setting t = x²; its roots will be m and n. 3. [Proof] Intersection ⇒ x⁴ = 5x² − 6 ⇔ x⁴ − 5x² + 6 = 0 Put t = x² (t ≥ 0): t² − 5t + 6 = 0 (t − 2)(t − 3) = 0 So t = 2 or t = 3. Hence x = ±√2, ±√3; thus n = 2, m = 3. Therefore m − n = 3 − 2 = 1. 4. [Conclusion] The required difference is m − n = 1.

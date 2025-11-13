@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers a, b with a² + b² = 1, prove that ab + |a − b| ≤ 1.
+-- 2. [Key Idea] Use the constraint a² + b² = 1 to rewrite |a − b| = √(a² + b² − 2ab) = √(1 − 2ab). This reduces the problem to a single-variable inequality in t = ab.
+-- 3. [Proof] 
+--    a) Compute |a − b| = √((a − b)²) = √(a² + b² − 2ab) = √(1 − 2ab).
+--    b) Set t = ab. From (a − b)² ≥ 0 we get 1 − 2t ≥ 0, so t ≤ 1/2. The target inequality becomes t + √(1 − 2t) ≤ 1 for t ≤ 1/2.
+--    c) Since t ≤ 1/2, both sides are nonnegative; subtract t and square: √(1 − 2t) ≤ 1 − t ⇒ 1 − 2t ≤ (1 − t)² = 1 − 2t + t², which reduces to t² ≥ 0, always true.
+--    d) Hence the inequality holds. Equality requires t² = 0, i.e., ab = 0; combined with a² + b² = 1, this forces (a, b) = (±1, 0) or (0, ±1).
+--    Alternative trigonometric view: Let a = cos θ, b = sin θ. Then ab + |a − b| = ½ sin 2θ + |cos θ − sin θ| = ½ s + √(1 − s) with s = sin 2θ ∈ [−1, 1], and the same one-variable check applies.
+-- 4. [Conclusion] For any real a, b with a² + b² = 1, we have ab + |a − b| ≤ 1, with equality precisely when one of a, b is zero.

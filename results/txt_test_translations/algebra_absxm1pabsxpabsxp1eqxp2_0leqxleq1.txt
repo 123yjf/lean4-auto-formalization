@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for a real number x, the equality |x − 1| + |x| + |x + 1| = x + 2 holds if and only if 0 ≤ x ≤ 1.
+-- 2. [Key Idea] Use the triangle inequality to obtain a universal lower bound |x − 1| + |x + 1| ≥ 2, which forces |x| ≤ x under the assumed equality and hence x ≥ 0. Substituting back shows |x − 1| + |x + 1| = 2; since x ≥ 0 gives |x + 1| = x + 1, this forces |x − 1| = 1 − x and thus x ≤ 1. Conversely, if 0 ≤ x ≤ 1, compute each absolute value directly to reach the desired sum.
+-- 3. [Proof] 
+   → Direction: Assume |x − 1| + |x| + |x + 1| = x + 2.
+   - By the triangle inequality, |x − 1| + |x + 1| ≥ |(x − 1) − (x + 1)| = |−2| = 2. Hence |x − 1| + |x| + |x + 1| ≥ |x| + 2.
+   - Comparing with the assumed equality x + 2 = |x − 1| + |x| + |x + 1| yields |x| + 2 ≤ x + 2, so |x| ≤ x. Together with the general inequality x ≤ |x|, we get |x| = x and therefore x ≥ 0.
+   - Substitute |x| = x into the equality to get |x − 1| + |x + 1| = 2. Since x ≥ 0 implies x + 1 > 0, we have |x + 1| = x + 1, so |x − 1| = 2 − (x + 1) = 1 − x. As an absolute value is nonnegative, 0 ≤ 1 − x, hence x ≤ 1.
+   - The code also records this as (x − 1)(x + 1) ≤ 0 (equivalently x^2 ≤ 1), from which one can re-derive −1 ≤ x ≤ 1 (and, using x ≥ 0, again x ≤ 1). Thus 0 ≤ x ≤ 1.
+   ← Direction: Assume 0 ≤ x ≤ 1.
+   - Then |x| = x, |x + 1| = x + 1 (since x + 1 > 0), and |x − 1| = 1 − x (since x − 1 ≤ 0). Summing gives (1 − x) + x + (x + 1) = x + 2, which is the desired equality.
+-- 4. [Conclusion] The equality |x − 1| + |x| + |x + 1| = x + 2 holds precisely for x in the interval [0, 1].

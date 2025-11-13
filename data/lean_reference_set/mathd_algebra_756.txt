@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the value of b^a given 2^a = 32 and a^b = 125.
+-- 2. [Key Idea] Identify a and b by comparing prime-power factorizations in the given equations, then compute b^a.
+-- 3. [Proof] Step 1. From 2^a = 32 and 32 = 2^5, we conclude a = 5. Step 2. Substituting a = 5 into a^b = 125 gives 5^b = 125, and since 125 = 5^3, it follows that b = 3. Step 3. Compute b^a = 3^5 = 243.
+-- 4. [Conclusion] Hence, b^a = 243.

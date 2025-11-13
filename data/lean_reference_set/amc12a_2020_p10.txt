@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the positive integer n such that log_2(log_16 n) = log_4(log_4 n), and then compute the sum of its digits.
+-- 2. [Key Idea] Set x = log_4 n so that every logarithm can be rewritten in base 2, turning the equation into a simple linear equation in log_2 x.
+-- 3. [Proof] Let x = log_4 n, so n = 4^x. Then log_16 n = (log_4 n) / (log_4 16) = x / 2. Thus the left-hand side is log_2(log_16 n) = log_2(x/2) = log_2 x − 1. The right-hand side is log_4(log_4 n) = log_4 x = (1/2)·log_2 x. Therefore, log_2 x − 1 = (1/2)·log_2 x, which gives (1/2)·log_2 x = 1, so log_2 x = 2 and hence x = 4. Since x = log_4 n = 4, we get n = 4^4 = 256. The sum of the digits of 256 is 2 + 5 + 6 = 13.
+-- 4. [Conclusion] The unique integer is n = 256, and its digits sum to 13 (option E).

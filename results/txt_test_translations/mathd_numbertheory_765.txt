@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] No Lean4 code was provided in the prompt, so there is no specific statement to restate.
+-- 2. [Key Idea] Not applicable, since the code to analyze and extract ideas from is missing.
+-- 3. [Proof] Not applicable, as there is no proof script to translate into English.
+-- 4. [Conclusion] Please provide the Lean4 code you want translated, and I will restate the problem, explain the key idea, translate the proof, and summarize the conclusion accordingly.

@@ -1,0 +1,30 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to classify all functions f: Z → Z satisfying the functional equation
+   for all integers a, b: f(2a) + 2 f(b) = f(f(a + b)).
+   The claim is that this holds if and only if either f is identically zero, or there exists an integer c such that f(x) = 2x + c for all x.
+
+-- 2. [Key Idea] Normalize the function by subtracting the constant f(0): define g(x) = f(x) − f(0). The equation then implies g is additive: g(a + b) = g(a) + g(b). Over the integers, every additive function is linear, so g(x) = d x for some integer d. Substituting f(x) = d x + f(0) back into the functional equation yields the constraints d(d − 2) = 0 and (d − 2) f(0) = 0, hence d ∈ {0, 2}. The case d = 0 forces f ≡ 0, and the case d = 2 gives f(x) = 2x + f(0). Conversely, both families satisfy the given equation.
+
+-- 3. [Proof]
+   - Assume the functional equation holds: for all a, b, f(2a) + 2 f(b) = f(f(a + b)).
+   - Plugging a = 0 gives: for all b, f(0) + 2 f(b) = f(f(b)).
+   - Plugging b = 0 gives: for all a, f(2a) + 2 f(0) = f(f(a)).
+   - Subtracting these, we get for all a: f(2a) = 2 f(a) − f(0).
+   - Using the original equation once more, this implies for all a, b:
+     f(a + b) = f(a) + f(b) − f(0).
+   - Define g(x) = f(x) − f(0). Then g(a + b) = g(a) + g(b) for all a, b (g is additive), and g(0) = 0.
+   - Over Z, additivity implies linearity by induction: setting d = g(1), one proves g(n) = d n for all integers n. Thus f(x) = d x + f(0).
+   - Substitute f(x) = d x + f(0) into the functional equation:
+     • From a = 0, b = 0: f(0) + 2 f(0) = f(f(0)) becomes 3 f(0) = d f(0) + f(0), hence (d − 2) f(0) = 0.
+     • From a = 1, b = 0: f(2) + 2 f(0) = f(f(1)) becomes (2 d + 3 f(0)) = (d^2 + d f(0) + f(0)).
+       Using 2 f(0) = d f(0) from the previous line, this simplifies to 2 d = d^2, i.e. d(d − 2) = 0.
+   - Therefore d = 0 or d = 2.
+     • If d = 0, then f(x) = f(0) is constant. The constraint (d − 2) f(0) = 0 becomes −2 f(0) = 0, so f(0) = 0, i.e. f ≡ 0.
+     • If d = 2, then f(x) = 2x + f(0), which is of the required form with c = f(0).
+   - Conversely, if f ≡ 0, then f(2a) + 2 f(b) and f(f(a + b)) are both 0, so the equation holds.
+     If f(x) = 2x + c, then
+       f(2a) + 2 f(b) = (4a + c) + 2(2b + c) = 4(a + b) + 3c,
+       f(f(a + b)) = f(2(a + b) + c) = 2(2(a + b) + c) + c = 4(a + b) + 3c,
+       so the equation holds.
+
+-- 4. [Conclusion] The functional equation f(2a) + 2 f(b) = f(f(a + b)) holds for all integers a, b if and only if either f is identically zero, or there exists an integer c such that f(x) = 2x + c for all x.

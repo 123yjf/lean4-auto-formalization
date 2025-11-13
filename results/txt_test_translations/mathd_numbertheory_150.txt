@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that for every natural number k with 1 ≤ k ≤ 5, the number 7 + 30k is prime; and also show that 7 + 30·6 is not prime.
+-- 2. [Key Idea] Use the given bounds 1 ≤ k ≤ 5 to perform a finite case analysis on k, checking each value k = 1, 2, 3, 4, 5 directly. In each case, compute 7 + 30k and verify its primality by straightforward computation. For k = 6, show non-primality by exhibiting a factorization.
+-- 3. [Proof] 
+- Split the goal into two parts: (i) the universal statement over k in {1, …, 5}, and (ii) the non-primality at k = 6.
+- For (i), assume 1 ≤ k ≤ 5. The interval_cases tactic reduces to the five cases k = 1, 2, 3, 4, 5.
+  • If k = 1: 7 + 30·1 = 37, which is prime.
+  • If k = 2: 7 + 30·2 = 67, which is prime.
+  • If k = 3: 7 + 30·3 = 97, which is prime.
+  • If k = 4: 7 + 30·4 = 127, which is prime.
+  • If k = 5: 7 + 30·5 = 157, which is prime.
+  Each of these primality checks is verified by computation.
+- For (ii), compute 7 + 30·6 = 187. Note that 187 = 11 · 17, so it is composite and therefore not prime.
+-- 4. [Conclusion] All five numbers 37, 67, 97, 127, and 157 (corresponding to k = 1 through 5) are prime, while 187 (corresponding to k = 6) is not prime. Hence the stated conjunction holds.

@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a, b > 0 and a natural number n, show that ((a + b) / 2)^n ≤ (a^n + b^n) / 2.
+-- 2. [Key Idea] Use that the function x ↦ x^n is convex on [0, ∞). For a convex function, Jensen’s (or the convexity) inequality with equal weights 1/2 gives f((a + b)/2) ≤ (f(a) + f(b))/2 when a, b are in the domain.
+-- 3. [Proof] The library result convexOn_pow n states that x ↦ x^n is convex on [0, ∞). Since a, b > 0, they lie in [0, ∞). Apply the convexity inequality to the points a and b with weights 1/2 and 1/2, verifying that these weights are nonnegative and sum to 1. This yields ((1/2)·a + (1/2)·b)^n ≤ (1/2)·a^n + (1/2)·b^n. Simple algebraic rewriting shows that ((1/2)·a + (1/2)·b) = (a + b)/2 and (1/2)·a^n + (1/2)·b^n = (a^n + b^n)/2, giving the desired inequality.
+-- 4. [Conclusion] Therefore, for all a, b > 0 and n ∈ ℕ, the inequality ((a + b) / 2)^n ≤ (a^n + b^n) / 2 holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that for any natural number n, the function x ↦ x^n is convex on the set [0, ∞) over ℝ.
+-- 2. [Key Idea] Invoke the standard result from the library that establishes this convexity directly.
+-- 3. [Proof] This follows immediately from the lemma convexOn_pow n, which states that x ↦ x^n is convex on [0, ∞).
+-- 4. [Conclusion] Hence, x ↦ x^n is convex on [0, ∞) for every n ∈ ℕ.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the integer n such that gcd(n, 40) = 10 and lcm(n, 40) = 280.
+-- 2. [Key Idea] For any positive integers a and b, we have a·b = gcd(a, b) · lcm(a, b).
+-- 3. [Proof] Using the product formula: n·40 = gcd(n, 40) · lcm(n, 40) = 10 · 280. Solving gives n = (10 · 280) / 40 = 280 / 4 = 70. Verification: gcd(70, 40) = 10 (common prime factors are 2 and 5), and lcm(70, 40) = (70·40)/10 = 280. Alternatively, via prime factors: 40 = 2^3·5, 70 = 2·5·7, so gcd = 2^1·5^1 = 10 and lcm = 2^3·5^1·7^1 = 280.
+-- 4. [Conclusion] The unique integer satisfying the conditions is n = 70.

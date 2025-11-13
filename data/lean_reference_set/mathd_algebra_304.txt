@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show mentally that 91² equals 8281.
+-- 2. [Key Idea] Use the binomial square formulas to avoid long multiplication by choosing numbers close to 91: (a + b)² = a² + 2ab + b² and (a − b)² = a² − 2ab + b².
+-- 3. [Proof] Method A (using 90 + 1): (90 + 1)² = 90² + 2·90·1 + 1² = 8100 + 180 + 1 = 8281. Method B (using 100 − 9): (100 − 9)² = 100² − 2·100·9 + 9² = 10000 − 1800 + 81 = 8281.
+-- 4. [Conclusion] Both computations yield 8281, so 91² = 8281.

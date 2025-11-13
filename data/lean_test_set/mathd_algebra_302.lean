@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the value of $\left(\dfrac{i}{2}\right)^2$. 2. [Key Idea] Square the fraction term-wise and use the fundamental fact $i^{2} = -1$. 3. [Proof] $\displaystyle\left(\frac{i}{2}\right)^{2} \;=\; \frac{i^{2}}{2^{2}}\;=\;\frac{-1}{4}\;=\;-\frac14.$ 4. [Conclusion] Hence $\left(\dfrac{i}{2}\right)^{2} = -\dfrac14$.

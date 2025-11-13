@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive real numbers a, b, c with ab + bc + ca ≥ 3, prove that a / sqrt(a + b) + b / sqrt(b + c) + c / sqrt(c + a) ≥ 3 / sqrt 2.
+
+-- 2. [Key Idea] The code assumes as an axiom a “reduction to equality” statement that directly yields the desired inequality under the hypothesis ab + bc + ca ≥ 3. Thus, the final theorem is obtained immediately by invoking this axiom. Although additional axioms suggest a potential deeper strategy (using Cauchy–Schwarz to bound the square of the sum in terms of p = a + b + c, then a polynomial inequality in p, together with a bound p ≥ 3), these are not used in the final proof.
+
+-- 3. [Proof] 
+- The file introduces four axioms:
+  1) reduction_to_equality_axiom: For positive a, b, c with ab + bc + ca ≥ 3, the target inequality a / sqrt(a + b) + b / sqrt(b + c) + c / sqrt(c + a) ≥ 3 / sqrt 2 holds.
+  2) cauchy_schwarz_step_axiom: Under the equality constraint ab + bc + ca = 3, it provides a Cauchy–Schwarz-based lower bound S^2 ≥ p^3 / (p^2 − 3), where S is the sum of the three fractions and p = a + b + c.
+  3) polynomial_inequality_axiom: For p ≥ 3, it yields p^3 / (p^2 − 3) ≥ 9 / 2.
+  4) constraint_implies_sum_bound: Under ab + bc + ca = 3 and positivity, it gives p = a + b + c ≥ 3.
+- The lemmas reduction_to_equality, cauchy_schwarz_step, polynomial_inequality, and constraint_bound merely restate these axioms.
+- The final theorem algebra_abpbcpcageq3_sumaonsqrtapbgeq3onsqrt2 assumes a, b, c > 0 and ab + bc + ca ≥ 3 and concludes the desired inequality by directly applying the lemma reduction_to_equality, which is exactly the first axiom.
+
+-- 4. [Conclusion] The inequality a / sqrt(a + b) + b / sqrt(b + c) + c / sqrt(c + a) ≥ 3 / sqrt 2 is established under the given conditions, but the proof provided relies entirely on an axiom that states the result, without deriving it inside the development. The additional axioms indicate a plausible route (Cauchy–Schwarz plus a polynomial bound) that could justify the claim if carried out, but they are not invoked in the final argument.

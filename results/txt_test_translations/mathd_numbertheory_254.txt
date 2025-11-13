@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the remainder when 239 + 174 + 83 is divided by 10 is 6; equivalently, the last digit of the sum is 6.
+-- 2. [Key Idea] Use modular arithmetic: (a + b + c) mod 10 equals ((a mod 10) + (b mod 10) + (c mod 10)) mod 10. Compute the last digits of the addends and add them. As a direct check, also compute the total sum and its division by 10.
+-- 3. [Proof] First compute the total: 239 + 174 + 83 = 496. Since 496 = 10 · 49 + 6, the remainder of 496 upon division by 10 is 6; equivalently, 496 − 6 = 490 = 10 · 49 confirms this decomposition. Alternatively, compute remainders termwise: 239 mod 10 = 9, 174 mod 10 = 4, and 83 mod 10 = 3. Their sum is 9 + 4 + 3 = 16, and 16 mod 10 = 6. By the property of modular addition, (239 + 174 + 83) mod 10 = ((239 mod 10) + (174 mod 10) + (83 mod 10)) mod 10 = 6.
+-- 4. [Conclusion] Therefore, (239 + 174 + 83) % 10 = 6.

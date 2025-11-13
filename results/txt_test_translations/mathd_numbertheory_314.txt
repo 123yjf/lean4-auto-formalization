@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to find a natural number k > 0 such that:
+--    (a) The remainder of k · 1342 upon division by 13 is strictly less than the remainder of 1342 upon division by 13.
+--    (b) For every j with 0 < j < k, the remainder of j · 1342 upon division by 13 is at least the remainder of 1342 upon division by 13.
+--    (c) Moreover, k · 1342 = 6710.
+-- 2. [Key Idea] Compute 1342 mod 13, then use that (j · 1342) mod 13 = (j · (1342 mod 13)) mod 13 to check small multiples. We look for the smallest positive j where the remainder drops below 1342 mod 13. This occurs at j = 5, and we also verify 5 · 1342 = 6710.
+-- 3. [Proof] First, compute 1342 mod 13 = 3. Then:
+--    - For j = 1: (1 · 1342) mod 13 = 3 ≥ 3.
+--    - For j = 2: (2 · 1342) mod 13 = (2 · 3) mod 13 = 6 ≥ 3.
+--    - For j = 3: (3 · 1342) mod 13 = (3 · 3) mod 13 = 9 ≥ 3.
+--    - For j = 4: (4 · 1342) mod 13 = (4 · 3) mod 13 = 12 ≥ 3.
+--    - For j = 5: (5 · 1342) mod 13 = (5 · 3) mod 13 = 15 mod 13 = 2 < 3.
+--    Thus, taking k = 5 we satisfy the strict inequality at k and the “no smaller j works” condition for all 1 ≤ j ≤ 4. Finally, compute 5 · 1342 = 6710.
+-- 4. [Conclusion] Choosing k = 5 meets all requirements: k > 0, (5 · 1342) mod 13 = 2 < 3 = 1342 mod 13, every j with 0 < j < 5 has (j · 1342) mod 13 ≥ 3, and 5 · 1342 = 6710.

@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the product (∑_{k=1}^{20} log_{5^{k}}(3^{k^{2}})) · (∑_{k=1}^{100} log_{9^{k}}(25^{k})).
+-- 2. [Key Idea] Use change of base to simplify each term. In general, log_{a^k}(b^{m}) = (m/k)·log_a b. Thus the first sum’s k-th term becomes k·log₅3, and the second sum’s k-th term becomes log₉25 = log₃5. Then use ∑_{k=1}^{20} k = 210 and the identity log₅3 · log₃5 = 1.
+-- 3. [Proof] For the first sum, log_{5^{k}}(3^{k^{2}}) = (k² ln 3)/(k ln 5) = k·(ln 3/ln 5) = k·log₅3. Therefore ∑_{k=1}^{20} log_{5^{k}}(3^{k^{2}}) = log₅3 · ∑_{k=1}^{20} k = log₅3 · (20·21/2) = 210·log₅3. For the second sum, log_{9^{k}}(25^{k}) = (k ln 25)/(k ln 9) = ln 25/ln 9 = log₉25. Since 25 = 5² and 9 = 3², log₉25 = (ln 5²)/(ln 3²) = ln 5/ln 3 = log₃5. Hence ∑_{k=1}^{100} log_{9^{k}}(25^{k}) = 100·log₃5. The product is (210·log₅3)·(100·log₃5) = 210·100·(log₅3·log₃5) = 21,000·1 = 21,000, because log₅3·log₃5 = 1.
+-- 4. [Conclusion] The value of the expression is 21,000 (choice E).

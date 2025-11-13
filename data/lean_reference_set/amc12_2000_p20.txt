@@ -1,0 +1,16 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given three equations for positive real numbers x, y, z:
+   x + 1/y = 4, y + 1/z = 1, and z + 1/x = 7/3. We are asked to find the value of the product xyz.
+-- 2. [Key Idea] Multiply the three equations together to create a symmetric expression. Expand the product once to get terms involving xyz and 1/(xyz) along with the sums x + y + z and 1/x + 1/y + 1/z. Then use the sum of the original equations to substitute for these sums, leaving an equation in P = xyz and 1/P that can be solved.
+-- 3. [Proof] Let P = xyz > 0. Multiply the three equations:
+   (x + 1/y)(y + 1/z)(z + 1/x) = 4 · 1 · 7/3 = 28/3.
+   Expanding the left-hand side once gives:
+   (x + 1/y)(y + 1/z)(z + 1/x) = xyz + (x + y + z) + (1/x + 1/y + 1/z) + 1/(xyz).
+   Next, add the original three equations:
+   (x + 1/y) + (y + 1/z) + (z + 1/x) = 4 + 1 + 7/3 = 22/3,
+   which means x + y + z + 1/x + 1/y + 1/z = 22/3.
+   Substitute this into the expanded product and equate to 28/3:
+   P + 1/P + 22/3 = 28/3, so P + 1/P = 2.
+   Since P > 0, solve P + 1/P = 2 by multiplying through by P:
+   P^2 − 2P + 1 = 0, i.e., (P − 1)^2 = 0, hence P = 1.
+-- 4. [Conclusion] The product xyz equals 1, so the answer is (B).

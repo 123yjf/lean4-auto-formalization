@@ -1,0 +1,28 @@
+-- Proof content:
+-- 1. [Problem Restatement] We work with a real sequence x : ℕ → ℝ. 
+--    • The predicate recurrence x means: for every n ≥ 1, x(n + 1) = x n · (x n + 1/n).
+--    • The predicate valid_sequence x means: for every n ≥ 1, 0 < x n, x n < x(n + 1), and x(n + 1) < 1.
+--    The goals are:
+--    (a) Show that recurrence x is definitionally equal to the quantified formula (hence the “well-defined” lemmas).
+--    (b) From recurrence x, extract the recurrence formula for any given n ≥ 1.
+--    (c) From valid_sequence x, extract the triple of inequalities for any given n ≥ 1.
+--    (d) Expand the recurrence into x(n + 1) = (x n)^2 + x n / n.
+--    (e) Prove positivity is preserved by the recurrence: if x n > 0 and n ≥ 1, then x(n + 1) > 0.
+-- 2. [Key Idea] 
+--    • Parts (a), (b), and (c) are immediate because the predicates are defined exactly as the quantified statements; we just “unfold” the definitions.
+--    • For (d), rewrite x(n + 1) using the recurrence and distribute the product: x n · (x n + 1/n) = (x n)^2 + x n/n.
+--    • For (e), by the recurrence x(n + 1) is a product of two factors: x n and (x n + 1/n). If x n > 0 and n ≥ 1, then n > 0 in ℝ, so 1/n > 0; hence x n + 1/n > 0; the product of two positive numbers is positive.
+-- 3. [Proof]
+--    (a) and (b) Recurrence:
+--       • recurrence_well_defined: This is true by reflexivity of equality, since recurrence x is defined to be exactly the quantified statement ∀ n ≥ 1, x(n + 1) = x n · (x n + 1/n).
+--       • recurrence_implies_formula: Given hx : recurrence x and n ≥ 1, apply hx at n to obtain x(n + 1) = x n · (x n + 1/n).
+--    (c) Validity:
+--       • validity_well_defined: Similarly, valid_sequence x is definitionally the statement ∀ n ≥ 1, 0 < x n ∧ x n < x(n + 1) ∧ x(n + 1) < 1, so the equivalence holds by reflexivity.
+--       • validity_implies_bounds: Given hx : valid_sequence x and n ≥ 1, apply hx at n to obtain the triple of inequalities 0 < x n, x n < x(n + 1), and x(n + 1) < 1.
+--    (d) Recurrence expansion:
+--       • Using (b), rewrite x(n + 1) as x n · (x n + 1/n). Then expand the product: x n · x n + x n · (1/n) = (x n)^2 + x n / n.
+--    (e) Positivity preservation:
+--       • Assume n ≥ 1 and x n > 0. From n ≥ 1 we get n > 0 as a real number, hence 1/n > 0.
+--       • Then x n + 1/n > 0 by adding two positive numbers.
+--       • By the recurrence, x(n + 1) = x n · (x n + 1/n), a product of two positive factors, so x(n + 1) > 0.
+-- 4. [Conclusion] The “well-defined” lemmas follow immediately from the definitions. The recurrence hypothesis yields the explicit step formula and, after expansion, x(n + 1) = (x n)^2 + x n/n. The validity hypothesis directly gives the bounds at each index. Finally, under the recurrence, positivity of a term x n with n ≥ 1 ensures positivity of the next term x(n + 1).

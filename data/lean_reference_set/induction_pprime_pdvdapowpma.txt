@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every prime number p and every positive integer a, the congruence a^p ≡ a (mod p) holds. Equivalently, p divides a^p − a.
+-- 2. [Key Idea] Modulo a prime p, all interior binomial coefficients in (x + y)^p are multiples of p, so (x + y)^p ≡ x^p + y^p (mod p). Applying this with y = 1 yields (a + 1)^p ≡ a^p + 1 (mod p). Summing the resulting consecutive differences from 0 up to a − 1 telescopes to a^p ≡ a (mod p). Alternatively, in the multiplicative group modulo p, which has order p − 1, either a ≡ 0 (mod p) or a^{p−1} ≡ 1 (mod p), giving a^p ≡ a.
+-- 3. [Proof] 
+--    Binomial-theorem proof:
+--    - If p divides a, then a ≡ 0 (mod p), so a^p ≡ 0 ≡ a (mod p), and we are done. Assume henceforth that p does not divide a.
+--    - By the binomial theorem, (x + y)^p = Σ_{k=0}^p (p choose k) x^{p−k} y^k. For a prime p and 1 ≤ k ≤ p − 1, the binomial coefficient (p choose k) is divisible by p (the numerator has a factor p, while the denominator k!(p−k)! is not divisible by p). Therefore, modulo p we have (x + y)^p ≡ x^p + y^p.
+--    - Take x = a and y = 1 to get (a + 1)^p ≡ a^p + 1 (mod p), which rearranges to (a + 1)^p − a^p ≡ 1 (mod p).
+--    - Apply this identity consecutively for t = 0, 1, …, a − 1 and add the congruences:
+--      (t + 1)^p − t^p ≡ 1 (mod p). Summing gives a^p − 0^p ≡ a (mod p), hence a^p ≡ a (mod p).
+--    - Thus p divides a^p − a.
+--    Alternate group-theoretic proof:
+--    - If p divides a, the result is immediate. Otherwise, a is a unit modulo p. The multiplicative group (Z/pZ)^× has order p − 1, so by Lagrange’s theorem a^{p−1} ≡ 1 (mod p). Multiplying both sides by a yields a^p ≡ a (mod p). Hence p divides a^p − a.
+-- 4. [Conclusion] For every prime p and positive integer a, the congruence a^p ≡ a (mod p) holds. Equivalently, p divides a^p − a.

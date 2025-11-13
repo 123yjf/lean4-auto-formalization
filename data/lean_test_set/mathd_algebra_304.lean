@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show, by mental arithmetic, that 91² = 8281. 2. [Key Idea] Expand (90 + 1)² or (100 − 9)² to avoid long multiplication. 3. [Proof] Method A (using 90 + 1): (90 + 1)² = 90² + 2·90·1 + 1² = 8100 + 180 + 1 = 8281. Method B (using 100 − 9): (100 − 9)² = 100² − 2·100·9 + 9² = 10000 − 1800 + 81 = 8281. 4. [Conclusion] Both expansions confirm that 91² equals 8281.

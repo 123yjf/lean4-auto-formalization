@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] In an arithmetic sequence with first term 2/3 and ninth term 4/5, find the fifth term.
+-- 2. [Key Idea] Use the formula for an arithmetic sequence: a_n = a_1 + (n−1)d. Determine the common difference d from the first and ninth terms, then substitute n = 5 to find the fifth term. Equivalently, note that the fifth term is the average of the first and ninth terms.
+-- 3. [Proof] Let a_1 = 2/3 and d be the common difference. The ninth term is a_9 = a_1 + 8d = 4/5, so 8d = 4/5 − 2/3 = 12/15 − 10/15 = 2/15, hence d = (2/15)/8 = 1/60. Then the fifth term is a_5 = a_1 + 4d = 2/3 + 4(1/60) = 2/3 + 1/15 = 10/15 + 1/15 = 11/15. Alternatively, since the fifth term is midway between the first and ninth terms, a_5 = (a_1 + a_9)/2 = (2/3 + 4/5)/2 = (10/15 + 12/15)/2 = 22/15 ÷ 2 = 11/15.
+-- 4. [Conclusion] The fifth term of the sequence is 11/15.

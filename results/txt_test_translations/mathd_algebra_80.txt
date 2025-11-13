@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a unique rational number x such that x ≠ -1 and (x − 9)/(x + 1) = 2.
+
+-- 2. [Key Idea] Clear the denominator using the assumption x ≠ -1 (so x + 1 ≠ 0), reduce the problem to solving a linear equation, solve to get x = -11, verify it satisfies the original equation, and prove any solution must equal -11.
+
+-- 3. [Proof] 
+- First, observe that if x = -1, then x + 1 = 0. This highlights why we need the condition x ≠ -1 to clear the denominator safely.
+- For any x with x ≠ -1, we have x + 1 ≠ 0. Hence (x − 9)/(x + 1) = 2 is equivalent to x − 9 = 2(x + 1) by multiplying both sides by the nonzero denominator.
+- Expand the right-hand side: 2(x + 1) = 2x + 2.
+- Solve the resulting linear equation: x − 9 = 2x + 2 if and only if x = -11. The “only if” direction is by rearranging terms (x − 2x = 2 + 9), and the “if” direction is verified by direct substitution.
+- Check that x = -11 satisfies the original conditions: indeed, -11 ≠ -1, and ((-11) − 9)/((-11) + 1) = (-20)/(-10) = 2.
+- For uniqueness, suppose x satisfies x ≠ -1 and (x − 9)/(x + 1) = 2. Since x + 1 ≠ 0, the equation is equivalent to x − 9 = 2(x + 1), which simplifies to x − 9 = 2x + 2, hence x = -11. Therefore, any solution must be -11.
+
+-- 4. [Conclusion] There exists a unique rational number x satisfying the conditions, namely x = -11.

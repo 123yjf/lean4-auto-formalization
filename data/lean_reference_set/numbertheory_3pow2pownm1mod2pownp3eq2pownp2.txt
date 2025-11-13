@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every positive integer n, the number 3^{2^{n}} − 1 leaves remainder 2^{n+2} when divided by 2^{n+3}; equivalently, 3^{2^{n}} − 1 ≡ 2^{n+2} (mod 2^{n+3}).
+-- 2. [Key Idea] Use the 2-adic valuation version of the Lifting-the-Exponent (LTE) lemma to compute v₂(3^{2^{n}} − 1). Once we know that the highest power of 2 dividing 3^{2^{n}} − 1 is exactly 2^{n+2}, the desired congruence modulo 2^{n+3} follows immediately.
+-- 3. [Proof] Let v₂(x) denote the exponent of the highest power of 2 dividing x.
+   Step 1: Apply LTE. For odd a, b and even m, LTE gives v₂(a^{m} − b^{m}) = v₂(a − b) + v₂(a + b) + v₂(m) − 1. Take a = 3, b = 1, and m = 2^{n} (which is even). Then
+   v₂(3^{2^{n}} − 1) = v₂(3 − 1) + v₂(3 + 1) + v₂(2^{n}) − 1 = v₂(2) + v₂(4) + n − 1 = 1 + 2 + n − 1 = n + 2.
+   Hence 2^{n+2} divides 3^{2^{n}} − 1 but 2^{n+3} does not.
+   Step 2: Convert to a congruence. Write 3^{2^{n}} − 1 = 2^{n+2}·k with k odd (otherwise v₂ would be at least n+3). Since k is odd, k ≡ 1 (mod 2), so k = 1 + 2t for some integer t. Therefore
+   3^{2^{n}} − 1 = 2^{n+2}(1 + 2t) = 2^{n+2} + 2^{n+3}t ≡ 2^{n+2} (mod 2^{n+3}).
+-- 4. [Conclusion] The exact power of 2 dividing 3^{2^{n}} − 1 is 2^{n+2}, so modulo 2^{n+3} the number 3^{2^{n}} − 1 is congruent to 2^{n+2}.

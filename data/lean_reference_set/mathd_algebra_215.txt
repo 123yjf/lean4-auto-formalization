@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the sum of the two real solutions of (x + 3)² = 121.
+-- 2. [Key Idea] Apply the square-root property: set y = x + 3. If y² = 121, then y = 11 or y = −11.
+-- 3. [Proof] From (x + 3)² = 121, taking square roots yields x + 3 = 11 or x + 3 = −11. Solving gives x₁ = 11 − 3 = 8 and x₂ = −11 − 3 = −14. Their sum is 8 + (−14) = −6.
+-- 4. [Conclusion] The sum of the two solutions is −6.

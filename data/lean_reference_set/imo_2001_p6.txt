@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement]
+-- Given four positive integers K > L > M > N satisfying KM + LN = (K + L - M + N)(-K + L + M + N), prove that KL + MN is composite.
+
+-- 2. [Key Idea]
+-- Rewrite the right-hand side as a difference of squares to obtain a symmetric identity relating K, L, M, N. Then try to use that identity to express KL + MN as a product of two nontrivial integers (i.e., factor it), which would show that KL + MN is composite.
+
+-- 3. [Proof]
+-- The given condition can be written as a difference of squares:
+-- KM + LN = ((L + N) + (K - M))((L + N) - (K - M)) = (L + N)^2 - (K - M)^2.
+-- Expanding and simplifying yields the symmetric identity
+-- K^2 - KM + M^2 = L^2 + LN + N^2  (*).
+-- 
+-- With (*) in hand, the proof attempts to relate KL + MN to products such as (K + M)(L + N) = KL + KN + LM + MN and (K - L)(M - N) = KM - KN - LM + LN, and to substitute KM + LN using (*). A number of candidate factorizations of KL + MN (for example, by expressions like (K ± L ± M ± N)) are tried and explicitly checked; each is found not to expand to KL + MN, so they are rejected.
+-- 
+-- At one point, an incorrect algebraic refactoring leads to K(K - M) = (L + M)(L + N - M), from which a ratio/divisibility argument is sketched that would imply M = N, contradicting M > N. However, this contradiction relies on the earlier faulty refactoring, and thus is not valid.
+-- 
+-- After several further unsuccessful attempts to produce a correct factorization of KL + MN from (*), the text suggests (without establishing it) that perhaps no quadruples K > L > M > N satisfy the hypothesis—under which the claim would be vacuously true—or otherwise simply asserts the intended conclusion.
+
+-- 4. [Conclusion]
+-- The intended conclusion is that KL + MN is not prime (i.e., is composite). However, the derivations presented contain acknowledged algebraic errors and do not yield a valid factorization or a rigorous proof; the vacuity route is also not established. Therefore, as written, the argument does not successfully prove the claim.

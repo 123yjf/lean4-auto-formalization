@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the value of z + 6/z for a complex number z satisfying 12|z|^2 = 2|z+2|^2 + |z^2 + 1|^2 + 31.
+-- 2. [Key Idea] Write z = x + iy. Expanding the moduli and simplifying yields (x^2 + y^2 − 6)^2 + 4(x + 1)^2 = 0, which forces x = −1 and |z|^2 = 6. Then 6/z = 6·conj(z)/|z|^2 = conj(z), so z + 6/z = z + conj(z) = 2 Re(z) = −2.
+-- 3. [Proof] Let z = x + iy. Then |z|^2 = x^2 + y^2, |z + 2|^2 = (x + 2)^2 + y^2, and |z^2 + 1|^2 = (x^2 − y^2 + 1)^2 + (2xy)^2. Substituting into the given equation and simplifying leads to (x^2 + y^2 − 6)^2 + 4(x + 1)^2 = 0. Since both terms are sums of squares, each must be zero, so x^2 + y^2 = 6 and x = −1. Therefore, |z|^2 = 6 and Re(z) = −1. Using 6/z = 6·conj(z)/|z|^2 = conj(z), we get z + 6/z = z + conj(z) = 2 Re(z) = −2.
+-- 4. [Conclusion] The value of z + 6/z is −2.

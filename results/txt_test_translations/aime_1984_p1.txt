@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] In an arithmetic progression with common difference 1, the sum of the first 98 terms is 137. Find the sum of the even-indexed terms a2 + a4 + ... + a98.
+-- 2. [Key Idea] Express both the total sum of the first 98 terms and the sum of the even-indexed terms in terms of the first term a1, then eliminate a1. Equivalently, use the identity 2 · (sum of even-indexed terms) = (sum of first 98 terms) + 49, which comes from simple algebra.
+-- 3. [Proof] Let a1 be the first term. For difference 1, the sum of the first 98 terms is S = 98/2 · (2a1 + 97) = 49 · (2a1 + 97) = 137 (this is the given hypothesis).
+  The sum of the even-indexed terms is
+  E = a2 + a4 + ... + a98 = sum_{k=1}^{49} a_{2k} = sum_{k=1}^{49} (a1 + (2k − 1)) = 49 a1 + sum_{k=1}^{49} (2k − 1) = 49 a1 + 49^2 = 49 a1 + 2401.
+  Now compute 2E:
+  2E = 2 · (49 a1 + 2401) = 49 · (2a1 + 98) = 49 · (2a1 + 97) + 49.
+  Substituting the given 49 · (2a1 + 97) = 137 yields 2E = 137 + 49 = 186. Hence E = 186/2 = 93. Division by 2 is valid since 2 ≠ 0.
+-- 4. [Conclusion] The sum of the even-indexed terms a2 + a4 + ... + a98 equals 93.

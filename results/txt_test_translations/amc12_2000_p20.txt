@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given positive real numbers x, y, z satisfying x + 1/y = 4, y + 1/z = 1, and z + 1/x = 7/3, prove that the product P = x y z equals 1.
+-- 2. [Key Idea] Compute the product (x + 1/y)(y + 1/z)(z + 1/x) in two ways: (i) by substituting the given numeric values, and (ii) by an algebraic expansion that expresses it in terms of P, x + y + z, 1/x + 1/y + 1/z, and 1/P. Then use the sum of the given equations to eliminate x + y + z and 1/x + 1/y + 1/z, isolate P + 1/P, and solve for P using positivity.
+-- 3. [Proof]
+--    - First, substituting the given values into the product yields (x + 1/y)(y + 1/z)(z + 1/x) = 4 · 1 · (7/3) = 28/3.
+--    - Next, expand algebraically:
+--      (x + 1/y)(y + 1/z)(z + 1/x) = ((xy + 1)/y) · ((yz + 1)/z) · ((zx + 1)/x)
+--      = ((xy + 1)(yz + 1)(zx + 1)) / (xyz)
+--      = xyz + (x + y + z) + (1/x + 1/y + 1/z) + 1/(xyz).
+--    - Add the three given equations to get:
+--      (x + 1/y) + (y + 1/z) + (z + 1/x) = 4 + 1 + 7/3 = 22/3,
+--      hence x + y + z + 1/x + 1/y + 1/z = 22/3.
+--    - Let P = xyz. From positivity of x, y, z we have P > 0. Plugging into the expanded product and equating with 28/3 gives:
+--      P + (x + y + z) + (1/x + 1/y + 1/z) + 1/P = 28/3.
+--      Using x + y + z + 1/x + 1/y + 1/z = 22/3, we obtain
+--      P + 1/P = 28/3 − 22/3 = 2.
+--    - Since P > 0, multiply by P ≠ 0 to get P^2 − 2P + 1 = 0, i.e., (P − 1)^2 = 0, hence P = 1.
+-- 4. [Conclusion] The product satisfies xyz = 1.

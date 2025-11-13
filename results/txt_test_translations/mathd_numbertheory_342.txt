@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 54 % 6 = 0.
+-- 2. [Key Idea] Use the fact that for natural numbers n and d, n % d = 0 if and only if d divides n. Then show 6 ∣ 54 by exhibiting an explicit multiple.
+-- 3. [Proof] First compute 54 = 6 * 9 (via arithmetic). Rewriting the goal using the equivalence n % d = 0 ↔ d ∣ n turns the goal into showing 6 ∣ 54. Providing the witness 9 (since 54 = 6 * 9) proves this divisibility. Therefore the original statement 54 % 6 = 0 follows.
+-- 4. [Conclusion] The remainder of 54 upon division by 6 is 0.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that (54 : ZMod 6) = 0.
+-- 2. [Key Idea] In ZMod 6, numbers are identified modulo 6, so any multiple of 6 represents 0. Since 54 is a multiple of 6, its class is 0 by definition.
+-- 3. [Proof] By definitional reduction in ZMod 6, 54 reduces to its remainder modulo 6, which is 0; hence (54 : ZMod 6) = 0. Lean confirms this with rfl.
+-- 4. [Conclusion] The residue class of 54 modulo 6 is 0 in ZMod 6.

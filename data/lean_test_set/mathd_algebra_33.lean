@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given 2x = 5y and 7y = 10z, find z ⁄ x. 2. [Key Idea] Express y in terms of x, then z in terms of y, and finally form the ratio z ⁄ x. 3. [Proof] Step 1: From 2x = 5y, solve for y: y = (2/5)x. Step 2: Substitute y into 7y = 10z: 7(2/5)x = 10z → (14/5)x = 10z → z = (14/5)(1/10)x = (14/50)x = (7/25)x. Step 3: Form the desired ratio: z / x = (7/25)x / x = 7/25. 4. [Conclusion] Therefore, z ⁄ x = 7⁄25.

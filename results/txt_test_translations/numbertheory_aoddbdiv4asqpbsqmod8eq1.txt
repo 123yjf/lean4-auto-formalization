@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] For integers a and b, if a is odd and 4 divides b, then a^2 + b^2 is congruent to 1 modulo 8.
+-- 2. [Key Idea] Write a = 2m + 1 and b = 4k. Then (2m + 1)^2 ≡ 1 (mod 8), because (2m + 1)^2 − 1 = 4m(m + 1) is a multiple of 8, and (4k)^2 ≡ 0 (mod 8), because (4k)^2 = 16k^2 is a multiple of 8. Adding these congruences gives the result.
+-- 3. [Proof] Since a is odd, there exists m with a = 2m + 1. Since 4 ∣ b, there exists k with b = 4k. 
+   To show (2m + 1)^2 ≡ 1 (mod 8), compute (2m + 1)^2 − 1 = 4m(m + 1). Among m and m + 1, one is even, so 2 divides m(m + 1). Hence m(m + 1) = 2t for some t, and thus 4m(m + 1) = 8t, so 8 divides (2m + 1)^2 − 1, proving (2m + 1)^2 ≡ 1 (mod 8).
+   To show (4k)^2 ≡ 0 (mod 8), note (4k)^2 = 16k^2 = 8(2k^2), so 8 divides (4k)^2, i.e., (4k)^2 ≡ 0 (mod 8).
+   By additivity of congruence, (2m + 1)^2 + (4k)^2 ≡ 1 + 0 ≡ 1 (mod 8). Substituting a = 2m + 1 and b = 4k yields a^2 + b^2 ≡ 1 (mod 8).
+-- 4. [Conclusion] Therefore, if a is odd and 4 divides b, then a^2 + b^2 is congruent to 1 modulo 8.

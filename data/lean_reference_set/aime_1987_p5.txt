@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the value of 3x^2 y^2 when integers x, y satisfy y^2 + 3x^2 y^2 = 30x^2 + 517.
+-- 2. [Key Idea] Rewrite the equation to isolate y^2, obtaining y^2 = 10 + 507/(3x^2 + 1). Since y^2 is an integer, 3x^2 + 1 must divide 507, and only one such divisor leads to both x^2 and y^2 being perfect squares.
+-- 3. [Proof] Set A = x^2 ≥ 0 and B = y^2 ≥ 0. The equation becomes B(1 + 3A) = 30A + 517, so
+   B = (30A + 517)/(3A + 1) = 10 + 507/(3A + 1).
+   Because B is an integer, 3A + 1 must divide 507 = 3 · 13^2. The positive divisors d of 507 that can equal 3A + 1 (i.e., d ≡ 1 mod 3) are 1, 13, 169.
+   - If d = 1, then A = (1 − 1)/3 = 0, giving B = 517, which is not a perfect square.
+   - If d = 13, then A = (13 − 1)/3 = 4 = 2^2, and B = 10 + 507/13 = 49 = 7^2.
+   - If d = 169, then A = (169 − 1)/3 = 56, which is not a perfect square.
+   Thus the only possibility with A = x^2 and B = y^2 is A = 4 and B = 49, corresponding to x = ±2 and y = ±7. Therefore 3x^2 y^2 = 3 · 4 · 49 = 588.
+-- 4. [Conclusion] For every integer solution of the given equation, 3x^2 y^2 = 588.

@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for real numbers a and b satisfying a^2 + b^2 = 1, we have (a + b)^2 ≤ 2.
+-- 2. [Key Idea] Expand (a + b)^2 to 1 + 2ab using a^2 + b^2 = 1, then bound the cross term via (a − b)^2 ≥ 0, which gives 2ab ≤ a^2 + b^2 = 1. Hence (a + b)^2 ≤ 2.
+-- 3. [Proof] 
+--    - First expand: (a + b)^2 = a^2 + 2ab + b^2.
+--    - Using the constraint a^2 + b^2 = 1, this becomes (a + b)^2 = 1 + 2ab.
+--    - To bound 2ab, note that (a − b)^2 ≥ 0. Expanding gives a^2 − 2ab + b^2 ≥ 0, so 2ab ≤ a^2 + b^2.
+--    - With a^2 + b^2 = 1, we obtain 2ab ≤ 1 (equivalently, ab ≤ 1/2).
+--    - Substitute into (a + b)^2 = 1 + 2ab to get (a + b)^2 ≤ 1 + 1 = 2.
+-- 4. [Conclusion] Therefore, (a + b)^2 ≤ 2 whenever a^2 + b^2 = 1. Equality occurs when a = b = 1/√2 (or both equal with a^2 + b^2 = 1).

@@ -1,0 +1,47 @@
+-- Proof content:
+-- 1. [Problem Restatement] For any real number x, show that x^2 ≥ 0.
+-- 2. [Key Idea] The square of any real number is nonnegative; this is a standard fact captured by the lemma sq_nonneg.
+-- 3. [Proof] Apply the lemma sq_nonneg directly to x to conclude x^2 ≥ 0.
+-- 4. [Conclusion] Therefore, for all real x, x^2 is nonnegative.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 0^2 = 0 in the real numbers.
+-- 2. [Key Idea] Powers of 0 simplify directly: 0^2 = 0 · 0 = 0. The simplifier can discharge this.
+-- 3. [Proof] Use the simplification tactic to reduce 0^2 to 0.
+-- 4. [Conclusion] Hence, 0 squared equals 0.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 1^2 = 1 in the real numbers.
+-- 2. [Key Idea] Powers of 1 simplify directly: 1^2 = 1 · 1 = 1. The simplifier can discharge this.
+-- 3. [Proof] Use the simplification tactic to reduce 1^2 to 1.
+-- 4. [Conclusion] Hence, 1 squared equals 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a and b, prove (a · b)^2 = a^2 · b^2.
+-- 2. [Key Idea] This is the standard algebraic identity (ab)^2 = a^2 b^2; expanding and collecting terms verifies it.
+-- 3. [Proof] Use the ring tactic to normalize both sides as polynomials and confirm equality.
+-- 4. [Conclusion] Therefore, the square of a product equals the product of squares.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a and b, show that a^2 + b^2 ≥ 0.
+-- 2. [Key Idea] The sum of two nonnegative numbers is nonnegative, and each square is nonnegative.
+-- 3. [Proof] Apply add_nonneg, providing sq_nonneg a and sq_nonneg b as the two nonnegativity witnesses for the summands.
+-- 4. [Conclusion] Hence, a^2 + b^2 is always nonnegative.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 2/5 < 12/25 in the real numbers.
+-- 2. [Key Idea] This is a straightforward numeric comparison; one can clear denominators or compute decimal values.
+-- 3. [Proof] Use norm_num to compute and compare the rational numbers (e.g., 2/5 = 0.4 and 12/25 = 0.48, so 0.4 < 0.48).
+-- 4. [Conclusion] Therefore, 2/5 is less than 12/25.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 11/25 < 12/25 in the real numbers.
+-- 2. [Key Idea] Fractions with the same positive denominator are ordered by their numerators.
+-- 3. [Proof] Use norm_num to reduce the inequality to comparing 11 and 12.
+-- 4. [Conclusion] Therefore, 11/25 is less than 12/25.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (12 : ℝ) / 25 = 0.48.
+-- 2. [Key Idea] Compute the exact decimal: 12/25 = 48/100 = 0.48.
+-- 3. [Proof] Use norm_num to evaluate the quotient and identify it with the decimal numeral 0.48.
+-- 4. [Conclusion] Hence, 12 divided by 25 equals 0.48 in ℝ.

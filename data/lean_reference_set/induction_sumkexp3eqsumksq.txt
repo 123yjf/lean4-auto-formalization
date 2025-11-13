@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every natural number n, show that 0^3 + 1^3 + … + (n−1)^3 equals (0 + 1 + … + (n−1))^2; equivalently, Σ_{k=0}^{n−1} k^3 = (Σ_{k=0}^{n−1} k)^2.
+
+-- 2. [Key Idea] Use induction on n. The crucial observation is that when you pass from n to n+1, the square of the triangular number increases by exactly n^3:
+   (n(n+1)/2)^2 − (n(n−1)/2)^2 = n^3.
+   This matches the amount you add to the cube-sum, so the identity is preserved step by step.
+
+-- 3. [Proof] Base case (n = 1): both sides are 0, so the identity holds.
+   Inductive step: assume Σ_{k=0}^{n−1} k^3 = (Σ_{k=0}^{n−1} k)^2 = (n(n−1)/2)^2. Add n^3 to both sides to get
+   Σ_{k=0}^{n} k^3 = (n(n−1)/2)^2 + n^3.
+   Compute the change in the square of the triangular number:
+   (n(n+1)/2)^2 − (n(n−1)/2)^2
+   = (n^2/4) [ (n+1)^2 − (n−1)^2 ]
+   = (n^2/4) [ (n^2 + 2n + 1) − (n^2 − 2n + 1) ]
+   = (n^2/4) (4n)
+   = n^3.
+   Therefore (n(n−1)/2)^2 + n^3 = (n(n+1)/2)^2, which shows Σ_{k=0}^{n} k^3 = (Σ_{k=0}^{n} k)^2. This completes the induction.
+   Alternative (telescoping): Summing (k+1)^4 − k^4 = 4k^3 + 6k^2 + 4k + 1 from k = 0 to n−1 gives n^4 = 4 Σ k^3 + 6 Σ k^2 + 4 Σ k + n. Using the standard formulas for Σ k and Σ k^2 and solving for Σ k^3 yields Σ k^3 = (Σ k)^2.
+
+-- 4. [Conclusion] For every natural number n, the sum of the first n cubes equals the square of the sum of the first n integers.

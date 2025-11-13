@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a real-valued function f defined on the reals satisfying f(x) + f(x - 1) = x^2 for every real x, and given f(19) = 94, compute f(94) modulo 1000.
+-- 2. [Key Idea] Solve the linear difference equation by finding a quadratic particular solution P(x) and adding the general solution of the homogeneous equation, which is an alternating term. Determine the constant from the initial condition f(19) = 94, then evaluate at x = 94 and reduce modulo 1000.
+-- 3. [Proof] 
+   Step 1. Particular solution. Look for P(x) = a x^2 + b x + c such that P(x) + P(x - 1) = x^2. Compute:
+   P(x) + P(x - 1) = a[x^2 + (x - 1)^2] + b[2x - 1] + 2c
+                    = (2a)x^2 + (-2a + 2b)x + (a - b + 2c).
+   Matching coefficients with x^2 gives:
+   2a = 1 → a = 1/2,
+   -2a + 2b = 0 → -1 + 2b = 0 → b = 1/2,
+   a - b + 2c = 0 → 1/2 - 1/2 + 2c = 0 → c = 0.
+   Thus P(x) = (1/2)x^2 + (1/2)x.
+   Step 2. Homogeneous solution. For h(x) satisfying h(x) + h(x - 1) = 0, on integers we have h(n) = (-1)^n k for some constant k.
+   Step 3. General solution on integers. For every integer n,
+   f(n) = (1/2)n^2 + (1/2)n + (-1)^n k.  (★)
+   Step 4. Determine k using f(19) = 94. Since (1/2)·19^2 + (1/2)·19 = 190, we get 190 - k = 94, hence k = 96.
+   Step 5. Evaluate f(94). Using (★),
+   f(94) = (1/2)·94^2 + (1/2)·94 + (-1)^94·96 = 4418 + 47 + 96 = 4561.
+   Step 6. Reduce modulo 1000. 4561 ≡ 561 (mod 1000).
+   Alternative (telescoping) approach. Iterating the recurrence or using g(n) = (-1)^n f(n) yields a telescoping sum that, together with f(19) = 94, also gives f(94) = 4561, hence the same remainder 561.
+-- 4. [Conclusion] The remainder when f(94) is divided by 1000 is 561.

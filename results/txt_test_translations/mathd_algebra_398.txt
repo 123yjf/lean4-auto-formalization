@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that in the real numbers, 80 × (9/20) × (7/4) = 63.
+-- 2. [Key Idea] Simplify the product by canceling common factors step by step: first simplify 80 × (9/20), then multiply the result by (7/4).
+-- 3. [Proof] Compute 80 × (9/20) = (80/20) × 9 = 4 × 9 = 36. Then compute 36 × (7/4) = (36/4) × 7 = 9 × 7 = 63. Thus the original expression equals 63. In Lean, the tactic norm_num performs these exact arithmetic simplifications automatically.
+-- 4. [Conclusion] Therefore, 80 × (9/20) × (7/4) = 63.

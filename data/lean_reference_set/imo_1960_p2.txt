@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve for all real x (where the expressions are defined) such that 4x^2 / (1 − √(2x + 1))^2 < 2x + 9.
+-- 2. [Key Idea] Make the substitution t = √(2x + 1) to simplify the algebra: express both sides in terms of t, factor (t^2 − 1) = (t − 1)(t + 1), cancel the common (t − 1)^2 with the denominator (noting t ≠ 1), and reduce to a linear inequality in t.
+-- 3. [Proof] Let t = √(2x + 1). Then t ≥ 0 and the domain requires 2x + 1 ≥ 0 (so x ≥ −1/2) and 1 − t ≠ 0 (so t ≠ 1, i.e., x ≠ 0). Also 2x = t^2 − 1 and 4x^2 = (t^2 − 1)^2. The inequality becomes (t^2 − 1)^2 / (1 − t)^2 < t^2 + 8. Factor t^2 − 1 = (t − 1)(t + 1) and note (1 − t)^2 = (t − 1)^2, so after canceling the nonzero factor (t − 1)^2 we get (t + 1)^2 < t^2 + 8. Expanding gives t^2 + 2t + 1 < t^2 + 8, hence 2t + 1 < 8, so t < 7/2. Combining with t ≥ 0 and t ≠ 1 yields 0 ≤ t < 7/2 with t ≠ 1. Translating back via t = √(2x + 1): 0 ≤ √(2x + 1) < 7/2 means −1/2 ≤ x < 45/8, and exclude x = 0 (which makes t = 1 and the denominator zero).
+-- 4. [Conclusion] The inequality holds precisely for x in [−1/2, 0) ∪ (0, 45/8).

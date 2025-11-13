@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to identify the smallest natural number greater than 1 that is both a perfect cube and a perfect fourth power. The lemma states that any natural number m > 1 that is simultaneously a cube and a fourth power must satisfy m ≥ 4096. The theorem then exhibits n = 4096 as such a number and shows it is minimal.
+
+-- 2. [Key Idea] If a number is both a cube and a fourth power, then in its prime factorization every exponent is a multiple of both 3 and 4, hence a multiple of lcm(3,4) = 12. Therefore the number is a twelfth power. Among twelfth powers greater than 1, the smallest is 2^12 = 4096. Thus any such m satisfies m ≥ 4096. We then verify concretely that 4096 is both a cube (16^3) and a fourth power (8^4), and conclude it is the minimal one.
+
+-- 3. [Proof] 
+- For the lemma: Assume m > 1 and m is both a cube and a fourth power, so there exist natural numbers a and b with m = a^3 and m = b^4. Looking at prime factorizations, each prime’s exponent in m must be divisible by 3 (since m is a cube) and by 4 (since m is a fourth power), hence by 12. Therefore m = c^12 for some c ∈ ℕ. Since m > 1, we must have c ≥ 2, so m = c^12 ≥ 2^12. A direct computation gives 2^12 = 4096. Hence m ≥ 4096.
+- For the theorem: Take n = 4096. First, n > 1 is immediate. Next, 16^3 = 4096, so n is a cube, and 8^4 = 4096, so n is a fourth power. For minimality, let m > 1 be any number that is both a cube and a fourth power. By the lemma, m ≥ 4096, so 4096 ≤ m. Thus n is minimal among such numbers. Finally, n = 4096 by construction.
+
+-- 4. [Conclusion] The smallest natural number greater than 1 that is both a perfect cube and a perfect fourth power is 4096. Any m > 1 with both properties must satisfy m ≥ 4096, and 4096 itself equals 16^3 and 8^4.

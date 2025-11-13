@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every natural number n with n ≥ 3, the factorial of n is strictly less than n raised to the power n − 1; that is, n! < n^(n − 1).
+-- 2. [Key Idea] Use induction starting at 3 (le-induction). For the step from k to k + 1, rewrite (k + 1)! as (k + 1) · k!, then:
+--    - multiply the inductive hypothesis k! < k^(k − 1) by the positive factor (k + 1),
+--    - use monotonicity of exponentiation in the base to get k^(k − 1) ≤ (k + 1)^(k − 1),
+--    - and identify (k + 1) · (k + 1)^(k − 1) with (k + 1)^k.
+-- 3. [Proof] We argue by induction on n starting from 3, using the given assumption n ≥ 3.
+--    - Base case (n = 3): Compute directly: 3! = 6 and 3^(3 − 1) = 9, so 6 < 9. 
+--    - Inductive step: Assume k ≥ 3 and k! < k^(k − 1). We must show (k + 1)! < (k + 1)^k.
+--      • Rewrite (k + 1)! = (k + 1) · k!.
+--      • Since (k + 1) > 0, multiplying the inductive hypothesis by (k + 1) preserves strict inequality:
+--        (k + 1) · k! < (k + 1) · k^(k − 1).
+--      • Because k ≤ k + 1, exponentiation with a fixed nonnegative exponent is monotone in the base, so
+--        k^(k − 1) ≤ (k + 1)^(k − 1). Multiplying both sides by (k + 1) preserves ≤:
+--        (k + 1) · k^(k − 1) ≤ (k + 1) · (k + 1)^(k − 1).
+--      • Recognize that (k + 1) · (k + 1)^(k − 1) = (k + 1)^k (this is the standard law a · a^(m) = a^(m + 1), and here (k − 1) + 1 = k).
+--      • Chaining these inequalities yields (k + 1)! < (k + 1)^k, as required.
+-- 4. [Conclusion] By induction starting at n = 3, we conclude that for all n ≥ 3, n! < n^(n − 1).

@@ -1,0 +1,33 @@
+-- Proof content:
+-- 1. [Problem Restatement] For all natural numbers n, show that in ZMod 4 we have Nat.fib (n + 2) = Nat.fib n + Nat.fib (n + 1).
+-- 2. [Key Idea] Use the Fibonacci recurrence Nat.fib (n + 2) = Nat.fib n + Nat.fib (n + 1) and then view both sides in ZMod 4, where addition is preserved by the natural-number cast.
+-- 3. [Proof] The standard identity Nat.fib_add_two gives Nat.fib (n + 2) = Nat.fib n + Nat.fib (n + 1) over the natural numbers. Rewriting by this equality and then simplifying the coercions with the rule that casting respects addition (Nat.cast_add) yields the desired equality in ZMod 4.
+-- 4. [Conclusion] The Fibonacci recurrence holds modulo 4 as stated.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that for every natural number n, (Nat.fib (n + 6) : ZMod 4) = (Nat.fib n : ZMod 4); that is, Fibonacci numbers are periodic modulo 4 with period 6.
+-- 2. [Key Idea] Use strong induction on n. The base cases n = 0 and n = 1 are immediate by computation. For the inductive step, deduce the case n + 2 from the cases n and n + 1 using the Fibonacci recurrence modulo 4, then apply the induction hypotheses.
+-- 3. [Proof] Proceed by strong induction on n. 
+- Base cases: For n = 0 and n = 1, the goal (Nat.fib (n + 6) : ZMod 4) = (Nat.fib n : ZMod 4) reduces by computation and is handled by reflexivity.
+- Inductive step: Assume the statement holds for all m < n + 2, and prove it for n + 2. Using the modular version of the recurrence, first rewrite
+  (Nat.fib (n + 2 + 6) : ZMod 4) = (Nat.fib (n + 6) : ZMod 4) + (Nat.fib (n + 1 + 6) : ZMod 4)
+  by applying the recurrence at index n + 6 (adjusting sums with associativity). Also rewrite
+  (Nat.fib (n + 2) : ZMod 4) = (Nat.fib n : ZMod 4) + (Nat.fib (n + 1) : ZMod 4)
+  by the recurrence at index n. The goal then becomes to show
+  (Nat.fib (n + 6) : ZMod 4) + (Nat.fib (n + 1 + 6) : ZMod 4) = (Nat.fib n : ZMod 4) + (Nat.fib (n + 1) : ZMod 4),
+  which follows by the induction hypotheses applied to n and n + 1 (both are < n + 2), yielding Nat.fib (n + 6) = Nat.fib n and Nat.fib (n + 1 + 6) = Nat.fib (n + 1) in ZMod 4.
+-- 4. [Conclusion] Therefore, Nat.fib (n + 6) ≡ Nat.fib n (mod 4) for all n; the Fibonacci sequence modulo 4 has period 6.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (Nat.fib 100 : ZMod 4) = 3.
+-- 2. [Key Idea] Use that Fibonacci numbers modulo 4 are periodic with period 6. Since 100 ≡ 4 (mod 6), we have Nat.fib 100 ≡ Nat.fib 4 (mod 4). Then compute Nat.fib 4 modulo 4 directly.
+-- 3. [Proof] The code records the small values modulo 4:
+  Nat.fib 1 ↦ 1, Nat.fib 2 ↦ 1, Nat.fib 3 ↦ 2, Nat.fib 4 ↦ 3, Nat.fib 5 ↦ 1, Nat.fib 6 ↦ 0, Nat.fib 7 ↦ 1, Nat.fib 8 ↦ 1 (all in ZMod 4, via reflexivity).
+  It notes that the pair (7, 8) matches (1, 2), consistent with period 6, and restates the period lemma fib_periodic_mod4. It also computes 100 % 6 = 4. The intended step is then to identify (Nat.fib 100 : ZMod 4) with (Nat.fib 4 : ZMod 4) by periodicity and finally use Nat.fib 4 = 3 (mod 4). In the script, this identification is taken as a definitional equality (by rfl), after which rewriting with the computed value for Nat.fib 4 modulo 4 gives the result 3.
+-- 4. [Conclusion] Hence (Nat.fib 100 : ZMod 4) = 3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Directly verify that (Nat.fib 100 : ZMod 4) = 3.
+-- 2. [Key Idea] Use direct computation as encoded in Lean (reflexivity).
+-- 3. [Proof] The proof is given by rfl, meaning Lean treats (Nat.fib 100 : ZMod 4) as definitionally equal to 3 after normalization.
+-- 4. [Conclusion] Therefore, (Nat.fib 100 : ZMod 4) = 3.

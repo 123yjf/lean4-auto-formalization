@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve the real system a²b³ = 32⁄27 and a ⁄ b³ = 27⁄4, and compute a + b.
+-- 2. [Key Idea] Express a from the second equation and substitute into the first. The exponents combine so that b⁹ appears, which can be solved directly, giving b = 2⁄3 and then a = 2.
+-- 3. [Proof] From a ⁄ b³ = 27⁄4, we get a = (27⁄4) b³. Substitute into a²b³ = 32⁄27:
+((27⁄4) b³)² · b³ = 32⁄27 ⟹ (27²⁄4²) b⁶ · b³ = 32⁄27 ⟹ (729⁄16) b⁹ = 32⁄27.
+Thus b⁹ = (32⁄27) · (16⁄729) = 512⁄19683 = 2⁹⁄3⁹, so b = 2⁄3 (the ninth root function is strictly increasing on ℝ, and the right-hand side is positive). Then a = (27⁄4) b³ = (27⁄4) · (2⁄3)³ = (27⁄4) · (8⁄27) = 2. Therefore a + b = 2 + 2⁄3 = 8⁄3.
+-- 4. [Conclusion] The unique real solution yields a + b = 8⁄3.

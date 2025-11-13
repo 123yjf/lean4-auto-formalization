@@ -1,0 +1,33 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to show there exists exactly one natural number n such that:
+   - n > 0,
+   - there are positive real numbers M and C with
+     M + C = 8n and (1/4) M + (1/6) C = 8,
+   - and moreover n = 5.
+   In other words, the unique natural number for which such positive M and C exist (and which is asserted to be 5) is indeed 5.
+
+-- 2. [Key Idea] 
+   - Solve the linear system in M and C:
+     M + C = 8n and (1/4) M + (1/6) C = 8.
+     This yields explicit expressions M = 96 − 16n and C = 24n − 96.
+   - The positivity constraints M > 0 and C > 0 then force 96 − 16n > 0 and 24n − 96 > 0, i.e., n < 6 and n > 4.
+   - The only natural number strictly between 4 and 6 is 5. This pins down n uniquely as 5.
+   - For existence, plug in n = 5 to get M = 16 and C = 24, which are positive and satisfy the equations.
+
+-- 3. [Proof]
+   - Solving the system:
+     From (1/4) M + (1/6) C = 8, multiply by 12 to get 3M + 2C = 96.
+     Subtract 2(M + C = 8n), i.e., 2M + 2C = 16n, to obtain M = 96 − 16n.
+     Substituting back into M + C = 8n gives C = 24n − 96.
+   - Positivity bounds on n:
+     If M > 0, then 96 − 16n > 0, hence 96 > 16n, so n < 6.
+     If C > 0, then 24n − 96 > 0, hence 24n > 96, so n > 4.
+     Therefore any admissible n must satisfy 4 < n < 6, so n = 5.
+   - Existence at n = 5:
+     Take n = 5. Then M = 96 − 16·5 = 16 > 0 and C = 24·5 − 96 = 24 > 0.
+     Check the equations: M + C = 16 + 24 = 40 = 8·5, and
+     (1/4) M + (1/6) C = 4 + 4 = 8. Also n = 5 holds.
+   - Uniqueness:
+     Suppose n with M, C satisfies the hypotheses. By the derived formulas, M = 96 − 16n and C = 24n − 96. Positivity of M and C gives 4 < n < 6, hence n = 5. Therefore any such n must equal 5.
+
+-- 4. [Conclusion] There exists exactly one natural number n satisfying the stated conditions, and it is n = 5. For this n, the corresponding positive solutions are M = 16 and C = 24.

@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given an invertible function f with f(2) = 4 and f⁻¹(2) = 4, compute f(f(2)). 2. [Key Idea] Because f⁻¹(2) = 4, the definition of an inverse forces f(4) = 2; then substitute f(2) = 4. 3. [Proof] Let y = f(2). • By hypothesis, y = 4. • The statement f⁻¹(2) = 4 means precisely that f(4) = 2. Therefore f(f(2)) = f(4) = 2. 4. [Conclusion] Hence f(f(2)) equals 2.

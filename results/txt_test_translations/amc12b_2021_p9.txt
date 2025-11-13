@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for real numbers x, the expression (4 + x)(3 + x) − (5 + x)(2 + x) is always equal to 2. As a consequence, there exists at least one real number x (indeed, any x) for which the expression equals 2.
+-- 2. [Key Idea] Expand both products into polynomials in x and simplify. The like terms cancel, leaving a constant value 2, independent of x. The Lean ring tactic automates this expansion and cancellation.
+-- 3. [Proof] 
+--    - Compute each product:
+--      (4 + x)(3 + x) = 12 + 7x + x^2
+--      (5 + x)(2 + x) = 10 + 7x + x^2
+--    - Subtract:
+--      (12 + 7x + x^2) − (10 + 7x + x^2) = (12 − 10) + (7x − 7x) + (x^2 − x^2) = 2.
+--    - Therefore, for every real x, (4 + x)(3 + x) − (5 + x)(2 + x) = 2.
+--    - In particular, taking x = 0 (or any real x), the equation holds, so there exists a real number x satisfying the equation. The intermediate lemmas in the code separate the expansion step from the final simplification, and the ring tactic carries out the algebraic expansion and cancellation automatically.
+-- 4. [Conclusion] The expression (4 + x)(3 + x) − (5 + x)(2 + x) is identically 2 for all real x. Consequently, there certainly exists an x (e.g., x = 0) making the expression equal to 2.

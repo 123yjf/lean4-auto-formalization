@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that (x + 1)²·x expands to x³ + 2x² + x.
+-- 2. [Key Idea] First expand the square (x + 1)², then multiply the resulting polynomial by x.
+-- 3. [Proof] Expanding the square gives (x + 1)² = x² + 2x + 1. Distributing x over this polynomial yields x(x² + 2x + 1) = x³ + 2x² + x.
+-- 4. [Conclusion] Therefore, (x + 1)²·x = x³ + 2x² + x.

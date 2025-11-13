@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the finite set of integers {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7} has cardinality 11.
+-- 2. [Key Idea] The set is explicitly listed with all distinct elements. Lean’s simplifier knows how to compute the cardinality of such a literal finite set by repeatedly applying the rule that inserting a new element not already present increases the cardinality by 1.
+-- 3. [Proof] The command simp computes the cardinality of the given Finset by expanding the set notation into successive insertions and using lemmas like card_insert together with the fact that each listed integer is distinct and not already in the partially built set. This adds up exactly 11 elements.
+-- 4. [Conclusion] Therefore, the cardinality of the set is 11.

@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let n be a positive integer, let a_0, a_1, ..., a_{n-1} be real numbers (encoded as a : Fin n → ℝ), and let x₁, x₂ be real numbers. Suppose the weighted cosine sums
+--    Σ_{k=0}^{n-1} (2^{-k}) cos(a_k + x₁) = 0 and Σ_{k=0}^{n-1} (2^{-k}) cos(a_k + x₂) = 0
+--    both vanish. Show that there exists an integer m such that x₂ − x₁ = mπ.
+-- 2. [Key Idea] The statement is exactly an instance of a provided axiom (weighted_cosine_zero_difference) asserting that if two such weighted cosine sums are zero, then the difference of the angles is an integer multiple of π.
+-- 3. [Proof] We directly apply the axiom weighted_cosine_zero_difference with the given n, hn, a, x₁, x₂ and hypotheses that both sums vanish. The axiom yields an integer m such that x₂ − x₁ = mπ. No further argument is needed.
+-- 4. [Conclusion] Therefore, under the given assumptions, there exists an integer m with x₂ − x₁ = mπ.

@@ -1,0 +1,53 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show there exist natural numbers A and B with A < 10, B < 10, A ≥ 1, (10A + B)^3 = 912673, and A + B = 16.
+-- 2. [Key Idea] Exhibit a concrete pair A = 9 and B = 7 and verify all conditions directly.
+-- 3. [Proof] Take A = 9 and B = 7. Then A < 10, B < 10, and A ≥ 1 are immediate. Compute (10·9 + 7)^3 = 97^3 = 912673 by direct calculation, and A + B = 9 + 7 = 16.
+-- 4. [Conclusion] Such digits exist; one solution is A = 9 and B = 7.
+
+-- Proof content:
+-- 1. [Problem Restatement] For any natural number d with d < 10, prove that d^3 mod 10 = 3 if and only if d = 7.
+-- 2. [Key Idea] Check all possible digits d = 0, 1, ..., 9; only 7 has cube ending in 3.
+-- 3. [Proof] For the “only if” direction, exhaustively compute d^3 mod 10 for d = 0 through 9; the result equals 3 only when d = 7. For the “if” direction, substituting d = 7 gives 7^3 = 343, and 343 mod 10 = 3.
+-- 4. [Conclusion] Among digits 0–9, the unique d with d^3 ending in 3 is d = 7.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove 90^3 < 912673 and 912673 < 100^3.
+-- 2. [Key Idea] Compute 90^3 and 100^3 explicitly and compare.
+-- 3. [Proof] Calculate 90^3 = 729000 and 100^3 = 1000000. Then 729000 < 912673 < 1000000 holds by direct comparison.
+-- 4. [Conclusion] The number 912673 lies strictly between 90^3 and 100^3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 97^3 = 912673.
+-- 2. [Key Idea] Direct arithmetic evaluation of the cube.
+-- 3. [Proof] Compute 97^3 by expansion or calculator to obtain 912673.
+-- 4. [Conclusion] 97^3 equals 912673.
+
+-- Proof content:
+-- 1. [Problem Restatement] Compute 97^2.
+-- 2. [Key Idea] Direct multiplication.
+-- 3. [Proof] 97^2 = 9409 by straightforward calculation.
+-- 4. [Conclusion] 97^2 = 9409.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify that 7^3 mod 10 = 3.
+-- 2. [Key Idea] Compute 7^3 and take its last digit.
+-- 3. [Proof] 7^3 = 343, whose last digit is 3; therefore 343 mod 10 = 3.
+-- 4. [Conclusion] The cube of 7 ends in the digit 3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Compute 90^3 and 100^3.
+-- 2. [Key Idea] Evaluate the powers directly.
+-- 3. [Proof] 90^3 = 729000 and 100^3 = 1000000 by direct calculation.
+-- 4. [Conclusion] The bounds are 90^3 = 729000 and 100^3 = 1000000.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that if n is a natural number with 90 < n < 100 and n^3 = 912673, then n = 97.
+-- 2. [Key Idea] Check all integers n in the range 91 through 99 and see which one cubes to 912673.
+-- 3. [Proof] By exhaustive case analysis for n = 91, 92, ..., 99, compute n^3 in each case; only n = 97 yields 912673. Hence any n in the given range satisfying n^3 = 912673 must equal 97.
+-- 4. [Conclusion] The solution in the interval (90, 100) is unique and equals n = 97.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 97 can be written as 10·9 + 7.
+-- 2. [Key Idea] Use base-10 decomposition into tens and units.
+-- 3. [Proof] Compute 10·9 = 90, and 90 + 7 = 97.
+-- 4. [Conclusion] 97 = 10·9 + 7, so its tens digit is 9 and its units digit is 7.

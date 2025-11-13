@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find how many angles θ in the interval (0, 2π] satisfy the equation 1 - 3 sin θ + 5 cos 3θ = 0.
+
+-- 2. [Key Idea] Use the triple-angle identity cos 3θ = (1 - 4 sin² θ) cos θ and set x = sin θ to rewrite the equation in terms of x and cos θ. Solve for cos θ in terms of x (away from the case 1 - 4x² = 0), then enforce the Pythagorean relation cos² θ = 1 - x² by squaring. This yields a degree-6 polynomial in x. Show that this polynomial has six roots in (-1, 1), and for each such x there is exactly one θ in (0, 2π] that satisfies the original equation.
+
+-- 3. [Proof] 
+- Let x = sin θ. Using cos 3θ = (1 - 4x²) cos θ, the given equation becomes 1 - 3x + 5(1 - 4x²) cos θ = 0, i.e., 5(1 - 4x²) cos θ = 3x - 1.
+- If 1 - 4x² = 0 (i.e., x = ±1/2), then cos 3θ = (1 - 4x²) cos θ = 0, which would force the original equation to read 1 - 3x = 0, giving x = 1/3, a contradiction. Hence, at any solution we must have 1 - 4x² ≠ 0, and we may divide by it.
+- Thus cos θ = C := (3x - 1) / (5(1 - 4x²)). Since cos² θ = 1 - x², we must have C² = 1 - x². Equivalently,
+  25(1 - x²)(1 - 4x²)² = (3x - 1)².
+- Expanding and simplifying yields the degree-6 polynomial
+  400x⁶ - 600x⁴ + 234x² - 6x - 24 = 0.
+- By evaluating this polynomial at selected points in (-1, 1) and observing sign changes, one finds six distinct real roots in (-1, 1): three in (-1, 0) and three in (0, 1).
+- For any such root x ∈ (-1, 1), there are exactly two angles θ in (0, 2π] with sin θ = x, one with cos θ = +√(1 - x²) and one with cos θ = -√(1 - x²). Our equation determines the sign: cos θ must equal C, where C² = 1 - x², so exactly one of the two possibilities matches C. Hence each root x corresponds to exactly one θ in (0, 2π].
+- Moreover, because cos 3θ = (1 - 4x²) cos θ = (1 - 4x²)C = (3x - 1)/5, plugging back shows the original equation is satisfied; thus squaring introduced no extraneous θ among these.
+
+-- 4. [Conclusion] There are 6 values of θ in (0, 2π] that satisfy 1 - 3 sin θ + 5 cos 3θ = 0.

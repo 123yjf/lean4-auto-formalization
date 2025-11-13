@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] There exists a unique natural number n with n < 101 such that 123456 is congruent to n modulo 101.
+-- 2. [Key Idea] Compute 123456 modulo 101 by writing it in base 10 and using the congruences of powers of 10 modulo 101. Since 10^2 = 100 ≡ −1 (mod 101), the powers of 10 cycle with period 4: 1, 10, −1, −10, 1, 10, …. This reduces 123456 to 34 modulo 101. Uniqueness then follows because two numbers in [0, 100) that are congruent mod 101 must be equal.
+-- 3. [Proof] 
+- Existence: Take n = 34. Clearly 34 < 101. To show 123456 ≡ 34 (mod 101), write
+  123456 = 1·10^5 + 2·10^4 + 3·10^3 + 4·10^2 + 5·10^1 + 6·10^0.
+  Compute powers of 10 modulo 101:
+  10^0 ≡ 1, 10^1 ≡ 10, 10^2 = 100 ≡ −1, 10^3 ≡ −10, 10^4 ≡ 1, 10^5 ≡ 10 (all modulo 101).
+  Substituting these into the expansion and using compatibility of congruence with addition and multiplication gives
+  123456 ≡ 1·10 + 2·1 + 3·(−10) + 4·(−1) + 5·10 + 6·1 (mod 101).
+  The right-hand side simplifies arithmetically to 10 + 2 − 30 − 4 + 50 + 6 = 34. Hence 123456 ≡ 34 (mod 101).
+- Uniqueness: Suppose m < 101 and 123456 ≡ m (mod 101). From the computation above, 123456 ≡ 34 (mod 101), so by transitivity 34 ≡ m (mod 101). Reduce both sides modulo 101: since 0 ≤ 34, m < 101, their remainders mod 101 are themselves, hence 34 = m as integers, and thus as natural numbers. Therefore m = 34.
+-- 4. [Conclusion] The unique natural number n with n < 101 and 123456 ≡ n (mod 101) is n = 34.

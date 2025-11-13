@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate (100² − 7²)/(70² − 11²) · (70−11)(70+11)/(100−7)(100+7). 2. [Key Idea] Each difference of squares factors, and every factor cancels perfectly. 3. [Proof] 100² − 7² = (100−7)(100+7) 70² − 11² = (70−11)(70+11) Hence [(100−7)(100+7)] / [(70−11)(70+11)] · (70−11)(70+11) / (100−7)(100+7) = 1. 4. [Conclusion] All factors cancel, so the expression equals 1; choice (A).

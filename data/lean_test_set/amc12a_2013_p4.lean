@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate (2^{2014}+2^{2012}) / (2^{2014}-2^{2012}). 2. [Key Idea] Factor out the common power 2^{2012}; the huge exponents then collapse to a simple ratio of small integers. 3. [Proof] (2^{2014}+2^{2012}) / (2^{2014}-2^{2012}) = 2^{2012}(2^{2}+1) / [2^{2012}(2^{2}-1)] (factor 2^{2012}) = (4+1)/(4-1) = 5/3. 4. [Conclusion] The expression equals 5/3, choice (C).

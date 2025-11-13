@@ -1,0 +1,19 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers A, B, C, D satisfying the system
+--    B + C + D = 3A, A + C + D = 4B, A + B + D = 2C, and 8A + 10B + 6C = 24,
+--    and moreover D = 13/15 and 13 + 15 = 28.
+-- 2. [Key Idea] Exhibit the specific values A = 1, B = 4/5, C = 4/3, D = 13/15 and verify they satisfy all equations. In parallel, derive these values systematically:
+--    - Eliminate D using the first equation to express D = 3A − B − C.
+--    - Substitute this into the second and third equations to solve B and C in terms of A: B = (4/5)A and C = (4/3)A.
+--    - Then D = 3A − (4/5)A − (4/3)A = (13/15)A.
+--    - Substitute B and C into the fourth equation to solve A = 1, and hence D = 13/15.
+-- 3. [Proof] 
+--    - Direct verification: Plugging A = 1, B = 4/5, C = 4/3, D = 13/15 into each of the four equations yields true equalities (checked by arithmetic), so such numbers exist. Also, 13/15 equals (13/15)·1 and 13 + 15 = 28 by computation.
+--    - Derivations supporting the solution:
+--      • From B + C + D = 3A, rearrange to D = 3A − B − C.
+--      • Substitute D into A + C + D = 4B to get A + C + (3A − B − C) = 4B, which simplifies to 4A − B = 4B, hence B = (4/5)A.
+--      • Substitute D into A + B + D = 2C to get A + B + (3A − B − C) = 2C, which simplifies to 4A − C = 2C, hence C = (4/3)A.
+--      • Then D = 3A − (4/5)A − (4/3)A = (13/15)A by combining fractions.
+--      • Substitute B and C into 8A + 10B + 6C = 24 to obtain 8A + 10(4/5)A + 6(4/3)A = 24, i.e., 8A + 8A + 8A = 24, so 24A = 24 and A = 1.
+--      • Therefore D = (13/15)A = 13/15 and the displayed values satisfy all equations.
+-- 4. [Conclusion] The system has a solution with A = 1, B = 4/5, C = 4/3, D = 13/15; these values satisfy all four equations, D indeed equals 13/15, and 13 + 15 = 28.

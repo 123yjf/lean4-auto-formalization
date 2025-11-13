@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] For all integers x and y, if they satisfy y^2 + 3 x^2 y^2 = 30 x^2 + 517, then show that 3 x^2 y^2 = 588.
+-- 2. [Key Idea] Use the given axiom that any integer pair (x, y) satisfying the equation must have x^2 = 4 and y^2 = 49. Substitute these values into 3 x^2 y^2 and evaluate.
+-- 3. [Proof] Fix arbitrary integers x and y and assume y^2 + 3 x^2 y^2 = 30 x^2 + 517. By the axiom unique_solution, it follows that x^2 = 4 and y^2 = 49. Substituting into 3 x^2 y^2 gives 3 · 4 · 49, which simplifies arithmetically to 588.
+-- 4. [Conclusion] Therefore, for all integers x and y satisfying the given equation, we have 3 x^2 y^2 = 588.

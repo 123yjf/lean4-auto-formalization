@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want to show there exists exactly one real pair p = (x, y) such that all of the following hold simultaneously:
+   (i) x + 3y = 11,
+   (ii) 3(x − 1) − 5y = −68,
+   (iii) x = −10,
+   (iv) y = 7.
+
+-- 2. [Key Idea] Solve the linear system given by (i) and a simplified version of (ii). First, rewrite (ii) as 3x − 5y = −65. Then eliminate x by multiplying (i) by 3 and subtracting this from the rewritten (ii) to get y. With y found, plug back into (i) to get x. Finally, verify that (x, y) = (−10, 7) satisfies the original equations, and use these computations to prove uniqueness.
+
+-- 3. [Proof]
+   - Algebraic simplification: For all real f, z, the equation 3(f − 1) − 5z = −68 is equivalent to 3f − 5z = −65. This follows by expanding 3(f − 1) = 3f − 3 and moving the constant term across the equality.
+   - Solving for y from the linear system:
+     • Start with f + 3z = 11 and 3f − 5z = −65.
+     • Multiply the first equation by 3 to get 3f + 9z = 33.
+     • Subtract the second equation from this to eliminate f: (3f + 9z) − (3f − 5z) = 33 − (−65), giving 14z = 98, hence z = 7.
+   - Solving for x: Substitute z = 7 into f + 3z = 11 to get f + 21 = 11, so f = −10.
+   - Verification: Check directly that (−10) + 3·7 = 11 and 3((−10) − 1) − 5·7 = 3(−11) − 35 = −33 − 35 = −68. Therefore, p = (−10, 7) satisfies the two linear equations. Trivially, it also satisfies x = −10 and y = 7.
+   - Uniqueness: Suppose another pair (f, z) satisfies the two linear equations. Using the simplification, 3(f − 1) − 5z = −68 implies 3f − 5z = −65. Repeating the elimination argument above yields z = 7 and then f = −10. Hence (f, z) = (−10, 7). Therefore, any pair satisfying the full conjunction (including x = −10 and y = 7) must be exactly (−10, 7).
+
+-- 4. [Conclusion] The pair p = (−10, 7) exists and satisfies all four conditions, and it is the only pair that does. Thus there exists a unique p with the stated properties.

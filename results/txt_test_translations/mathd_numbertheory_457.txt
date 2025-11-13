@@ -1,0 +1,23 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show two facts about the number 80325 and factorials:
+--    (i) For every natural number n, if 80325 divides n!, then n ≥ 17.
+--    (ii) 80325 divides 17!.
+--
+-- 2. [Key Idea] Factorize 80325 into prime powers and primes:
+--    80325 = 3^3 · 5^2 · 7 · 17.
+--    If 80325 divides n!, then in particular 17 divides n!. Since 17 is prime, a standard property says 17 | n! if and only if 17 ≤ n; hence n ≥ 17.
+--    Conversely, 17! contains at least the prime powers 3^3 and 5^2 and the primes 7 and 17 as factors (by counting multiplicities via Legendre’s formula or direct divisibility), so their product 80325 divides 17!.
+--
+-- 3. [Proof]
+--    (i) Suppose 80325 | n!. To force a contradiction, assume n < 17. Using the factorization 80325 = 3^3 · 5^2 · 7 · 17, we see immediately that 17 | 80325, hence 17 | n! by transitivity of divisibility. But 17 is prime, and the well-known criterion for primes dividing factorials states: for a prime p, p | n! if and only if p ≤ n. Applying this with p = 17 gives 17 ≤ n, contradicting n < 17. Therefore, n ≥ 17 whenever 80325 | n!.
+--    (ii) To show 80325 | 17!, it suffices (by the factorization above) to check that 17! contains each of the factors 3^3, 5^2, 7, and 17:
+--        - For 3^3: the exponent of 3 in 17! is floor(17/3) + floor(17/9) + floor(17/27) = 5 + 1 + 0 = 6 ≥ 3, so 3^3 | 17!.
+--        - For 5^2: the exponent of 5 in 17! is floor(17/5) + floor(17/25) = 3 + 0 = 3 ≥ 2, so 5^2 | 17!.
+--        - For 7: since 7 ≤ 17, we have 7 | 17!.
+--        - For 17: since 17 ≤ 17, we have 17 | 17!.
+--      Because divisibility is preserved under multiplication of divisors, combining these shows 3^3 · 5^2 · 7 · 17 = 80325 divides 17!.
+--    (Auxiliary observations mirrored in the code:)
+--        • The minimality lemma restates (i) contrapositive-style: if n < 17, then 80325 ∤ n!.
+--        • The “compute_floor_divisions” lemma records the exact quotients used in the Legendre counts above.
+--
+-- 4. [Conclusion] The number 80325 divides n! only when n ≥ 17, and in particular 80325 divides 17!.

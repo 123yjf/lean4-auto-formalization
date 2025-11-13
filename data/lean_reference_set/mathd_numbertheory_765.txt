@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the greatest negative integer x such that 24x ≡ 15 (mod 1199).
+-- 2. [Key Idea] Compute the modular inverse of 24 modulo 1199, use it to solve the linear congruence for x, then choose the representative that is negative and as close to 0 as possible.
+-- 3. [Proof] 
+--    a) Existence of an inverse: gcd(24, 1199) = 1 because 1199 = 24·49 + 23 and 24 = 23·1 + 1. Hence 24 is invertible modulo 1199.
+--    b) Inverse of 24 modulo 1199: Using the extended Euclidean algorithm, 1 = 24 − 23 = 24 − (1199 − 24·49) = 24·50 − 1199. Therefore 24·50 ≡ 1 (mod 1199), so 24⁻¹ ≡ 50 (mod 1199).
+--    c) Solve the congruence: Multiplying 24x ≡ 15 by the inverse gives x ≡ 50·15 ≡ 750 (mod 1199). Thus the general solution is x = 750 + 1199k for k ∈ ℤ.
+--    d) Largest negative solution: To get a negative representative closest to 0, take k = −1, giving x = 750 − 1199 = −449. For k = 0 we get 750 ≥ 0, and for k ≤ −2 we get x ≤ −1648 < −449, so −449 is the greatest negative solution.
+-- 4. [Conclusion] The largest negative integer x satisfying 24x ≡ 15 (mod 1199) is −449.

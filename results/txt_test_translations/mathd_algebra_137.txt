@@ -1,0 +1,17 @@
+-- Proof content (Theorem: last_year_enrollment):
+-- 1. [Problem Restatement] Show that there exists a real number x such that x > 0, (26/25) * x = 598, and x = 575.
+-- 2. [Key Idea] Exhibit the specific value x = 575 and verify it satisfies all the stated conditions.
+-- 3. [Proof] Choose x = 575. 
+   - Positivity: 575 > 0, so x > 0.
+   - Equation check: (26/25) * 575 = 598 (a straightforward numeric calculation).
+   - Identity: x = 575 holds by definition of our choice.
+-- 4. [Conclusion] Therefore, such an x exists; namely, x = 575 satisfies all requirements.
+
+-- Proof content (Theorem: last_year_enrollment_proportional):
+-- 1. [Problem Restatement] Show that there exists a real number x such that x > 0, 598 / x = 26 / 25, and x = 575.
+-- 2. [Key Idea] Again take x = 575 and verify the proportionality and the other conditions numerically.
+-- 3. [Proof] Choose x = 575.
+   - Positivity: 575 > 0, so x > 0.
+   - Proportion check: 598 / 575 = 26 / 25 (since 598 = 23·26 and 575 = 23·25, the common factor 23 cancels).
+   - Identity: x = 575 is immediate from our choice.
+-- 4. [Conclusion] Hence, such an x exists; specifically, x = 575 satisfies the given proportional relationship and positivity.

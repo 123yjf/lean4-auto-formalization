@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that f(1) = 9, where f(x) = 5x + 4 for real x.
+-- 2. [Key Idea] Evaluate the linear function at x = 1: compute 5 · 1 + 4.
+-- 3. [Proof] By definition, f(1) = 5 · 1 + 4. Since 5 · 1 = 5 and 5 + 4 = 9, it follows that f(1) = 9. In Lean, this is achieved by unfolding the definition of f and letting arithmetic normalization verify the computation.
+-- 4. [Conclusion] Therefore, f 1 = 9.

@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every positive integer n, the finite product ∏_{k=1}^{n} (1 + 2^{-k}) is strictly less than 5/2.
+-- 2. [Key Idea] Split off a small initial segment of the product that can be computed exactly, and then bound the remaining factors by taking logarithms and using the inequality ln(1 + x) ≤ x for x > −1. Sum the resulting geometric tail to get an explicit bound.
+-- 3. [Proof] Define P_n = ∏_{k=1}^{n} (1 + 2^{-k}).
+   - First compute a short initial segment exactly: P_3 = (3/2)(5/4)(9/8) = 135/64 ≈ 2.109375.
+   - For the remaining factors (from k = 4 to n), take logarithms and apply ln(1 + x) ≤ x with x = 2^{-k} > 0:
+     ln P_n = ∑_{k=1}^{n} ln(1 + 2^{-k}) = ln P_3 + ∑_{k=4}^{n} ln(1 + 2^{-k}) ≤ ln P_3 + ∑_{k=4}^{n} 2^{-k} ≤ ln P_3 + ∑_{k=4}^{∞} 2^{-k}.
+   - The tail sum is a geometric series: ∑_{k=4}^{∞} 2^{-k} = 2^{-4}/(1 − 1/2) = 1/8. Hence ln P_n ≤ ln(135/64) + 1/8.
+   - Exponentiating gives P_n ≤ (135/64)·e^{1/8} ≈ 2.109375 × 1.133148… ≈ 2.388, which is strictly less than 2.5.
+   - Finally, check the smallest cases directly: P_1 = 3/2 and P_2 = (3/2)(5/4) = 15/8; both are less than 5/2.
+-- 4. [Conclusion] Therefore, for every positive integer n, the product ∏_{k=1}^{n} (1 + 2^{-k}) is strictly less than 5/2.

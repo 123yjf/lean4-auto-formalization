@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that sqrt(log base 2 of 6 plus log base 3 of 6) equals sqrt(log base 2 of 3) plus sqrt(log base 3 of 2).
+-- 2. [Key Idea] Use logarithm rules to rewrite logb 2 6 and logb 3 6 as 1 plus a simpler log, use the reciprocity logb 3 2 = 1 / logb 2 3, and then recognize that the resulting expression inside the square root is the square of sqrt(x) + sqrt(1/x) with x = logb 2 3. Positivity ensures square roots and equalities are valid.
+-- 3. [Proof] 
+- By the product rule and the fact that log base equals 1: logb 2 6 = logb 2 (2·3) = logb 2 2 + logb 2 3 = 1 + logb 2 3. Similarly, logb 3 6 = logb 3 (3·2) = logb 3 3 + logb 3 2 = 1 + logb 3 2.
+- By the change-of-base reciprocity, logb 3 2 = 1 / logb 2 3.
+- Adding the two expressions gives logb 2 6 + logb 3 6 = 2 + logb 2 3 + 1 / logb 2 3.
+- Note that logb 2 3 > 0 (since 2 > 1 and 3 > 1), hence both logb 2 3 and 1 / logb 2 3 are nonnegative and their square roots are defined. Let x = logb 2 3. Then the right-hand side we aim for is sqrt x + sqrt(1/x).
+- Compute the square of this sum: (sqrt x + sqrt(1/x))^2 = x + 2 sqrt x sqrt(1/x) + 1/x. Because x > 0, sqrt x sqrt(1/x) = sqrt(x·1/x) = sqrt 1 = 1. Hence (sqrt x + sqrt(1/x))^2 = x + 2 + 1/x.
+- Therefore, 2 + x + 1/x equals the square of sqrt x + sqrt(1/x), and since sqrt x + sqrt(1/x) ≥ 0, we get sqrt(2 + x + 1/x) = sqrt x + sqrt(1/x).
+- Substituting back x = logb 2 3 and 1/x = logb 3 2 yields sqrt(logb 2 6 + logb 3 6) = sqrt(logb 2 3) + sqrt(logb 3 2).
+-- 4. [Conclusion] Using logarithm product rules, the reciprocal relation between logb 3 2 and logb 2 3, and an algebraic square expansion with positivity to justify square roots, we conclude the desired identity.

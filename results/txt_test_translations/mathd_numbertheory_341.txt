@@ -1,0 +1,19 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define last_three as the remainder of 5^100 upon division by 1000 (i.e., the last three digits of 5^100). Let d1 be its hundreds digit, d2 its tens digit, and d3 its units digit. The goal is to show that d1 + d2 + d3 = 13.
+-- 2. [Key Idea] Determine the last three digits of 5^100 using modular arithmetic, then read off the digits and sum them. The key modular facts are that 5^100 is divisible by 125 and congruent to 1 modulo 8, which together pinpoint the residue modulo 1000 as 625; equivalently, one can compute 5^10 ≡ 625 (mod 1000) and note that 625 is idempotent modulo 1000 (its higher powers still end in 625). From 625, the digits are 6, 2, 5 whose sum is 13.
+-- 3. [Proof] 
+First, 125 = 5^3 divides 5^100, since 3 ≤ 100, so (5^100) mod 125 = 0.
+
+Next, modulo 8 we have 5^2 = 25 ≡ 1 (mod 8), hence 5^100 = (5^2)^50 ≡ 1^50 ≡ 1 (mod 8).
+
+These two congruences imply that modulo 1000 (which factors as 125 × 8), the remainder of 5^100 must be the unique number between 0 and 999 that is 0 modulo 125 and 1 modulo 8, namely 625.
+
+The code also confirms this directly: 5^10 ≡ 625 (mod 1000), so 5^100 = (5^10)^10 ≡ 625^10 ≡ 625 (mod 1000) (since 625^2 still ends in 625, all higher powers do as well). Therefore last_three = 625.
+
+From 625, we extract the digits:
+- d1 = 625 / 100 = 6 (hundreds digit),
+- d2 = (625 % 100) / 10 = 25 / 10 = 2 (tens digit),
+- d3 = 625 % 10 = 5 (units digit).
+
+Summing gives d1 + d2 + d3 = 6 + 2 + 5 = 13.
+-- 4. [Conclusion] The last three digits of 5^100 are 625, so their sum is 13.

@@ -1,0 +1,23 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a natural number n such that n > 10, n is both a perfect square and a perfect cube, n is minimal with these properties (i.e., for any m > 10 that is both a perfect square and a perfect cube, we have n ≤ m), and in fact n = 64.
+
+-- 2. [Key Idea] 
+- The numbers that are both perfect squares and perfect cubes are precisely the sixth powers (numbers of the form c^6). 
+- The smallest sixth power greater than 10 is 2^6 = 64. 
+- Equivalently, among the integers between 11 and 63, none is both a square and a cube: the only squares there are 16, 25, 36, 49 (none of which is a cube), and the only cube is 27 (which is not a square).
+
+-- 3. [Proof] 
+- Choose n = 64.
+- Then n > 10 is immediate.
+- n is a perfect square, since 64 = 8^2.
+- n is a perfect cube, since 64 = 4^3.
+- To prove minimality, let m be any natural number with m > 10 that is both a perfect square and a perfect cube. We must show 64 ≤ m.
+  • If m ≥ 64, we are done.
+  • Suppose instead that m < 64. Then 10 < m < 64 and m is both a square and a cube.
+    - One way to see the impossibility is via sixth powers: a number that is both a square and a cube must be a sixth power, say m = c^6. But if c ≤ 1, then c^6 ≤ 1, contradicting m > 10; if c ≥ 2, then c^6 ≥ 64, contradicting m < 64. Hence no such m exists.
+    - The proof in the code also cross-checks this by small-case analysis: it shows 16, 25, 36, and 49 are not cubes, and 27 is not a square. These are precisely the square/cube candidates between 11 and 63, so none is both. Thus there is no m with 10 < m < 64 that is both a square and a cube.
+  • Therefore the assumption m < 64 leads to a contradiction, and we must have m ≥ 64.
+- Hence 64 is indeed minimal among numbers greater than 10 that are both perfect squares and perfect cubes.
+- Finally, the statement includes n = 64 explicitly, which matches our choice.
+
+-- 4. [Conclusion] Taking n = 64 satisfies all requirements: n > 10, n is both a perfect square and a perfect cube, it is minimal among such numbers, and n = 64.

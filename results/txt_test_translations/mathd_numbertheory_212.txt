@@ -1,0 +1,24 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that the last digit of 16^17 · 17^18 · 18^19 is 8; equivalently, (16^17 · 17^18 · 18^19) mod 10 = 8.
+
+-- 2. [Key Idea] Reduce each base modulo 10 to get its last digit, analyze the repeating cycles of last digits of powers: 6^k ≡ 6 (mod 10) for k ≥ 1; powers of 7 cycle with period 4 as 7, 9, 3, 1; powers of 8 cycle with period 4 as 8, 4, 2, 6. Then combine the three residues using that multiplication respects reduction modulo 10.
+
+-- 3. [Proof]
+- For 16^17:
+  - 16 ≡ 6 (mod 10).
+  - For any k ≥ 1, 6^k ≡ 6 (mod 10), since multiplying by 6 preserves the last digit 6 modulo 10.
+  - Hence (16^17) mod 10 = (6^17) mod 10 = 6.
+- For 17^18:
+  - 17 ≡ 7 (mod 10).
+  - Powers of 7 modulo 10 have cycle 7, 9, 3, 1 with period 4.
+  - Since 18 mod 4 = 2, we get 7^18 ≡ 7^2 ≡ 9 (mod 10).
+  - Thus (17^18) mod 10 = 9.
+- For 18^19:
+  - 18 ≡ 8 (mod 10).
+  - Powers of 8 modulo 10 have cycle 8, 4, 2, 6 with period 4.
+  - Since 19 mod 4 = 3, we get 8^19 ≡ 8^3 ≡ 2 (mod 10).
+  - Thus (18^19) mod 10 = 2.
+- Combine the residues:
+  - (16^17 · 17^18 · 18^19) mod 10 = (6 · 9 · 2) mod 10 = 108 mod 10 = 8.
+
+-- 4. [Conclusion] The last digit of 16^17 · 17^18 · 18^19 is 8; equivalently, (16^17 · 17^18 · 18^19) mod 10 = 8.

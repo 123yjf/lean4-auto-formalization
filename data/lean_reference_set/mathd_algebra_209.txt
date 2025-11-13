@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given that the inverse function h = f⁻¹ satisfies h(2) = 10, h(10) = 1, and h(1) = 2, determine f(f(10)).
+-- 2. [Key Idea] Use the inverse relationship: h(y) = x if and only if f(x) = y, then chain the resulting f-values.
+-- 3. [Proof] Since h = f⁻¹: from h(2) = 10 we get f(10) = 2; from h(1) = 2 we get f(2) = 1. Therefore, f(f(10)) = f(2) = 1.
+-- 4. [Conclusion] Therefore, f(f(10)) equals 1.

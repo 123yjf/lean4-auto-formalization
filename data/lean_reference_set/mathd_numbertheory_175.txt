@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the units digit of 2^2010.
+-- 2. [Key Idea] The units digits of powers of 2 repeat in a cycle of length 4, so reduce the exponent modulo 4.
+-- 3. [Proof] Compute the initial pattern: 2^1 → 2, 2^2 → 4, 2^3 → 8, 2^4 → 6, then it repeats 2 → 4 → 8 → 6. Since 2010 = 4·502 + 2, we have 2010 ≡ 2 (mod 4). Therefore 2^2010 has the same units digit as 2^2, namely 4.
+-- 4. [Conclusion] The units digit of 2^2010 is 4.

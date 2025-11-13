@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for all positive real numbers a and b and every positive integer n, we have ((a + b)/2)^n ≤ (a^n + b^n)/2.
+-- 2. [Key Idea] Use that the function x ↦ x^n (for n ≥ 1) is convex on (0, ∞). Then Jensen’s inequality with equal weights 1/2 gives the result immediately. Alternatively, give an elementary proof by induction on n, reducing the step to the nonnegativity of a factorized difference.
+-- 3. [Proof] 
+   Proof 1 (Convexity/Jensen): For f(x) = x^n with n ≥ 1, the second derivative is f''(x) = n(n − 1) x^{n − 2} ≥ 0 for x > 0, so f is convex on (0, ∞). Applying Jensen’s inequality to the two points a and b with weights 1/2 gives:
+   f((a + b)/2) ≤ (f(a) + f(b))/2, i.e., ((a + b)/2)^n ≤ (a^n + b^n)/2.
+
+   Proof 2 (Induction): For n = 1, both sides equal (a + b)/2, so equality holds. Assume ((a + b)/2)^k ≤ (a^k + b^k)/2 for some k ≥ 1. Multiply both sides by (a + b)/2 > 0 to get
+   ((a + b)/2)^{k+1} ≤ [(a^k + b^k)(a + b)]/4 = [a^{k+1} + a^k b + a b^k + b^{k+1}]/4.
+   It remains to show a^{k+1} + b^{k+1} ≥ a^k b + a b^k. Consider the difference:
+   (a^{k+1} + b^{k+1}) − (a^k b + a b^k) = a^k(a − b) + b^k(b − a) = (a − b)(a^k − b^k)
+   = (a − b)^2(a^{k−1} + a^{k−2} b + ··· + b^{k−1}) ≥ 0.
+   Hence a^{k+1} + b^{k+1} ≥ a^k b + a b^k, so ((a + b)/2)^{k+1} ≤ (a^{k+1} + b^{k+1})/2, completing the induction.
+-- 4. [Conclusion] For every positive integer n and positive reals a, b, the nth power of the arithmetic mean does not exceed the arithmetic mean of the nth powers: ((a + b)/2)^n ≤ (a^n + b^n)/2.

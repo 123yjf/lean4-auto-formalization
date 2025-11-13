@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve for y in the equation √(19 + 3y) = 7.
+-- 2. [Key Idea] Eliminate the square root by squaring both sides, then isolate y; verify the result in the original equation.
+-- 3. [Proof] Squaring both sides gives 19 + 3y = 49. Subtracting 19 yields 3y = 30, so y = 10. Checking: √(19 + 3·10) = √49 = 7, which matches the right-hand side.
+-- 4. [Conclusion] The unique solution is y = 10.

@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a unique natural number x with 0 ≤ x < 100 such that 9x ≡ 1 (mod 100).
+-- 2. [Key Idea] Since gcd(9, 100) = 1, the element 9 is invertible modulo 100. Compute its inverse explicitly (it is 89 because 9·89 = 801 ≡ 1 mod 100). Uniqueness follows because each residue class modulo 100 has exactly one representative in {0, …, 99}.
+-- 3. [Proof] 
+- Compute gcd(9, 100) = 1, so 9 and 100 are coprime. Hence 9 is a unit in ZMod 100 and has a multiplicative inverse.
+- Verify directly that 9·89 = 801 ≡ 1 (mod 100), so the inverse of 9 in ZMod 100 is the class of 89.
+- Existence: take x = 89. Then 89 < 100 and 9x ≡ 1 (mod 100), as just checked.
+- Uniqueness: suppose y < 100 and 9y ≡ 1 (mod 100). Then the class of y in ZMod 100 equals the inverse of 9, hence equals the class of 89. Since both y and 89 lie in {0, …, 99}, equality of their classes implies y = 89.
+-- 4. [Conclusion] There exists a unique x with x < 100 and 9x ≡ 1 (mod 100), namely x = 89.

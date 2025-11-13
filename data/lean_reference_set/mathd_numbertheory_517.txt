@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute 121·122·123 modulo 4 and confirm that the result is 2.
+-- 2. [Key Idea] Reduce each factor modulo 4 first (working with residues 0, 1, 2, 3), then multiply the residues.
+-- 3. [Proof] We have 121 ≡ 1 (mod 4) since 121 = 4·30 + 1; 122 ≡ 2 (mod 4) since 122 = 4·30 + 2; and 123 ≡ 3 (mod 4) since 123 = 4·30 + 3. Multiplying the residues gives 1·2·3 = 6 ≡ 2 (mod 4). Alternatively, pair 122 and 123: 122·123 ≡ 2·3 = 6 ≡ 2 (mod 4), then multiply by 121 ≡ 1 to get 1·2 ≡ 2 (mod 4).
+-- 4. [Conclusion] The product 121·122·123 leaves remainder 2 upon division by 4.

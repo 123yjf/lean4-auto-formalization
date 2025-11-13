@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that in the ring of integers modulo 7, the value of 5 raised to the 999999th power equals 6; that is, (5 : ZMod 7)^999999 = 6.
+-- 2. [Key Idea] Use the fact that 5^6 = 1 in ZMod 7 (a consequence of Fermat’s little theorem, since 7 is prime and 5 ≠ 0 mod 7). Hence powers of 5 are periodic with period 6, so we can reduce the exponent modulo 6: 5^n = 5^(n mod 6). Then compute 999999 mod 6 and evaluate 5^3 modulo 7.
+-- 3. [Proof] 
+--    - First, observe that (5 : ZMod 7)^6 = 1. This is because 5 is a unit modulo 7 and by Fermat’s little theorem 5^6 ≡ 1 (mod 7). In the code, this is confirmed by direct evaluation.
+--    - Next, compute the remainder of 999999 upon division by 6: 999999 % 6 = 3.
+--    - Since 5^6 = 1, powers of 5 repeat with period 6; therefore 5^999999 = 5^(999999 % 6) = 5^3.
+--    - Finally, compute 5^3 modulo 7: 5^3 = 125 ≡ 6 (mod 7). The code verifies this directly.
+--    - Putting these together: 5^999999 = 5^3 = 6 in ZMod 7.
+-- 4. [Conclusion] Therefore, (5 : ZMod 7)^999999 = 6 in ZMod 7.

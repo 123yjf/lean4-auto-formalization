@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] We want natural numbers a and b such that 2^a = 32, a^b = 125, and b^a = 243. Along the way, the code also proves some auxiliary facts: the explicit computations 2^5 = 32, 5^3 = 125, 3^5 = 243; and the uniqueness of exponents in the equations 2^n = 32 and 5^n = 125 (namely, n = 5 and n = 3, respectively) using injectivity of exponentiation for bases greater than 1.
+-- 2. [Key Idea] Recognize the standard prime-power decompositions: 32 = 2^5, 125 = 5^3, and then check that 3^5 = 243. Thus choosing a = 5 and b = 3 satisfies all three equations. Uniqueness of the exponents in 2^n = 32 and 5^n = 125 follows from the fact that for a fixed base c > 1, the map n ↦ c^n is injective.
+-- 3. [Proof] 
+   - Existence: Take a = 5 and b = 3. Then 2^a = 2^5 = 32, a^b = 5^3 = 125, and b^a = 3^5 = 243; each of these equalities is verified by direct computation.
+   - Uniqueness of the exponents (auxiliary lemmas):
+     • If 2^n = 32, then 2^n = 2^5, and since 2 > 1, injectivity of n ↦ 2^n implies n = 5.
+     • If 5^n = 125, then 5^n = 5^3, and since 5 > 1, injectivity of n ↦ 5^n implies n = 3.
+   - Additional verifications provided in the code simply restate and compute these equalities (e.g., 32 = 2^5, 125 = 5^3, and the conjunction 2^5 = 32 ∧ 5^3 = 125 ∧ 3^5 = 243).
+-- 4. [Conclusion] Setting a = 5 and b = 3 satisfies 2^a = 32, a^b = 125, and b^a = 243. Moreover, the exponents in 2^n = 32 and 5^n = 125 are uniquely determined as n = 5 and n = 3, respectively, by injectivity of exponentiation for bases greater than 1.

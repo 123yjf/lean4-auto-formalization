@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve for a in (8⁻¹)/(4⁻¹) − a⁻¹ = 1. 2. [Key Idea] Rewrite negative exponents as reciprocals, simplify the numerical fraction, then isolate a⁻¹. 3. [Proof] (8⁻¹)/(4⁻¹) − a⁻¹ = 1 ⇔ (1/8)/(1/4) − a⁻¹ = 1 (using x⁻¹ = 1/x) Compute the quotient: (1/8)/(1/4) = (1/8)·(4/1) = 4/8 = 1/2. Hence 1/2 − a⁻¹ = 1 ⇔ −a⁻¹ = 1 − 1/2 = 1/2 ⇔ a⁻¹ = −1/2 ⇔ a = −2. 4. [Conclusion] The unique solution is a = −2.

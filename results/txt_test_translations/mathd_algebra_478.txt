@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that (1/3) · 30 · (13/2) equals 65 in the real numbers.
+-- 2. [Key Idea] Simplify the product by canceling common factors: 30/3 = 10, then compute 10 · (13/2) = 130/2 = 65.
+-- 3. [Proof] First, (1/3) · 30 = 10. Next, 10 · (13/2) = (10 · 13)/2 = 130/2 = 65. Thus the entire product equals 65. The tactic norm_num automates this numeric simplification.
+-- 4. [Conclusion] Therefore, (1/3) · 30 · (13/2) = 65.

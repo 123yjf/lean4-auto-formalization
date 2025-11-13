@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the largest possible Euclidean distance in the complex plane between any cube root of 8 (solutions to z^3 = 8) and any root of the polynomial z^3 − 8z^2 − 8z + 64.
+-- 2. [Key Idea] Factor the cubic z^3 − 8z^2 − 8z + 64 to locate its real roots. List the three cube roots of 8. Then compute pairwise distances (conveniently via squared distances) between these two sets; by symmetry, two of the cube roots are complex conjugates and yield the same distances. Identify the maximum.
+-- 3. [Proof] The cube roots of 8 are A = { 2, −1 + i√3, −1 − i√3 }.
+   Factor the other polynomial: z^3 − 8z^2 − 8z + 64 = (z^2 − 8)(z − 8), so its roots are B = { 8, 2√2, −2√2 }.
+   Compute squared distances:
+   - From −1 + i√3 to:
+     • 8: (8 − (−1))^2 + (0 − √3)^2 = 9^2 + (−√3)^2 = 81 + 3 = 84.
+     • 2√2: (2√2 + 1)^2 + (−√3)^2 = (9 + 4√2) + 3 = 12 + 4√2.
+     • −2√2: (−2√2 + 1)^2 + (−√3)^2 = (9 − 4√2) + 3 = 12 − 4√2.
+   - The point −1 − i√3 is the reflection across the real axis, so it gives the same three squared distances: 84, 12 + 4√2, 12 − 4√2.
+   - From 2 to:
+     • 8: (8 − 2)^2 = 36.
+     • 2√2: (2√2 − 2)^2 = 12 − 8√2.
+     • −2√2: (−2√2 − 2)^2 = 12 + 8√2.
+   Among all these, the largest squared distance is 84, achieved between −1 ± i√3 and 8. Therefore the maximal distance is √84 = 2√21.
+-- 4. [Conclusion] The greatest distance between a root of z^3 = 8 and a root of z^3 − 8z^2 − 8z + 64 is 2√21 (option D).

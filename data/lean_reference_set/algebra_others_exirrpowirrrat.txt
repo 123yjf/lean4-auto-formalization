@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find irrational real numbers a and b such that the power aᵇ is rational.
+
+-- 2. [Key Idea] Use the number √2. Consider c = (√2)^(√2). If c is rational, we can take a = √2 and b = √2. If c is irrational, then raising c to the power √2 gives (√2)^(√2·√2) = (√2)² = 2, a rational number; so take a = c and b = √2. Alternatively, use the fact that e and ln 2 are irrational and satisfy e^{ln 2} = 2.
+
+-- 3. [Proof] 
+Style A – Classical case split:
+- Let b = √2, which is known to be irrational, and set c = (√2)^(√2).
+- Case 1: If c is rational, take a = √2. Then a and b are both irrational, and aᵇ = c is rational.
+- Case 2: If c is irrational, take a = c and keep b = √2. Using laws of exponents,
+  aᵇ = ( (√2)^(√2) )^(√2) = (√2)^(√2·√2) = (√2)² = 2,
+  which is rational.
+In either case, we obtain irrational a, b with aᵇ rational.
+
+Style B – One-shot choice:
+- It is known that e is irrational and ln 2 is irrational. Set a = e and b = ln 2. Then
+  aᵇ = e^{ln 2} = 2,
+  which is rational.
+
+-- 4. [Conclusion] Therefore, there exist irrational numbers a and b—indeed, explicitly obtainable choices—such that aᵇ is rational (for example, either a = √2, b = √2 if (√2)^(√2) is rational, or a = (√2)^(√2), b = √2 otherwise; or simply a = e, b = ln 2).

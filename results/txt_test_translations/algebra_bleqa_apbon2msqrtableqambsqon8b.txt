@@ -1,0 +1,29 @@
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a and b with a > 0, b > 0, and b ≤ a, prove that (a + b)/2 − sqrt(a b) ≤ (a − b)^2 / (8 b).
+
+-- 2. [Key Idea] Introduce t = sqrt(a) and s = sqrt(b). Then a = t^2, b = s^2, and from b ≤ a we get s ≤ t. Rewrite both sides using these substitutions:
+- The left side, after multiplying by 8 s^2, becomes 4 s^2 (t − s)^2.
+- The right side, (a − b)^2, becomes (t + s)^2 (t − s)^2.
+Thus the inequality reduces to showing 4 s^2 ≤ (t + s)^2, which follows from s ≤ t. Finally, convert back to a and b and divide by the positive number 8 b.
+
+-- 3. [Proof]
+- Set t = sqrt(a) and s = sqrt(b). Since a, b > 0, we have t, s > 0, and t^2 = a, s^2 = b. From b ≤ a and monotonicity of sqrt on [0, ∞), s ≤ t.
+- Algebraic rewrites:
+  • Using a = t^2 and b = s^2, and that sqrt(t^2 s^2) = t s (since t, s ≥ 0), one checks
+    8 s^2 ((a + b)/2 − sqrt(a b)) = 4 s^2 (t − s)^2.
+  • Also, a − b = t^2 − s^2 = (t − s)(t + s), hence
+    (a − b)^2 = (t + s)^2 (t − s)^2.
+- Core inequality: show 4 s^2 ≤ (t + s)^2. Expanding gives (t + s)^2 = t^2 + 2 t s + s^2. Since s ≤ t and s > 0, we have t^2 ≥ s^2 and 2 t s ≥ 2 s^2. Therefore
+  t^2 + 2 t s + s^2 ≥ s^2 + 2 s^2 + s^2 = 4 s^2,
+  as needed.
+- Multiply the core inequality by the nonnegative factor (t − s)^2 to get
+  4 s^2 (t − s)^2 ≤ (t + s)^2 (t − s)^2 = (a − b)^2.
+  By the earlier rewrite of the left side, this is
+  8 s^2 ((a + b)/2 − sqrt(a b)) ≤ (a − b)^2.
+- Replace s^2 with b to obtain
+  8 b ((a + b)/2 − sqrt(a b)) ≤ (a − b)^2.
+  Since b > 0, we have 8 b > 0, so dividing both sides by 8 b preserves the inequality and yields
+  (a + b)/2 − sqrt(a b) ≤ (a − b)^2 / (8 b).
+
+-- 4. [Conclusion] By introducing square-root variables and using simple algebraic identities together with s ≤ t, we reduce the claim to the elementary inequality 4 s^2 ≤ (t + s)^2. This establishes the desired bound:
+(a + b)/2 − sqrt(a b) ≤ (a − b)^2 / (8 b).

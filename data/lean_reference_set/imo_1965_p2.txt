@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that a real 3×3 homogeneous linear system Ax = 0 has only the trivial solution when the coefficient matrix A has: (a) positive diagonal entries, (b) negative off-diagonal entries, and (c) positive row sums.
+-- 2. [Key Idea] Each row satisfies a_ii > −∑_{j≠i} a_ij, but since the off-diagonals are negative this equals ∑_{j≠i} |a_ij|. Thus A is strictly diagonally dominant. By the Levy–Desplanques (or equivalently, Gershgorin) theorem, strictly diagonally dominant matrices are nonsingular, so Ax = 0 has only the trivial solution. Alternatively, one can argue directly: if Ax = 0 with a nonzero x, take a component of maximal absolute value and use the signs to force a strict positivity contradiction.
+-- 3. [Proof] 
+   First proof (via Levy–Desplanques):
+   - For any row i, the assumption on row sums gives a_ii + ∑_{j≠i} a_ij > 0.
+   - Since a_ij < 0 for j ≠ i, we have −∑_{j≠i} a_ij = ∑_{j≠i} |a_ij|.
+   - Hence a_ii > −∑_{j≠i} a_ij = ∑_{j≠i} |a_ij|, i.e., A is strictly diagonally dominant.
+   - Levy–Desplanques: a strictly diagonally dominant square matrix is nonsingular, so det(A) ≠ 0.
+   - Therefore the only solution of Ax = 0 is x = 0.
+
+   Second proof (direct, no determinants):
+   - Suppose Ax = 0 with x ≠ 0 and choose k with |x_k| = max_i |x_i|.
+   - Let s = sign(x_k) ∈ {−1, 1}. Consider the k-th equation and multiply by s:
+     0 = a_kk |x_k| + ∑_{j≠k} a_kj s x_j.
+   - Because a_kj < 0 and |x_j| ≤ |x_k|, we get
+     0 ≥ a_kk |x_k| − ∑_{j≠k} |a_kj| |x_j| ≥ (a_kk − ∑_{j≠k} |a_kj|) |x_k|.
+   - Strict diagonal dominance gives a_kk − ∑_{j≠k} |a_kj| > 0, and |x_k| > 0, so the right-hand side is > 0, a contradiction.
+   - Hence no nonzero x can satisfy Ax = 0, so x must be 0.
+-- 4. [Conclusion] The matrix A is nonsingular, so the homogeneous system Ax = 0 has only the trivial solution x₁ = x₂ = x₃ = 0.

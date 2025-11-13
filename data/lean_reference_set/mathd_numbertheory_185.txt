@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] If an integer leaves a remainder of 3 when divided by 5, what remainder does its double leave when divided by 5?
+-- 2. [Key Idea] Use modular arithmetic: if a ≡ r (mod 5), then multiplying by any integer preserves congruence, so ka ≡ kr (mod 5).
+-- 3. [Proof] Let n be the integer with n ≡ 3 (mod 5). Doubling gives 2n ≡ 2·3 = 6 (mod 5). Since 6 ≡ 1 (mod 5), it follows that 2n ≡ 1 (mod 5). Therefore, 2n leaves a remainder of 1 upon division by 5.
+-- 4. [Conclusion] Doubling the number changes the remainder from 3 to 1 modulo 5.

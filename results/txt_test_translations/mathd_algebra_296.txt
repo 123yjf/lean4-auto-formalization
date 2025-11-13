@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that (3491 − 60)(3491 + 60) − 3491^2 = −3600.
+-- 2. [Key Idea] Use the difference of squares identity (a − b)(a + b) = a^2 − b^2. This turns the product into 3491^2 − 60^2, so subtracting 3491^2 leaves −60^2, and 60^2 = 3600, giving −3600.
+-- 3. [Proof] 
+--    a) Apply the difference of squares with a = 3491 and b = 60 to get (3491 − 60)(3491 + 60) = 3491^2 − 60^2.
+--    b) Subtract 3491^2: (3491^2 − 60^2) − 3491^2 = −60^2, since the 3491^2 terms cancel.
+--    c) Compute the remaining square: −60^2 = −3600.
+--    d) Therefore, (3491 − 60)(3491 + 60) − 3491^2 = −3600.
+-- 4. [Conclusion] The expression simplifies to −3600, as claimed.

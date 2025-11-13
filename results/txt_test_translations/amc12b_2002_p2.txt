@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] For all real numbers x, prove that (3x − 2)(4x + 1) − (3x − 2)(4x) + 1 = 3x − 1.
+-- 2. [Key Idea] Factor the common term (3x − 2) from the difference of products using distributivity: a·b − a·c = a·(b − c). Then note that (4x + 1) − 4x = 1, and simplify.
+-- 3. [Proof] Consider (3x − 2)(4x + 1) − (3x − 2)(4x). By distributivity, this equals (3x − 2)((4x + 1) − 4x). The inner difference simplifies to 1, so the whole expression becomes (3x − 2)·1 + 1 = 3x − 2 + 1 = 3x − 1.
+-- 4. [Conclusion] The identity holds: (3x − 2)(4x + 1) − (3x − 2)(4x) + 1 = 3x − 1 for all real x.
+
+-- Proof content:
+-- 1. [Problem Restatement] Evaluate ((3)(4) − 2)(4·4 + 1) − (3·4 − 2)(4·4) + 1 and show it equals 11.
+-- 2. [Key Idea] Apply the previously proved identity with x = 4 to reduce the expression to 3·4 − 1, then compute numerically.
+-- 3. [Proof] By the general identity, substituting x = 4 gives ((3·4 − 2)(4·4 + 1) − (3·4 − 2)(4·4) + 1) = 3·4 − 1. Compute 3·4 − 1 = 12 − 1 = 11.
+-- 4. [Conclusion] The value of the expression at x = 4 is 11.

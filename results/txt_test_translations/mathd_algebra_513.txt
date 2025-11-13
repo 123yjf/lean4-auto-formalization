@@ -1,0 +1,47 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show there exists a unique pair p = (a, b) of real numbers such that 3a + 2b = 5, a + b = 2, and moreover p = (1, 1).
+-- 2. [Key Idea] Exhibit (1, 1) as a solution and then prove any solution must equal (1, 1) by solving the linear system: subtract the equations to get a = 1, then back-substitute to get b = 1.
+-- 3. [Proof] For existence, take p = (1, 1) and check directly: 3·1 + 2·1 = 5 and 1 + 1 = 2, and of course p = (1, 1). For uniqueness, suppose p = (a, b) also satisfies the two equations. Subtract a + b = 2 from 3a + 2b = 5 to get a = 1; substituting back into a + b = 2 gives b = 1. Hence p = (a, b) = (1, 1).
+-- 4. [Conclusion] There is exactly one pair satisfying the conditions, namely p = (1, 1).
+
+-- Proof content:
+-- 1. [Problem Restatement] If a + b = 2 for real numbers a, b, then 2a + 2b = 4.
+-- 2. [Key Idea] Multiply both sides of the given equation by 2.
+-- 3. [Proof] From a + b = 2, scaling by 2 yields 2a + 2b = 4.
+-- 4. [Conclusion] The doubled sum equation holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] If 3a + 2b = 5 and 2a + 2b = 4 for real a, b, then a = 1.
+-- 2. [Key Idea] Subtract the second equation from the first to eliminate b.
+-- 3. [Proof] (3a + 2b) − (2a + 2b) = 5 − 4 gives a = 1.
+-- 4. [Conclusion] The value of a is 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] If a + b = 2 and a = 1 for real a, b, then b = 1.
+-- 2. [Key Idea] Substitute a = 1 into the sum equation.
+-- 3. [Proof] From a + b = 2 and a = 1, we get 1 + b = 2, hence b = 1.
+-- 4. [Conclusion] The value of b is 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify that 3·1 + 2·1 = 5 and 1 + 1 = 2.
+-- 2. [Key Idea] Direct computation.
+-- 3. [Proof] Compute 3 + 2 = 5 and 1 + 1 = 2.
+-- 4. [Conclusion] The pair (1, 1) satisfies both equations.
+
+-- Proof content:
+-- 1. [Problem Restatement] If two pairs (a₁, b₁) and (a₂, b₂) of real numbers both satisfy 3a + 2b = 5 and a + b = 2, then a₁ = a₂ and b₁ = b₂.
+-- 2. [Key Idea] The linear system has a unique solution; subtract the two instances of each equation and solve for the differences.
+-- 3. [Proof] Subtracting the equations yields a homogeneous system for (a₁ − a₂, b₁ − b₂): 3(a₁ − a₂) + 2(b₁ − b₂) = 0 and (a₁ − a₂) + (b₁ − b₂) = 0. Solving gives a₁ − a₂ = 0 and b₁ − b₂ = 0, hence a₁ = a₂ and b₁ = b₂.
+-- 4. [Conclusion] The solution to the system is unique.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show there exist real numbers a, b such that 3a + 2b = 5, a + b = 2, and moreover a = 1 and b = 1.
+-- 2. [Key Idea] Exhibit the concrete solution a = 1, b = 1 and verify.
+-- 3. [Proof] Take a = 1, b = 1. Then 3·1 + 2·1 = 5 and 1 + 1 = 2, and clearly a = 1 and b = 1.
+-- 4. [Conclusion] Such a pair exists, namely (1, 1).
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify basic arithmetic facts: 2·2 = 4, 3 − 2 = 1, 5 − 4 = 1, and 2 − 1 = 1.
+-- 2. [Key Idea] Direct calculation.
+-- 3. [Proof] Evaluate each expression: 4, 1, 1, and 1 respectively.
+-- 4. [Conclusion] All stated equalities hold.

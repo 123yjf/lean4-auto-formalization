@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist real numbers N and x such that all three equations hold simultaneously: N + x = 97, N + 5x = 265, and N + 2x = 139.
+-- 2. [Key Idea] Explicitly exhibit specific values of N and x and verify they satisfy each equation. This reduces the problem to straightforward arithmetic checks.
+-- 3. [Proof] Choose N = 55 and x = 42. Then:
+--    - N + x = 55 + 42 = 97.
+--    - N + 5x = 55 + 5·42 = 55 + 210 = 265.
+--    - N + 2x = 55 + 2·42 = 55 + 84 = 139.
+--    Thus, all three required equalities are satisfied by these choices. In the Lean code, use provides the witnesses (55, 42), constructor splits the conjunction into separate goals, and norm_num confirms each arithmetic equality.
+-- 4. [Conclusion] The values N = 55 and x = 42 satisfy all three equations, so there exist real numbers N and x meeting the stated conditions.

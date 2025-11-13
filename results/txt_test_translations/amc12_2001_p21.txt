@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers a, b, c, d, all positive, such that:
+--    a * b * c * d = 40320,
+--    (a + 1) * (b + 1) = 525,
+--    (b + 1) * (c + 1) = 147,
+--    (c + 1) * (d + 1) = 105,
+--    and a - d = 10.
+
+-- 2. [Key Idea] Provide an explicit example of such numbers and verify each condition directly. In Lean, this is done by supplying witnesses a = 24, b = 20, c = 6, d = 14, then checking the arithmetic equalities and inequalities with straightforward numeric evaluation.
+
+-- 3. [Proof] Take a = 24, b = 20, c = 6, d = 14.
+--    - Positivity: 24 > 0, 20 > 0, 6 > 0, 14 > 0.
+--    - Product: 24 * 20 = 480, 480 * 6 = 2880, 2880 * 14 = 40320, so a * b * c * d = 40320.
+--    - (a + 1)(b + 1): (24 + 1)(20 + 1) = 25 * 21 = 525.
+--    - (b + 1)(c + 1): (20 + 1)(6 + 1) = 21 * 7 = 147.
+--    - (c + 1)(d + 1): (6 + 1)(14 + 1) = 7 * 15 = 105.
+--    - Difference: a - d = 24 - 14 = 10 (valid in naturals since 24 ≥ 14).
+--    Each of these verifications is carried out by Lean’s numeric tactic (norm_num) after splitting the conjunctions (constructor).
+--    The second theorem simply invokes the first, reasserting the same existence without further work.
+
+-- 4. [Conclusion] The explicit choice (a, b, c, d) = (24, 20, 6, 14) satisfies all the required conditions, so such natural numbers exist. The follow-up theorem directly cites this result.

@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the index n at which the arithmetic progression with first three terms 2x − 3, 5x − 11, and 3x + 1 takes the value 2009.
+-- 2. [Key Idea] In an arithmetic sequence, consecutive differences are equal. This condition lets us solve for x, which then fixes the first term and common difference. With these, we write the general term and set it equal to 2009 to solve for n.
+-- 3. [Proof] Let a1 = 2x − 3, a2 = 5x − 11, a3 = 3x + 1. The arithmetic condition gives a2 − a1 = a3 − a2. Compute:
+(5x − 11) − (2x − 3) = (3x + 1) − (5x − 11)
+3x − 8 = −2x + 12
+5x = 20, so x = 4.
+Then a1 = 2(4) − 3 = 5, and the common difference d = a2 − a1 = (5x − 11) − (2x − 3) = 3x − 8 = 3(4) − 8 = 4.
+The general term is a_n = a1 + (n − 1)d = 5 + 4(n − 1) = 4n + 1.
+Set this equal to 2009: 4n + 1 = 2009 ⇒ 4n = 2008 ⇒ n = 502.
+-- 4. [Conclusion] The term equal to 2009 occurs at n = 502.

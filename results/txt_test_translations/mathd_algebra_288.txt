@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exists a real number n equal to 52, along with real numbers x and y that are both negative, such that |y| = 6, (x − 8)^2 + (y − 3)^2 = 15^2, and x^2 + y^2 = n.
+-- 2. [Key Idea] Provide explicit witnesses: take n = 52, x = −4, and y = −6, and then verify each required condition by direct computation.
+-- 3. [Proof] Choose n = 52. Then take x = −4 and y = −6. We have x < 0 and y < 0. Since y = −6 < 0, |y| = |−6| = −(−6) = 6. Next, (x − 8)^2 + (y − 3)^2 = (−4 − 8)^2 + (−6 − 3)^2 = (−12)^2 + (−9)^2 = 144 + 81 = 225 = 15^2. Finally, x^2 + y^2 = (−4)^2 + (−6)^2 = 16 + 36 = 52 = n.
+-- 4. [Conclusion] With n = 52, x = −4, and y = −6, all the required conditions are satisfied, so the desired existence statement holds.

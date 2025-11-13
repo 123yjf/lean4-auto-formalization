@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every integer n ≥ 0, the sum s_n = ∑_{k=0}^n (2n+1 choose 2k+1) 2^{3k} is not divisible by 5.
+-- 2. [Key Idea] Encode the sum via the binomial expansion of a^N − b^N with a = 1 + 2√2, b = 1 − 2√2, where N = 2n + 1. This yields s_n = (a^N − b^N)/(4√2). Write a^m − b^m = d_m √2 with integers d_m; then s_n = d_N/4. The numbers d_m satisfy the linear recurrence d_m = 2 d_{m−1} + 7 d_{m−2} with d_1 = 4, d_2 = 8. Reducing modulo 5 shows d_m mod 5 is periodic (period 24) and never 0 at odd indices, so d_N ≢ 0 mod 5 for odd N. Since 4 is invertible mod 5, s_n ≢ 0 mod 5.
+-- 3. [Proof] Let N = 2n + 1. Consider a = 1 + 2√2 and b = 1 − 2√2. Expanding (1 + 2√2)^N and (1 − 2√2)^N by the binomial theorem, the even-√2 terms cancel in a^N − b^N while the odd-√2 terms add, giving
+     a^N − b^N = 2√2 ∑_{k=0}^n (N choose 2k+1) (2√2)^{2k}
+               = 4√2 ∑_{k=0}^n (N choose 2k+1) 8^k.
+   Hence s_n = ∑_{k=0}^n (N choose 2k+1) 8^k = (a^N − b^N)/(4√2).
+   Define integers d_m by a^m − b^m = d_m √2. Then s_n = d_N/4. One checks d_1 = 4 (since a − b = 4√2) and d_2 = 8 (since a^2 − b^2 = (a − b)(a + b) = 4√2 · 2 = 8√2). Moreover, a and b satisfy r^2 = 2r + 7 (because a^2 = 2a + 7 and b^2 = 2b + 7), so
+     a^m = 2 a^{m−1} + 7 a^{m−2},  b^m = 2 b^{m−1} + 7 b^{m−2}.
+   Subtracting gives the recurrence for v_m := a^m − b^m: v_m = 2 v_{m−1} + 7 v_{m−2}. Dividing by √2 yields
+     d_m = 2 d_{m−1} + 7 d_{m−2},  with d_1 = 4, d_2 = 8.
+   Working modulo 5, this becomes d_m ≡ 2(d_{m−1} + d_{m−2}) (mod 5) (since 7 ≡ 2 mod 5) with d_1 ≡ 4, d_2 ≡ 3. Iterating produces a periodic sequence modulo 5 of period 24:
+     4, 3, 4, 4, 1, 0, 2, 4, 2, 2, 3, 0, 1, 2, 1, 1, 4, 0, 3, 1, 3, 3, 2, 0, …
+   The entries at odd indices within a period (m = 1, 3, …, 23) are 4, 4, 1, 2, 2, 3, 1, 1, 4, 3, 3, 2 and none is 0 modulo 5. Thus d_m ≢ 0 (mod 5) for all odd m. Since N = 2n + 1 is odd, we get d_N ≢ 0 (mod 5). Because 4 is invertible modulo 5, s_n = d_N/4 is also nonzero modulo 5, i.e., not divisible by 5.
+-- 4. [Conclusion] For every n ≥ 0, s_n is not divisible by 5.

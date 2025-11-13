@@ -1,0 +1,21 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show there exists a unique natural number n with n < 11 such that 3n ≡ 2 (mod 11).
+-- 2. [Key Idea] Work in ZMod 11. Note that 3 has a multiplicative inverse modulo 11, namely 4, since 3·4 ≡ 1 (mod 11). The equation 3n ≡ 2 (mod 11) then implies n ≡ 4·2 ≡ 8 (mod 11). Because we restrict to 0 ≤ n < 11, this forces n = 8.
+-- 3. [Proof] 
+--    - Existence: Take n = 8. Clearly 8 < 11. In ZMod 11, 3·8 = 24 ≡ 2, so the congruence holds.
+--    - Uniqueness: Suppose n < 11 and 3n ≡ 2 (mod 11). Multiply both sides by 4 in ZMod 11. Using 3·4 ≡ 1 (mod 11), we get n ≡ 4·2 ≡ 8 (mod 11). Interpreting both sides as representatives in {0, …, 10}, this implies n = 8.
+-- 4. [Conclusion] There is exactly one such n, namely n = 8.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify that 3·8 ≡ 2 (mod 11).
+-- 2. [Key Idea] Compute directly in ZMod 11.
+-- 3. [Proof] 3·8 = 24, and 24 ≡ 2 (mod 11), so (3·8 : ZMod 11) = 2.
+-- 4. [Conclusion] The congruence holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] Again, show there exists a unique natural number n with n < 11 such that 3n ≡ 2 (mod 11).
+-- 2. [Key Idea] Same as before: use that 4 is the inverse of 3 modulo 11 to solve for n, then use the bound n < 11 to identify the representative uniquely as 8.
+-- 3. [Proof] 
+--    - Existence: Choose n = 8. We have 8 < 11, and the congruence 3·8 ≡ 2 (mod 11) is verified computationally.
+--    - Uniqueness: If n < 11 and 3n ≡ 2 (mod 11), multiply by 4 in ZMod 11 to get (since 4·3 ≡ 1) that n ≡ 8 (mod 11). Passing to representatives in {0, …, 10} (using the fact that for n < 11, the value of (n : ZMod 11) is n itself), this yields n = 8.
+-- 4. [Conclusion] The unique solution is n = 8.

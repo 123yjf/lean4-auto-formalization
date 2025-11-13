@@ -1,0 +1,41 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers a and b with a^2 + b^2 = 1, prove that |a| ≤ 1 and |b| ≤ 1.
+-- 2. [Key Idea] Since squares are nonnegative, each square is bounded above by the sum a^2 + b^2 = 1. Then use the equivalence a^2 ≤ 1 ↔ |a| ≤ 1.
+-- 3. [Proof] Because b^2 ≥ 0, we have a^2 ≤ a^2 + b^2 = 1, hence |a| ≤ 1. Similarly, since a^2 ≥ 0, we have b^2 ≤ a^2 + b^2 = 1, hence |b| ≤ 1.
+-- 4. [Conclusion] Both |a| and |b| are at most 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] For real numbers a and b with a^2 + b^2 = 1, show (a − b)^2 = 1 − 2ab.
+-- 2. [Key Idea] Expand the square (a − b)^2 and substitute the given relation a^2 + b^2 = 1.
+-- 3. [Proof] Expanding gives (a − b)^2 = a^2 − 2ab + b^2 = (a^2 + b^2) − 2ab. Using a^2 + b^2 = 1, we get (a − b)^2 = 1 − 2ab.
+-- 4. [Conclusion] The identity (a − b)^2 = 1 − 2ab holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers a and b with a^2 + b^2 = 1, prove the lower bound ab ≥ −1/2.
+-- 2. [Key Idea] Use the nonnegativity of (a + b)^2 to obtain 1 + 2ab ≥ 0, then divide by 2 (> 0).
+-- 3. [Proof] Since (a + b)^2 ≥ 0, expanding yields a^2 + 2ab + b^2 ≥ 0. Substituting a^2 + b^2 = 1 gives 1 + 2ab ≥ 0, hence 2ab ≥ −1. Dividing both sides by 2 (a positive number) yields ab ≥ −1/2.
+-- 4. [Conclusion] The product ab satisfies ab ≥ −1/2.
+
+-- Proof content:
+-- 1. [Problem Restatement] Let a = 1 and b = 0. Show a^2 + b^2 = 1 and ab + |a − b| = 1.
+-- 2. [Key Idea] Direct arithmetic evaluation.
+-- 3. [Proof] We have a^2 + b^2 = 1^2 + 0^2 = 1. Also, ab + |a − b| = (1)(0) + |1 − 0| = 0 + 1 = 1.
+-- 4. [Conclusion] Both equalities hold for a = 1, b = 0.
+
+-- Proof content:
+-- 1. [Problem Restatement] Let a = 0 and b = 1. Show a^2 + b^2 = 1 and ab + |a − b| = 1.
+-- 2. [Key Idea] Direct arithmetic evaluation.
+-- 3. [Proof] We have a^2 + b^2 = 0^2 + 1^2 = 1. Also, ab + |a − b| = (0)(1) + |0 − 1| = 0 + 1 = 1.
+-- 4. [Conclusion] Both equalities hold for a = 0, b = 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove (1:ℝ)/2 < 1.
+-- 2. [Key Idea] This is the standard inequality 1/2 < 1 over the reals.
+-- 3. [Proof] Numerically, 0.5 < 1.
+-- 4. [Conclusion] The inequality (1:ℝ)/2 < 1 is true.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove (0:ℝ) ≤ 1.
+-- 2. [Key Idea] This is a basic order property of real numbers.
+-- 3. [Proof] Zero is less than or equal to one.
+-- 4. [Conclusion] The inequality 0 ≤ 1 holds.

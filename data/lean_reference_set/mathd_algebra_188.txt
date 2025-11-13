@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given an invertible function f with f(2) = 4 and f⁻¹(2) = 4, compute f(f(2)).
+-- 2. [Key Idea] Use the inverse property: from f⁻¹(2) = 4 it follows that f(4) = 2. Then substitute f(2) = 4 into f(f(2)) to get f(4).
+-- 3. [Proof] Let y = f(2). By hypothesis, y = 4. The equation f⁻¹(2) = 4 means that applying f gives f(4) = 2. Therefore f(f(2)) = f(4) = 2.
+-- 4. [Conclusion] Hence f(f(2)) = 2.

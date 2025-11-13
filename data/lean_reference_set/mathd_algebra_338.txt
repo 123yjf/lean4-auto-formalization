@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve the linear system 3a + b + c = -3, a + 3b + c = 9, a + b + 3c = 19 and show that abc = -56.
+-- 2. [Key Idea] Subtract the equations pairwise to obtain simple relations among a, b, c, then substitute these relations into one original equation to determine each variable and their product.
+-- 3. [Proof] From (2) - (1): (a + 3b + c) - (3a + b + c) = 9 - (-3) gives -2a + 2b = 12, so -a + b = 6 and hence b = a + 6. From (3) - (2): (a + b + 3c) - (a + 3b + c) = 19 - 9 gives -2b + 2c = 10, so -b + c = 5 and hence c = b + 5. Substitute into (1): 3a + b + c = -3 becomes 3a + (a + 6) + (a + 11) = -3, so 5a + 17 = -3, hence 5a = -20 and a = -4. Then b = a + 6 = 2 and c = b + 5 = 7. Therefore abc = (-4)(2)(7) = -56.
+-- 4. [Conclusion] The unique solution is a = -4, b = 2, c = 7, and indeed abc = -56.

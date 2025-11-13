@@ -1,0 +1,65 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every real x, cos x = sin (π/2 − x).
+-- 2. [Key Idea] Use the cofunction identity sin(π/2 − t) = cos t.
+-- 3. [Proof] By the standard identity sin(π/2 − x) = cos x, rewriting the right-hand side yields cos x = sin (π/2 − x).
+-- 4. [Conclusion] The identity holds for all real x.
+
+-- Proof content:
+-- 1. [Problem Restatement] π/2 > 0.
+-- 2. [Key Idea] This is a standard fact: π is positive, hence so is π/2.
+-- 3. [Proof] Invoke the library lemma Real.pi_div_two_pos.
+-- 4. [Conclusion] π/2 is strictly positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] π > 0.
+-- 2. [Key Idea] This is a standard built-in result.
+-- 3. [Proof] Apply the lemma pi_pos.
+-- 4. [Conclusion] π is strictly positive.
+
+-- Proof content:
+-- 1. [Problem Restatement] For all real x, −1 ≤ cos x and cos x ≤ 1.
+-- 2. [Key Idea] Combine two standard bounds on cosine.
+-- 3. [Proof] For any x, we have −1 ≤ cos x (neg_one_le_cos) and cos x ≤ 1 (cos_le_one); take their conjunction.
+-- 4. [Conclusion] cos x always lies in the interval [−1, 1].
+
+-- Proof content:
+-- 1. [Problem Restatement] For all real x, −1 ≤ sin x and sin x ≤ 1.
+-- 2. [Key Idea] Combine two standard bounds on sine.
+-- 3. [Proof] For any x, we have −1 ≤ sin x (neg_one_le_sin) and sin x ≤ 1 (sin_le_one); take their conjunction.
+-- 4. [Conclusion] sin x always lies in the interval [−1, 1].
+
+-- Proof content:
+-- 1. [Problem Restatement] sin((π/2) · cos 0) = cos((π/2) · sin 0).
+-- 2. [Key Idea] Evaluate sine and cosine at 0 and π/2 and simplify.
+-- 3. [Proof] cos 0 = 1 and sin 0 = 0, so the left side is sin(π/2) = 1 and the right side is cos 0 = 1; hence they are equal.
+-- 4. [Conclusion] The equality holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] sin((π/2) · cos(π/2)) = cos((π/2) · sin(π/2)).
+-- 2. [Key Idea] Evaluate cos(π/2) and sin(π/2).
+-- 3. [Proof] cos(π/2) = 0 and sin(π/2) = 1, so the left side is sin 0 = 0 and the right side is cos(π/2) = 0; hence they are equal.
+-- 4. [Conclusion] The equality holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] 0 + π/2 = π/2.
+-- 2. [Key Idea] Zero is the additive identity.
+-- 3. [Proof] This is immediate from ring arithmetic.
+-- 4. [Conclusion] The equality holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] cos 0 + sin 0 = 1.
+-- 2. [Key Idea] Evaluate trig functions at 0.
+-- 3. [Proof] cos 0 = 1 and sin 0 = 0, so the sum is 1.
+-- 4. [Conclusion] The equality holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] cos(π/2) + sin(π/2) = 1.
+-- 2. [Key Idea] Evaluate trig functions at π/2.
+-- 3. [Proof] cos(π/2) = 0 and sin(π/2) = 1, so the sum is 1.
+-- 4. [Conclusion] The equality holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] There exists a natural number n such that n = 2.
+-- 2. [Key Idea] Provide an explicit witness.
+-- 3. [Proof] Take n = 2; then n = 2 is immediate.
+-- 4. [Conclusion] The existential statement is proven.

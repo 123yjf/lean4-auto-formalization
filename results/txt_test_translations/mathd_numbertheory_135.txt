@@ -1,0 +1,55 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers A, B, C, each less than 10, such that:
+   - 3^17 + 3^10 equals the 9-digit decimal number whose digits are A B C A C C B A B (i.e., 100000000*A + 10000000*B + 1000000*C + 100000*A + 10000*C + 1000*C + 100*B + 10*A + B),
+   - and the three-digit number ABC equals 129, i.e., 100*A + 10*B + C = 129.
+-- 2. [Key Idea] Choose A = 1, B = 2, C = 9 (so that ABC = 129) and verify directly that 3^17 + 3^10 = 129199212, whose decimal expansion is exactly A B C A C C B A B with these choices.
+-- 3. [Proof] Take A = 1, B = 2, C = 9. Trivially A, B, C are each less than 10. Compute 3^17 + 3^10 = 129199212. Its decimal expansion is 1·10^8 + 2·10^7 + 9·10^6 + 1·10^5 + 9·10^4 + 9·10^3 + 2·10^2 + 1·10 + 2, which matches the required pattern with A = 1, B = 2, C = 9. Also 100*A + 10*B + C = 129 holds by construction.
+-- 4. [Conclusion] Such digits exist; specifically A = 1, B = 2, C = 9 satisfy all the required conditions.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that 3^17 = 129140163 and 3^10 = 59049.
+-- 2. [Key Idea] Direct numerical evaluation of the powers of 3.
+-- 3. [Proof] Compute 3^10 = 59049 and 3^17 = 129140163 by standard arithmetic.
+-- 4. [Conclusion] The stated equalities for 3^17 and 3^10 hold.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 3^17 + 3^10 = 129199212.
+-- 2. [Key Idea] Add the previously computed values of 3^17 and 3^10.
+-- 3. [Proof] Using 3^17 = 129140163 and 3^10 = 59049, their sum is 129140163 + 59049 = 129199212.
+-- 4. [Conclusion] The sum evaluates to 129199212.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify that 129199212 equals 100000000*1 + 10000000*2 + 1000000*9 + 100000*1 + 10000*9 + 1000*9 + 100*2 + 10*1 + 2.
+-- 2. [Key Idea] This is just writing the decimal expansion of 129199212 with digits 1,2,9,1,9,9,2,1,2 in place-value form.
+-- 3. [Proof] Expand 129199212 as 1·10^8 + 2·10^7 + 9·10^6 + 1·10^5 + 9·10^4 + 9·10^3 + 2·10^2 + 1·10 + 2; both sides match exactly.
+-- 4. [Conclusion] The decomposition into place values is correct.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that the units digit of 3^17 + 3^10 is 2, i.e., (3^17 + 3^10) mod 10 = 2.
+-- 2. [Key Idea] Use the last-digit cycle of powers of 3 or compute directly.
+-- 3. [Proof] The last digits of 3^n cycle with period 4 as 3, 9, 7, 1. Thus 3^17 has last digit 3 (since 17 ≡ 1 mod 4) and 3^10 has last digit 9 (since 10 ≡ 2 mod 4). Then 3 + 9 = 12, whose last digit is 2.
+-- 4. [Conclusion] The remainder modulo 10 is 2.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (3^17 + 3^10) is divisible by 9, i.e., (3^17 + 3^10) mod 9 = 0.
+-- 2. [Key Idea] For k ≥ 2, 3^k is a multiple of 9; hence both terms are divisible by 9.
+-- 3. [Proof] Since 17 ≥ 2 and 10 ≥ 2, both 3^17 and 3^10 are multiples of 9, so their sum is also a multiple of 9.
+-- 4. [Conclusion] The sum is congruent to 0 modulo 9.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (1 + 2 + 9) mod 3 = 0.
+-- 2. [Key Idea] Compute the sum and reduce modulo 3.
+-- 3. [Proof] 1 + 2 + 9 = 12, and 12 is divisible by 3; hence the remainder modulo 3 is 0.
+-- 4. [Conclusion] The sum of the digits 1, 2, 9 is a multiple of 3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (3^17 + 3^10 + 1) is divisible by 11, i.e., (3^17 + 3^10 + 1) mod 11 = 0.
+-- 2. [Key Idea] Use the fact that 3^5 ≡ 1 (mod 11), so 3^10 ≡ 1 and 3^17 ≡ 3^2 ≡ 9 (mod 11).
+-- 3. [Proof] Compute modulo 11: 3^10 ≡ 1 and 3^17 ≡ 9, so 3^17 + 3^10 + 1 ≡ 9 + 1 + 1 = 11 ≡ 0 (mod 11).
+-- 4. [Conclusion] The congruence modulo 11 holds.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that (2 − 1 + 9) mod 11 = 10.
+-- 2. [Key Idea] Direct arithmetic followed by reduction modulo 11.
+-- 3. [Proof] 2 − 1 + 9 = 10, and 10 modulo 11 is 10.
+-- 4. [Conclusion] The stated remainder modulo 11 is 10.

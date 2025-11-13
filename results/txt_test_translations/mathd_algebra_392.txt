@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that there exist natural numbers a, b, c and a natural number k ≥ 2 such that a = 2k − 2, b = 2k, c = 2k + 2, and moreover a^2 + b^2 + c^2 = 12296 and (a · b · c) / 8 = 32736.
+-- 2. [Key Idea] Explicitly choose k = 32, which gives the consecutive even numbers a = 62, b = 64, c = 66, and then verify the required numerical equalities.
+-- 3. [Proof] Take a = 62, b = 64, c = 66. Let k = 32. Then k ≥ 2 is clear. We compute:
+--    - a = 2k − 2 = 64 − 2 = 62, b = 2k = 64, c = 2k + 2 = 66.
+--    - Sum of squares: a^2 + b^2 + c^2 = 62^2 + 64^2 + 66^2 = 3844 + 4096 + 4356 = 12296.
+--    - Product condition: (a · b · c) / 8 = (62 · 64 · 66) / 8 = 62 · (64/8) · 66 = 62 · 8 · 66 = 32736.
+--    Each of these is a straightforward arithmetic check (handled in the Lean proof by norm_num).
+-- 4. [Conclusion] Therefore, the triple (a, b, c) = (62, 64, 66) with k = 32 satisfies all the stated conditions, so such natural numbers exist.

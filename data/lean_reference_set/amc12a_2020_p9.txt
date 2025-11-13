@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the number of solutions x in [0, 2π] of the equation tan(2x) = cos(x/2).
+-- 2. [Key Idea] Consider F(x) = tan(2x) − cos(x/2). Between the vertical asymptotes of tan(2x), the function F is well-defined, continuous, and strictly increasing, so on each such interval it can cross the x-axis at most once. A sign check at the ends of each interval shows it does cross once on every interval.
+-- 3. [Proof] Define F(x) = tan(2x) − cos(x/2) on [0, 2π].
+--    a) Strict monotonicity. Where F is defined (i.e., away from the asymptotes of tan(2x)), its derivative is
+--       F′(x) = 2 sec²(2x) + (1/2) sin(x/2).
+--       Since 2 sec²(2x) ≥ 2 and (1/2) sin(x/2) ≥ −1/2, we have F′(x) ≥ 3/2 > 0. Thus F is strictly increasing on every open interval where tan(2x) is finite.
+--    b) Intervals of continuity. The vertical asymptotes of tan(2x) occur when 2x = π/2 + kπ, i.e., x = π/4 + k(π/2). Within [0, 2π] these are at x = π/4, 3π/4, 5π/4, 7π/4. Hence F is continuous and strictly increasing on the five sub-intervals:
+--       I₁ = [0, π/4), I₂ = (π/4, 3π/4), I₃ = (3π/4, 5π/4), I₄ = (5π/4, 7π/4), I₅ = (7π/4, 2π].
+--    c) Sign checks at the ends of each interval.
+--       • I₁: F(0) = 0 − 1 = −1 < 0, and as x → π/4⁻, tan(2x) → +∞, so F → +∞.
+--       • I₂: as x → π/4⁺, tan(2x) → −∞, so F → −∞; as x → 3π/4⁻, tan(2x) → +∞, so F → +∞.
+--       • I₃: as x → 3π/4⁺, F → −∞; as x → 5π/4⁻, F → +∞.
+--       • I₄: as x → 5π/4⁺, F → −∞; as x → 7π/4⁻, F → +∞.
+--       • I₅: as x → 7π/4⁺, F → −∞; and F(2π) = tan(4π) − cos(π) = 0 − (−1) = 1 > 0.
+--       By continuity on each interval and these sign changes, the Intermediate Value Theorem guarantees at least one zero of F in each interval. Since F is strictly increasing there, each interval contains at most one zero. Therefore, each interval contains exactly one solution.
+--    d) Counting solutions. There are five such intervals, so there are five distinct solutions in [0, 2π]. (Equivalently, set t = x/2 ∈ [0, π] and analyze tan(4t) − cos t in the same way.)
+-- 4. [Conclusion] The equation tan(2x) = cos(x/2) has exactly 5 solutions on [0, 2π].

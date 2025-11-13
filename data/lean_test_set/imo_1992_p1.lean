@@ -1,0 +1,24 @@
+-- Proof content:
+-- ### [Problem Restatement]
+-- For integers \(p, q, r\) with \(1 < p < q < r\) such that \((p-1)(q-1)(r-1)\) divides \(pqr - 1\), the only such triples are \((2,4,8)\) and \((3,5,15)\).
+-- 
+-- ### [Key Idea]
+-- Substitute \(a = p-1\), \(b = q-1\), \(c = r-1\) with \(1 \leq a < b < c\), so the condition becomes \(abc\) divides \(ab + ac + bc + a + b + c\); exhaustive case analysis on small values of \(a\) shows only the given triples satisfy this, as larger values make the dividend smaller than the divisor.
+-- 
+-- ### [Proof]
+-- Let \(a = p-1\), \(b = q-1\), \(c = r-1\), so \(a, b, c\) are positive integers with \(a < b < c\) and \(a \geq 1\), \(b \geq 2\), \(c \geq 3\). The condition is equivalent to \(abc \mid (ab + ac + bc + a + b + c)\). Denote \(S = ab + ac + bc + a + b + c\).
+-- 
+-- A necessary condition is \(S \geq abc\), else no positive integer multiple fits. We proceed by cases on \(a\).
+-- 
+-- **Case \(a=1\)**: Then \(abc = bc\), \(S = bc + 2b + 2c + 1\), so \(bc \mid (2b + 2c + 1)\). For \(b \geq 4\), \(bc > 2b + 2c + 1\), impossible. For \(b=2\), no \(c \geq 3\) works. For \(b=3\), only \(c=7\) works, giving \((a,b,c) = (1,3,7)\) or \((p,q,r) = (2,4,8)\).
+-- 
+-- **Case \(a=2\)**: Then \(abc = 2bc\), \(S = bc + 3b + 3c + 2\). Solving \(c = (3b+2)/(b(2k-1) - 3)\) for integer \(k \geq 1\), \(c > b \geq 3\), only \(k=1\), \(b=4\), \(c=14\) works, giving \((a,b,c) = (2,4,14)\) or \((p,q,r) = (3,5,15)\).
+-- 
+-- **Case \(a \geq 3\)**: Then \(S < abc\) (since \(abc - S > 0\)), impossible.
+-- 
+-- Thus, these are the only triples.
+-- 
+-- **Alternative proof (modular)**: The condition \(pqr \equiv 1 \pmod{(p-1)(q-1)(r-1)}\) implies specific relations like powers of 2 for \((2,4,8)\) or multiples for \((3,5,15)\), but exhaustive verification as above confirms uniqueness.
+-- 
+-- ### [Conclusion]
+-- The only such triples are \((2,4,8)\) and \((3,5,15)\).

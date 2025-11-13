@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let f : ℕ → ℕ be a bijection. Suppose f(2) = 4 and invFun f 2 = 4, where invFun f is a choice of a preimage for each value (its definition requires Nonempty ℕ). Prove that f(f(2)) = 2.
+-- 2. [Key Idea] Use surjectivity of f to assert that f(invFun f 2) = 2; then substitute invFun f 2 = 4 to get f 4 = 2. Finally, since f(2) = 4, replace f(2) by 4 to conclude f(f(2)) = f 4 = 2.
+-- 3. [Proof] 
+   - From bijectivity, f is surjective. Hence there exists some a with f a = 2. By the defining property of invFun (specifically, invFun_eq when such an a exists), we have f(invFun f 2) = 2.
+   - Using the hypothesis invFun f 2 = 4, this becomes f 4 = 2.
+   - From f(2) = 4, we rewrite f(f(2)) as f 4. Combining these, f(f(2)) = f 4 = 2.
+-- 4. [Conclusion] Therefore, f(f(2)) = 2.

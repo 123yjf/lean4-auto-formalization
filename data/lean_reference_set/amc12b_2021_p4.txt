@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute the overall mean score if the morning class has mean 84, the afternoon class has mean 70, and their sizes are in the ratio 3:4.
+-- 2. [Key Idea] The overall mean is the weighted average of the two class means, with weights proportional to their class sizes.
+-- 3. [Proof] Let the morning and afternoon class sizes be 3k and 4k. Then the overall mean is (84·3k + 70·4k) / (3k + 4k) = (252k + 280k) / 7k = 532/7 = 76. Equivalently, using weights directly: (3/7)·84 + (4/7)·70 = 36 + 40 = 76.
+-- 4. [Conclusion] The overall mean score is 76, choice (C).

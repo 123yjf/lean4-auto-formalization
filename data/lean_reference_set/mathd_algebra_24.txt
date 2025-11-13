@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given that 40 calories is 2% of a person’s daily caloric requirement, find the total daily requirement.
+-- 2. [Key Idea] Use the relation part = percent × whole, so whole = part ÷ percent (with percent written as a decimal).
+-- 3. [Proof] Let D denote the daily requirement. The statement “40 is 2% of D” means 40 = 0.02 × D. Solving gives D = 40 ÷ 0.02 = 2000. Alternatively, since 2% = 2/100 = 1/50, we get D = 40 × 50 = 2000.
+-- 4. [Conclusion] The total daily caloric requirement is 2000 calories.

@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove in the complex numbers that (i / 2)^2 = -1 / 4.
+-- 2. [Key Idea] Use the rule that a quotient to a power equals the quotient of the powers, together with the facts i^2 = -1 and 2^2 = 4, then substitute these into the expression.
+-- 3. [Proof] 
+--    a) Apply the quotient power rule: (i / 2)^2 = i^2 / 2^2.
+--    b) Use the standard identity for the imaginary unit: i^2 = -1.
+--    c) Compute the square of 2 (viewed in ℂ): 2^2 = 4.
+--    d) Substituting (b) and (c) into (a) gives (i / 2)^2 = (-1) / 4.
+-- 4. [Conclusion] Therefore, (i / 2)^2 equals -1 / 4.

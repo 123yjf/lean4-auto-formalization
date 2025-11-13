@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Solve for y in the equation √(19 + 3y) = 7. 2. [Key Idea] Square both sides to remove the square root, then isolate y. 3. [Proof] (i) Direct algebraic solution √(19 + 3y) = 7 ⇒ (√(19 + 3y))² = 7² ⇒ 19 + 3y = 49 ⇒ 3y = 49 − 19 = 30 ⇒ y = 30 / 3 = 10. (ii) Verification Substitute y = 10 into the original equation: √(19 + 3·10) = √(19 + 30) = √49 = 7 ✓ 4. [Conclusion] The unique solution is y = 10.

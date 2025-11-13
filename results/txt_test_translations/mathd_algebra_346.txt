@@ -1,0 +1,12 @@
+-- Proof content:
+-- 1. [Problem Restatement] With f(x) = 2x − 3 and g(x) = x + 1, show that g(f(5) − 1) = 7.
+-- 2. [Key Idea] Expand the definitions of f and g and carry out the straightforward arithmetic: compute f(5), subtract 1, then apply g. The auxiliary lemmas simply record these small computations and definition expansions.
+-- 3. [Proof] 
+- Main theorem (mathd_algebra_346): By unfolding the definitions of f and g, we get g(f(5) − 1) = (2·5 − 3 − 1) + 1. Evaluating the numbers gives (10 − 3 − 1) + 1 = (7 − 1) + 1 = 6 + 1 = 7.
+- Lemma f_at_5: Using the definition of f, f(5) = 2·5 − 3 = 10 − 3 = 7.
+- Lemma f_5_minus_1: From f_at_5, f(5) − 1 = 7 − 1 = 6.
+- Lemma g_at_6: Using the definition of g, g(6) = 6 + 1 = 7.
+- Lemmas f_def_check and g_def_check: These just restate the definitions, f x = 2x − 3 and g x = x + 1.
+- Lemma direct_computation: Expanding f inside g shows g(f(5) − 1) = g(2·5 − 3 − 1), i.e., we replace f(5) by its definitional expression.
+- Lemma arithmetic_steps: The necessary arithmetic is recorded explicitly: 2·5 = 10, 10 − 3 = 7, 7 − 1 = 6, and 6 + 1 = 7.
+-- 4. [Conclusion] By direct expansion of f and g and simple arithmetic, g(f(5) − 1) evaluates to 7, as claimed. The supporting lemmas verify each intermediate computation.

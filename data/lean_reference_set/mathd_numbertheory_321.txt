@@ -1,0 +1,13 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the unique residue n with 0 ≤ n < 1399 such that 160·n ≡ 1 (mod 1399).
+-- 2. [Key Idea] Use that 1400 ≡ 1 (mod 1399). Since 1400 = 35·40, the inverse of 40 modulo 1399 is 35. Also, 160 = 4·40, so the inverse of 160 is the product of the inverses of 4 and 40. From 4·350 = 1400 ≡ 1, the inverse of 4 is 350. Multiply these inverses and reduce modulo 1399.
+-- 3. [Proof] Method 1 (modular manipulations).
+- Because 1400 = 35·40 and 1400 ≡ 1 (mod 1399), we have 40⁻¹ ≡ 35 (mod 1399).
+- Also, 4·350 = 1400 ≡ 1 (mod 1399), so 4⁻¹ ≡ 350 (mod 1399).
+- Since 160 = 4·40, it follows that 160⁻¹ ≡ (4·40)⁻¹ ≡ 4⁻¹·40⁻¹ ≡ 350·35 = 12250 (mod 1399).
+- Reducing 12250 modulo 1399: 1399·8 = 11192, and 12250 − 11192 = 1058. Hence 160⁻¹ ≡ 1058 (mod 1399), i.e., 160·1058 ≡ 1 (mod 1399).
+Method 2 (extended Euclidean algorithm).
+- Compute gcd steps: 1399 = 8·160 + 119; 160 = 1·119 + 41; 119 = 2·41 + 37; 41 = 1·37 + 4; 37 = 9·4 + 1.
+- Back-substituting expresses 1 as 1 = 1058·160 − 121·1399, which shows 160·1058 ≡ 1 (mod 1399).
+Both methods give the same residue 1058, and it satisfies 0 ≤ 1058 < 1399.
+-- 4. [Conclusion] The multiplicative inverse of 160 modulo 1399 is n = 1058.

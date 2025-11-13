@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are to show that there exist natural numbers x and y such that x + y = 17402, x is divisible by 10 (i.e., x % 10 = 0), y equals x divided by 10, and moreover x − y = 14238.
+-- 2. [Key Idea] Use the relation y = x/10 to rewrite the sum condition as x + x/10 = 17402, which gives (11/10) x = 17402. Solving for x yields x = 17402 · 10 / 11. Compute this value explicitly, then set y = x/10 and verify all required properties numerically.
+-- 3. [Proof] From x + y = 17402 and y = x/10, we get (11/10) x = 17402, so x = 17402 · 10 / 11 = 15820. Then y = x/10 = 15820/10 = 1582. These values satisfy:
+--    - Sum: 15820 + 1582 = 17402.
+--    - Divisibility: 15820 % 10 = 0 (so x ends in 0).
+--    - Relation: 1582 = 15820 / 10 (so y = x/10).
+--    - Difference: 15820 − 1582 = 14238.
+--    Therefore, the pair (x, y) = (15820, 1582) fulfills all the conditions.
+-- 4. [Conclusion] Choosing x = 15820 and y = 1582 demonstrates the existence of natural numbers satisfying x + y = 17402, x % 10 = 0, y = x/10, and x − y = 14238, as required.

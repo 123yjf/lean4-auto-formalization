@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Let x and y be real numbers with x + y = 14 and x · y = 19. Prove that x^2 + y^2 = 158.
+-- 2. [Key Idea] Use the algebraic identity x^2 + y^2 = (x + y)^2 − 2xy. Then substitute the given values for x + y and xy and compute the resulting number.
+-- 3. [Proof] The identity x^2 + y^2 = (x + y)^2 − 2xy follows by expanding (x + y)^2 = x^2 + 2xy + y^2 and rearranging. Substituting x + y = 14 and xy = 19 gives x^2 + y^2 = 14^2 − 2·19. Compute 14^2 = 196 and 2·19 = 38, so 196 − 38 = 158. Therefore x^2 + y^2 = 158.
+-- 4. [Conclusion] Using the standard identity and straightforward arithmetic, we conclude x^2 + y^2 = 158.

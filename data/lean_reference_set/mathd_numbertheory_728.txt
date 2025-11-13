@@ -1,0 +1,11 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 29¹³ − 5¹³ is congruent to 3 modulo 7.
+-- 2. [Key Idea] Reduce each base modulo 7 and apply Fermat’s Little Theorem (FLT), which says a⁶ ≡ 1 (mod 7) for any a not divisible by 7.
+-- 3. [Proof] 
+--    Method 1 (direct reduction + FLT):
+--    a) Since 29 ≡ 1 (mod 7), we have 29¹³ ≡ 1¹³ = 1 (mod 7).
+--    b) Since 5 ≡ 5 (mod 7) and by FLT we have 5⁶ ≡ 1 (mod 7). Because 13 = 2·6 + 1, write 5¹³ = (5⁶)²·5 ≡ 1²·5 = 5 (mod 7).
+--    c) Therefore 29¹³ − 5¹³ ≡ 1 − 5 ≡ −4 ≡ 3 (mod 7).
+--    Method 2 (cyclic pattern):
+--    Compute powers of 5 modulo 7: 5¹ ≡ 5, 5² ≡ 4, 5³ ≡ 6, 5⁴ ≡ 2, 5⁵ ≡ 3, 5⁶ ≡ 1. The pattern repeats every 6. Since 13 ≡ 1 (mod 6), we get 5¹³ ≡ 5¹ ≡ 5 (mod 7). Combine with 29¹³ ≡ 1 to reach the same result.
+-- 4. [Conclusion] Hence 29¹³ − 5¹³ ≡ 3 (mod 7).

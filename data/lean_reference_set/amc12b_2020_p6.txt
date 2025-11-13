@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for every integer n ≥ 9, the quantity ((n + 2)! − (n + 1)!)/n! is always a perfect square.
+-- 2. [Key Idea] Factor out n! from both factorial terms; the expression simplifies to (n + 1)².
+-- 3. [Proof] We compute:
+   ((n + 2)! − (n + 1)!)/n!
+   = [(n + 2)(n + 1)n! − (n + 1)n!]/n!
+   = (n + 1)[(n + 2) − 1]
+   = (n + 1)².
+   Since (n + 1)² is the square of the integer n + 1, the expression is a perfect square.
+-- 4. [Conclusion] For every n ≥ 9 (indeed, for every positive integer n), ((n + 2)! − (n + 1)!)/n! equals (n + 1)², hence it is always a perfect square, choice (D).

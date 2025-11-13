@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Convert 80 lugs into ligs, given the relations 7 ligs = 4 lags and 9 lags = 20 lugs.
+-- 2. [Key Idea] Use conversion factors expressed as fractions to move from lugs to lags to ligs, canceling units along the way; alternatively, use proportional reasoning in two steps.
+-- 3. [Proof] Method 1 (factor chain): Multiply 80 lugs by (9 lags / 20 lugs) to convert to lags, then by (7 ligs / 4 lags) to convert to ligs:
+80 lugs × (9 lags / 20 lugs) × (7 ligs / 4 lags) = (80·9·7) / (20·4) ligs = (80/20)·(9/4)·7 ligs = 4·(9/4)·7 ligs = 9·7 ligs = 63 ligs.
+Method 2 (proportions): First, from 9 lags = 20 lugs, 80 lugs correspond to (80·9)/20 = 36 lags. Then, from 7 ligs = 4 lags, 36 lags correspond to (36·7)/4 = 63 ligs.
+-- 4. [Conclusion] Therefore, 80 lugs equal 63 ligs.

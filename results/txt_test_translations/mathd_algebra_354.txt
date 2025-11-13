@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] We have an arithmetic sequence with n-th term given by a₁ + (n − 1) d. We are told the 7th term is 30 and the 11th term is 60. Prove that the 21st term equals 135.
+-- 2. [Key Idea] Use the definition of an arithmetic sequence to turn the given term values into linear equations a₁ + 6d = 30 and a₁ + 10d = 60. Solve this system to find d and a₁, then compute the 21st term a₁ + 20d.
+-- 3. [Proof] By definition, arithmetic_seq a₁ d n = a₁ + (n − 1) d. Plugging in n = 7 gives a₁ + 6d = 30, and n = 11 gives a₁ + 10d = 60. Subtracting the first equation from the second yields 4d = 30, so d = 7.5. Substituting d = 7.5 into a₁ + 6d = 30 gives a₁ = 30 − 6·7.5 = 30 − 45 = −15. The 21st term is a₁ + 20d = −15 + 20·7.5 = −15 + 150 = 135.
+-- 4. [Conclusion] Therefore, arithmetic_seq a₁ d 21 = 135.

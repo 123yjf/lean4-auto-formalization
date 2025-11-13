@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every natural number n, show that 12 divides 4^(n+1) + 20.
+-- 2. [Key Idea] Prove separately that 4 divides the number and 3 divides the number; since 4 and 3 are coprime, their product 12 will also divide it.
+-- 3. [Proof] 
+--    - First, 4 divides 4^(n+1) because any power of 4 is a multiple of 4, and 4 divides 20. Therefore, by additivity of divisibility, 4 divides 4^(n+1) + 20.
+--    - Next, work modulo 3. Since 4 ≡ 1 (mod 3), we have 4^(n+1) ≡ 1 (mod 3). Also, 20 ≡ 2 (mod 3). Hence 4^(n+1) + 20 ≡ 1 + 2 ≡ 0 (mod 3), so 3 divides 4^(n+1) + 20.
+--    - The numbers 4 and 3 are coprime. Therefore, because both 4 and 3 divide the number, their product 12 divides 4^(n+1) + 20.
+-- 4. [Conclusion] Thus, for all n, 12 divides 4^(n+1) + 20.

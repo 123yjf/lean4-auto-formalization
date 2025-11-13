@@ -1,0 +1,15 @@
+-- Proof content:
+-- 1. [Problem Restatement] We are given a real sequence of pairs (a_n, b_n) defined by the linear recurrence (a_{n+1}, b_{n+1}) = (√3 a_n − b_n, √3 b_n + a_n). Knowing that (a_{100}, b_{100}) = (2, 4), we are asked to find the value of a₁ + b₁.
+-- 2. [Key Idea] Encode the pair (a_n, b_n) as a single complex number z_n = a_n + i b_n. Then the recurrence becomes multiplicative: z_{n+1} = (√3 + i) z_n. Hence z_{100} = (√3 + i)^{99} z_1, so z_1 = z_{100} / (√3 + i)^{99}. Compute the power (√3 + i)^{99} by first showing (√3 + i)^3 = 8i, which implies (√3 + i)^{99} = (8i)^{33} = 2^{99} i. Finally, evaluate z_1 and take the sum of its real and imaginary parts.
+-- 3. [Proof] Define z_n = a_n + i b_n. Using the given recurrences,
+     z_{n+1} = (√3 a_n − b_n) + i(√3 b_n + a_n) = (√3 + i)(a_n + i b_n) = (√3 + i) z_n.
+     By induction, this yields z_{100} = (√3 + i)^{99} z_1, so z_1 = z_{100}/(√3 + i)^{99}.
+     We compute (√3 + i)^3 by binomial expansion and the identities i^2 = −1, i^3 = −i, and (√3)^2 = 3:
+     (√3 + i)^3 = (√3)^3 + 3(√3)^2 i + 3√3 i^2 + i^3 = 3√3 + 9i − 3√3 − i = 8i.
+     Therefore, (√3 + i)^{99} = [(√3 + i)^3]^{33} = (8i)^{33} = 8^{33} i = 2^{99} i.
+     With z_{100} = 2 + 4i, we get
+     z_1 = (2 + 4i)/(2^{99} i) = (2 + 4i)·(−i)/2^{99} = (4 − 2i)/2^{99}.
+     Thus a₁ = Re(z_1) = 4/2^{99} and b₁ = Im(z_1) = (−2)/2^{99}, so
+     a₁ + b₁ = (4 − 2)/2^{99} = 2/2^{99} = 1/2^{98}.
+     (Equivalently, this final arithmetic is the identity (4/2^{99}) + (−2/2^{99}) = 1/2^{98}.)
+-- 4. [Conclusion] The required sum is a₁ + b₁ = 1/2^{98}.

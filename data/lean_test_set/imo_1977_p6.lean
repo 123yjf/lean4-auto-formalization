@@ -1,0 +1,22 @@
+-- Proof content:
+-- ### [Problem Restatement]
+-- Prove that the only function \(f: \mathbb{N}^{+} \to \mathbb{N}^{+}\) satisfying \(f(n+1) > f(f(n))\) for all positive integers \(n\) is the identity function \(f(n) = n\).
+-- 
+-- ### [Key Idea]
+-- Establish that \(f\) is strictly increasing with \(f(1) = 1\) and \(f(n) \geq n\), then show by contradiction that assuming \(f(k) > k\) for the smallest such \(k\) violates the inequality.
+-- 
+-- ### [Proof]
+-- First, prove \(f\) is strictly increasing, i.e., \(f(n) < f(n+1)\) for all \(n\).
+-- 
+-- Assume for contradiction that there exists a smallest \(n\) such that \(f(n+1) \leq f(n)\). Then \(f\) is strictly increasing on \(\{1, \dots, n\}\), so \(f(1) < \cdots < f(n)\). The given inequality yields \(f(n+1) > f(f(n))\), so \(f(f(n)) < f(n+1) \leq f(n)\), hence \(f(f(n)) < f(n)\). Since \(f\) is strictly increasing on \(\{1, \dots, n\}\), this implies \(f(n) < n\). Thus, \(f(1) < \cdots < f(n) \leq n-1\), but \(n\) distinct positive integers cannot fit into \(\{1, \dots, n-1\}\), a contradiction. Therefore, \(f\) is strictly increasing.
+-- 
+-- Next, prove \(f(1) = 1\).
+-- 
+-- Assume for contradiction that \(f(1) \geq 2\). Then strict increase gives \(f(n) \geq n+1\) for all \(n\). Since \(f(n) \geq n+1 > n\) and \(f\) is strictly increasing, \(f(f(n)) \geq f(n+1)\). But the inequality gives \(f(n+1) > f(f(n)) \geq f(n+1)\), a contradiction. Thus, \(f(1) = 1\).
+-- 
+-- Since \(f\) is strictly increasing and \(f(1) = 1\), it follows that \(f(n) \geq n\) for all \(n\).
+-- 
+-- Assume for contradiction that \(f\) is not the identity, and let \(k\) be the smallest positive integer with \(f(k) > k\) (hence \(f(k) \geq k+1\)). Then \(f(j) = j\) for \(j < k\). Let \(m = f(k) \geq k+1\). The inequality at \(n = k\) gives \(f(k+1) > f(m)\). But if \(m = k+1\), then \(f(k+1) > f(k+1)\), impossible. If \(m > k+1\), strict increase yields \(f(k+1) < f(m)\), contradicting \(f(k+1) > f(m)\). Thus, no such \(k\) exists, so \(f(n) = n\) for all \(n\).
+-- 
+-- ### [Conclusion]
+-- The only function satisfying the given condition is \(f(n) = n\).

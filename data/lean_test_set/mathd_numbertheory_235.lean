@@ -1,0 +1,2 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the units (ones) digit of 29·79 + 31·81. 2. [Key Idea] Work modulo 10: the units digit of any integer equals its remainder upon division by 10, and multiplication/addition respect congruences. 3. [Proof] Modulo 10 we have 29 ≡ 9, 79 ≡ 9, 31 ≡ 1, 81 ≡ 1. Hence 29·79 + 31·81 ≡ 9·9 + 1·1 ≡ 81 + 1 ≡ 1 + 1 ≡ 2 (mod 10). Therefore the units digit is 2. 4. [Conclusion] The number 29·79 + 31·81 ends in the digit 2.

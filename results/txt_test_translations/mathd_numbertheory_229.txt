@@ -1,0 +1,25 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that in ZMod 7, we have (5)^30 = 1.
+-- 2. [Key Idea] Use Fermat’s little theorem: since 7 is prime and gcd(5,7)=1, we get 5^6 = 1 in ZMod 7. Then write 30 = 6·5 and use the law (a^m)^n = a^(m·n).
+-- 3. [Proof] First note that 7 is prime and 5 is coprime to 7. By Fermat’s little theorem, (5 : ZMod 7)^6 = 1. Since 30 = 6·5, we rewrite (5 : ZMod 7)^30 as ((5 : ZMod 7)^6)^5, which equals 1^5 = 1.
+-- 4. [Conclusion] Therefore, (5 : ZMod 7)^30 = 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] Verify the sequence of powers modulo 7:
+--    5^1 = 5, 5^2 = 4, 5^3 = 6, 5^4 = 2, 5^5 = 3, 5^6 = 1 in ZMod 7.
+-- 2. [Key Idea] Compute each power by reducing modulo 7 step by step.
+-- 3. [Proof] Compute:
+--    • 5^1 = 5.
+--    • 5^2 = 25 ≡ 4 (mod 7).
+--    • 5^3 = 5·4 = 20 ≡ 6 (mod 7).
+--    • 5^4 = 5·6 = 30 ≡ 2 (mod 7).
+--    • 5^5 = 5·2 = 10 ≡ 3 (mod 7).
+--    • 5^6 = 5·3 = 15 ≡ 1 (mod 7).
+--    These equalities are bundled into a single conjunction.
+-- 4. [Conclusion] The listed cyclic pattern of powers of 5 modulo 7 is verified.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove that in ZMod 7, (5)^30 = 1.
+-- 2. [Key Idea] Direct computation in ZMod 7 shows the expression reduces to 1.
+-- 3. [Proof] Evaluating 5^30 modulo 7 (as Lean can do mechanically) yields 1.
+-- 4. [Conclusion] Hence, (5 : ZMod 7)^30 = 1.

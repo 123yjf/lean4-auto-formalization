@@ -1,0 +1,30 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for all real numbers a and b,
+--    |a + b| / (1 + |a + b|) ≤ |a| / (1 + |a|) + |b| / (1 + |b|).
+-- 2. [Key Idea] Set x = |a| and y = |b| (so x, y ≥ 0). Use:
+--    - the triangle inequality |a + b| ≤ x + y,
+--    - the fact that g(t) = t / (1 + t) is increasing on [0, ∞),
+--    - and the subadditivity g(x + y) ≤ g(x) + g(y) for x, y ≥ 0, proved by clearing denominators and checking the resulting inequality is nonnegative.
+-- 3. [Proof]
+--    - Define x = |a| and y = |b|, so x, y ≥ 0.
+--    - Consider g(t) = t / (1 + t). For any s, t ≥ 0 with s ≤ t, we have 1 + s > 0 and 1 + t > 0, so
+--      s / (1 + s) ≤ t / (1 + t) ⇔ s(1 + t) ≤ t(1 + s) ⇔ s + st ≤ t + st ⇔ s ≤ t.
+--      Hence g is increasing on [0, ∞).
+--    - By the triangle inequality, |a + b| ≤ |a| + |b| = x + y, and |a + b| ≥ 0. Applying the monotonicity of g gives
+--      |a + b| / (1 + |a + b|) ≤ (x + y) / (1 + x + y).
+--    - It remains to show subadditivity on nonnegatives:
+--      (x + y) / (1 + x + y) ≤ x / (1 + x) + y / (1 + y).
+--      Since 1 + x + y > 0 and (1 + x)(1 + y) > 0, we can clear denominators:
+--      (x + y)(1 + x)(1 + y) ≤ (x / (1 + x) + y / (1 + y)) ⋅ (1 + x)(1 + y)
+--      ⇔ (x + y)(1 + x)(1 + y) ≤ x(1 + y) + y(1 + x).
+--      Writing the right-hand side as a single fraction first,
+--      x / (1 + x) + y / (1 + y) = (x(1 + y) + y(1 + x)) / ((1 + x)(1 + y)),
+--      the cross-multiplied inequality becomes
+--      (x + y)(1 + x)(1 + y) ≤ (x(1 + y) + y(1 + x))(1 + x + y).
+--      Expanding both sides and simplifying shows this is equivalent to
+--      0 ≤ xy(2 + x + y),
+--      which holds because x, y ≥ 0 imply xy ≥ 0 and 2 + x + y ≥ 0.
+--    - Putting the two steps together,
+--      |a + b| / (1 + |a + b|) ≤ (x + y) / (1 + x + y) ≤ x / (1 + x) + y / (1 + y).
+-- 4. [Conclusion] Therefore, for all real a and b,
+--    |a + b| / (1 + |a + b|) ≤ |a| / (1 + |a|) + |b| / (1 + |b|).

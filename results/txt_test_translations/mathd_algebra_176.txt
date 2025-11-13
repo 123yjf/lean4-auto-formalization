@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that for any element x in a commutative ring R, the identity (x + 1)^2 * x = x^3 + 2*x^2 + x holds.
+-- 2. [Key Idea] Expand the square (x + 1)^2 and then distribute multiplication by x; these are standard polynomial identities valid in any commutative ring.
+-- 3. [Proof] First, expand the square: (x + 1)^2 = x^2 + 2*x + 1. Next, multiply this result by x: (x^2 + 2*x + 1) * x = x^3 + 2*x^2 + x. Substituting the first equality into the left-hand side gives (x + 1)^2 * x = x^3 + 2*x^2 + x, as required.
+-- 4. [Conclusion] Therefore, (x + 1)^2 * x equals x^3 + 2*x^2 + x for all x in any commutative ring.

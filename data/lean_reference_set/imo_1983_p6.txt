@@ -1,0 +1,20 @@
+-- Proof content:
+-- 1. [Problem Restatement]
+-- Given positive real numbers a, b, c that are side lengths of a triangle, prove that a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a) ≥ 0, with equality if and only if a = b = c.
+
+-- 2. [Key Idea]
+-- Without loss of generality, order the sides so that a ≥ b ≥ c > 0. For fixed b and c, regard the expression E = a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a) as a function of a. Show that this function is nondecreasing for a ≥ b, so its minimum on the relevant interval occurs at a = b, where it reduces to b c (b − c)^2 ≥ 0. Equality then forces b = c and, together with the monotonicity in a, also a = b.
+
+-- 3. [Proof]
+-- Define E = a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a). Assume a ≥ b ≥ c > 0; relabeling covers all permutations. Because a, b, c form a triangle, we also have a < b + c, so a lies in [b, b + c).
+-- Treat E as a function of a with b, c fixed. Expanding gives
+-- E(a) = b a^3 − (b^2 + c^2) a^2 + c^3 a + b^3 c − b^2 c^2.
+-- Differentiate:
+-- E′(a) = 3 b a^2 − 2 (b^2 + c^2) a + c^3.
+-- This is an upward-opening quadratic in a. One checks (via a discriminant estimate) that its larger root is at most b when b ≥ c, with equality only if b = c. Consequently, for all a ≥ b we have E′(a) ≥ 0, with equality only in the case b = c and a = b.
+-- Therefore E is nondecreasing on [b, b + c), so its minimum on this interval is attained at a = b. Substituting a = b yields
+-- E(b) = b c (b − c)^2 ≥ 0,
+-- with equality if and only if b = c. Combined with a ≥ b and the monotonicity of E in a, equality forces a = b as well. Hence equality occurs exactly when a = b = c.
+
+-- 4. [Conclusion]
+-- The inequality a^2 b (a − b) + b^2 c (b − c) + c^2 a (c − a) ≥ 0 holds for all triangle side lengths a, b, c, and equality holds if and only if the triangle is equilateral (a = b = c).

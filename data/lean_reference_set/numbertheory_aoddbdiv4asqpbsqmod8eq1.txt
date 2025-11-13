@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Prove that if a is odd and b is divisible by 4, then a² + b² ≡ 1 (mod 8).
+-- 2. [Key Idea] Squares of odd integers are congruent to 1 modulo 8, while squares of multiples of 4 are congruent to 0 modulo 8; thus their sum is 1 modulo 8.
+-- 3. [Proof] Since a is odd, write a = 2m + 1 for some integer m. Then a² = (2m + 1)² = 4m² + 4m + 1 = 4m(m + 1) + 1. Because m and m + 1 are consecutive integers, one of them is even, so m(m + 1) is even; hence 4m(m + 1) is divisible by 8, giving a² ≡ 1 (mod 8). Since b is divisible by 4, write b = 4k for some integer k. Then b² = (4k)² = 16k² = 8·(2k²), which is divisible by 8, so b² ≡ 0 (mod 8). Adding these congruences yields a² + b² ≡ 1 + 0 ≡ 1 (mod 8).
+-- 4. [Conclusion] Therefore, for every odd a and every b divisible by 4, we have a² + b² ≡ 1 (mod 8).

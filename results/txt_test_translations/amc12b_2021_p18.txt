@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] There exists a complex number w such that for every nonzero complex number z satisfying 12·|z|^2 = 2·|z+2|^2 + |z^2+1|^2 + 31, we have z + 6/z = w and moreover w = -2.
+-- 2. [Key Idea] Choose w = -2 and show that any z satisfying the given constraint must have real part -1 and |z|^2 = 6, hence z = -1 ± i√5. Then use the identity z⁻¹ = conj(z)/|z|^2 to get 6/z = conj(z), so z + 6/z = z + conj(z) = 2 Re(z) = -2.
+-- 3. [Proof] 
+   - We set w = -2 and fix a nonzero z satisfying the constraint. Rewrite the constraint using |z|^2 = z.re^2 + z.im^2 and similarly expand |z+2|^2 and |z^2+1|^2 in terms of z.re and z.im. Using:
+     • (z+2).re = z.re + 2 and (z+2).im = z.im,
+     • (z^2+1).re = z.re^2 − z.im^2 + 1 and (z^2+1).im = 2 z.re z.im,
+     a straightforward algebraic simplification of the given equality yields
+     (z.re^2 + z.im^2 − 6)^2 + 4 (z.re + 1)^2 = 0.
+   - Each term on the left is nonnegative, so both must be zero. Hence z.re + 1 = 0 and z.re^2 + z.im^2 = 6. Therefore z.re = −1 and z.im^2 = 5, so z.im = ±√5 and z = −1 ± i√5.
+   - From |z|^2 = 6 we obtain z⁻¹ = conj(z)/|z|^2, so 6/z = 6·conj(z)/|z|^2 = conj(z). Therefore
+     z + 6/z = z + conj(z) = 2 Re(z) = 2·(−1) = −2.
+   - Thus z + 6/z = w with w = −2.
+-- 4. [Conclusion] Taking w = −2 works: for every nonzero z satisfying the constraint, we have z + 6/z = −2, and indeed w = −2.

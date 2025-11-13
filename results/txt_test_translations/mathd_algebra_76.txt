@@ -1,0 +1,18 @@
+-- Proof content:
+-- 1. [Problem Restatement] We define a function f on integers by f(n) = n^2 if n is odd, and f(n) = n^2 − 4n − 1 if n is not odd. The goal is to show that applying f five times to 4 yields 1; that is, f(f(f(f(f(4))))) = 1.
+-- 2. [Key Idea] Evaluate f explicitly at the needed points by using the parity of the inputs:
+--    - 4 is not odd, so use the “even” branch to get f(4) = 4^2 − 4·4 − 1 = −1.
+--    - −1 is odd, so f(−1) = (−1)^2 = 1.
+--    - 1 is odd, so f(1) = 1^2 = 1.
+--    Then repeatedly substitute these values through the nested composition of f.
+-- 3. [Proof] 
+--    - Since 4 is not odd, f(4) = 4^2 − 4·4 − 1 = 16 − 16 − 1 = −1.
+--    - Since −1 is odd, f(−1) = (−1)^2 = 1.
+--    - Since 1 is odd, f(1) = 1^2 = 1.
+--    Now compute the composition step by step:
+--    f(f(f(f(f 4))))) = f(f(f(f (−1)))) by f(4) = −1
+--                      = f(f(f (1)))     by f(−1) = 1
+--                      = f(f (1))        by f(1) = 1
+--                      = f(1)            by f(1) = 1
+--                      = 1               by f(1) = 1.
+-- 4. [Conclusion] Therefore, f(f(f(f(f 4))))) = 1.

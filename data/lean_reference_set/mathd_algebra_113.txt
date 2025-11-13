@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine the real number x that minimizes the quadratic function f(x) = x^2 − 14x + 3, and confirm that the minimizer is x = 7.
+-- 2. [Key Idea] A quadratic ax^2 + bx + c with a > 0 achieves its minimum at its vertex x = −b/(2a). Equivalently, by completing the square, one rewrites the quadratic as a perfect square plus a constant; since the square is always nonnegative, the minimum occurs when the square is zero.
+-- 3. [Proof] 
+--    Method A (Vertex formula): Here a = 1 and b = −14. The vertex is at x = −b/(2a) = −(−14)/(2·1) = 7. Because a = 1 > 0, the parabola opens upward, so x = 7 gives the unique minimum.
+--    Method B (Completing the square): Rewrite f(x) as x^2 − 14x + 3 = (x^2 − 14x + 49) − 49 + 3 = (x − 7)^2 − 46. Since (x − 7)^2 ≥ 0 for all x, the expression is minimized when (x − 7)^2 = 0, i.e., at x = 7.
+-- 4. [Conclusion] Both methods show that the quadratic attains its minimum precisely at x = 7.

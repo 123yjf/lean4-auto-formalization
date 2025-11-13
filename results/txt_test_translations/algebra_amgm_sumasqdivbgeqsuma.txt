@@ -1,0 +1,26 @@
+-- Proof content:
+-- 1. [Problem Restatement] For positive real numbers a, b, c, d (that is, a, b, c, d > 0), prove that a^2/b + b^2/c + c^2/d + d^2/a ≥ a + b + c + d.
+
+-- 2. [Key Idea] Apply the two-term AM–GM inequality with equal weights 1/2 and 1/2 to each pair (a^2/b, b), (b^2/c, c), (c^2/d, d), and (d^2/a, a). Each application yields an inequality of the form x + y ≥ 2√(xy), which in these specific pairings simplifies to:
+- a^2/b + b ≥ 2a,
+- b^2/c + c ≥ 2b,
+- c^2/d + d ≥ 2c,
+- d^2/a + a ≥ 2d.
+Summing these four inequalities and rearranging gives the desired result.
+
+-- 3. [Proof] 
+- First pair (a^2/b, b): Since b > 0, both a^2/b and b are nonnegative. By weighted AM ≥ GM with weights 1/2 and 1/2,
+  (1/2)(a^2/b) + (1/2)b ≥ (a^2/b)^(1/2) · b^(1/2).
+  The right-hand side equals a because (a^2/b)^(1/2) · b^(1/2) = ((a^2/b)·b)^(1/2) = (a^2)^(1/2) = a, using a > 0. Multiplying both sides by 2 yields a^2/b + b ≥ 2a.
+- Second pair (b^2/c, c): By the same reasoning (with c > 0 and b > 0), b^2/c + c ≥ 2b.
+- Third pair (c^2/d, d): Using d > 0 and c > 0, we get c^2/d + d ≥ 2c.
+- Fourth pair (d^2/a, a): Using a > 0 and d > 0, we get d^2/a + a ≥ 2d.
+
+Adding these four inequalities gives
+a^2/b + b + b^2/c + c + c^2/d + d + d^2/a + a ≥ 2a + 2b + 2c + 2d.
+Rewriting the left-hand side as [a^2/b + b^2/c + c^2/d + d^2/a] + (a + b + c + d), and the right-hand side as 2(a + b + c + d), we obtain
+a^2/b + b^2/c + c^2/d + d^2/a + (a + b + c + d) ≥ 2(a + b + c + d).
+Subtracting (a + b + c + d) from both sides yields the desired inequality:
+a^2/b + b^2/c + c^2/d + d^2/a ≥ a + b + c + d.
+
+-- 4. [Conclusion] By four applications of the two-term AM–GM inequality and summing the results, we conclude that for positive reals a, b, c, d, the cyclic sum a^2/b + b^2/c + c^2/d + d^2/a is at least a + b + c + d.

@@ -1,0 +1,9 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute f(g(2)) where f(x) = x + 1 and g(x) = x^2 + 3, and show it equals 8. An equivalent reformulation is to compute (f ∘ g)(2). Along the way, we also record g(2) and a general formula for (f ∘ g)(x).
+-- 2. [Key Idea] Evaluate g at 2 to get 7, then apply f to 7 to get 8. Alternatively, simplify the composition (f ∘ g)(x) = f(g(x)) to x^2 + 4, and then plug in x = 2.
+-- 3. [Proof] 
+- First, g(2) = 2^2 + 3 = 4 + 3 = 7. This is what the lemma g_at_2 establishes by unfolding the definition of g.
+- Then f(g(2)) = f(7) = 7 + 1 = 8, which proves the theorem mathd_algebra_143. In the code, this is done by rewriting with g_at_2 and then simplifying using the definition of f.
+- For a general x, (f ∘ g)(x) = f(g(x)) = (x^2 + 3) + 1 = x^2 + 4. This is the lemma comp_formula, obtained by expanding the definitions of function composition, f, and g.
+- Applying this general formula at x = 2 gives (f ∘ g)(2) = 2^2 + 4 = 4 + 4 = 8, proving mathd_algebra_143_alt. In the code, this is done by rewriting with comp_formula and simplifying.
+-- 4. [Conclusion] Using the definitions of f and g, we find g(2) = 7 and hence f(g(2)) = 8. Equivalently, the composition satisfies (f ∘ g)(x) = x^2 + 4, so at x = 2 we again obtain 8.

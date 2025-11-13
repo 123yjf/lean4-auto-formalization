@@ -1,0 +1,10 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that ⌊10 · (1/3)⌋ + ⌊100 · (1/3)⌋ + ⌊1000 · (1/3)⌋ + ⌊10000 · (1/3)⌋ = 3702, where ⌊·⌋ is the floor function on rational numbers.
+-- 2. [Key Idea] Each term is a simple floor of a rational number with repeating decimal expansion: n/3 for n = 10, 100, 1000, 10000. The floor of n/3 is obtained by taking the integer part of the decimal expansion (3.333..., 33.333..., 333.333..., 3333.333...), yielding 3, 33, 333, and 3333 respectively. Summing these gives the result.
+-- 3. [Proof] Compute each floor explicitly:
+--    - 10/3 = 3.333..., so ⌊10/3⌋ = 3.
+--    - 100/3 = 33.333..., so ⌊100/3⌋ = 33.
+--    - 1000/3 = 333.333..., so ⌊1000/3⌋ = 333.
+--    - 10000/3 = 3333.333..., so ⌊10000/3⌋ = 3333.
+--    Adding these values: 3 + 33 + 333 + 3333 = 3702.
+-- 4. [Conclusion] Therefore, ⌊10 · (1/3)⌋ + ⌊100 · (1/3)⌋ + ⌊1000 · (1/3)⌋ + ⌊10000 · (1/3)⌋ = 3702.

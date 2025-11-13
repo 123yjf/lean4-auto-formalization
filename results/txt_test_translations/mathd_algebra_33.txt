@@ -1,0 +1,8 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given real numbers x, y, z with x ≠ 0, 2x = 5y, and 7y = 10z, prove that z / x = 7 / 25.
+-- 2. [Key Idea] Express y and then z in terms of x using the given proportional equations, and then cancel x in the ratio z / x (justified by x ≠ 0).
+-- 3. [Proof] 
+- From 2x = 5y, solve for y to get y = (2/5) x.
+- Substitute this into 7y = 10z to obtain 7 · (2/5) x = 10z, hence z = (7/10) · (2/5) x = (14/50) x = (7/25) x.
+- Therefore z / x = ((7/25) x) / x = 7/25, where the cancellation of x is valid because x ≠ 0.
+-- 4. [Conclusion] The ratio z / x equals 7 / 25.

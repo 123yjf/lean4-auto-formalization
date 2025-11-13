@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find the radius of the circle defined by the equation x^2 + 8x + y^2 - 6y = 0.
+-- 2. [Key Idea] Complete the square in x and y to rewrite the equation in the standard circle form (x - a)^2 + (y - b)^2 = r^2.
+-- 3. [Proof] Start with x^2 + 8x + y^2 - 6y = 0. For x: x^2 + 8x = (x + 4)^2 - 16. For y: y^2 - 6y = (y - 3)^2 - 9. Substituting gives (x + 4)^2 - 16 + (y - 3)^2 - 9 = 0, so (x + 4)^2 + (y - 3)^2 = 25. Thus r^2 = 25, so r = 5.
+-- 4. [Conclusion] The circle’s radius is 5.

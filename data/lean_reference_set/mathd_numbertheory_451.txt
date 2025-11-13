@@ -1,0 +1,17 @@
+-- Proof content:
+-- 1. [Problem Restatement] Determine which numbers among 2010, 2011, …, 2019 can be expressed as the sum of the four positive divisors of an integer that itself has exactly four positive divisors.
+-- 2. [Key Idea] An integer has exactly four divisors precisely when it is either p^3 (with p prime) or pq (with distinct primes p < q). The sums of their four divisors are, respectively, 1 + p + p^2 + p^3 and 1 + p + q + pq = (1 + p)(1 + q). Only sums of the second form can fall between 2010 and 2019.
+-- 3. [Proof] For m = p^3, the sum is 1 + p + p^2 + p^3 = (p^4 − 1)/(p − 1). For p = 11 this sum is 1464 < 2010, while for p = 13 it is 2380 > 2019. Hence no value of this form lies in the interval.
+For m = pq with distinct primes p < q, the sum is n = 1 + p + q + pq = (1 + p)(1 + q). Write a = 1 + p and b = 1 + q; then n = ab with a − 1 and b − 1 both prime, and a, b ≥ 3. Test n ∈ {2010,…,2019}:
+- 2010 = 2·3·5·67: no factor pair (a, b) has both a − 1 and b − 1 prime.
+- 2011 is prime, so only (1, 2011), which is invalid.
+- 2012 = 4·503: 4 − 1 = 3 is prime, but 503 − 1 = 502 is composite.
+- 2013 = 3·11·61: no suitable factor pair.
+- 2014 = 2·19·53: no suitable factor pair.
+- 2015 = 5·13·31: no suitable factor pair.
+- 2016 = 8·252 with 8 − 1 = 7 prime and 252 − 1 = 251 prime. Thus 2016 = (1 + 7)(1 + 251), corresponding to m = 7·251 = 1757.
+- 2017 is prime, so only (1, 2017), invalid.
+- 2018 = 2·1009: any factor pair has at least one of a − 1, b − 1 composite.
+- 2019 = 3·673: 3 − 1 = 2 is prime but 673 − 1 = 672 is composite.
+Therefore, the only number in the interval of the required form is 2016.
+-- 4. [Conclusion] Among 2010 through 2019, exactly one number—namely 2016—can be written as the sum of the four divisors of an integer with exactly four divisors (the corresponding integer is 1757 = 7·251).

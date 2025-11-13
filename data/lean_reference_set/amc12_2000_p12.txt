@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given non-negative integers A, M, C with A + M + C = 12, find the maximum value of P = AMC + AM + AC + MC.
+-- 2. [Key Idea] Rewrite P as (A+1)(M+1)(C+1) − 13. Then set x = A+1, y = M+1, z = C+1 so that x, y, z are positive integers with x + y + z = 15. Maximizing P is equivalent to maximizing the product xyz under a fixed sum, which is largest when the three numbers are as equal as possible.
+-- 3. [Proof] Expand (A+1)(M+1)(C+1) to get AMC + AM + AC + MC + A + M + C + 1. Hence P = (A+1)(M+1)(C+1) − (A + M + C) − 1 = (A+1)(M+1)(C+1) − 13, using A + M + C = 12. Let x = A+1, y = M+1, z = C+1; then x, y, z are positive integers with x + y + z = 15, and P = xyz − 13. By the AM-GM inequality, for fixed sum 15, xyz ≤ (15/3)^3 = 125, with equality when x = y = z = 5. This choice is attainable (x, y, z integers), giving A = M = C = 4 and P = 125 − 13 = 112. Any deviation from 5,5,5 lowers the product (e.g., 6·5·4 = 120 < 125), so this is indeed maximal.
+-- 4. [Conclusion] The maximum value of AMC + AM + AC + MC is 112, achieved at A = M = C = 4.

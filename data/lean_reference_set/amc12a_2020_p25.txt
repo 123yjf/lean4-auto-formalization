@@ -1,0 +1,14 @@
+-- Proof content:
+-- 1. [Problem Restatement] Find p + q where a = p/q in lowest terms makes the sum of all real solutions x to floor(x) * {x} = a * x^2 equal 420.
+-- 
+-- 2. [Key Idea] Write x = n + f with n = floor(x) ∈ Z and f = {x} ∈ [0,1). For each integer n, x must satisfy a x^2 - n x + n^2 = 0. Let t = sqrt(1 - 4a). Then the candidate in [n, n+1) is x = 2n / (1 + t). Choosing a so that t = 14/15 (i.e., a = 29/900) makes the admissible n be 1 through 28, yielding solutions x_n = 30n/29 together with x = 0, whose sum is 420. No other solutions occur.
+-- 
+-- 3. [Proof] 
+--    - Decompose x = n + f with n = floor(x) and f ∈ [0,1). The equation becomes n f = a (n + f)^2. Using f = x - n gives a x^2 - n x + n^2 = 0. 
+--    - Solving yields x = n (1 ± t) / (2a), where t = sqrt(1 - 4a). Since x must lie in [n, n+1), we take the smaller root: x = n (1 - t) / (2a) = 2n / (1 + t) (using 2a = (1 - t)(1 + t)/2). 
+--    - For n ≥ 0, the lower bound n ≤ x holds automatically. The upper bound x < n + 1 is equivalent to n < (1 + t)/(1 - t). 
+--    - Choose t = 14/15, so (1 + t)/(1 - t) = 29. Hence the admissible integers are n = 1, 2, ..., 28, giving x_n = 2n/(1 + t) = 30n/29. Also, when n = 0, the quadratic reduces to a x^2 = 0, yielding x = 0. 
+--    - If n < 0, then floor(x) < 0 while {x} ∈ [0,1), so floor(x) * {x} ≤ 0, but a x^2 ≥ 0 with equality only at x = 0. Thus there are no negative (nonzero) solutions. For 1 ≤ n ≤ 28, the quadratic has exactly one root in [n, n+1), so there are no further solutions. 
+--    - With t = 14/15, we have a = (1 - t^2)/4 = (1 - 196/225)/4 = (29/225)/4 = 29/900 in lowest terms. The sum is sum_{n=1}^{28} 30n/29 + 0 = (30/29) * (28 * 29 / 2) = 420, as required.
+-- 
+-- 4. [Conclusion] Therefore a = 29/900, so p = 29 and q = 900, and p + q = 929.

@@ -1,0 +1,6 @@
+-- Proof content:
+-- 1. [Problem Restatement] For natural numbers m, n, k, t with m and n prime, k > t > 0, k > 0, and satisfying k + t = m and k · t = n, show that m^n + n^m + k^t + t^k = 20.
+-- 2. [Key Idea] Since the product k·t equals the prime n, one factor must be 1 and the other must be n. The inequality k > t > 0 rules out k = 1, so t = 1 and k = n. Then m = k + 1 with both m and k prime; the only consecutive primes are 2 and 3, yielding k = 2 and m = 3. Substituting (m, n, k, t) = (3, 2, 2, 1) gives the desired sum 20.
+-- 3. [Proof] From k·t = n and n prime, primality of a product implies one factor is 1 and the other equals n, so k = 1 or t = 1. The inequalities k > t and t > 0 exclude k = 1 (it would force 1 > t ≥ 1, a contradiction), hence t = 1. Then k·1 = n gives k = n. Using k + t = m with t = 1 yields m = k + 1. Since n is prime and k = n, k is prime; thus both k and m = k + 1 are prime consecutive integers. A prime k is either 2 or odd. If k were odd, then m = k + 1 would be even and greater than 2, hence not prime—a contradiction. Therefore k = 2. It follows that t = 1, n = k = 2, and m = k + 1 = 3. Substituting these values,
+3^2 + 2^3 + 2^1 + 1^2 = 9 + 8 + 2 + 1 = 20.
+-- 4. [Conclusion] The only possibility is (m, n, k, t) = (3, 2, 2, 1), and consequently m^n + n^m + k^t + t^k = 20.

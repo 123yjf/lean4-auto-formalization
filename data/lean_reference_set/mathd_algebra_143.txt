@@ -1,0 +1,5 @@
+-- Proof content:
+-- 1. [Problem Restatement] Compute f(g(2)) where f(x) = x + 1 and g(x) = x^2 + 3.
+-- 2. [Key Idea] First evaluate g at 2 to get a numeric result, then apply f to that result; equivalently, form the composition f ∘ g and substitute x = 2.
+-- 3. [Proof] Method 1 (Direct computation): g(2) = 2^2 + 3 = 4 + 3 = 7, so f(g(2)) = f(7) = 7 + 1 = 8. Method 2 (Explicit composition): (f ∘ g)(x) = f(g(x)) = (x^2 + 3) + 1 = x^2 + 4. Substituting x = 2 gives (f ∘ g)(2) = 2^2 + 4 = 4 + 4 = 8.
+-- 4. [Conclusion] Both methods yield the same result: f(g(2)) = 8.

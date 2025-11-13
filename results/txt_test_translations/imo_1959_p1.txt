@@ -1,0 +1,7 @@
+-- Proof content:
+-- 1. [Problem Restatement] For every natural number n, the greatest common divisor of 21n + 4 and 14n + 3 is 1.
+-- 2. [Key Idea] Use Bézout’s identity: to show two natural numbers are coprime, it suffices to find integers a and b such that a(21n + 4) + b(14n + 3) = 1. The coefficients a = -2 and b = 3 work.
+-- 3. [Proof] Rephrase the statement “gcd(21n + 4, 14n + 3) = 1” as “21n + 4 and 14n + 3 are coprime,” and then as the existence of integers a, b with a(21n + 4) + b(14n + 3) = 1. Take a = -2 and b = 3. Compute over the integers:
+   -2(21n + 4) + 3(14n + 3) = (-42n - 8) + (42n + 9) = 1.
+  Hence there is an integer linear combination of 21n + 4 and 14n + 3 equal to 1, so they are coprime.
+-- 4. [Conclusion] Therefore, for all natural numbers n, gcd(21n + 4, 14n + 3) = 1.

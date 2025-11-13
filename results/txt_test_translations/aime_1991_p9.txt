@@ -1,0 +1,25 @@
+-- Proof content:
+-- 1. [Problem Restatement] Given a real number x with cos x ≠ 0 and sin x ≠ 0, and the condition 1/cos x + (sin x)/(cos x) = 22/7, prove that 1/sin x + (cos x)/(sin x) = 29/15.
+-- 2. [Key Idea] Introduce a = sec x = 1/cos x and b = tan x = (sin x)/(cos x). Then a + b = 22/7 by hypothesis, and the trigonometric identity (sec x + tan x)(sec x − tan x) = 1 gives (a + b)(a − b) = 1. From these, solve for a − b, hence for a and b individually, and finally rewrite the target expression as (a + 1)/b to compute its value.
+-- 3. [Proof] 
+--    - Define a = 1/cos x and b = (sin x)/(cos x). Then the given hypothesis is a + b = 22/7.
+--    - Show (a + b)(a − b) = 1. This is the standard identity (sec + tan)(sec − tan) = 1. In the proof, this is verified by multiplying (a ± b) by cos x: a·cos x = 1 and b·cos x = sin x, so
+--      ((a + b)(a − b))·cos^2 x = (a cos x + b cos x)(a cos x − b cos x) = (1 + sin x)(1 − sin x) = 1 − sin^2 x = cos^2 x,
+--      where the last step uses sin^2 x + cos^2 x = 1. Since cos x ≠ 0, dividing by cos^2 x yields (a + b)(a − b) = 1.
+--    - From a + b = 22/7 and (a + b)(a − b) = 1, deduce a − b = 1/(a + b) = 1/(22/7) = 7/22.
+--    - Solve for a and b:
+--      a = [(a + b) + (a − b)]/2 = [(22/7) + (7/22)]/2 = 533/308,
+--      b = [(a + b) − (a − b)]/2 = [(22/7) − (7/22)]/2 = 435/308.
+--    - Rewrite the target expression:
+--      1/sin x + (cos x)/sin x = (1 + cos x)/sin x. Using a = 1/cos x and b = (sin x)/(cos x), and noting sin x ≠ 0 and b ≠ 0 (since both sin x and cos x are nonzero), we verify
+--      (1 + cos x)/sin x = (a + 1)/b.
+--    - Compute (a + 1)/b with the found values of a, b:
+--      (a + 1)/b = ((533/308) + 1)/(435/308) = (841/308)/(435/308) = 841/435 = 29/15.
+-- 4. [Conclusion] Therefore, 1/sin x + (cos x)/sin x = 29/15, as required.
+
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 29 + 15 = 44.
+-- 2. [Key Idea] Direct arithmetic evaluation.
+-- 3. [Proof] Compute 29 + 15 = 44.
+-- 4. [Conclusion] The identity holds.

@@ -1,0 +1,29 @@
+-- Proof content:
+-- 1. [Problem Restatement] Show that 49 − 46 = 3.
+-- 2. [Key Idea] This is a straightforward arithmetic identity verified by computation; Lean confirms it by reflexivity after normalizing the numerals.
+-- 3. [Proof] Compute 49 − 46 = 3. In Lean, rfl closes the goal because both sides reduce to the same numeral.
+-- 4. [Conclusion] Therefore, 49 − 46 = 3.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 14 / 2 = 7.
+-- 2. [Key Idea] This is a direct division fact; Lean checks it by computation and reflexivity.
+-- 3. [Proof] Compute 14 ÷ 2 = 7. In Lean, rfl succeeds since both sides evaluate to 7.
+-- 4. [Conclusion] Therefore, 14 / 2 = 7.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 49 − 98 + 3 = −46.
+-- 2. [Key Idea] Evaluate the arithmetic step by step: 49 − 98 = −49, then −49 + 3 = −46. Lean confirms this by computation and reflexivity.
+-- 3. [Proof] Simplify numerically: 49 − 98 + 3 reduces to −46. In Lean, rfl closes the goal since both sides compute to the same integer.
+-- 4. [Conclusion] Therefore, 49 − 98 + 3 = −46.
+
+-- Proof content:
+-- 1. [Problem Restatement] Show that 0 ≤ 1.
+-- 2. [Key Idea] This is a basic order fact in ordered types; Lean’s decision procedure can verify it automatically.
+-- 3. [Proof] The decide tactic confirms the inequality 0 ≤ 1 holds.
+-- 4. [Conclusion] Therefore, 0 ≤ 1.
+
+-- Proof content:
+-- 1. [Problem Restatement] Prove the conjunction (49 − 46 = 3) ∧ (14 / 2 = 7) ∧ (49 − 98 + 3 = −46) ∧ (0 ≤ 1).
+-- 2. [Key Idea] Build the conjunction using conjunction-introduction, supplying each previously proved statement as a conjunct.
+-- 3. [Proof] Use constructor repeatedly to split the goal into four parts, and apply the earlier theorems: completing_square_computation, vertex_formula_computation, function_at_vertex, and perfect_square_principle to solve each part.
+-- 4. [Conclusion] Therefore, all four statements hold simultaneously.
