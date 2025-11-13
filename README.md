@@ -1,5 +1,5 @@
 # lean4-auto-formalization
-本项目旨在构建一个**可实践、可复现**的 Lean4 证明自动化流水线，核心在于将语义验证工具 `semantic_validator.py`（原名 `steps.py`）作为智能体（Agent）驱动流程中的强制性语义关卡，从而实现“生成—编译—验证”的自我修正闭环。
+本项目旨在构建一个**可实践、可复现**的 Lean4 证明自动化流水线，核心在于将语义验证工具 `semantic_validator.py`作为智能体（Agent）驱动流程中的强制性语义关卡，从而实现“生成—编译—验证”的自我修正闭环。
 
 > 本章为新增高级应用部分，说明如何把 `semantic_validator.py` 嵌入到一个基于公开 Agent 插件的自动化证明生成工作流中。
 
