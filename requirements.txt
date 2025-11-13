@@ -1,0 +1,7 @@
+# === 必需的第三方库 ===
+openai>=1.0.0
+numpy>=1.24.0
+requests>=2.31.0
+tqdm>=4.66.0 
+# === 说明 ===
+# 其他 import（os, json, re, base64 等）均为 Python 内置模块，无需额外安装

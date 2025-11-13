@@ -27,7 +27,7 @@
 1. 克隆仓库并安装依赖（示例）：
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/123yjf/lean4-auto-formalization.git
 cd your-repo
 # 安装 Python 依赖（示例）
 python -m venv .venv
